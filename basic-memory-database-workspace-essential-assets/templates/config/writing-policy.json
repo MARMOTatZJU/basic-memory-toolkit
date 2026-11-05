@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "language_policy": "preserve original languages and titles",
+  "english": "STE-aligned draft",
+  "other_languages": "same-language clarity review",
+  "dictionary_review": "pending",
+  "human_domain_review": "pending",
+  "coverage": "Full source prose is reviewed or conservatively screened; code, formulas, examples, and quotations retain their exact values.",
+  "automated_screening": "Exact text retained. Screening is separate from agent prose review.",
+  "originals": "Immutable source snapshots stay outside the active corpus. Use read --original to verify and read them."
+}
