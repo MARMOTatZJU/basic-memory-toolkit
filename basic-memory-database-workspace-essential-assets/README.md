@@ -218,3 +218,11 @@ Four reusable scripts were added after the original selection:
 `canonical_db.py` now supports database-relative evidence paths and reading Codex JSON snapshots. It is therefore no longer byte-identical to the original curated copy. The capture, sync, and verification CLIs accept `--help`; the formatter is an imported module. Obtain an explicit unarchived thread inventory from the app before selecting logs. Keep private snapshots in the database workspace, not in this reusable toolkit.
 
 Typical workflow: capture selected API histories, recover visible local-log events, stage with `sync_codex_memory.py --target DB --sources CAPTURES --stage NEW_DIRECTORY`, validate with `verify_codex_sync.py`, build the staged index with `canonical_db.py --root STAGE build-index`, back up the live corpus, and publish only after checks pass. Re-run verification against the published root and backup. Do not copy source instructions into an agent's instruction layer.
+
+## Notion incremental verification (2026-11-06)
+
+[scripts/verify_notion_sync.py](scripts/verify_notion_sync.py) verifies a completed Notion sync against a backup and fresh MCP cache. It checks exact changed-source properties and text, unchanged source file bytes, evidence hashes, source membership, and graph preservation. It refuses errors and block responses used as source pages. It does not fetch Notion, discover roots, or authorize deletions. Run with explicit `--root`, `--baseline`, `--run`, and `--report`; the run directory must contain the documented analysis and cache artifacts from synchronization-2026-11-06.
+
+The canonical reader now resolves historical evidence through an optional `registry/evidence-roots.json` file with `version: 1` and a `roots` list of `from`/`to` path prefixes. Every resolved snapshot still undergoes its recorded SHA-256 check. Escapes outside the declared destination root are rejected. This permits relocating evidence without rewriting unchanged source records.
+
+The default store resolver discovers the current `basic-memory-databases/MARMOTatZJU-s-Notion` layout beneath an ancestor directory, while preserving an explicit `CANONICAL_ROOT` override and the historical fallback. The same changes are applied to the active toolkit workspace helpers.

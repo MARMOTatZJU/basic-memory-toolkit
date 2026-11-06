@@ -34,6 +34,35 @@ import store_layout
 DEFAULT_ROOT = store_layout.canonical_default()
 
 
+
+def evidence_path(root, value):
+    """Resolve a recorded evidence path through explicit relocation mappings."""
+    canonical = store_layout.locate(root)[0]
+    path = Path(value)
+    if not path.is_absolute():
+        path = canonical / path
+    if path.is_file():
+        return path
+    registry = canonical / "registry/evidence-roots.json"
+    if registry.is_file():
+        mappings = json.loads(registry.read_text())
+        if mappings.get("version") != 1:
+            raise ValueError("Unsupported evidence relocation registry")
+        for mapping in mappings.get("roots", []):
+            try:
+                suffix = path.relative_to(Path(mapping["from"]))
+            except ValueError:
+                continue
+            destination = Path(mapping["to"])
+            if not destination.is_absolute():
+                destination = canonical / destination
+            candidate = (destination / suffix).resolve()
+            if not candidate.is_relative_to(destination.resolve()):
+                raise ValueError("Evidence relocation escapes its root")
+            if candidate.is_file():
+                return candidate
+    return path
+
 def load_records(root):
     canonical, selected_view = store_layout.locate(root)
     records, issues = legacy.load_records(canonical)
@@ -168,9 +197,7 @@ def check(root, records=None, load_issues=None):
                 errors.append({"kind": "frontmatter_observation_disagreement", "path": r["path"], "field": field})
         evidence = meta.get("original_evidence")
         if evidence:
-            path = Path(evidence["path"])
-            if not path.is_absolute():
-                path = store_layout.locate(root)[0] / path
+            path = evidence_path(root, evidence["path"])
             if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != evidence["sha256"]:
                 errors.append({"kind": "original_evidence_hash", "path": r["path"]})
         if meta.get("imported_by") == "global_memory_db.py" and "## Edited source content" not in r["body"]:
@@ -254,8 +281,7 @@ def main():
             if args.original:
                 evidence = record["metadata"].get("original_evidence", {})
                 path = Path(evidence["path"]) if evidence.get("path") else WORKSPACE / "global-scan/notion" / (record["metadata"].get("notion_page_id", "") + ".json")
-                if not path.is_absolute():
-                    path = store_layout.locate(args.root)[0] / path
+                path = evidence_path(args.root, path)
                 if not path.is_file(): raise ValueError("Original evidence is not available for this record")
                 if evidence.get("sha256") and hashlib.sha256(path.read_bytes()).hexdigest() != evidence["sha256"]:
                     raise ValueError("Original evidence hash differs")

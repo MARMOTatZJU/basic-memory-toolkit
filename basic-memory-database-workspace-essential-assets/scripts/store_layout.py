@@ -16,7 +16,13 @@ WORKSPACE = next(p for p in Path(__file__).resolve().parents if (p / 'scripts/me
 def canonical_default():
     """Allow an isolated staged store without falling back to active aliases."""
     value = os.environ.get('CANONICAL_ROOT')
-    return Path(value).resolve() if value else WORKSPACE.parent / 'basic-memory-database/MARMOTatZJU-s-Notion'
+    if value:
+        return Path(value).resolve()
+    for parent in WORKSPACE.parents:
+        current = parent / 'basic-memory-databases/MARMOTatZJU-s-Notion'
+        if (current / 'registry/aliases.json').is_file():
+            return current
+    return WORKSPACE.parent / 'basic-memory-database/MARMOTatZJU-s-Notion'
 
 
 def _view(canonical, name):
