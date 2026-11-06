@@ -169,6 +169,8 @@ def check(root, records=None, load_issues=None):
         evidence = meta.get("original_evidence")
         if evidence:
             path = Path(evidence["path"])
+            if not path.is_absolute():
+                path = store_layout.locate(root)[0] / path
             if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != evidence["sha256"]:
                 errors.append({"kind": "original_evidence_hash", "path": r["path"]})
         if meta.get("imported_by") == "global_memory_db.py" and "## Edited source content" not in r["body"]:
@@ -252,11 +254,16 @@ def main():
             if args.original:
                 evidence = record["metadata"].get("original_evidence", {})
                 path = Path(evidence["path"]) if evidence.get("path") else WORKSPACE / "global-scan/notion" / (record["metadata"].get("notion_page_id", "") + ".json")
+                if not path.is_absolute():
+                    path = store_layout.locate(args.root)[0] / path
                 if not path.is_file(): raise ValueError("Original evidence is not available for this record")
                 if evidence.get("sha256") and hashlib.sha256(path.read_bytes()).hexdigest() != evidence["sha256"]:
                     raise ValueError("Original evidence hash differs")
-                snapshot = unwrap_snapshot(json.loads(path.read_text()))
-                print(snapshot["text"])
+                raw = json.loads(path.read_text())
+                if "threadListEntry" in raw:
+                    print(json.dumps(raw, ensure_ascii=False, indent=2))
+                else:
+                    print(unwrap_snapshot(raw)["text"])
             else:
                 print(record["text"])
             return

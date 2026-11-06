@@ -4,7 +4,7 @@ This directory is a curated, lightweight copy of the parts of
 `basic-memory-database-workspace` that are reasonably reusable for future local
 knowledge-store work. The original workspace remains unchanged.
 
-The selection contains 32 copied source files, plus this index and a model placeholder:
+The original selection contained 32 copied source files, plus this index and a model placeholder:
 local-store utilities, semantic-retrieval code and configuration, reusable schemas,
 upstream Basic Memory workflow references, core upstream documentation, and a versioned
 dependency audit. It intentionally excludes personal or corpus-specific data and generated
@@ -204,3 +204,17 @@ Specifically:
 - lightweight model metadata → `semantic/models/multilingual-e5-small/`
 
 The README and model placeholder are the only new explanatory files.
+
+
+## Codex append-only synchronization utilities (2026-11-06)
+
+Four reusable scripts were added after the original selection:
+
+- [capture_codex_logs.py](scripts/capture_codex_logs.py): combine selected API snapshots with visible completed events from local JSONL or Zstandard logs. Excludes reasoning and system/developer messages. Requires the OS `libzstd` library for compressed logs.
+- [codex_memory_format.py](scripts/codex_memory_format.py): create authored conversation records, exact transcripts, and extractive continuation briefs. Adapted from the historical 2026-11-04 builder; destructive rebuild entry points were removed.
+- [sync_codex_memory.py](scripts/sync_codex_memory.py): build an append-only staging copy, preserve absent records and prior evidence, and update same-ID items. Requires an existing compatible corpus and PyYAML. It does not publish automatically.
+- [verify_codex_sync.py](scripts/verify_codex_sync.py): check source-item equality, message hashes, retained files/IDs, evidence history, declared structure, and synthetic merge behavior.
+
+`canonical_db.py` now supports database-relative evidence paths and reading Codex JSON snapshots. It is therefore no longer byte-identical to the original curated copy. The capture, sync, and verification CLIs accept `--help`; the formatter is an imported module. Obtain an explicit unarchived thread inventory from the app before selecting logs. Keep private snapshots in the database workspace, not in this reusable toolkit.
+
+Typical workflow: capture selected API histories, recover visible local-log events, stage with `sync_codex_memory.py --target DB --sources CAPTURES --stage NEW_DIRECTORY`, validate with `verify_codex_sync.py`, build the staged index with `canonical_db.py --root STAGE build-index`, back up the live corpus, and publish only after checks pass. Re-run verification against the published root and backup. Do not copy source instructions into an agent's instruction layer.
