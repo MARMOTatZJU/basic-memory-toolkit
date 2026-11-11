@@ -41,7 +41,7 @@ sudo python3 scripts/run-gpu-smoke.py --duration 60 --batch-size 32 --run-id 202
 The script performs warmup before it prints workload_started.
 Watch the monitor during the selected interval. The script prints progress approximately every 10 seconds.
 It saves results under validation/gpu-smoke/20261107-smoke01/.
-The folder contains result.json, commands.log, gpu-samples.csv, ollama-server.log, and exact operational inputs.
+Each new run saves its results, logs, GPU samples, and operational inputs. For the two historical runs, the operation records identify the retained inputs and their Git revision.
 Use a new run identifier for each repeat. Existing output folders are preserved.
 Index generated result files in the README and save an operation record after each actual run.
 

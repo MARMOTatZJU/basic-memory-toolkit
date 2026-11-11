@@ -51,3 +51,37 @@ And make three rounds of reorganization/structural optimization to make the data
 
 In the end, report your works of each round.
 ```
+
+## Cleaning up
+
+### Scan
+
+```markdown
+Refer to:
+- ./basic-memory-toolkit/UTILITY-ASSETS.md for paths to utility assets.
+Currently, the utility assets are too redundant. Based on practical uses, make a full scan of these assets and spot points from which the redundancy can be reduced.
+
+Focus on:
+- List temporary files that can be safely deleted, such as
+  - logs
+  - cache
+- List outdated files that are no longer needed, such as
+  - outdated scripts
+- etc.
+
+$asd-ste100-writing-context Make a temporary report under the root directory of the repository.
+
+- Applying the core ideas of ASD-STE100 writing style to this report.
+- At the beginning of the report, write a "oneline" style (like `git log --graph --oneline`) hierarchical summary of the items spotted below.
+
+
+Pause before taking actions to clean up.
+```
+
+### Per-Part Clean-up
+
+```
+Help to clean up SPECIFY_HERE and pay attention to following points:
+- remove out dated elements and cleanup references to them if exists.
+- for duplicated elements, decide the sides to preserve and remove the other sides with their references
+```

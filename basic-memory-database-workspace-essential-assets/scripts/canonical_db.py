@@ -63,6 +63,16 @@ def evidence_path(root, value):
                 return candidate
     return path
 
+def original_snapshot_path(metadata):
+    evidence = metadata.get("original_evidence", {})
+    if evidence.get("path"):
+        return Path(evidence["path"])
+    relative = Path("global-scan/notion") / (metadata.get("notion_page_id", "") + ".json")
+    local = WORKSPACE / relative
+    older = WORKSPACE.with_name("basic-memory-database-workspace") / relative
+    return older if not local.is_file() and older.is_file() else local
+
+
 def load_records(root):
     canonical, selected_view = store_layout.locate(root)
     records, issues = legacy.load_records(canonical)
@@ -280,7 +290,7 @@ def main():
             record = resolve(args.identifier, records)
             if args.original:
                 evidence = record["metadata"].get("original_evidence", {})
-                path = Path(evidence["path"]) if evidence.get("path") else WORKSPACE / "global-scan/notion" / (record["metadata"].get("notion_page_id", "") + ".json")
+                path = original_snapshot_path(record["metadata"])
                 path = evidence_path(args.root, path)
                 if not path.is_file(): raise ValueError("Original evidence is not available for this record")
                 if evidence.get("sha256") and hashlib.sha256(path.read_bytes()).hexdigest() != evidence["sha256"]:

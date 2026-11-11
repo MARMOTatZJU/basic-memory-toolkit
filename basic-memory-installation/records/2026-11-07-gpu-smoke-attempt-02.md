@@ -84,12 +84,12 @@ Raw logs, historical executed inputs, and recovery evidence remain under
 | post-cleanup-gpu.csv | Device counters after all test cleanup |
 | home-cache-verification.json | Complete home-cache verification after recovered cleanup: all 572 indexed files passed |
 | cleanup-recovery.json | Initial cleanup error, exact ownership repair, exit codes, and recovery result |
-| recovery/cleanup.py | Exact narrowly scoped recovery executed for this run; not a general repeat entry point |
-| recovery/inputs/scripts/run-gpu-smoke.py | Follow-up helper fix for future runs; not used for this timed workload |
 | inputs/scripts/run-gpu-smoke.py | Original host helper executed for the timed workload |
-| inputs/docker/run-gpu-smoke.py | Exact 300-second public embedding loop |
-| inputs/docker/check-embedding-runtime.py | Exact dimensions and CUDA runner probe |
-| inputs/config/versions.env | Exact image, model, interpreter, and application pins |
+
+Git revision `47598653c774353c2431b05fd3fe1d0f1893136c` preserves the exact shared inputs for this run.
+- [Version pins](../config/versions.env)
+- [Container workload](../docker/run-gpu-smoke.py)
+- [Embedding runtime probe](../docker/check-embedding-runtime.py)
 
 The installation and essential-assets READMEs index their respective results and
 scripts. No private notes or server private key are included.

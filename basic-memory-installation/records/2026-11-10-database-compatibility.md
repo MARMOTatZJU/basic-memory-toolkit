@@ -30,9 +30,9 @@ Shell: Ubuntu WSL2 Bash. Docker access used `sg docker -c` because the agent pro
 12. Correct the test graph timeframe from unsupported `3650d` to `365d`. Retain the failed attempts in the result.
 13. Identify four unsupported YAML aliases through the installed parser.
 14. Save the graph audit before repairs.
-15. Try `--repair-codex`, which uses the standard full CLI reindex. Nine SQLite lock failures remained.
+15. The standard full CLI reindex left nine SQLite lock failures.
 16. Run `--repair-notion` on the four copied files. Verify equal metadata and body text.
-17. Run `docker exec bm-compat-app python /test/reindex-compatibility-serial.py`. All 128 files passed with one index operation at a time.
+17. The serial repair indexed all 128 files with one index operation at a time. See the [repeat procedure](../docs/database-compatibility.md#repeat-and-resume) for the current command.
 18. Refresh embeddings and repeat graph checks and twenty semantic/hybrid queries.
 19. Verify every original file by a relative-path/SHA-256 tree comparison.
 20. Run `python3 scripts/run-database-compatibility.py cleanup --run-id 2026-11-10`.

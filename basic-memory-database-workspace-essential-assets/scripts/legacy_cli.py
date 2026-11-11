@@ -197,7 +197,7 @@ def main(mode="memory", argv=None):
             print(record["text"], end="")
         else:
             evidence = record["metadata"].get("original_evidence", {})
-            path = Path(evidence["path"]) if evidence.get("path") else WORKSPACE / "global-scan/notion" / (record["metadata"].get("notion_page_id", "") + ".json")
+            path = canonical.original_snapshot_path(record["metadata"])
             if not path.is_file():
                 raise ValueError("Original evidence is unavailable for this record")
             if evidence.get("sha256") and hashlib.sha256(path.read_bytes()).hexdigest() != evidence["sha256"]:

@@ -12,8 +12,8 @@ Custom workspace scripts are excluded.
 | --- | --- |
 | [Release manifest](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/pyproject.toml) | Direct runtime, optional, build, and development requirements. |
 | [Release lockfile](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/uv.lock) | Concrete versions, dependency edges, and environment markers. |
-| [Declared dependency CSV](../../basic-memory-database-workspace/reports/dependency-audit-2026-11-04/declared-dependencies.csv) | Existing machine-readable inventory of declared requirements. |
-| [Locked package CSV](../../basic-memory-database-workspace/reports/dependency-audit-2026-11-04/locked-packages.csv) | Existing full lock inventory and dependency relationships. |
+| [Declared dependency CSV](../../basic-memory-database-workspace-essential-assets/reference-audits/basic-memory-1.0.0-wsl2/declared-dependencies.csv) | Existing machine-readable inventory of declared requirements. |
+| [Locked package CSV](../../basic-memory-database-workspace-essential-assets/reference-audits/basic-memory-1.0.0-wsl2/locked-packages.csv) | Existing full lock inventory and dependency relationships. |
 
 The manifest declares 43 runtime requirements, five extras, and 22 development requirements.
 The lockfile contains 222 package records across platforms and feature selections.

@@ -21,7 +21,14 @@ import sys
 import time
 
 WORKSPACE = next(p for p in Path(__file__).resolve().parents if (p / "semantic/models/multilingual-e5-small").exists())
-SEMANTIC = WORKSPACE / "semantic"
+# Keep the installed local model and evaluation data usable after moving the CLI.
+MODEL_SUBDIR = Path("semantic/models/multilingual-e5-small")
+older_workspace = WORKSPACE.with_name("basic-memory-database-workspace")
+DATA_WORKSPACE = WORKSPACE
+if not (WORKSPACE / MODEL_SUBDIR / "model.safetensors").is_file():
+    if (older_workspace / MODEL_SUBDIR / "model.safetensors").is_file():
+        DATA_WORKSPACE = older_workspace
+SEMANTIC = DATA_WORKSPACE / "semantic"
 MODEL_DIR = SEMANTIC / "models" / "multilingual-e5-small"
 INDEX_DIR = SEMANTIC / "global-index-v6"
 MODEL_ID = "intfloat/multilingual-e5-small"
@@ -843,7 +850,7 @@ def main():
     query_parser.add_argument("--variant", action="append", default=[], help="Additional preprovided query form; repeat for bilingual variants")
     query_parser.add_argument("--hybrid", action="store_true", help="Fuse dense and BM25 channels, returning source-only candidates and separate graph context")
     trial_parser = sub.add_parser("trials")
-    trial_parser.add_argument("--cases", type=Path, default=WORKSPACE / "reports/semantic-trial-cases.json")
+    trial_parser.add_argument("--cases", type=Path, default=DATA_WORKSPACE / "reports/semantic-trial-cases.json")
     trial_parser.add_argument("--root", type=Path)
     trial_parser.add_argument("--index", type=Path, default=INDEX_DIR)
     trial_parser.add_argument("--report", type=Path, default=WORKSPACE / "reports/semantic-trials-embeddings.json")
@@ -853,7 +860,7 @@ def main():
     refresh_parser.add_argument("--root", type=Path)
     refresh_parser.add_argument("--reason", required=True)
     workflow_parser = sub.add_parser("workflow-trials", help="Evaluate frozen paired forms as one bilingual hybrid task per concept")
-    workflow_parser.add_argument("--cases", type=Path, default=WORKSPACE / "global-scan/semantic-trial-cases-global.json")
+    workflow_parser.add_argument("--cases", type=Path, default=DATA_WORKSPACE / "global-scan/semantic-trial-cases-global.json")
     workflow_parser.add_argument("--index", type=Path, default=INDEX_DIR)
     workflow_parser.add_argument("--root", type=Path)
     workflow_parser.add_argument("--path-prefix")

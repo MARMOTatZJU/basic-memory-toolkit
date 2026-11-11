@@ -135,7 +135,7 @@ Repeat the relevant checks before installation.
 | [18 — Tutorial verification](18-tutorial-validation-and-version-update.md) | Historical test evidence remains intact. It does not certify the new Docker procedure. |
 | [19 — File-adapter tutorial](19-user-tutorial-skill-version.md) | Separate service-free workflow. It is not part of complete application installation. |
 | [20 — Strategy and token use](20-installation-strategy-token-use-gpu-and-dependencies.md) | Strategy comparison and token analysis. Installation topics link to their canonical chapters. |
-| [Earlier dependency audit](../../basic-memory-database-workspace/reports/dependency-audit-2026-11-04/README.md) | Historical audit and machine-readable inventories. |
+| [Earlier dependency audit](../../basic-memory-database-workspace-essential-assets/reference-audits/basic-memory-1.0.0-wsl2/README.md) | Historical audit and machine-readable inventories. |
 
 Update the owning chapter when a requirement changes.
 Keep historical results labeled by date and environment.

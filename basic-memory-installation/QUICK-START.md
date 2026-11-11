@@ -6,10 +6,7 @@ Basic Memory stores Markdown notes and supports text, semantic, and hybrid searc
 An MCP-compatible AI client can read, write, and search these notes through the local service.
 Ollama generates embeddings on the RTX 5090 Laptop GPU. This deployment does not configure a chat-generation model.
 
-The selected runtime uses Basic Memory **1.0.0**, uv **0.13.7**, Python **3.13.18**, and Ollama **0.40.15** in WSL2 Docker containers.
-The embedding model is **nomic-embed-text:v1.5**, F16, with **768 dimensions**, using CUDA Runtime **12.8.90**.
-Python packages are installed directly into the uv-managed container interpreter.
-All five application extras are installed. Redis and Milvus servers remain optional, separately configured services.
+The installation entry points list the selected runtime and embedding pins. [Version pins](ENTRY-POINTS.md#version-pin-reference) · [Embedding model](ENTRY-POINTS.md#3-native-model-and-reusable-download-store)
 
 **Recorded status:** dependency installation, image builds, model download, and GPU smoke tests passed.
 Persistent deployment and full application acceptance remain pending in the saved checkpoint.

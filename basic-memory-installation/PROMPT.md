@@ -3,7 +3,7 @@ $asd-ste100-writing-context
 
 Prepare for a complete installation of runtime environment of [Basic Memory](https://github.com/basicmachines-co/basic-memory).
 
-You have an existing [code report](`./basic-memory-toolkit/basic-memory-code/code-report/`) to refer to.
+You have an existing [code report](../basic-memory-code/code-report/) to refer to.
 
 The customized requirements of the complete installation are:
 

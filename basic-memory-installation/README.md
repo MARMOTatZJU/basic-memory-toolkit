@@ -128,20 +128,7 @@ Do not use a successful `nvidia-smi` result as evidence of successful model infe
 
 ## Runtime status entry point
 
-After Docker and runtime settings exist, inspect the selected deployment through:
-
-```bash
-sudo docker compose --project-name basic-memory-installation \
-  --project-directory "$PWD" \
-  --env-file config/versions.env \
-  --env-file config/runtime.env \
-  -f docker/compose.yaml ps
-```
-
-Use the same prefix with `logs --tail=100` to inspect service logs.
-A later `stop` action preserves named volume data.
-The command `down -v` deletes named volume data. It is not a normal stop command.
-The future MCP endpoint is `http://127.0.0.1:8000/mcp` unless the configured host port changes.
+Use the quick start to inspect service status and logs or stop the services. Use the entry point reference for the current Compose settings and MCP endpoint. [Daily operation](QUICK-START.md#6-daily-operation) · [Compose reference](ENTRY-POINTS.md#5-compose-endpoints-and-persistent-paths)
 
 ## Maintain the entry points after every operation
 
@@ -176,6 +163,7 @@ clone; use the essential-assets baseline index for durable comparison data.
 | [QUICK-START.md](QUICK-START.md) | Concise first-deployment and daily-use guide for the selected complete runtime. | Start here for configuration, service commands, note/search examples, MCP, and recovery links. |
 | [README.md](README.md) | Bundle entry points, current state, and complete file index. | Start here after each interruption or restart. |
 | [AGENTS.md](AGENTS.md) | User-controlled installation and documentation maintenance rules. | Read before any installation operation. |
+| [PROMPT.md](PROMPT.md) | Original installation planning request. | Use as historical context for the selected requirements. |
 | [installation-plan.md](installation-plan.md) | Dependency order, locations, and proposed versions. | Use the dependency order to select the next authorized operation. |
 | [.gitignore](.gitignore) | Exclusions for private runtime configuration, data, and generated caches. | Used by Git if the bundle is tracked. |
 | [docs/installation-status.md](docs/installation-status.md) | Current focus, operation status, and exact resume instructions. | Read before selecting or repeating an operation. |
@@ -335,9 +323,6 @@ clone; use the essential-assets baseline index for durable comparison data.
 | [records/2026-11-07-gpu-smoke-attempt-01.md](records/2026-11-07-gpu-smoke-attempt-01.md) | Authorized temporary GPU smoke-test operation record and resume point. | Read with docs/gpu-smoke-test.md and the operation record. |
 | [validation/gpu-smoke/20261107-smoke01/commands.log](validation/gpu-smoke/20261107-smoke01/commands.log) | Exact smoke-test commands and public workload progress. | Read with docs/gpu-smoke-test.md and the operation record. |
 | [smoke01 GPU samples](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/gpu-smoke/20261107-smoke01/gpu-samples.csv) | One-second NVIDIA timestamp, name, driver, GPU utilization, memory, and power samples. | Reusable baseline moved to essential assets. |
-| [validation/gpu-smoke/20261107-smoke01/inputs/config/versions.env](validation/gpu-smoke/20261107-smoke01/inputs/config/versions.env) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the operation record. |
-| [validation/gpu-smoke/20261107-smoke01/inputs/docker/check-embedding-runtime.py](validation/gpu-smoke/20261107-smoke01/inputs/docker/check-embedding-runtime.py) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the operation record. |
-| [validation/gpu-smoke/20261107-smoke01/inputs/docker/run-gpu-smoke.py](validation/gpu-smoke/20261107-smoke01/inputs/docker/run-gpu-smoke.py) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the operation record. |
 | [validation/gpu-smoke/20261107-smoke01/inputs/scripts/run-gpu-smoke.py](validation/gpu-smoke/20261107-smoke01/inputs/scripts/run-gpu-smoke.py) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the operation record. |
 | [smoke01 result](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/gpu-smoke/20261107-smoke01/result.json) | Smoke-test status, dimensions, GPU placement, timings, and cleanup. | Reusable baseline moved to essential assets. |
 | [docs/gpu-monitoring.md](docs/gpu-monitoring.md) | Explain Task Manager engine figures and inspect NVIDIA execution through WSL counters. | Read with docs/gpu-smoke-test.md and the linked operation record. |
@@ -346,17 +331,12 @@ clone; use the essential-assets baseline index for durable comparison data.
 | [smoke01 telemetry summary](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/gpu-smoke/20261107-smoke01/telemetry-summary.json) | Device-wide utilization, memory, and power statistics with measurement scope. | Reusable baseline moved to essential assets. |
 | [validation/gpu-smoke/20261107-smoke02/commands.log](validation/gpu-smoke/20261107-smoke02/commands.log) | Exact smoke-test commands and public workload progress. | Read with docs/gpu-smoke-test.md and the linked operation record. |
 | [smoke02 GPU samples](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/gpu-smoke/20261107-smoke02/gpu-samples.csv) | NVIDIA device timestamp, name, driver, utilization, memory, and power each second. | Reusable baseline moved to essential assets. |
-| [validation/gpu-smoke/20261107-smoke02/inputs/config/versions.env](validation/gpu-smoke/20261107-smoke02/inputs/config/versions.env) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the linked operation record. |
-| [validation/gpu-smoke/20261107-smoke02/inputs/docker/check-embedding-runtime.py](validation/gpu-smoke/20261107-smoke02/inputs/docker/check-embedding-runtime.py) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the linked operation record. |
-| [validation/gpu-smoke/20261107-smoke02/inputs/docker/run-gpu-smoke.py](validation/gpu-smoke/20261107-smoke02/inputs/docker/run-gpu-smoke.py) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the linked operation record. |
 | [validation/gpu-smoke/20261107-smoke02/inputs/scripts/run-gpu-smoke.py](validation/gpu-smoke/20261107-smoke02/inputs/scripts/run-gpu-smoke.py) | Exact executed smoke-test input. | Read with docs/gpu-smoke-test.md and the linked operation record. |
 | [smoke02 result](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/gpu-smoke/20261107-smoke02/result.json) | Timed GPU smoke-test result, dimensions, placement, library maps, and cleanup. | Reusable baseline moved to essential assets. |
 | [validation/gpu-smoke/20261107-smoke02-launch.json](validation/gpu-smoke/20261107-smoke02-launch.json) | Failed Windows WSL entry and recovery through existing Docker group access. | Read with docs/gpu-smoke-test.md and the linked operation record. |
 | [validation/gpu-smoke/20261107-smoke02/cleanup-recovery.json](validation/gpu-smoke/20261107-smoke02/cleanup-recovery.json) | Scoped temporary-cache ownership recovery, exact commands, and final result. | Read with docs/gpu-smoke-test.md and the relevant operation record. |
 | [validation/gpu-smoke/20261107-smoke02/ollama-server.log](validation/gpu-smoke/20261107-smoke02/ollama-server.log) | Sanitized temporary server and CUDA runner diagnostics. | Read with docs/gpu-smoke-test.md and the relevant operation record. |
 | [validation/gpu-smoke/20261107-smoke02/post-cleanup-gpu.csv](validation/gpu-smoke/20261107-smoke02/post-cleanup-gpu.csv) | NVIDIA counters after complete test cleanup. | Read with docs/gpu-smoke-test.md and the relevant operation record. |
-| [validation/gpu-smoke/20261107-smoke02/recovery/cleanup.py](validation/gpu-smoke/20261107-smoke02/recovery/cleanup.py) | Exact one-time smoke02 cache recovery; already executed and not a general repeat entry point. | Read with docs/gpu-smoke-test.md and the relevant operation record. |
-| [validation/gpu-smoke/20261107-smoke02/recovery/inputs/scripts/run-gpu-smoke.py](validation/gpu-smoke/20261107-smoke02/recovery/inputs/scripts/run-gpu-smoke.py) | Follow-up host helper fix for future cleanup; separate from timed-run inputs. | Read with docs/gpu-smoke-test.md and the relevant operation record. |
 | [smoke02 telemetry summary](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/gpu-smoke/20261107-smoke02/telemetry-summary.json) | Device-wide utilization, memory, and power statistics with measurement scope. | Reusable baseline moved to essential assets. |
 | [docs/remaining-installation-steps.md](docs/remaining-installation-steps.md) | Audited unfinished runtime configuration, storage, service startup, acceptance, and separate open issues. | Read before selecting runbook Step 6 or another remaining operation. |
 | [validation/gpu-smoke/20261107-smoke02/home-cache-verification.json](validation/gpu-smoke/20261107-smoke02/home-cache-verification.json) | Complete 572-file home-cache hash, size, and index check after recovered test cleanup. | All files passed. Read with the five-minute smoke-test result. |
@@ -368,7 +348,6 @@ clone; use the essential-assets baseline index for durable comparison data.
 | [scripts/summarize-database-compatibility.py](scripts/summarize-database-compatibility.py) | Reusable compatibility test or reporting entry point. | See the compatibility report for use and limitations. |
 | [docker/test-database-compatibility.py](docker/test-database-compatibility.py) | Reusable compatibility test or reporting entry point. | See the compatibility report for use and limitations. |
 | [docker/test-database-retrieval.py](docker/test-database-retrieval.py) | Reusable compatibility test or reporting entry point. | See the compatibility report for use and limitations. |
-| [docker/reindex-compatibility-serial.py](docker/reindex-compatibility-serial.py) | Reusable compatibility test or reporting entry point. | See the compatibility report for use and limitations. |
 | [compatibility batch tuning](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/batch-tuning.json) | Provider batch and concurrency baseline. | Reusable baseline moved to essential assets. |
 | [validation/compatibility/2026-11-10/container-stats.jsonl](validation/compatibility/2026-11-10/container-stats.jsonl) | Empty CPU-series capture retained as failed measurement evidence. | See the compatibility report for use and limitations. |
 | [compatibility frontmatter repair](../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/copy-frontmatter-repair.json) | Copy-only YAML-alias repair invariant. | Reusable repair baseline moved to essential assets. |

@@ -204,10 +204,11 @@ The following commands operate only on the active disposable test containers:
 
 ```bash
 docker exec bm-compat-app python /test/test-database-compatibility.py --repair-notion
-docker exec bm-compat-app python /test/reindex-compatibility-serial.py
+docker exec bm-compat-app python /test/test-database-compatibility.py --serial-codex
 docker exec bm-compat-app python /test/test-database-retrieval.py --graphs-only
 ```
 
+The serial action uses the shared file-index helper through the read-only assets mount. It then refreshes Codex embeddings.
 Despite its historical name, `--graphs-only` also repeats the twenty semantic/hybrid checks after repairs.
 Inspect final graph parity, unchanged originals, embedding readiness, and query rankings in `retrieval.json`.
 Do not equate nonempty search results with correct answers.

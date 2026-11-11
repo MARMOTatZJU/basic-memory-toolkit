@@ -83,13 +83,7 @@ Source: [NVIDIA CUDA on WSL](https://docs.nvidia.com/cuda/wsl-user-guide/index.h
 
 ## Basic Memory connection settings
 
-| Setting | Value for the selected Compose deployment |
-| --- | --- |
-| `BASIC_MEMORY_SEMANTIC_EMBEDDING_PROVIDER` | `openai` |
-| `BASIC_MEMORY_SEMANTIC_EMBEDDING_API_BASE` | `http://ollama:11434/v1` |
-| `BASIC_MEMORY_SEMANTIC_EMBEDDING_API_KEY` | `ollama`, a local placeholder accepted by this server |
-| `BASIC_MEMORY_SEMANTIC_EMBEDDING_MODEL` | Exact name of the installed embedding model |
-| `BASIC_MEMORY_SEMANTIC_EMBEDDING_DIMENSIONS` | Actual number of values in each returned vector |
+The saved Compose file defines the provider, endpoint, model, dimensions, and prefixes. Use the installation entry points for the selected values. [Compose file](../../basic-memory-installation/docker/compose.yaml) · [Compose endpoints](../../basic-memory-installation/ENTRY-POINTS.md#5-compose-endpoints-and-persistent-paths)
 
 Here, `openai` selects the API format. It does not require a hosted OpenAI service.
 The Compose service name `ollama` resolves between containers on the same network.
@@ -126,17 +120,4 @@ Sources: [ONNX Runtime requirements](https://onnxruntime.ai/docs/execution-provi
 
 ## Acceptance procedure
 
-1. Complete the host GPU check in [chapter 25](25-headless-wsl2-docker.md#step-7-verify-container-gpu-access).
-2. Start Ollama with GPU access and persistent model storage.
-3. Download the selected embedding model through Ollama.
-4. Send one embedding request from the Basic Memory container.
-5. Confirm the returned model output dimensions.
-6. Inspect Ollama's logs and device placement during inference.
-7. Configure Basic Memory with those verified values.
-8. Index disposable notes and rebuild their embeddings.
-9. Run semantic and hybrid queries against those notes.
-10. Restart the services and confirm persistent state and retrieval.
-
-`nvidia-smi` proves visibility. It does not prove that a particular embedding operation executes on the GPU.
-Likewise, an ONNX provider list proves availability, not complete model execution on that provider.
-Record model identity, runtime/image versions, vector dimensions, and test outcomes after validation.
+The installation bundle owns the GPU verification and application acceptance procedures. A device visibility check confirms GPU access. Use the inference evidence to verify that Ollama executes the embedding model on the GPU. An ONNX provider list confirms provider availability for the direct FastEmbed option. Inspect execution to verify that the provider runs the model. [GPU smoke test](../../basic-memory-installation/docs/gpu-smoke-test.md) · [Application acceptance](../../basic-memory-installation/docs/validation-and-open-items.md#acceptance-procedure)

@@ -196,13 +196,13 @@ All copied assets came from:
 
 Specifically:
 
-- `scripts/*` → `scripts/`
-- `skills/basic-memory-global-file-adapter/references/*` → `references/basic-memory-workflows/`
+- The reusable database scripts now live in `scripts/`.
+- `references/basic-memory-workflows/` holds the shared workflow references.
 - `vendor/basic-memory/{NOTE-FORMAT.md,docs/DOMAIN_MODEL.md,docs/ARCHITECTURE.md,LICENSE}`
   → `references/upstream-basic-memory/`
 - `synchronization-2026-11-03/baseline/schema/*` → `templates/schemas/`
 - `semantic/hybrid-config.json` and the baseline writing policy → `templates/config/`
-- `reports/dependency-audit-2026-11-04/*` → `reference-audits/basic-memory-1.0.0-wsl2/`
+- `reference-audits/basic-memory-1.0.0-wsl2/` holds the November 4 dependency audit.
 - lightweight model metadata → `semantic/models/multilingual-e5-small/`
 
 The README and model placeholder are the only new explanatory files.
@@ -227,7 +227,7 @@ Typical workflow: capture selected API histories, recover visible local-log even
 
 The canonical reader now resolves historical evidence through an optional `registry/evidence-roots.json` file with `version: 1` and a `roots` list of `from`/`to` path prefixes. Every resolved snapshot still undergoes its recorded SHA-256 check. Escapes outside the declared destination root are rejected. This permits relocating evidence without rewriting unchanged source records.
 
-The default store resolver discovers the current `basic-memory-databases/MARMOTatZJU-s-Notion` layout beneath an ancestor directory, while preserving an explicit `CANONICAL_ROOT` override and the historical fallback. The same changes are applied to the active toolkit workspace helpers.
+The default store resolver discovers the current `basic-memory-databases/MARMOTatZJU-s-Notion` layout beneath an ancestor directory, while preserving an explicit `CANONICAL_ROOT` override and the historical fallback. Both workspaces use the shared helpers in this bundle.
 
 ## Basic Memory runtime compatibility utilities (2026-11-11)
 
@@ -266,6 +266,8 @@ best tested throughput. That value is a measured starting point, not a universal
 default. Read the database workspace skill before a migration or in-place edit.
 
 ## Runtime validation baselines (2026-11-11 curation)
+
+The [November 11 Notion validation result](reports/notion-validation-2026-11-11.json) records the saved structural check. Run the current validator for a fresh report.
 
 The [runtime validation baseline index](reference-baselines/runtime-validation/README.md)
 contains the reusable result summaries and telemetry moved from the installation

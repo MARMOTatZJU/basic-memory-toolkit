@@ -536,10 +536,9 @@ The durable result, GPU samples, and telemetry summaries are in the
 The generated local run folders retain:
 
 - `commands.log` and `ollama-server.log` with operational output and sanitized server diagnostics;
-- `inputs/` preserves the exact executed script/configuration copies. These copies are historical evidence, not current entry points.
+- Each run folder retains the exact host wrapper used for that run. The operation records identify the Git revision for the shared inputs.
 - Smoke02 also includes `post-cleanup-gpu.csv`, `home-cache-verification.json`, and `cleanup-recovery.json`.
-- [smoke02 recovery/cleanup.py](validation/gpu-smoke/20261107-smoke02/recovery/cleanup.py) is a one-time recorded recovery for a specific removed staging path. Do not use it as a general cleanup command.
-- [smoke02 recovery/inputs/scripts/run-gpu-smoke.py](validation/gpu-smoke/20261107-smoke02/recovery/inputs/scripts/run-gpu-smoke.py) preserves the later ownership-repair fix. The active helper remains scripts/run-gpu-smoke.py.
+- The cleanup receipt documents the one-time recovery. The current [host wrapper](scripts/run-gpu-smoke.py) includes the later ownership repair.
 
 [smoke02 launch evidence](validation/gpu-smoke/20261107-smoke02-launch.json) records the Windows launcher failure and successful Docker-group route.
 Both runs used public text. Neither established complete Basic Memory application acceptance.
@@ -595,9 +594,8 @@ Outputs are under `validation/compatibility/<run-id>/`. No note bodies are expor
 | Entry point | Purpose, effects, and verification |
 | --- | --- |
 | [scripts/run-database-compatibility.py](scripts/run-database-compatibility.py) | Use `start`, `test`, `retrieve`, or `cleanup`, always with `--run-id NAME`. Creates an internal network, copied-data volume, and two temporary containers. Rejects existing output folders on start. Test actions sample GPU use. Cleanup removes temporary data and containers. |
-| [docker/test-database-compatibility.py](docker/test-database-compatibility.py) | Runs inside `bm-compat-app`. Imports copied projects and builds GPU vectors through a local timing proxy. `--repair-notion` expands unsupported aliases in copies. `--repair-codex` retains the unsuccessful standard full-index experiment. Check each recorded exit code. |
+| [docker/test-database-compatibility.py](docker/test-database-compatibility.py) | Runs inside `bm-compat-app`. Imports copied projects and builds GPU vectors through a local timing proxy. `--repair-notion` expands unsupported aliases in copies. `--serial-codex` uses the shared serial index helper on the disposable Codex copy. It refreshes embeddings in a separate phase. Check each recorded exit code. |
 | [docker/test-database-retrieval.py](docker/test-database-retrieval.py) | Runs inside the application container. Tests reads, ten sample questions, graph traversal, vector batches, query concurrency, and original-file hashes. Saves frontmatter diagnostics. `--graphs-only` repeats graph checks and final semantic/hybrid queries after repairs. |
-| [docker/reindex-compatibility-serial.py](docker/reindex-compatibility-serial.py) | Applies the tested serial SQLite indexing workaround only to the disposable Codex project. Uses a Basic Memory 1.0.0 internal adapter. Keeps GPU embedding separate. Expected result: 128 files and no indexing failures. |
 | [scripts/summarize-database-compatibility.py](scripts/summarize-database-compatibility.py) | Reads an exported result directory and writes `metrics-summary.json`. Calculates phase GPU statistics and request overlap. Does not run inference or access the original databases. |
 
 The standard CLI showed SQLite locking failures even after changes to file-batch configuration.

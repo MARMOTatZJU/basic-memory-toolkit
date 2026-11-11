@@ -20,6 +20,9 @@ def run(*args,check=True):
  if check and r.returncode:raise RuntimeError(r.stderr)
  return r.stdout.strip()
 if a.action=='start':
+ assets = B.parent / 'basic-memory-database-workspace-essential-assets'
+ if not (assets / 'scripts/reindex_basic_memory_serial.py').is_file():
+  raise SystemExit('The shared serial indexing helper is missing')
  for kind,name in [('container','bm-compat-app'),('container','bm-compat-ollama'),('volume',volume),('network',network)]:
   if subprocess.run(['docker',kind,'inspect',name],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0:raise SystemExit('Existing test resource: '+name+'. Inspect or clean up first.')
  run('volume','create',volume);run('network','create','--internal',network)
@@ -43,7 +46,7 @@ print(json.dumps(summaries))
  run('run','-d','--name','bm-compat-ollama','--network',network,'--network-alias','ollama','--gpus','all','-v',f'{volume}:/work','--tmpfs','/root/.ollama:rw,size=8m','-e','OLLAMA_MODELS=/work/models','-e','OLLAMA_KEEP_ALIVE=30m','-e','OLLAMA_DEBUG=1',pins['BM_OLLAMA_IMAGE'])
  env={'BASIC_MEMORY_CONFIG_DIR':'/work/state','BASIC_MEMORY_HOME':'/work/home','BASIC_MEMORY_AUTO_UPDATE':'false','BASIC_MEMORY_FORCE_LOCAL':'true','BASIC_MEMORY_SEMANTIC_EMBEDDING_PROVIDER':'openai','BASIC_MEMORY_SEMANTIC_EMBEDDING_API_BASE':'http://ollama:11434/v1','BASIC_MEMORY_SEMANTIC_EMBEDDING_API_KEY':'ollama','BASIC_MEMORY_SEMANTIC_EMBEDDING_MODEL':'nomic-embed-text:v1.5','BASIC_MEMORY_SEMANTIC_EMBEDDING_DIMENSIONS':'768','BASIC_MEMORY_SEMANTIC_EMBEDDING_DOCUMENT_PREFIX':'search_document: ','BASIC_MEMORY_SEMANTIC_EMBEDDING_QUERY_PREFIX':'search_query: ','PYTHONDONTWRITEBYTECODE':'1'}
  flags=[x for k,v in env.items() for x in ['-e',k+'='+v]]
- run('run','-d','--name','bm-compat-app','--no-healthcheck','--network',network,'-v',f'{volume}:/work','-v',f'{B/"docker"}:/test:ro','-v',f'{B.parents[1]/"basic-memory-databases"}:/originals:ro','-v',f'{O}:/results',*flags,'--entrypoint','sleep',app,'infinity')
+ run('run','-d','--name','bm-compat-app','--no-healthcheck','--network',network,'-v',f'{volume}:/work','-v',f'{B/"docker"}:/test:ro','-v',f'{assets}:/assets:ro','-v',f'{B.parents[1]/"basic-memory-databases"}:/originals:ro','-v',f'{O}:/results',*flags,'--entrypoint','sleep',app,'infinity')
  print('Started bm-compat-app and bm-compat-ollama. No host ports. Originals mounted read-only.')
 elif a.action in ('test','retrieve'):
  mounted=run('inspect','--format','{{range .Mounts}}{{if eq .Destination "/results"}}{{.Source}}{{end}}{{end}}','bm-compat-app')

@@ -2,7 +2,7 @@
 """Run corpus import and retrieval tests inside the disposable application container.
 No note bodies or embedding input text are written to the exported results.
 """
-import sys,argparse,hashlib,json,os,sqlite3,subprocess,threading,time,urllib.request,urllib.error
+import sys,argparse,asyncio,hashlib,json,os,sqlite3,subprocess,threading,time,urllib.request,urllib.error
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 OUT=Path('/results'); WORK=Path('/work'); phase='startup'
@@ -91,9 +91,44 @@ def main():
  latest={c['label']:c['exit_code'] for c in REPORT['commands']}
  REPORT['status']='indexed_with_errors' if any(latest.get(p+s,1) for p in PROJECTS for s in ['-index','-embeddings']) else 'indexed'
  save();mark(REPORT['status'])
+def repair_codex_serially():
+    from basic_memory.config import ConfigManager
+    from loguru import logger
+
+    if Path(ConfigManager().config.database_path) != WORK / "state/memory.db":
+        raise RuntimeError("Serial repair requires the disposable compatibility database")
+    sys.path.insert(0, "/assets/scripts")
+    from reindex_basic_memory_serial import reindex
+
+    logger.remove()
+    mark("codex-serial-index-repair")
+    result = asyncio.run(reindex("codex", WORK / PROJECTS["codex"], force_full=True))
+    report = {
+        "seconds": result["seconds"],
+        "files": result["files_observed"],
+        "enqueued": result["files_enqueued"],
+        "batches": result["batches"],
+        "failures": result["failures"],
+        "index_max_concurrent": result["index_max_concurrent"],
+        "batch_size": result["batch_size"],
+        "adapter": "Basic Memory 1.0.0 LocalProjectIndexRuntimeFactory",
+    }
+    (OUT / "serial-index-repair.json").write_text(json.dumps(report, indent=2))
+    print(json.dumps(report), flush=True)
+    if report["failures"]:
+        raise RuntimeError("Serial indexing still failed")
+    cli(["reindex", "--embeddings", "--project", "codex"], "codex-serial-embedding-refresh")
+    inspect_state()
+
+
 if __name__=='__main__':
+ parser = argparse.ArgumentParser(description=__doc__)
+ repairs = parser.add_mutually_exclusive_group()
+ repairs.add_argument("--repair-notion", action="store_true")
+ repairs.add_argument("--serial-codex", action="store_true")
  try:
-  if '--repair-notion' in sys.argv:
+  args = parser.parse_args()
+  if args.repair_notion:
    import re,yaml
    from basic_memory.file_utils import parse_frontmatter
    class NoAliasDumper(yaml.SafeDumper):
@@ -112,11 +147,8 @@ if __name__=='__main__':
    cli(['reindex','--search','--project','notion'],'notion-index-repair')
    cli(['reindex','--embeddings','--project','notion'],'notion-embedding-repair')
    inspect_state()
-  elif '--repair-codex' in sys.argv:
-   cli(['reindex','--full','--search','--project','codex'],'codex-full-index-repair')
-   inspect_state()
-   cli(['reindex','--embeddings','--project','codex'],'codex-embedding-repair')
-   inspect_state()
+  elif args.serial_codex:
+   repair_codex_serially()
   else:main()
  except Exception as e:
   REPORT['status']='error';REPORT['exception']=type(e).__name__+': '+str(e);save();raise

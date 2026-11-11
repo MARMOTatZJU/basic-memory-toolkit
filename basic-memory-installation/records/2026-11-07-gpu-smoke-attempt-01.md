@@ -61,9 +61,11 @@ Raw logs and historical executed inputs remain under
 | baseline telemetry-summary.json | Device-wide statistics and measurement scope |
 | ollama-server.log | Sanitized server and GPU runner diagnostics |
 | inputs/scripts/run-gpu-smoke.py | Exact host script used in this run |
-| inputs/docker/run-gpu-smoke.py | Exact timed workload used in this run |
-| inputs/docker/check-embedding-runtime.py | Exact dimensions and GPU runner probe |
-| inputs/config/versions.env | Exact image, model, interpreter, and application pins |
+
+Git revision `47598653c774353c2431b05fd3fe1d0f1893136c` preserves the exact shared inputs for this run.
+- [Version pins](../config/versions.env)
+- [Container workload](../docker/run-gpu-smoke.py)
+- [Embedding runtime probe](../docker/check-embedding-runtime.py)
 
 The installation and essential-assets READMEs index their respective outputs.
 The original model cache remains in the separately indexed WSL home asset folder.
