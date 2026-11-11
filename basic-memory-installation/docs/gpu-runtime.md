@@ -48,6 +48,21 @@ The Compose service name `ollama` resolves between containers on the same networ
 For two processes directly inside the same WSL distribution, the endpoint would instead use `http://127.0.0.1:11434/v1`.
 The saved deployment uses separate containers.
 
+## Embedding selection and multilingual TODO
+
+The selected Basic Memory provider remains `nomic-embed-text:v1.5`. It is the
+only embedding model configured through the Basic Memory environment variables
+above. `nomic-embed-text-v2-moe` is not selected.
+
+An optional `multilingual-e5-small` index is future work for stores with
+substantial non-English content. It would be an external companion retrieval
+channel, not a second vector type inside the Nomic table. The stock application
+image does not contain its PyTorch/Transformers runtime or model weights.
+Keep its 384-dimensional vectors separate from Nomic's 768-dimensional vectors
+and fuse only result rankings. See the
+[companion embedding TODO](companion-multilingual-embeddings-todo.md) for the
+required evaluation and lifecycle gates.
+
 ## Model identity and limits
 
 The selected Ollama tag is `nomic-embed-text:v1.5`.

@@ -16,6 +16,13 @@ The pinned **nomic-embed-text:v1.5** model uses F16 weights and returned **768 f
 Ollama reported the model in GPU memory. Actual runner mappings confirmed CUDA Runtime **12.8.90** and cuBLAS **12.8.5.5**.
 The RTX 5090 Laptop GPU retained Windows driver **572.84**.
 
+**Embedding choice:** Basic Memory remains on Nomic v1.5. A separate
+multilingual-E5-small channel is recorded only as a future companion-index
+TODO for multilingual stores. Its 384-dimensional vectors must remain separate
+from Nomic's 768-dimensional vectors; only ranked results may be fused.
+Nomic v2 is not selected. Read the
+[companion embedding TODO](docs/companion-multilingual-embeddings-todo.md).
+
 Use the [Order 15 guide](docs/order-15-model.md), [completed result](records/2026-11-07-order-15-model-attempt-01.md), and [runtime evidence](reference/order-15-model-runtime-2026-11-07.json).
 The native model store is `/home/ydxu_/basic-memory-installation-assets/models/ollama/nomic-embed-text/v1.5/0a109f422b47/store`.
 The home cache contains **572 verified files plus index.json**, with full source, version, size, and SHA-256 records.
@@ -56,6 +63,7 @@ Each row below is a separate entry point. Do not execute the table as one sequen
 | Operation | Entry point | Prerequisites and effects |
 | --- | --- | --- |
 | Operate the repaired databases | [Current in-place repair result](docs/database-in-place-fix.md) | Agent entry points, runtime filter, serial import, current counts, and machine evidence. |
+| Review the optional multilingual companion design | [Companion embedding TODO](docs/companion-multilingual-embeddings-todo.md) | Future E5 channel alongside BM's unchanged Nomic v1.5 index; no current installation action. |
 | Test existing database compatibility | [Container test procedure](docs/database-compatibility.md#repeat-and-resume) | Read/search/graph checks on copies, GPU benchmarks, and explicit cleanup. Original folders are mounted read-only. |
 | Find detailed technical entry points | [ENTRY-POINTS.md](ENTRY-POINTS.md) | Image identities and archives, every active script/configuration, effects, privileges, outputs, and recovery routes. |
 | Start using the selected installation | [Quick start](QUICK-START.md) | First deployment, verification, notes, search, MCP, and daily commands. Persistent deployment remains pending in the saved records. |
@@ -176,6 +184,7 @@ clone; use the essential-assets baseline index for durable comparison data.
 | [docs/requirements-and-decisions.md](docs/requirements-and-decisions.md) | Requested scope and selected architecture. | Review before changing deployment choices. |
 | [docs/dependencies.md](docs/dependencies.md) | All direct Python requirements, extras, versions, and lock distinctions. | Review application package changes here. |
 | [docs/gpu-runtime.md](docs/gpu-runtime.md) | GPU runtime placement, model identity, API settings, and inference limits. | Use before model configuration or GPU tests. |
+| [docs/companion-multilingual-embeddings-todo.md](docs/companion-multilingual-embeddings-todo.md) | Future optional multilingual-E5 companion design, isolation rules, and acceptance gates. | Review before proposing a second semantic index; it does not change the current Nomic v1.5 deployment. |
 | [docs/host-observations.md](docs/host-observations.md) | Historical host inspection and command results. | Compare with fresh observations before installation. |
 | [docs/validation-and-open-items.md](docs/validation-and-open-items.md) | Acceptance procedure, pending checks, and evidence limits. | Use to decide whether an operation passed. |
 | [docs/sources-and-provenance.md](docs/sources-and-provenance.md) | First-party sources, local evidence, and reference provenance. | Check a claim or revisit version research. |

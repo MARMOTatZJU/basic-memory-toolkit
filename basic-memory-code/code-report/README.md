@@ -21,6 +21,11 @@ It reuses the repository's record format, Task schema, and shipped workflow guid
 Use [usage strategy and token use](20-installation-strategy-token-use-gpu-and-dependencies.md) to compare both approaches.
 Chapters 21–25 own the installation requirements and procedures. Custom workspace scripts are outside that installation scope.
 
+The selected Basic Memory semantic model is Nomic v1.5. Chapter 24 now records
+an optional future multilingual-E5 companion channel as a TODO. It keeps the
+two vector spaces separate and permits only rank-level fusion; Nomic v2 is not
+selected for the current deployment.
+
 The original survey and inventories remain fixed to the earlier commit above.
 In 1.0, the `bm_*` tools replace the earlier MCP registrations.
 Use the tutorial for current 1.0 command examples.
@@ -82,7 +87,7 @@ Read 23 for a direct installation into a separate Python environment.
 | [21 — Runtime installation guide](21-runtime-installation-guide.md) | Scope, headless deployment choice, reading order, and evidence boundaries. |
 | [22 — Runtime dependencies](22-runtime-dependencies.md) | Exact runtime requirements, optional extras, native libraries, services, and build/development requirements. |
 | [23 — Separate Python environments](23-python-environments.md) | Environment comparison, source-lock installation, state isolation, and validation. |
-| [24 — GPU embeddings](24-gpu-embeddings.md) | RTX 5090 runtime choices, local Ollama configuration, and inference acceptance checks. |
+| [24 — GPU embeddings](24-gpu-embeddings.md) | RTX 5090 runtime choices, selected Nomic v1.5 contract, future multilingual-E5 companion TODO, and inference acceptance checks. |
 | [25 — Headless WSL2 and Docker](25-headless-wsl2-docker.md) | Terminal-only Docker host setup, NVIDIA container support, and application deployment requirements. |
 
 ### Understand the implementation

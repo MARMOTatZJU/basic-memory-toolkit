@@ -9,6 +9,36 @@ Ollama executes the model on the NVIDIA GPU when its runtime supports the device
 Status: source-checked design. GPU inference and end-to-end container retrieval have not run in this report update.
 Custom workspace scripts are excluded.
 
+## Selected model and future multilingual companion
+
+The selected Basic Memory embedding contract is explicit:
+
+| Property | Selected value |
+| --- | --- |
+| Runtime | Local Ollama through the OpenAI-compatible provider |
+| Model | `nomic-embed-text:v1.5` |
+| Dimensions | 768 |
+| Document prefix | `search_document: ` |
+| Query prefix | `search_query: ` |
+| Primary store | Basic Memory SQLite/`sqlite-vec` state |
+
+Nomic v1.5 remains the current choice because the installation pins and has
+verified this exact model. `nomic-embed-text-v2-moe` is not selected.
+
+For a multilingual corpus, a future experiment may compute
+`intfloat/multilingual-e5-small` as an external companion channel. This is a
+TODO, not a Basic Memory feature or an installed image component. The E5 model
+uses 384-dimensional vectors and needs a separate PyTorch/Transformers runtime.
+The Basic Memory image does not include that runtime or the E5 weights.
+
+The vector spaces are incompatible. Never insert, average, concatenate, or
+compare E5 vectors with Nomic vectors. If the companion experiment proceeds,
+rank each channel independently and fuse record rankings only. Evaluate
+multilingual recall, latency, storage, stale-index rejection, backup, restore,
+and failure isolation before operational adoption. The installation TODO is
+documented in
+[`companion-multilingual-embeddings-todo.md`](../../basic-memory-installation/docs/companion-multilingual-embeddings-todo.md).
+
 ## What the GPU accelerates
 
 The GPU can accelerate embedding generation and compatible model-based reranking.
@@ -74,6 +104,9 @@ Source: [OpenAI-compatible provider](https://github.com/basicmachines-co/basic-m
 Apply the same settings to CLI and MCP processes that use the same project.
 After a model, provider, or dimension change, rebuild embeddings for that project.
 Use [chapter 17](17-user-tutorial.md#step-9-add-semantic-and-hybrid-retrieval) for the semantic workflow and readiness checks.
+
+An external companion index does not change these settings. It owns its own
+model identity, source manifest, storage, and rebuild lifecycle.
 
 ## Direct FastEmbed alternative
 

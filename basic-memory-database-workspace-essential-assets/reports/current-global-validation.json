@@ -1,0 +1,116 @@
+{
+  "ok": true,
+  "records": 431,
+  "source_ids": 408,
+  "relations": 1403,
+  "internal_relations": 1403,
+  "boundary_relations": [],
+  "types": {
+    "note": 7,
+    "source_note": 404,
+    "task": 1,
+    "topic": 11,
+    "source_database": 4,
+    "schema": 4
+  },
+  "errors": [],
+  "known_partial_sources": [
+    {
+      "source_id": "24ff8d77a87b804bbf99d74c11c2f2aa",
+      "flags": {
+        "truncated": true,
+        "unknown_block_count": 2,
+        "unknown_block_ids": [
+          "394f8d77-a87b-80ff-9dd9-eefcafee39c1",
+          "394f8d77-a87b-802c-a79d-dc0d882e325b"
+        ]
+      }
+    },
+    {
+      "source_id": "1e4f8d77a87b80f9b828fdc10f6a02e2",
+      "flags": {
+        "truncated": true,
+        "unknown_block_count": 1,
+        "unknown_block_ids": [
+          "1e4f8d77-a87b-8050-b6c0-cae1a2764c87"
+        ]
+      }
+    },
+    {
+      "source_id": "412f8d77a87b8012b437f20cd36c1c7b",
+      "flags": {
+        "truncated": true,
+        "unknown_block_count": 1,
+        "unknown_block_ids": [
+          "412f8d77-a87b-80e8-a1a6-cc77fb80e828"
+        ]
+      }
+    }
+  ],
+  "validation_boundary": "Local structural and declared-schema checks; no domain or dictionary certification",
+  "checked_at": "2026-11-11T02:31:09.761312+00:00",
+  "root": "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-databases/MARMOTatZJU-s-Notion",
+  "canonical_root": "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-databases/MARMOTatZJU-s-Notion",
+  "record_count": 431,
+  "named_relation_count": 1403,
+  "notion_source_count": 408,
+  "type_counts": {
+    "note": 7,
+    "source_note": 404,
+    "task": 1,
+    "topic": 11,
+    "source_database": 4,
+    "schema": 4
+  },
+  "warnings": [
+    {
+      "kind": "source_omission_flags",
+      "sources": [
+        {
+          "source_id": "24ff8d77a87b804bbf99d74c11c2f2aa",
+          "flags": {
+            "truncated": true,
+            "unknown_block_count": 2,
+            "unknown_block_ids": [
+              "394f8d77-a87b-80ff-9dd9-eefcafee39c1",
+              "394f8d77-a87b-802c-a79d-dc0d882e325b"
+            ]
+          }
+        },
+        {
+          "source_id": "1e4f8d77a87b80f9b828fdc10f6a02e2",
+          "flags": {
+            "truncated": true,
+            "unknown_block_count": 1,
+            "unknown_block_ids": [
+              "1e4f8d77-a87b-8050-b6c0-cae1a2764c87"
+            ]
+          }
+        },
+        {
+          "source_id": "412f8d77a87b8012b437f20cd36c1c7b",
+          "flags": {
+            "truncated": true,
+            "unknown_block_count": 1,
+            "unknown_block_ids": [
+              "412f8d77-a87b-80e8-a1a6-cc77fb80e828"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "selected_view": null,
+  "coverage": {
+    "manifest": "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-databases/MARMOTatZJU-s-Notion/registry/source-inventory.json",
+    "manifest_entities": 408,
+    "authored_source_ids": 408,
+    "missing_cached_sources": [],
+    "unknown_sources": [],
+    "aliases": {},
+    "pending": [],
+    "exclusions": [],
+    "scope": "declared global manifest",
+    "complete_for_declared_manifest": false
+  }
+}
