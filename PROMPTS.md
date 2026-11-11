@@ -85,3 +85,9 @@ Help to clean up SPECIFY_HERE and pay attention to following points:
 - remove out dated elements and cleanup references to them if exists.
 - for duplicated elements, decide the sides to preserve and remove the other sides with their references
 ```
+
+### Report
+
+```markdown
+Make a "--oneline style" summary of operation items and write to `commit-message.txt` under the root path of the repo.
+```
