@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "samples": 301,
+  "scope": "Device-wide samples across warmup, timed workload, and final checks; not exclusive process accounting.",
+  "sampling_timezone": "Asia/Shanghai",
+  "first_timestamp": "2026/11/07 22:12:34.587",
+  "last_timestamp": "2026/11/07 22:17:37.432",
+  "gpu_percent": {
+    "minimum": 0.0,
+    "mean": 45.564784053156146,
+    "maximum": 53.0
+  },
+  "memory_MiB": {
+    "minimum": 74.0,
+    "mean": 718.3521594684386,
+    "maximum": 725.0
+  },
+  "power_W": {
+    "minimum": 7.43,
+    "mean": 84.97800664451827,
+    "maximum": 99.93
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "operation": "Enable Docker group access for ydxu_",
+  "authorization": "ok. resolve this issue for me.",
+  "started_at_utc": "2026-11-07T12:17:27.856047+00:00",
+  "status": "passed",
+  "commands": [
+    {
+      "command": [
+        "id",
+        "-nG",
+        "ydxu_"
+      ],
+      "exit_code": 0,
+      "stdout": "ydxu_ adm cdrom sudo dip plugdev users",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "stat",
+        "-c",
+        "%a %U %G",
+        "/var/run/docker.sock"
+      ],
+      "exit_code": 0,
+      "stdout": "660 root docker",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/usermod",
+        "-aG",
+        "docker",
+        "ydxu_"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "id",
+        "-nG",
+        "ydxu_"
+      ],
+      "exit_code": 0,
+      "stdout": "ydxu_ adm cdrom sudo dip plugdev users docker",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "getent",
+        "group",
+        "docker"
+      ],
+      "exit_code": 0,
+      "stdout": "docker:x:989:ydxu_",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "stat",
+        "-c",
+        "%a %U %G",
+        "/var/run/docker.sock"
+      ],
+      "exit_code": 0,
+      "stdout": "660 root docker",
+      "stderr": ""
+    }
+  ],
+  "groups_before": "ydxu_ adm cdrom sudo dip plugdev users",
+  "socket_before": "660 root docker",
+  "groups_after": "ydxu_ adm cdrom sudo dip plugdev users docker",
+  "docker_group": "docker:x:989:ydxu_",
+  "socket_after": "660 root docker",
+  "account_membership_change": "passed",
+  "existing_processes_require_group_refresh": true,
+  "finished_at_utc": "2026-11-07T12:18:08.157763+00:00",
+  "fresh_wsl_user_verification": {
+    "command": [
+      "/mnt/c/Windows/System32/wsl.exe",
+      "--distribution",
+      "Ubuntu-24.04",
+      "--user",
+      "ydxu_",
+      "--exec",
+      "/bin/sh",
+      "-c",
+      "id -nG && docker images --format \"{{.Repository}}:{{.Tag}} {{.ID}}\""
+    ],
+    "exit_code": 0,
+    "groups": "ydxu_ adm cdrom sudo dip plugdev users docker",
+    "docker_images_without_sudo": "passed",
+    "image_rows": 6
+  },
+  "service_restart": false,
+  "socket_permissions_changed": false
+}

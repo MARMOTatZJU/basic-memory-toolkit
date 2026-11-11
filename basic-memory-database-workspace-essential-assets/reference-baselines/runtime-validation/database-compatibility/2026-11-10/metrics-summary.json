@@ -1,0 +1,461 @@
+{
+  "sampling": "One-second, whole-device NVIDIA samples from inside Ollama. UTC timestamps. Short phases have few samples.",
+  "phases": {
+    "notion-register": {
+      "samples": 4,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 59.0,
+      "power_max_w": 7.27
+    },
+    "notion-index": {
+      "samples": 132,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 59.0,
+      "power_max_w": 7.4
+    },
+    "version": {
+      "samples": 2,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.33
+    },
+    "notion-embeddings": {
+      "samples": 123,
+      "gpu_mean_percent": 14.56910569105691,
+      "gpu_max_percent": 23.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 51.59
+    },
+    "codex-register": {
+      "samples": 6,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 17.83
+    },
+    "codex-index": {
+      "samples": 98,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.86
+    },
+    "codex-embeddings": {
+      "samples": 414,
+      "gpu_mean_percent": 26.731884057971016,
+      "gpu_max_percent": 69.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 77.74
+    },
+    "indexed": {
+      "samples": 134,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 34.17
+    },
+    "notion-read": {
+      "samples": 1,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.64
+    },
+    "notion-query-semantic": {
+      "samples": 1,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.57
+    },
+    "notion-query-hybrid": {
+      "samples": 2,
+      "gpu_mean_percent": 11.0,
+      "gpu_max_percent": 15.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 15.65
+    },
+    "codex-query-semantic": {
+      "samples": 4,
+      "gpu_mean_percent": 1.75,
+      "gpu_max_percent": 7.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 15.14
+    },
+    "codex-query-hybrid": {
+      "samples": 3,
+      "gpu_mean_percent": 2.6666666666666665,
+      "gpu_max_percent": 8.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 13.28
+    },
+    "benchmark-b2-c1": {
+      "samples": 6,
+      "gpu_mean_percent": 11.666666666666666,
+      "gpu_max_percent": 18.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 39.92
+    },
+    "benchmark-b32-c4": {
+      "samples": 2,
+      "gpu_mean_percent": 38.0,
+      "gpu_max_percent": 39.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 91.4
+    },
+    "benchmark-b128-c4": {
+      "samples": 2,
+      "gpu_mean_percent": 39.5,
+      "gpu_max_percent": 41.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 97.06
+    },
+    "benchmark-b512-c4": {
+      "samples": 3,
+      "gpu_mean_percent": 26.333333333333332,
+      "gpu_max_percent": 29.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 76.52
+    },
+    "warm-query-c1": {
+      "samples": 1,
+      "gpu_mean_percent": 1.0,
+      "gpu_max_percent": 1.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 20.83
+    },
+    "warm-query-c4": {
+      "samples": 3,
+      "gpu_mean_percent": 0.3333333333333333,
+      "gpu_max_percent": 1.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 19.53
+    },
+    "retrieval-completed": {
+      "samples": 98,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 17.83
+    },
+    "notion-graph-retry": {
+      "samples": 2,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.39
+    },
+    "codex-graph-retry": {
+      "samples": 228,
+      "gpu_mean_percent": 0.008771929824561403,
+      "gpu_max_percent": 2.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 23.63
+    },
+    "codex-full-index-repair": {
+      "samples": 68,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.49
+    },
+    "codex-embedding-repair": {
+      "samples": 74,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 19.54
+    },
+    "notion-index-repair": {
+      "samples": 4,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.35
+    },
+    "notion-embedding-repair": {
+      "samples": 74,
+      "gpu_mean_percent": 0.43243243243243246,
+      "gpu_max_percent": 32.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 31.15
+    },
+    "codex-serial-index-repair": {
+      "samples": 72,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.31
+    },
+    "codex-serial-embedding-refresh": {
+      "samples": 102,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.22
+    },
+    "notion-post-repair-semantic": {
+      "samples": 1,
+      "gpu_mean_percent": 0.0,
+      "gpu_max_percent": 0.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 7.05
+    },
+    "notion-post-repair-hybrid": {
+      "samples": 2,
+      "gpu_mean_percent": 10.5,
+      "gpu_max_percent": 14.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 12.27
+    },
+    "codex-post-repair-hybrid": {
+      "samples": 48,
+      "gpu_mean_percent": 0.16666666666666666,
+      "gpu_max_percent": 8.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 10.85
+    },
+    "codex-post-repair-semantic": {
+      "samples": 2,
+      "gpu_mean_percent": 3.5,
+      "gpu_max_percent": 7.0,
+      "memory_max_mib": 716.0,
+      "power_max_w": 10.27
+    }
+  },
+  "requests": {
+    "benchmark-b128-c4": {
+      "requests": 4,
+      "inputs": 512,
+      "statuses": {
+        "200": 4
+      },
+      "batch_sizes": {
+        "128": 4
+      },
+      "mean_seconds": 1.543191373348236,
+      "max_overlapping_requests": 4
+    },
+    "benchmark-b2-c1": {
+      "requests": 256,
+      "inputs": 512,
+      "statuses": {
+        "200": 256
+      },
+      "batch_sizes": {
+        "2": 256
+      },
+      "mean_seconds": 0.017914501950144768,
+      "max_overlapping_requests": 1
+    },
+    "benchmark-b32-c4": {
+      "requests": 16,
+      "inputs": 512,
+      "statuses": {
+        "200": 16
+      },
+      "batch_sizes": {
+        "32": 16
+      },
+      "mean_seconds": 0.7342637330293655,
+      "max_overlapping_requests": 4
+    },
+    "benchmark-b512-c4": {
+      "requests": 1,
+      "inputs": 512,
+      "statuses": {
+        "200": 1
+      },
+      "batch_sizes": {
+        "512": 1
+      },
+      "mean_seconds": 2.7044477462768555,
+      "max_overlapping_requests": 1
+    },
+    "codex-embedding-repair": {
+      "requests": 1,
+      "inputs": 16,
+      "statuses": {
+        "200": 1
+      },
+      "batch_sizes": {
+        "16": 1
+      },
+      "mean_seconds": 0.3136909008026123,
+      "max_overlapping_requests": 1
+    },
+    "codex-embeddings": {
+      "requests": 386,
+      "inputs": 36376,
+      "statuses": {
+        "200": 386
+      },
+      "batch_sizes": {
+        "32": 132,
+        "128": 242,
+        "121": 1,
+        "92": 1,
+        "91": 1,
+        "114": 1,
+        "110": 1,
+        "120": 1,
+        "123": 1,
+        "77": 1,
+        "113": 1,
+        "87": 1,
+        "33": 1,
+        "95": 1
+      },
+      "mean_seconds": 1.1702982736992713,
+      "max_overlapping_requests": 4
+    },
+    "codex-post-repair-hybrid": {
+      "requests": 4,
+      "inputs": 4,
+      "statuses": {
+        "200": 4
+      },
+      "batch_sizes": {
+        "1": 4
+      },
+      "mean_seconds": 0.03371709585189819,
+      "max_overlapping_requests": 1
+    },
+    "codex-post-repair-semantic": {
+      "requests": 4,
+      "inputs": 4,
+      "statuses": {
+        "200": 4
+      },
+      "batch_sizes": {
+        "1": 4
+      },
+      "mean_seconds": 0.025967001914978027,
+      "max_overlapping_requests": 1
+    },
+    "codex-query-hybrid": {
+      "requests": 4,
+      "inputs": 4,
+      "statuses": {
+        "200": 4
+      },
+      "batch_sizes": {
+        "1": 4
+      },
+      "mean_seconds": 0.02969413995742798,
+      "max_overlapping_requests": 1
+    },
+    "codex-query-semantic": {
+      "requests": 4,
+      "inputs": 4,
+      "statuses": {
+        "200": 4
+      },
+      "batch_sizes": {
+        "1": 4
+      },
+      "mean_seconds": 0.029605388641357422,
+      "max_overlapping_requests": 1
+    },
+    "notion-embedding-repair": {
+      "requests": 1,
+      "inputs": 66,
+      "statuses": {
+        "200": 1
+      },
+      "batch_sizes": {
+        "66": 1
+      },
+      "mean_seconds": 0.7604930400848389,
+      "max_overlapping_requests": 1
+    },
+    "notion-embeddings": {
+      "requests": 3750,
+      "inputs": 7500,
+      "statuses": {
+        "200": 3750
+      },
+      "batch_sizes": {
+        "2": 3750
+      },
+      "mean_seconds": 0.021078924242655436,
+      "max_overlapping_requests": 1
+    },
+    "notion-post-repair-hybrid": {
+      "requests": 6,
+      "inputs": 6,
+      "statuses": {
+        "200": 6
+      },
+      "batch_sizes": {
+        "1": 6
+      },
+      "mean_seconds": 0.027650872866312664,
+      "max_overlapping_requests": 1
+    },
+    "notion-post-repair-semantic": {
+      "requests": 6,
+      "inputs": 6,
+      "statuses": {
+        "200": 6
+      },
+      "batch_sizes": {
+        "1": 6
+      },
+      "mean_seconds": 0.028414090474446613,
+      "max_overlapping_requests": 1
+    },
+    "notion-query-hybrid": {
+      "requests": 6,
+      "inputs": 6,
+      "statuses": {
+        "200": 6
+      },
+      "batch_sizes": {
+        "1": 6
+      },
+      "mean_seconds": 0.024759888648986816,
+      "max_overlapping_requests": 1
+    },
+    "notion-query-semantic": {
+      "requests": 6,
+      "inputs": 6,
+      "statuses": {
+        "200": 6
+      },
+      "batch_sizes": {
+        "1": 6
+      },
+      "mean_seconds": 0.028113285700480144,
+      "max_overlapping_requests": 1
+    },
+    "warm-query-c1": {
+      "requests": 16,
+      "inputs": 16,
+      "statuses": {
+        "200": 16
+      },
+      "batch_sizes": {
+        "1": 16
+      },
+      "mean_seconds": 0.009529739618301392,
+      "max_overlapping_requests": 1
+    },
+    "warm-query-c4": {
+      "requests": 16,
+      "inputs": 16,
+      "statuses": {
+        "200": 16
+      },
+      "batch_sizes": {
+        "1": 16
+      },
+      "mean_seconds": 0.015035256743431091,
+      "max_overlapping_requests": 3
+    }
+  },
+  "container_cpu": {}
+}

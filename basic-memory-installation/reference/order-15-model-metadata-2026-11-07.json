@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "model": "nomic-embed-text:v1.5",
+  "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+  "model_blob_digest": "sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6",
+  "model_bytes": 274290656,
+  "blob_count": 4,
+  "all_blob_hashes_verified": true,
+  "gguf_version": 3,
+  "tensor_count": 112,
+  "metadata_count": 24,
+  "metadata_header_bytes": 749863,
+  "architecture": "nomic-bert",
+  "dimensions": 768,
+  "gguf_context_length": 2048,
+  "parameters": {
+    "num_ctx": 8192
+  },
+  "file_type": "F16",
+  "license": "Apache-2.0",
+  "config": {
+    "model_format": "gguf",
+    "model_family": "nomic-bert",
+    "model_families": [
+      "nomic-bert"
+    ],
+    "model_type": "137M",
+    "file_type": "F16",
+    "architecture": "amd64",
+    "os": "linux",
+    "rootfs": {
+      "type": "layers",
+      "diff_ids": [
+        "sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6",
+        "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "sha256:ce4a164fc04605703b485251fe9f1a181688ba0eb6badb80cc6335c0de17ca0d"
+      ]
+    }
+  },
+  "gguf_metadata": {
+    "general.architecture": "nomic-bert",
+    "general.name": "nomic-embed-text-v1.5",
+    "nomic-bert.block_count": 12,
+    "nomic-bert.context_length": 2048,
+    "nomic-bert.embedding_length": 768,
+    "nomic-bert.feed_forward_length": 3072,
+    "nomic-bert.attention.head_count": 12,
+    "nomic-bert.attention.layer_norm_epsilon": 9.999999960041972e-13,
+    "general.file_type": 1,
+    "nomic-bert.attention.causal": false,
+    "nomic-bert.pooling_type": 1,
+    "nomic-bert.rope.freq_base": 1000.0,
+    "tokenizer.ggml.token_type_count": 2,
+    "tokenizer.ggml.bos_token_id": 101,
+    "tokenizer.ggml.eos_token_id": 102,
+    "tokenizer.ggml.model": "bert",
+    "tokenizer.ggml.tokens": {
+      "element_type": 8,
+      "length": 30522,
+      "content_retained": false
+    },
+    "tokenizer.ggml.scores": {
+      "element_type": 6,
+      "length": 30522,
+      "content_retained": false
+    },
+    "tokenizer.ggml.token_type": {
+      "element_type": 5,
+      "length": 30522,
+      "content_retained": false
+    },
+    "tokenizer.ggml.unknown_token_id": 100,
+    "tokenizer.ggml.seperator_token_id": 102,
+    "tokenizer.ggml.padding_token_id": 0,
+    "tokenizer.ggml.cls_token_id": 101,
+    "tokenizer.ggml.mask_token_id": 103
+  },
+  "scope": "Artifact, native store layout, and declared metadata; embedding execution is a separate check."
+}

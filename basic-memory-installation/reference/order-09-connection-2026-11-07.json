@@ -1,0 +1,141 @@
+{
+  "recorded_date": "2026-11-07",
+  "status": "verified_alternative_route_available",
+  "verification_enabled": true,
+  "probes": {
+    "canonical_key": {
+      "arguments": [
+        "https://nvidia.github.io/libnvidia-container/gpgkey"
+      ],
+      "exit_code": 35,
+      "http_remote_verify": "000 198.18.4.24 1",
+      "stderr": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443",
+      "bytes": 0,
+      "sha256": null
+    },
+    "canonical_list": {
+      "arguments": [
+        "https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list"
+      ],
+      "exit_code": 56,
+      "http_remote_verify": "000 198.18.4.24 0",
+      "stderr": "curl: (56) Failure when receiving data from the peer",
+      "bytes": 0,
+      "sha256": null
+    },
+    "canonical_release": {
+      "arguments": [
+        "https://nvidia.github.io/libnvidia-container/stable/deb/amd64/Release"
+      ],
+      "exit_code": 35,
+      "http_remote_verify": "000 198.18.4.24 1",
+      "stderr": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443",
+      "bytes": 0,
+      "sha256": null
+    },
+    "pages_fixed_ipv4": {
+      "arguments": [
+        "--resolve",
+        "nvidia.github.io:443:185.199.108.153",
+        "https://nvidia.github.io/libnvidia-container/gpgkey"
+      ],
+      "exit_code": 35,
+      "http_remote_verify": "000 185.199.108.153 1",
+      "stderr": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443",
+      "bytes": 0,
+      "sha256": null
+    },
+    "raw_key": {
+      "arguments": [
+        "https://raw.githubusercontent.com/NVIDIA/libnvidia-container/gh-pages/gpgkey"
+      ],
+      "exit_code": 0,
+      "http_remote_verify": "200 198.18.4.20 0",
+      "stderr": "",
+      "bytes": 3195,
+      "sha256": "c880576d6cf75a48e5027a871bac70fd0421ab07d2b55f30877b21f1c87959c9"
+    },
+    "raw_list": {
+      "arguments": [
+        "https://raw.githubusercontent.com/NVIDIA/libnvidia-container/gh-pages/stable/deb/nvidia-container-toolkit.list"
+      ],
+      "exit_code": 0,
+      "http_remote_verify": "200 198.18.4.20 0",
+      "stderr": "",
+      "bytes": 147,
+      "sha256": "bc6cb10d15243cfcf5c1506c46d7fed4037ce16f84a3f592482cb4ac874c528f"
+    },
+    "raw_release": {
+      "arguments": [
+        "https://raw.githubusercontent.com/NVIDIA/libnvidia-container/gh-pages/stable/deb/amd64/Release"
+      ],
+      "exit_code": 22,
+      "http_remote_verify": "404 198.18.4.20 0",
+      "stderr": "curl: (22) The requested URL returned error: 404",
+      "bytes": 0,
+      "sha256": null
+    },
+    "raw_inrelease": {
+      "arguments": [
+        "https://raw.githubusercontent.com/NVIDIA/libnvidia-container/gh-pages/stable/deb/amd64/InRelease"
+      ],
+      "exit_code": 0,
+      "http_remote_verify": "200 198.18.4.20 0",
+      "stderr": "",
+      "bytes": 1477,
+      "sha256": "7fa8e870c5bf936c0f13178424b264ad940ddfbef5dfa113e4904713a0fe627a"
+    },
+    "docker_control": {
+      "arguments": [
+        "https://download.docker.com/linux/ubuntu/gpg"
+      ],
+      "exit_code": 0,
+      "http_remote_verify": "200 198.18.4.23 0",
+      "stderr": "",
+      "bytes": 3817,
+      "sha256": "1500c1f56fa9e26b9b8f42452a553675796ade0807cdce11975eb98170b3a570"
+    },
+    "dns_ipv4": [
+      "198.18.4.24"
+    ]
+  },
+  "selected_route": "Official NVIDIA raw GitHub publication, gh-pages branch",
+  "selected_repository": "https://raw.githubusercontent.com/NVIDIA/libnvidia-container/gh-pages/stable/deb/amd64",
+  "metadata_verification": "reference/nvidia-repository/verification.json",
+  "canonical_domain_repaired": false,
+  "global_network_settings_changed": false,
+  "ca_trust_store_changed": false,
+  "metadata_probe_notes": [
+    {
+      "path": "stable/deb/amd64/Release",
+      "result": "404; this repository publishes signed InRelease instead"
+    },
+    {
+      "path": "stable/deb/amd64/Packages.gz",
+      "result": "404; this repository publishes Packages and Packages.xz instead"
+    }
+  ],
+  "transfer_probe": {
+    "url": "https://raw.githubusercontent.com/NVIDIA/libnvidia-container/gh-pages/stable/deb/amd64/nvidia-container-toolkit_1.20.1-1_amd64.deb",
+    "exit_code": 0,
+    "http_speed_bytes_verification": "200 388783 1501496 0",
+    "stderr": "",
+    "sha256": "a95c9d206a7ecd6a90adff9290635271fa167a86b5767b17eaa0478a552eb02c",
+    "bytes": 1501496,
+    "purpose": "Compare direct curl transfer speed with the slow APT download. Temporary probe file removed."
+  },
+  "docker_registry_transfer_probe": {
+    "manifest_digest_verified": "sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+    "layer_digest": "sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a",
+    "layer_size": 29767612,
+    "range_probe_bytes": 1048576,
+    "exit_code": 0,
+    "http_speed_bytes_verification": "206 384565 1048576 0",
+    "stderr": "",
+    "token_saved": false
+  },
+  "image_transfer_recovery": {
+    "first_full_blob_transfer": "Interrupted before import because the full stream was slow. No image or runtime was changed by that helper execution.",
+    "selected_method": "Six concurrent 1 MiB range requests, exact offset and size checks, followed by complete blob SHA-256 verification and Docker archive import."
+  }
+}

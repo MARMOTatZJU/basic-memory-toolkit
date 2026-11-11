@@ -1,0 +1,18 @@
+[
+  {
+    "path": "notes/h-auto-doc-notes/New database--8491b5ac.md",
+    "error": "ParseError: Invalid YAML in frontmatter: YAML aliases are not supported in note frontmatter"
+  },
+  {
+    "path": "notes/h-auto-doc-notes/New database--b216bc29.md",
+    "error": "ParseError: Invalid YAML in frontmatter: YAML aliases are not supported in note frontmatter"
+  },
+  {
+    "path": "workspace/agent-documents/_index.md",
+    "error": "ParseError: Invalid YAML in frontmatter: YAML aliases are not supported in note frontmatter"
+  },
+  {
+    "path": "workspace/linked-sources/_index.md",
+    "error": "ParseError: Invalid YAML in frontmatter: YAML aliases are not supported in note frontmatter"
+  }
+]

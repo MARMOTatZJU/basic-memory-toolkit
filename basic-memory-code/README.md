@@ -10,9 +10,11 @@ Use this README as the index for the collection.
 | Goal | Recommended asset |
 | --- | --- |
 | Get the shortest useful overview | [Essential version](code-report/00-essential-version.md) |
-| Install and use Basic Memory 1.0 locally | [Step-by-step user tutorial](code-report/17-user-tutorial.md) |
+| Install the complete runtime on headless WSL2 | [Runtime installation series](code-report/21-runtime-installation-guide.md) |
+| Find a specific dependency or installation operation | [Runtime topic and operation index](code-report/21-runtime-installation-guide.md#find-a-topic-or-operation) |
+| Learn Basic Memory 1.0 operations | [Step-by-step user tutorial](code-report/17-user-tutorial.md) |
 | Use the record design without running the Basic Memory service | [File-adapter and skill tutorial](code-report/19-user-tutorial-skill-version.md) |
-| Compare both usage strategies, token use, embeddings, and dependencies | [Installation strategy analysis](code-report/20-installation-strategy-token-use-gpu-and-dependencies.md) |
+| Compare application and service-free use | [Usage strategy and token use](code-report/20-installation-strategy-token-use-gpu-and-dependencies.md) |
 | Understand the implementation from end to end | [System overview](code-report/01-system-overview.md), then documents 02–07 below |
 | Explore use cases and example prompts | [General use cases](code-report/08-usage-cases-and-prompts.md) and [graph use cases](code-report/09-knowledge-graph-use-cases.md) |
 | Design a system on top of Basic Memory | [Harness systems](code-report/12-harness-systems.md) and [reference harness design](code-report/13-reference-harness-design.md) |
@@ -76,7 +78,22 @@ they are not commitments from the upstream Basic Memory project.
 | [17 — User tutorial](code-report/17-user-tutorial.md) | Tested Basic Memory 1.0 installation, isolated SQLite setup, note creation, search, graph context, updates, schemas, imports, MCP setup, backups, and exports. |
 | [18 — Tutorial validation and version update](code-report/18-tutorial-validation-and-version-update.md) | Tested environment, runtime checks, validation limits, and the interface changes between the pinned survey snapshot and version 1.0. |
 | [19 — File-adapter and skill tutorial](code-report/19-user-tutorial-skill-version.md) | A service-free workflow that reuses Basic Memory's Markdown note format, Task definition, and upstream workflow guides through a file adapter. |
-| [20 — Installation strategy, tokens, GPU, and dependencies](code-report/20-installation-strategy-token-use-gpu-and-dependencies.md) | Comparison of service-free and installed use, expected token effects, local embeddings, WSL2 GPU paths, dependencies, and a decision guide. |
+| [20 — Usage strategy and token use](code-report/20-installation-strategy-token-use-gpu-and-dependencies.md) | Comparison of service-free and installed use, expected token effects, and a decision guide. |
+
+### Runtime installation series
+
+Use the [topic and operation index](code-report/21-runtime-installation-guide.md#find-a-topic-or-operation) for direct section links and search terms.
+
+The 2026-11-07 consolidation targets the complete application and GPU embeddings on headless WSL2.
+It excludes custom workspace scripts. Docker and GPU procedures remain unexecuted.
+
+| Asset | What it contains |
+| --- | --- |
+| [21 — Runtime installation guide](code-report/21-runtime-installation-guide.md) | Scope, headless deployment choice, reading order, and evidence boundaries. |
+| [22 — Runtime dependencies](code-report/22-runtime-dependencies.md) | Exact runtime requirements, optional extras, native libraries, services, and build/development requirements. |
+| [23 — Separate Python environments](code-report/23-python-environments.md) | Environment comparison, source-lock installation, state isolation, and validation. |
+| [24 — GPU embeddings](code-report/24-gpu-embeddings.md) | RTX 5090 runtime choices, local Ollama configuration, and inference acceptance checks. |
+| [25 — Headless WSL2 and Docker](code-report/25-headless-wsl2-docker.md) | Terminal-only Docker host setup, NVIDIA container support, and application deployment requirements. |
 
 ### Source and interface inventories
 
@@ -101,7 +118,9 @@ These files are reference assets rather than recommended sequential reading.
 
 ## Suggested reading paths
 
-**Use Basic Memory now:** 17 → 18 → 20.
+**Install on headless WSL2:** 21 → 22 → 24 → 25. Use 23 for a direct Python installation.
+
+**Learn application operations:** 17 → 18. Use 20 to compare operating strategies.
 
 **Understand the code:** 00 → 01 → 02 → 03 → 04 → 05 → 06 → 07, then use 90–95 as references.
 

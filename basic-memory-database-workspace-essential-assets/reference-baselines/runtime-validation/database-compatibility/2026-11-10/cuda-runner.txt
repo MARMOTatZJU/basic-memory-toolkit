@@ -1,0 +1,5 @@
+RUNNER /proc/168
+/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5
+/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5
+/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90
+/usr/lib/ollama/cuda_v12/libggml-cuda.so

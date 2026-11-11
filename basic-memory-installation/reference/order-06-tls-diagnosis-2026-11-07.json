@@ -1,0 +1,76 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 6,
+  "attempt": 2,
+  "scope": "read-only TLS, DNS, and proxy diagnostics; no repair applied",
+  "endpoint": "https://nvidia.github.io/libnvidia-container/gpgkey",
+  "wsl_proxy_environment_variables_present": [],
+  "wsl_custom_ca_environment_variables_present": [],
+  "dns_addresses": [
+    "198.18.4.24",
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+  ],
+  "wsl_http1_tls12_request": {
+    "exit_code": 35,
+    "http_status": "000",
+    "error": "OpenSSL SSL_connect: SSL_ERROR_SYSCALL"
+  },
+  "openssl_handshake": {
+    "exit_code": 1,
+    "tcp_connected": true,
+    "peer_certificate_received": false,
+    "tls_bytes_read": 0,
+    "tls_bytes_written": 325,
+    "cipher_negotiated": false,
+    "error": "unexpected eof while reading",
+    "scope_note": "Verification OK text is inconclusive because no peer certificate was received."
+  },
+  "windows_https": {
+    "exit_code": 35,
+    "http_status": "000",
+    "error": "schannel: failed to receive handshake, SSL/TLS connection failed"
+  },
+  "windows_user_proxy": {
+    "proxy_enabled": false,
+    "proxy_server_configured": true,
+    "auto_config_url_configured": false,
+    "endpoint_disclosed": false
+  },
+  "relevant_processes": [
+    "clash-verge",
+    "clash-verge-service",
+    "verge-mihomo"
+  ],
+  "windows_request_through_existing_loopback_proxy": {
+    "exit_code": 35,
+    "http_status": "000",
+    "certificate_verification_enabled": true,
+    "system_proxy_setting_changed": false,
+    "credentials_used": false
+  },
+  "assessment": {
+    "additional_ca_installation_indicated": false,
+    "likely_area": "Clash/Mihomo routing, DNS, or upstream connectivity",
+    "root_cause_confirmed": false,
+    "route_and_node_logs_inspected": false,
+    "connection_resolved": false
+  },
+  "changes": {
+    "host_packages": false,
+    "trust_store": false,
+    "proxy_settings": false,
+    "dns_settings": false,
+    "repository_urls": false
+  },
+  "sources": [
+    "https://curl.se/libcurl/c/libcurl-errors.html",
+    "https://www.iana.org/assignments/iana-ipv4-special-registry",
+    "https://wiki.metacubex.one/en/config/dns/",
+    "https://wiki.metacubex.one/en/config/rules/",
+    "https://ubuntu.com/server/docs/how-to/security/install-a-root-ca-certificate-in-the-trust-store/"
+  ]
+}

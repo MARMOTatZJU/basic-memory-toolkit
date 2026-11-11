@@ -1,0 +1,10 @@
+{
+  "seconds": 74.63326120376587,
+  "files": 128,
+  "enqueued": 128,
+  "batches": 128,
+  "failures": [],
+  "index_max_concurrent": 1,
+  "batch_size": 1,
+  "adapter": "Basic Memory 1.0.0 LocalProjectIndexRuntimeFactory"
+}

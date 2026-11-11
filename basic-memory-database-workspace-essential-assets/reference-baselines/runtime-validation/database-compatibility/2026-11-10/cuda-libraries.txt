@@ -1,0 +1,8 @@
+/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5
+/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5
+/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90
+/usr/lib/ollama/cuda_v12/libggml-cuda.so
+/usr/lib/ollama/cuda_v13/libcublas.so.13.1.1.3
+/usr/lib/ollama/cuda_v13/libcublasLt.so.13.1.1.3
+/usr/lib/ollama/cuda_v13/libnvJitLink.so.13.0.88
+/usr/lib/ollama/cuda_v13/libnvrtc.so.13.0.88

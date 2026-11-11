@@ -1,0 +1,898 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-11-07T14:12:32.336333+00:00",
+  "duration_seconds": 300,
+  "batch_size": 32,
+  "run_id": "20261107-smoke02",
+  "image": "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+  "model": "nomic-embed-text:v1.5",
+  "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+  "commands": [
+    {
+      "arguments": [
+        "/usr/bin/python3",
+        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
+        "--store",
+        "/home/ydxu_/basic-memory-installation-assets/models/ollama/nomic-embed-text/v1.5/0a109f422b47/store"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "run",
+        "--pull=never",
+        "--detach",
+        "--network",
+        "none",
+        "--gpus",
+        "all",
+        "--name",
+        "basic-memory-gpu-smoke-20261107-smoke02",
+        "--env",
+        "OLLAMA_MODELS=/models",
+        "--env",
+        "OLLAMA_DEBUG=1",
+        "--env",
+        "OLLAMA_NUM_PARALLEL=1",
+        "--env",
+        "OLLAMA_KEEP_ALIVE=5m",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--tmpfs",
+        "/root/.ollama:rw,size=8m",
+        "--mount",
+        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd/models,target=/models",
+        "--mount",
+        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd/interpreter/python,target=/opt/order15-python,readonly",
+        "--mount",
+        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/check-embedding-runtime.py,target=/opt/check-embedding-runtime.py,readonly",
+        "--mount",
+        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/run-gpu-smoke.py,target=/opt/run-gpu-smoke.py,readonly",
+        "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+        "serve"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "exec",
+        "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe",
+        "/opt/order15-python/bin/python3.13",
+        "/opt/run-gpu-smoke.py",
+        "--duration",
+        "300",
+        "--batch-size",
+        "32"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "/usr/bin/python3",
+        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
+        "--store",
+        "/home/ydxu_/basic-memory-installation-assets/models/ollama/nomic-embed-text/v1.5/0a109f422b47/store"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "logs",
+        "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "rm",
+        "--force",
+        "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "persistent_service_started": false,
+  "basic_memory_acceptance": "not_run",
+  "artifact_before": {
+    "status": "passed",
+    "model": "nomic-embed-text:v1.5",
+    "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "model_blob_digest": "sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6",
+    "model_bytes": 274290656,
+    "blob_count": 4,
+    "all_blob_hashes_verified": true,
+    "gguf_version": 3,
+    "tensor_count": 112,
+    "metadata_count": 24,
+    "metadata_header_bytes": 749863,
+    "architecture": "nomic-bert",
+    "dimensions": 768,
+    "gguf_context_length": 2048,
+    "parameters": {
+      "num_ctx": 8192
+    },
+    "file_type": "F16",
+    "license": "Apache-2.0",
+    "config": {
+      "model_format": "gguf",
+      "model_family": "nomic-bert",
+      "model_families": [
+        "nomic-bert"
+      ],
+      "model_type": "137M",
+      "file_type": "F16",
+      "architecture": "amd64",
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6",
+          "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "sha256:ce4a164fc04605703b485251fe9f1a181688ba0eb6badb80cc6335c0de17ca0d"
+        ]
+      }
+    },
+    "gguf_metadata": {
+      "general.architecture": "nomic-bert",
+      "general.name": "nomic-embed-text-v1.5",
+      "nomic-bert.block_count": 12,
+      "nomic-bert.context_length": 2048,
+      "nomic-bert.embedding_length": 768,
+      "nomic-bert.feed_forward_length": 3072,
+      "nomic-bert.attention.head_count": 12,
+      "nomic-bert.attention.layer_norm_epsilon": 9.999999960041972e-13,
+      "general.file_type": 1,
+      "nomic-bert.attention.causal": false,
+      "nomic-bert.pooling_type": 1,
+      "nomic-bert.rope.freq_base": 1000.0,
+      "tokenizer.ggml.token_type_count": 2,
+      "tokenizer.ggml.bos_token_id": 101,
+      "tokenizer.ggml.eos_token_id": 102,
+      "tokenizer.ggml.model": "bert",
+      "tokenizer.ggml.tokens": {
+        "element_type": 8,
+        "length": 30522,
+        "content_retained": false
+      },
+      "tokenizer.ggml.scores": {
+        "element_type": 6,
+        "length": 30522,
+        "content_retained": false
+      },
+      "tokenizer.ggml.token_type": {
+        "element_type": 5,
+        "length": 30522,
+        "content_retained": false
+      },
+      "tokenizer.ggml.unknown_token_id": 100,
+      "tokenizer.ggml.seperator_token_id": 102,
+      "tokenizer.ggml.padding_token_id": 0,
+      "tokenizer.ggml.cls_token_id": 101,
+      "tokenizer.ggml.mask_token_id": 103
+    },
+    "scope": "Artifact, native store layout, and declared metadata; embedding execution is a separate check."
+  },
+  "container_id": "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe",
+  "events": [
+    {
+      "event": "workload_started",
+      "duration_seconds": 300,
+      "batch_size": 32,
+      "cuda_backend": "cuda_v12"
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 10.19,
+      "batches": 45,
+      "embeddings": 1440
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 20.08,
+      "batches": 95,
+      "embeddings": 3040
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 30.0,
+      "batches": 149,
+      "embeddings": 4768
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 40.08,
+      "batches": 208,
+      "embeddings": 6656
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 50.19,
+      "batches": 266,
+      "embeddings": 8512
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 60.05,
+      "batches": 325,
+      "embeddings": 10400
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 70.04,
+      "batches": 385,
+      "embeddings": 12320
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 80.12,
+      "batches": 445,
+      "embeddings": 14240
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 90.06,
+      "batches": 504,
+      "embeddings": 16128
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 100.12,
+      "batches": 566,
+      "embeddings": 18112
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 110.13,
+      "batches": 626,
+      "embeddings": 20032
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 120.12,
+      "batches": 686,
+      "embeddings": 21952
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 130.09,
+      "batches": 748,
+      "embeddings": 23936
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 140.06,
+      "batches": 809,
+      "embeddings": 25888
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 150.12,
+      "batches": 868,
+      "embeddings": 27776
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 160.01,
+      "batches": 929,
+      "embeddings": 29728
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 170.03,
+      "batches": 991,
+      "embeddings": 31712
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 180.07,
+      "batches": 1055,
+      "embeddings": 33760
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 190.14,
+      "batches": 1120,
+      "embeddings": 35840
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 200.13,
+      "batches": 1184,
+      "embeddings": 37888
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 210.14,
+      "batches": 1247,
+      "embeddings": 39904
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 220.01,
+      "batches": 1310,
+      "embeddings": 41920
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 230.07,
+      "batches": 1374,
+      "embeddings": 43968
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 240.12,
+      "batches": 1439,
+      "embeddings": 46048
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 250.14,
+      "batches": 1503,
+      "embeddings": 48096
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 260.02,
+      "batches": 1566,
+      "embeddings": 50112
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 270.02,
+      "batches": 1628,
+      "embeddings": 52096
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 280.09,
+      "batches": 1690,
+      "embeddings": 54080
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 290.01,
+      "batches": 1753,
+      "embeddings": 56096
+    },
+    {
+      "event": "progress",
+      "elapsed_seconds": 300.12,
+      "batches": 1818,
+      "embeddings": 58176
+    },
+    {
+      "event": "completed",
+      "status": "passed",
+      "requested_seconds": 300,
+      "elapsed_seconds": 300.12387716899684,
+      "batch_size": 32,
+      "batches": 1818,
+      "embeddings": 58176,
+      "dimensions": 768,
+      "all_values_finite": true,
+      "mean_batch_seconds": 0.16494110438346324,
+      "max_batch_seconds": 0.5067565779900178,
+      "gpu_before": {
+        "status": "passed",
+        "ollama_version": "0.40.15",
+        "model": "nomic-embed-text:v1.5",
+        "endpoint": "/v1/embeddings",
+        "dimensions": 768,
+        "finite_values": true,
+        "l2_norm": 1.000000161214146,
+        "gpu_placement": [
+          {
+            "name": "nomic-embed-text:v1.5",
+            "model": "nomic-embed-text:v1.5",
+            "size": 335743549,
+            "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "nomic-bert",
+              "families": [
+                "nomic-bert"
+              ],
+              "parameter_size": "137M",
+              "quantization_level": "F16"
+            },
+            "expires_at": "2026-11-07T14:17:37.57373188Z",
+            "size_vram": 335743549,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ],
+        "runner_library_maps": [
+          {
+            "pid": 167,
+            "cuda_libraries": [
+              "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
+              "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
+              "/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90",
+              "/usr/lib/ollama/cuda_v12/libggml-cuda.so"
+            ]
+          }
+        ],
+        "selected_cuda_backend": "cuda_v12",
+        "show": {
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16"
+          },
+          "model_info": {
+            "general.architecture": "nomic-bert",
+            "general.file_type": 1,
+            "general.parameter_count": 136727040,
+            "nomic-bert.attention.causal": false,
+            "nomic-bert.attention.head_count": 12,
+            "nomic-bert.attention.layer_norm_epsilon": 1e-12,
+            "nomic-bert.block_count": 12,
+            "nomic-bert.context_length": 2048,
+            "nomic-bert.embedding_length": 768,
+            "nomic-bert.feed_forward_length": 3072,
+            "nomic-bert.pooling_type": 1,
+            "nomic-bert.rope.freq_base": 1000,
+            "tokenizer.ggml.bos_token_id": 101,
+            "tokenizer.ggml.cls_token_id": 101,
+            "tokenizer.ggml.eos_token_id": 102,
+            "tokenizer.ggml.mask_token_id": 103,
+            "tokenizer.ggml.model": "bert",
+            "tokenizer.ggml.padding_token_id": 0,
+            "tokenizer.ggml.scores": [],
+            "tokenizer.ggml.seperator_token_id": 102,
+            "tokenizer.ggml.token_type": [],
+            "tokenizer.ggml.token_type_count": 2,
+            "tokenizer.ggml.tokens": [],
+            "tokenizer.ggml.unknown_token_id": 100
+          },
+          "parameters": "num_ctx                        8192",
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        "fixture": "Public installation verification query; no user notes.",
+        "persistent_service_started": false,
+        "scope": "Model-level OpenAI-compatible embedding and actual GPU/CUDA 12 runner; not Basic Memory or MCP acceptance."
+      },
+      "gpu_after": {
+        "status": "passed",
+        "ollama_version": "0.40.15",
+        "model": "nomic-embed-text:v1.5",
+        "endpoint": "/v1/embeddings",
+        "dimensions": 768,
+        "finite_values": true,
+        "l2_norm": 1.000000161214146,
+        "gpu_placement": [
+          {
+            "name": "nomic-embed-text:v1.5",
+            "model": "nomic-embed-text:v1.5",
+            "size": 335743549,
+            "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "nomic-bert",
+              "families": [
+                "nomic-bert"
+              ],
+              "parameter_size": "137M",
+              "quantization_level": "F16"
+            },
+            "expires_at": "2026-11-07T14:22:37.850044708Z",
+            "size_vram": 335743549,
+            "context_length": 2048,
+            "runner": "llamacpp"
+          }
+        ],
+        "runner_library_maps": [
+          {
+            "pid": 167,
+            "cuda_libraries": [
+              "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
+              "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
+              "/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90",
+              "/usr/lib/ollama/cuda_v12/libggml-cuda.so"
+            ]
+          }
+        ],
+        "selected_cuda_backend": "cuda_v12",
+        "show": {
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16"
+          },
+          "model_info": {
+            "general.architecture": "nomic-bert",
+            "general.file_type": 1,
+            "general.parameter_count": 136727040,
+            "nomic-bert.attention.causal": false,
+            "nomic-bert.attention.head_count": 12,
+            "nomic-bert.attention.layer_norm_epsilon": 1e-12,
+            "nomic-bert.block_count": 12,
+            "nomic-bert.context_length": 2048,
+            "nomic-bert.embedding_length": 768,
+            "nomic-bert.feed_forward_length": 3072,
+            "nomic-bert.pooling_type": 1,
+            "nomic-bert.rope.freq_base": 1000,
+            "tokenizer.ggml.bos_token_id": 101,
+            "tokenizer.ggml.cls_token_id": 101,
+            "tokenizer.ggml.eos_token_id": 102,
+            "tokenizer.ggml.mask_token_id": 103,
+            "tokenizer.ggml.model": "bert",
+            "tokenizer.ggml.padding_token_id": 0,
+            "tokenizer.ggml.scores": [],
+            "tokenizer.ggml.seperator_token_id": 102,
+            "tokenizer.ggml.token_type": [],
+            "tokenizer.ggml.token_type_count": 2,
+            "tokenizer.ggml.tokens": [],
+            "tokenizer.ggml.unknown_token_id": 100
+          },
+          "parameters": "num_ctx                        8192",
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        "fixture": "Public installation verification query; no user notes.",
+        "persistent_service_started": false,
+        "scope": "Model-level OpenAI-compatible embedding and actual GPU/CUDA 12 runner; not Basic Memory or MCP acceptance."
+      },
+      "scope": "Sustained model-level GPU embeddings in a disposable container; no Basic Memory acceptance."
+    }
+  ],
+  "workload": {
+    "event": "completed",
+    "status": "passed",
+    "requested_seconds": 300,
+    "elapsed_seconds": 300.12387716899684,
+    "batch_size": 32,
+    "batches": 1818,
+    "embeddings": 58176,
+    "dimensions": 768,
+    "all_values_finite": true,
+    "mean_batch_seconds": 0.16494110438346324,
+    "max_batch_seconds": 0.5067565779900178,
+    "gpu_before": {
+      "status": "passed",
+      "ollama_version": "0.40.15",
+      "model": "nomic-embed-text:v1.5",
+      "endpoint": "/v1/embeddings",
+      "dimensions": 768,
+      "finite_values": true,
+      "l2_norm": 1.000000161214146,
+      "gpu_placement": [
+        {
+          "name": "nomic-embed-text:v1.5",
+          "model": "nomic-embed-text:v1.5",
+          "size": 335743549,
+          "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16"
+          },
+          "expires_at": "2026-11-07T14:17:37.57373188Z",
+          "size_vram": 335743549,
+          "context_length": 2048,
+          "runner": "llamacpp"
+        }
+      ],
+      "runner_library_maps": [
+        {
+          "pid": 167,
+          "cuda_libraries": [
+            "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
+            "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
+            "/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90",
+            "/usr/lib/ollama/cuda_v12/libggml-cuda.so"
+          ]
+        }
+      ],
+      "selected_cuda_backend": "cuda_v12",
+      "show": {
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16"
+        },
+        "model_info": {
+          "general.architecture": "nomic-bert",
+          "general.file_type": 1,
+          "general.parameter_count": 136727040,
+          "nomic-bert.attention.causal": false,
+          "nomic-bert.attention.head_count": 12,
+          "nomic-bert.attention.layer_norm_epsilon": 1e-12,
+          "nomic-bert.block_count": 12,
+          "nomic-bert.context_length": 2048,
+          "nomic-bert.embedding_length": 768,
+          "nomic-bert.feed_forward_length": 3072,
+          "nomic-bert.pooling_type": 1,
+          "nomic-bert.rope.freq_base": 1000,
+          "tokenizer.ggml.bos_token_id": 101,
+          "tokenizer.ggml.cls_token_id": 101,
+          "tokenizer.ggml.eos_token_id": 102,
+          "tokenizer.ggml.mask_token_id": 103,
+          "tokenizer.ggml.model": "bert",
+          "tokenizer.ggml.padding_token_id": 0,
+          "tokenizer.ggml.scores": [],
+          "tokenizer.ggml.seperator_token_id": 102,
+          "tokenizer.ggml.token_type": [],
+          "tokenizer.ggml.token_type_count": 2,
+          "tokenizer.ggml.tokens": [],
+          "tokenizer.ggml.unknown_token_id": 100
+        },
+        "parameters": "num_ctx                        8192",
+        "capabilities": [
+          "embedding"
+        ]
+      },
+      "fixture": "Public installation verification query; no user notes.",
+      "persistent_service_started": false,
+      "scope": "Model-level OpenAI-compatible embedding and actual GPU/CUDA 12 runner; not Basic Memory or MCP acceptance."
+    },
+    "gpu_after": {
+      "status": "passed",
+      "ollama_version": "0.40.15",
+      "model": "nomic-embed-text:v1.5",
+      "endpoint": "/v1/embeddings",
+      "dimensions": 768,
+      "finite_values": true,
+      "l2_norm": 1.000000161214146,
+      "gpu_placement": [
+        {
+          "name": "nomic-embed-text:v1.5",
+          "model": "nomic-embed-text:v1.5",
+          "size": 335743549,
+          "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16"
+          },
+          "expires_at": "2026-11-07T14:22:37.850044708Z",
+          "size_vram": 335743549,
+          "context_length": 2048,
+          "runner": "llamacpp"
+        }
+      ],
+      "runner_library_maps": [
+        {
+          "pid": 167,
+          "cuda_libraries": [
+            "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
+            "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
+            "/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90",
+            "/usr/lib/ollama/cuda_v12/libggml-cuda.so"
+          ]
+        }
+      ],
+      "selected_cuda_backend": "cuda_v12",
+      "show": {
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16"
+        },
+        "model_info": {
+          "general.architecture": "nomic-bert",
+          "general.file_type": 1,
+          "general.parameter_count": 136727040,
+          "nomic-bert.attention.causal": false,
+          "nomic-bert.attention.head_count": 12,
+          "nomic-bert.attention.layer_norm_epsilon": 1e-12,
+          "nomic-bert.block_count": 12,
+          "nomic-bert.context_length": 2048,
+          "nomic-bert.embedding_length": 768,
+          "nomic-bert.feed_forward_length": 3072,
+          "nomic-bert.pooling_type": 1,
+          "nomic-bert.rope.freq_base": 1000,
+          "tokenizer.ggml.bos_token_id": 101,
+          "tokenizer.ggml.cls_token_id": 101,
+          "tokenizer.ggml.eos_token_id": 102,
+          "tokenizer.ggml.mask_token_id": 103,
+          "tokenizer.ggml.model": "bert",
+          "tokenizer.ggml.padding_token_id": 0,
+          "tokenizer.ggml.scores": [],
+          "tokenizer.ggml.seperator_token_id": 102,
+          "tokenizer.ggml.token_type": [],
+          "tokenizer.ggml.token_type_count": 2,
+          "tokenizer.ggml.tokens": [],
+          "tokenizer.ggml.unknown_token_id": 100
+        },
+        "parameters": "num_ctx                        8192",
+        "capabilities": [
+          "embedding"
+        ]
+      },
+      "fixture": "Public installation verification query; no user notes.",
+      "persistent_service_started": false,
+      "scope": "Model-level OpenAI-compatible embedding and actual GPU/CUDA 12 runner; not Basic Memory or MCP acceptance."
+    },
+    "scope": "Sustained model-level GPU embeddings in a disposable container; no Basic Memory acceptance."
+  },
+  "artifact_after": {
+    "status": "passed",
+    "model": "nomic-embed-text:v1.5",
+    "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "model_blob_digest": "sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6",
+    "model_bytes": 274290656,
+    "blob_count": 4,
+    "all_blob_hashes_verified": true,
+    "gguf_version": 3,
+    "tensor_count": 112,
+    "metadata_count": 24,
+    "metadata_header_bytes": 749863,
+    "architecture": "nomic-bert",
+    "dimensions": 768,
+    "gguf_context_length": 2048,
+    "parameters": {
+      "num_ctx": 8192
+    },
+    "file_type": "F16",
+    "license": "Apache-2.0",
+    "config": {
+      "model_format": "gguf",
+      "model_family": "nomic-bert",
+      "model_families": [
+        "nomic-bert"
+      ],
+      "model_type": "137M",
+      "file_type": "F16",
+      "architecture": "amd64",
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6",
+          "sha256:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "sha256:ce4a164fc04605703b485251fe9f1a181688ba0eb6badb80cc6335c0de17ca0d"
+        ]
+      }
+    },
+    "gguf_metadata": {
+      "general.architecture": "nomic-bert",
+      "general.name": "nomic-embed-text-v1.5",
+      "nomic-bert.block_count": 12,
+      "nomic-bert.context_length": 2048,
+      "nomic-bert.embedding_length": 768,
+      "nomic-bert.feed_forward_length": 3072,
+      "nomic-bert.attention.head_count": 12,
+      "nomic-bert.attention.layer_norm_epsilon": 9.999999960041972e-13,
+      "general.file_type": 1,
+      "nomic-bert.attention.causal": false,
+      "nomic-bert.pooling_type": 1,
+      "nomic-bert.rope.freq_base": 1000.0,
+      "tokenizer.ggml.token_type_count": 2,
+      "tokenizer.ggml.bos_token_id": 101,
+      "tokenizer.ggml.eos_token_id": 102,
+      "tokenizer.ggml.model": "bert",
+      "tokenizer.ggml.tokens": {
+        "element_type": 8,
+        "length": 30522,
+        "content_retained": false
+      },
+      "tokenizer.ggml.scores": {
+        "element_type": 6,
+        "length": 30522,
+        "content_retained": false
+      },
+      "tokenizer.ggml.token_type": {
+        "element_type": 5,
+        "length": 30522,
+        "content_retained": false
+      },
+      "tokenizer.ggml.unknown_token_id": 100,
+      "tokenizer.ggml.seperator_token_id": 102,
+      "tokenizer.ggml.padding_token_id": 0,
+      "tokenizer.ggml.cls_token_id": 101,
+      "tokenizer.ggml.mask_token_id": 103
+    },
+    "scope": "Artifact, native store layout, and declared metadata; embedding execution is a separate check."
+  },
+  "containers_after": "",
+  "volumes_after": "",
+  "container_removed": true,
+  "staging_removed": true,
+  "cleanup_recovery": {
+    "initial_helper_exit_code": 1,
+    "initial_error": "PermissionError during rmtree of container-created root-owned model metadata.",
+    "scope": "/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd",
+    "commands": [
+      {
+        "arguments": [
+          "docker",
+          "run",
+          "--pull=never",
+          "--rm",
+          "--network",
+          "none",
+          "--user",
+          "0:0",
+          "--entrypoint",
+          "/bin/chown",
+          "--mount",
+          "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd,target=/cleanup",
+          "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+          "-R",
+          "1000:1000",
+          "/cleanup"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "docker",
+          "ps",
+          "-a",
+          "--format",
+          "{{.Names}}"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "docker",
+          "volume",
+          "ls",
+          "--quiet"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "arguments": [
+          "/usr/lib/wsl/lib/nvidia-smi",
+          "--query-gpu=name,driver_version,utilization.gpu,memory.used,power.draw",
+          "--format=csv"
+        ],
+        "exit_code": 0,
+        "stdout": "name, driver_version, utilization.gpu [%], memory.used [MiB], power.draw [W]\nNVIDIA GeForce RTX 5090 Laptop GPU, 572.84, 0 %, 74 MiB, 7.67 W\n",
+        "stderr": ""
+      }
+    ],
+    "status": "passed",
+    "staging_removed": true,
+    "finished_at_utc": "2026-11-07T14:19:06.048438+00:00"
+  },
+  "finished_at_utc": "2026-11-07T14:19:06.048438+00:00"
+}

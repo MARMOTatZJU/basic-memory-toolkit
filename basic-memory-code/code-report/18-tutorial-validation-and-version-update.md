@@ -6,6 +6,10 @@ The tutorial update was completed on 2026-11-03, Asia/Shanghai.
 The tutorial uses the published Basic Memory 1.0.0 package.
 It adds runtime evidence to the earlier source survey.
 
+The 2026-11-07 [runtime installation series](21-runtime-installation-guide.md) consolidates later setup guidance.
+The results below describe the historical tutorial execution, including its original document and code-block counts.
+They do not certify the new all-extras, Docker, or GPU procedures.
+
 ## Version scope
 
 | Material | Version or source | Evidence scope |

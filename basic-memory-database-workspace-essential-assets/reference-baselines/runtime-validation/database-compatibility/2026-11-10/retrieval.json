@@ -1,0 +1,4162 @@
+{
+  "status": "completed",
+  "cases": [
+    {
+      "project": "notion",
+      "id": "controls-en",
+      "query": "How do throttle, clutch and brakes coordinate motorcycle balance?",
+      "expected_topic": "topics/riding-controls",
+      "mode": "text",
+      "seconds": 0.07082080841064453,
+      "hits": [
+        {
+          "type": "entity",
+          "score": -13.826584097159532,
+          "permalink": "notion/23bf8d77a87b800a9333d0d4f2c5bf3f",
+          "file_path": "languages/ENG/Life--f2c5bf3f.md"
+        },
+        {
+          "type": "entity",
+          "score": -13.317046241058263,
+          "permalink": "notion/23af8d77a87b8032a846f9ebffdeae1e",
+          "file_path": "notes/h-auto-doc-notes/[LocoManipulation][Quadruped] Learning coordinated badminton--ffdeae1e.md"
+        },
+        {
+          "type": "entity",
+          "score": -11.429610962113182,
+          "permalink": "notion/239f8d77a87b807ba1f9e2aed799658f",
+          "file_path": "notes/h-auto-doc-notes/[MultiTerrain][Humanoid] Humanoid Whole-Body Locomotion on N--d799658f.md"
+        },
+        {
+          "type": "entity",
+          "score": -10.739141912999912,
+          "permalink": "notion/376f8d77a87b803d9b3cc0a960e48fbb",
+          "file_path": "knowledge/Mathematics/Notes on Differential Geometry--60e48fbb.md"
+        },
+        {
+          "type": "entity",
+          "score": -10.61129834944206,
+          "permalink": "notion/23af8d77a87b802c927be8f5820113ea",
+          "file_path": "notes/h-auto-doc-notes/[MultiView] PETRv2- A Unified Framework for 3D Perception fr--820113ea.md"
+        },
+        {
+          "type": "entity",
+          "score": -10.51819268951133,
+          "permalink": "notion/239f8d77a87b802ca89be9f06693ba9a",
+          "file_path": "notes/h-auto-doc-notes/Humanoid Motion Control Reading--6693ba9a.md"
+        },
+        {
+          "type": "entity",
+          "score": -8.93152863401723,
+          "permalink": "notion/23af8d77a87b8050b1dfcf3955baff82",
+          "file_path": "notes/h-auto-doc-notes/[Draft][Research] Foothold-as-Interface--55baff82.md"
+        },
+        {
+          "type": "entity",
+          "score": -8.52619679440387,
+          "permalink": "notion/23af8d77a87b80b7a691ecfb98aa965d",
+          "file_path": "notes/h-auto-doc-notes/[PaperReading] On Vision-Based Multi-Terrain Locomotion--98aa965d.md"
+        },
+        {
+          "type": "entity",
+          "score": -8.120445942903615,
+          "permalink": "topics/course-offroad-progression",
+          "file_path": "driving/MotorcycleNotes/topics/course-offroad-progression.md"
+        },
+        {
+          "type": "entity",
+          "score": -8.107390776147243,
+          "permalink": "notion/23af8d77a87b80c9a811c0c9be6c3ade",
+          "file_path": "notes/h-auto-doc-notes/[Draft-Discussions] Vision-Based Multi-Terrain Policy--be6c3ade.md"
+        }
+      ],
+      "total": 92,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "controls-en",
+      "query": "How do throttle, clutch and brakes coordinate motorcycle balance?",
+      "expected_topic": "topics/riding-controls",
+      "mode": "semantic",
+      "seconds": 0.97987961769104,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7295363744265089,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7031071406851694,
+          "permalink": "sources/3a4f8d77a87b80689fd2c92af8157078",
+          "file_path": "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6941421098995306,
+          "permalink": "notion/399f8d77a87b80778019d95550632a4a",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Variability and Fatigue (Answered by ChatGPT)--50632a4a.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6863831094180863,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6787132896740147,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6752121258359107,
+          "permalink": "notion/205f8d77a87b800ebc74d5fa73c3a5d0",
+          "file_path": "driving/VehicleNotes--73c3a5d0.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6544671156763666,
+          "permalink": "notion/36ff8d77a87b809f87bed62efd21b29a",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Physiology of Supramaximal Cycling Sprints (Answered by Gemi--fd21b29a.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6490214383917827,
+          "permalink": "notion/1eef8d77a87b80ddb291fefd4013352b",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/_index.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6481547708867037,
+          "permalink": "notion/391f8d77a87b80ca898ad23aa3f53823",
+          "file_path": "knowledge/Robotics & Control/Impedance Control-Admittance Control--a3f53823.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6476990724543654,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "controls-en",
+      "query": "How do throttle, clutch and brakes coordinate motorcycle balance?",
+      "expected_topic": "topics/riding-controls",
+      "mode": "hybrid",
+      "seconds": 0.18468737602233887,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 1.1460029699647107,
+          "permalink": "notion/23af8d77a87b8032a846f9ebffdeae1e",
+          "file_path": "notes/h-auto-doc-notes/[LocoManipulation][Quadruped] Learning coordinated badminton--ffdeae1e.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0110754599210316,
+          "permalink": "notion/239f8d77a87b807ba1f9e2aed799658f",
+          "file_path": "notes/h-auto-doc-notes/[MultiTerrain][Humanoid] Humanoid Whole-Body Locomotion on N--d799658f.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0,
+          "permalink": "notion/23bf8d77a87b800a9333d0d4f2c5bf3f",
+          "file_path": "languages/ENG/Life--f2c5bf3f.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.9524115436868428,
+          "permalink": "notion/23af8d77a87b802c927be8f5820113ea",
+          "file_path": "notes/h-auto-doc-notes/[MultiView] PETRv2- A Unified Framework for 3D Perception fr--820113ea.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.9517279705102764,
+          "permalink": "notion/376f8d77a87b803d9b3cc0a960e48fbb",
+          "file_path": "knowledge/Mathematics/Notes on Differential Geometry--60e48fbb.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.9443189707407509,
+          "permalink": "notion/239f8d77a87b802ca89be9f06693ba9a",
+          "file_path": "notes/h-auto-doc-notes/Humanoid Motion Control Reading--6693ba9a.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8297946050648507,
+          "permalink": "notion/23af8d77a87b8050b1dfcf3955baff82",
+          "file_path": "notes/h-auto-doc-notes/[Draft][Research] Foothold-as-Interface--55baff82.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8237526450750349,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8233106906575264,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8220402747056933,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "controls-zh",
+      "query": "摩托车如何协调油门、离合、刹车与身体重心？",
+      "expected_topic": "topics/riding-controls",
+      "mode": "text",
+      "seconds": 0.11495709419250488,
+      "hits": [],
+      "total": 0,
+      "expected_rank": null,
+      "has_results": false
+    },
+    {
+      "project": "notion",
+      "id": "controls-zh",
+      "query": "摩托车如何协调油门、离合、刹车与身体重心？",
+      "expected_topic": "topics/riding-controls",
+      "mode": "semantic",
+      "seconds": 0.09435439109802246,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7563090327843849,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7264285099842525,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7214268818969458,
+          "permalink": "notion/2b8f8d77a87b801493ecf241d9196b3f",
+          "file_path": "knowledge/户外运动 Outdoors/滑雪-滑雪携带物资 Ski-Snowboard--d9196b3f.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7210782363742894,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7155637263614221,
+          "permalink": "sources/1e4f8d77a87b80f58f42dae851d32ed3",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾高阶--51d32ed3.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7073702748147923,
+          "permalink": "notion/1eef8d77a87b80ddb291fefd4013352b",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/_index.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.705354673452673,
+          "permalink": "sources/1e4f8d77a87b807ba2cdfdea7e71f4dc",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾初阶--7e71f4dc.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.704177075255636,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.703438110715517,
+          "permalink": "notion/405f8d77a87b80499d9fc372d4073603",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/蛋白粉食物热效应（ChatGPT 回答）--d4073603.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7028491426513526,
+          "permalink": "notion/2d8f8d77a87b8097a48ad960f09152b6",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/高容量徒步后恢复（Gemini 回答）--f09152b6.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "controls-zh",
+      "query": "摩托车如何协调油门、离合、刹车与身体重心？",
+      "expected_topic": "topics/riding-controls",
+      "mode": "hybrid",
+      "seconds": 0.15702009201049805,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7563090327843849,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7264285099842525,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7214268818969458,
+          "permalink": "notion/2b8f8d77a87b801493ecf241d9196b3f",
+          "file_path": "knowledge/户外运动 Outdoors/滑雪-滑雪携带物资 Ski-Snowboard--d9196b3f.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7210782363742894,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7155637263614221,
+          "permalink": "sources/1e4f8d77a87b80f58f42dae851d32ed3",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾高阶--51d32ed3.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7073702748147923,
+          "permalink": "notion/1eef8d77a87b80ddb291fefd4013352b",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/_index.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.705354673452673,
+          "permalink": "sources/1e4f8d77a87b807ba2cdfdea7e71f4dc",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾初阶--7e71f4dc.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.704177075255636,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.703438110715517,
+          "permalink": "notion/405f8d77a87b80499d9fc372d4073603",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/蛋白粉食物热效应（ChatGPT 回答）--d4073603.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7028491426513526,
+          "permalink": "notion/2d8f8d77a87b8097a48ad960f09152b6",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/高容量徒步后恢复（Gemini 回答）--f09152b6.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "vehicle-en",
+      "query": "KTM 250 DUKE fuel consumption and oil maintenance records",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "mode": "text",
+      "seconds": 0.10172009468078613,
+      "hits": [],
+      "total": 0,
+      "expected_rank": null,
+      "has_results": false
+    },
+    {
+      "project": "notion",
+      "id": "vehicle-en",
+      "query": "KTM 250 DUKE fuel consumption and oil maintenance records",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "mode": "semantic",
+      "seconds": 0.12148833274841309,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.807289200358495,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7675588098823578,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7621753664901618,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7586758287547966,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7414940989505521,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7256673132310549,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7037372390640257,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6720462608521967,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.650441548011484,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6417540084062221,
+          "permalink": "sources/1e4f8d77a87b80c2988af052590fa530",
+          "file_path": "driving/MotorcycleNotes/sources/其他摩托杂项--590fa530.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 1,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "vehicle-en",
+      "query": "KTM 250 DUKE fuel consumption and oil maintenance records",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "mode": "hybrid",
+      "seconds": 0.16334986686706543,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.807289200358495,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7675588098823578,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7621753664901618,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7586758287547966,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7414940989505521,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7256673132310549,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7037372390640257,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6720462608521967,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.650441548011484,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6417540084062221,
+          "permalink": "sources/1e4f8d77a87b80c2988af052590fa530",
+          "file_path": "driving/MotorcycleNotes/sources/其他摩托杂项--590fa530.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 1,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "vehicle-zh",
+      "query": "KTM 250 DUKE 的油耗记录与机油保养在哪里？",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "mode": "text",
+      "seconds": 0.09660053253173828,
+      "hits": [],
+      "total": 0,
+      "expected_rank": null,
+      "has_results": false
+    },
+    {
+      "project": "notion",
+      "id": "vehicle-zh",
+      "query": "KTM 250 DUKE 的油耗记录与机油保养在哪里？",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "mode": "semantic",
+      "seconds": 0.1200721263885498,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.8498252774721706,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8326424080485548,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8240227771658777,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8126563207924971,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7993998269594158,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7703330897224543,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7214739505777104,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7100219265020087,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7049499171902127,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6973973711245076,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 1,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "vehicle-zh",
+      "query": "KTM 250 DUKE 的油耗记录与机油保养在哪里？",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "mode": "hybrid",
+      "seconds": 0.15500831604003906,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.8498252774721706,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8326424080485548,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8240227771658777,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8126563207924971,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7993998269594158,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7703330897224543,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7214739505777104,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7100219265020087,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7049499171902127,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6973973711245076,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 1,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "travel-en",
+      "query": "What equipment and preparation are needed for a motorcycle journey?",
+      "expected_topic": "topics/travel-preparation",
+      "mode": "text",
+      "seconds": 0.030586719512939453,
+      "hits": [
+        {
+          "type": "entity",
+          "score": -16.22500378065324,
+          "permalink": "topics/travel-preparation",
+          "file_path": "driving/MotorcycleNotes/topics/travel-preparation.md"
+        },
+        {
+          "type": "entity",
+          "score": -11.899548148667346,
+          "permalink": "notion/2d1f8d77a87b80ee9702e984f2122f5c",
+          "file_path": "languages/ENG/Sentences-Quotes-Idiom--f2122f5c.md"
+        },
+        {
+          "type": "entity",
+          "score": -11.229838269700297,
+          "permalink": "notion/2eef8d77a87b80178eb7c680d642311d",
+          "file_path": "languages/FRA/Education Française--d642311d.md"
+        },
+        {
+          "type": "entity",
+          "score": -10.56263063753643,
+          "permalink": "notion/34bf8d77a87b8035a3f7c19c65cd5df5",
+          "file_path": "notes/AudaxLab/Claude Code Client Notes--65cd5df5.md"
+        },
+        {
+          "type": "entity",
+          "score": -10.4443309994577,
+          "permalink": "notion/38ef8d77a87b804fb2bbdec8f3047f49",
+          "file_path": "languages/ENG/Technical Terms--f3047f49.md"
+        },
+        {
+          "type": "entity",
+          "score": -7.682406282711699,
+          "file_path": "views/MotorcycleNotes.json"
+        },
+        {
+          "type": "entity",
+          "score": -7.6804759292807026,
+          "file_path": "driving/MotorcycleNotes/data/MotorcycleNotes-source-manifest.json"
+        },
+        {
+          "type": "entity",
+          "score": -7.413841783950878,
+          "permalink": "notion/2b2f8d77a87b808986baedce95787705",
+          "file_path": "notes/WhiteBoard3--95787705.md"
+        },
+        {
+          "type": "entity",
+          "score": -7.0466027495480805,
+          "permalink": "tasks/build-motorcycle-notes",
+          "file_path": "driving/MotorcycleNotes/history/build-motorcycle-notes.md"
+        },
+        {
+          "type": "entity",
+          "score": -6.6057420397761,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        }
+      ],
+      "total": 63,
+      "expected_rank": 1,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "travel-en",
+      "query": "What equipment and preparation are needed for a motorcycle journey?",
+      "expected_topic": "topics/travel-preparation",
+      "mode": "semantic",
+      "seconds": 0.11837577819824219,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7188286726286606,
+          "permalink": "sources/3a4f8d77a87b80689fd2c92af8157078",
+          "file_path": "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6996936621945888,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6926536508949468,
+          "permalink": "notion/370f8d77a87b80aa93dcfa5699c3efde",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Fasted Training For Fat Oxidation (Answered by Gemini)--99c3efde.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6831735879206633,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6570813419115336,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6562304102343415,
+          "permalink": "notion/37df8d77a87b804ca6e8fcc699b38c4f",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/FatMax Power Relative to CP (Answered by Gemini)--99b38c4f.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6478702627857444,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6410643899042707,
+          "permalink": "notion/270f8d77a87b8082a453c9715cfa27b1",
+          "file_path": "languages/ENG/Programs-Articles-Talks-Radio--5cfa27b1.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6393972761163411,
+          "permalink": "notion/303f8d77a87b80759d42f64c27917a91",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Switch between Different Energy Systems (Answered by Gemini)--27917a91.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6390187526394584,
+          "permalink": "notion/391f8d77a87b80df9456ff3bd17ed02f",
+          "file_path": "knowledge/户外运动 Outdoors/The Feeling of Skill Mastery (Answered by ChatGPT)--d17ed02f.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "travel-en",
+      "query": "What equipment and preparation are needed for a motorcycle journey?",
+      "expected_topic": "topics/travel-preparation",
+      "mode": "hybrid",
+      "seconds": 0.1833817958831787,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 1.1750304210387292,
+          "permalink": "topics/travel-preparation",
+          "file_path": "driving/MotorcycleNotes/topics/travel-preparation.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.9187213510894264,
+          "permalink": "notion/2d1f8d77a87b80ee9702e984f2122f5c",
+          "file_path": "languages/ENG/Sentences-Quotes-Idiom--f2122f5c.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8282870148832887,
+          "permalink": "notion/38ef8d77a87b804fb2bbdec8f3047f49",
+          "file_path": "languages/ENG/Technical Terms--f3047f49.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7799826536212608,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7792213819832556,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7718581998654829,
+          "permalink": "sources/3a4f8d77a87b80689fd2c92af8157078",
+          "file_path": "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7472982149776581,
+          "permalink": "sources/1e2f8d77a87b8070b139dd315e7a8010",
+          "file_path": "driving/MotorcycleNotes/sources/MotorcycleNotes--5e7a8010.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.747290694414832,
+          "permalink": "tasks/build-motorcycle-notes",
+          "file_path": "driving/MotorcycleNotes/history/build-motorcycle-notes.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7464869503822147,
+          "permalink": "notion/2fff8d77a87b8080af8cfcbe4077f42e",
+          "file_path": "driving/_index.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.74647492358158,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 1,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "travel-zh",
+      "query": "摩托车长途旅行之前需要准备什么装备？",
+      "expected_topic": "topics/travel-preparation",
+      "mode": "text",
+      "seconds": 0.09219241142272949,
+      "hits": [],
+      "total": 0,
+      "expected_rank": null,
+      "has_results": false
+    },
+    {
+      "project": "notion",
+      "id": "travel-zh",
+      "query": "摩托车长途旅行之前需要准备什么装备？",
+      "expected_topic": "topics/travel-preparation",
+      "mode": "semantic",
+      "seconds": 0.11005592346191406,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7904026857796094,
+          "permalink": "sources/235f8d77a87b807db139e29fd0f383f1",
+          "file_path": "driving/MotorcycleNotes/sources/摩托道路骑行经验--d0f383f1.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7619410769580099,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7602877093478764,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7458251898171095,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7421535600775471,
+          "permalink": "topics/course-offroad-progression",
+          "file_path": "driving/MotorcycleNotes/topics/course-offroad-progression.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7380522906752116,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7363949579407745,
+          "permalink": "notion/3d1f8d77a87b8094968ffa318fed48cb",
+          "file_path": "driving/LegalNotes--8fed48cb.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.730592623127194,
+          "permalink": "sources/394f8d77a87b80049940ec4b1b2bc4ae",
+          "file_path": "driving/MotorcycleNotes/sources/中长途摩托旅行--1b2bc4ae.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7270835889326417,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7185399885479722,
+          "permalink": "notion/3ebf8d77a87b805d9848f7a3b99f7ebb",
+          "file_path": "knowledge/户外运动 Outdoors/北体车队-计成课堂--b99f7ebb.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "notion",
+      "id": "travel-zh",
+      "query": "摩托车长途旅行之前需要准备什么装备？",
+      "expected_topic": "topics/travel-preparation",
+      "mode": "hybrid",
+      "seconds": 0.16250205039978027,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7904026857796094,
+          "permalink": "sources/235f8d77a87b807db139e29fd0f383f1",
+          "file_path": "driving/MotorcycleNotes/sources/摩托道路骑行经验--d0f383f1.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7619410769580099,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7602877093478764,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7458251898171095,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7421535600775471,
+          "permalink": "topics/course-offroad-progression",
+          "file_path": "driving/MotorcycleNotes/topics/course-offroad-progression.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7380522906752116,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7363949579407745,
+          "permalink": "notion/3d1f8d77a87b8094968ffa318fed48cb",
+          "file_path": "driving/LegalNotes--8fed48cb.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.730592623127194,
+          "permalink": "sources/394f8d77a87b80049940ec4b1b2bc4ae",
+          "file_path": "driving/MotorcycleNotes/sources/中长途摩托旅行--1b2bc4ae.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7270835889326417,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7185399885479722,
+          "permalink": "notion/3ebf8d77a87b805d9848f7a3b99f7ebb",
+          "file_path": "knowledge/户外运动 Outdoors/北体车队-计成课堂--b99f7ebb.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "memory-en",
+      "query": "Find previous work on persistent conversation memory and agent skills",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "mode": "text",
+      "seconds": 0.04563188552856445,
+      "hits": [
+        {
+          "type": "entity",
+          "score": -59.22775253876812,
+          "permalink": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+          "file_path": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md"
+        },
+        {
+          "type": "entity",
+          "score": -53.33674150557182,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "type": "entity",
+          "score": -49.20275085242663,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": -48.136904822259936,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "type": "entity",
+          "score": -47.9874892766347,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": -47.075965887702424,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "type": "entity",
+          "score": -46.85636949108002,
+          "permalink": "conversations/01a1a65c-d362-7280-88b9-84125626afa5",
+          "file_path": "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md"
+        },
+        {
+          "type": "entity",
+          "score": -46.56864666637621,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "type": "entity",
+          "score": -44.514978610700666,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "type": "entity",
+          "score": -31.52482773867027,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        }
+      ],
+      "total": 14,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "memory-en",
+      "query": "Find previous work on persistent conversation memory and agent skills",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "mode": "semantic",
+      "seconds": 0.42067384719848633,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7653307423720133,
+          "permalink": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+          "file_path": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7575605977833373,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7550369737502773,
+          "permalink": "topics/memory-agent-infrastructure",
+          "file_path": "topics/memory-agent-infrastructure.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7507134664089374,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7438987203467615,
+          "permalink": "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd",
+          "file_path": "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd--reinstall-research-context-skill.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7351919616720135,
+          "permalink": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+          "file_path": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.729812833085127,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7289957588462812,
+          "permalink": "catalog/conversation-inventory",
+          "file_path": "catalog/ConversationInventory.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7274096236679508,
+          "permalink": "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+          "file_path": "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7233396038046678,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 3,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "memory-en",
+      "query": "Find previous work on persistent conversation memory and agent skills",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "mode": "hybrid",
+      "seconds": 1.0068409442901611,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 1.229599222711604,
+          "permalink": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+          "file_path": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.1257503462878387,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0387372430084414,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0374878351496297,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0200844496147576,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.011831397201264,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0052078000204574,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.002162033350009,
+          "permalink": "conversations/01a1a65c-d362-7280-88b9-84125626afa5",
+          "file_path": "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.9607028513675148,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8669555804239663,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "memory-zh",
+      "query": "查找之前关于对话记忆、智能体技能和上下文系统的工作",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "mode": "text",
+      "seconds": 0.052139997482299805,
+      "hits": [],
+      "total": 0,
+      "expected_rank": null,
+      "has_results": false
+    },
+    {
+      "project": "codex",
+      "id": "memory-zh",
+      "query": "查找之前关于对话记忆、智能体技能和上下文系统的工作",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "mode": "semantic",
+      "seconds": 1.2765324115753174,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7212522303567379,
+          "permalink": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539",
+          "file_path": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7058569479395214,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6908275325022668,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.647162720458418,
+          "permalink": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac",
+          "file_path": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6389100094240643,
+          "permalink": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0",
+          "file_path": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6034689323548434,
+          "permalink": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c",
+          "file_path": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c--分析近端梯度线搜索方向.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5936498005067801,
+          "permalink": "conversations/01a0d187-2137-7691-ba29-58a377292dad",
+          "file_path": "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5849145888258818,
+          "permalink": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1",
+          "file_path": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1--总结肌腱肌肉与神经对早期发力的贡献.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5756358335929619,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5636307357997463,
+          "permalink": "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+          "file_path": "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "memory-zh",
+      "query": "查找之前关于对话记忆、智能体技能和上下文系统的工作",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "mode": "hybrid",
+      "seconds": 0.7044887542724609,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7212522303567379,
+          "permalink": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539",
+          "file_path": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7058569479395214,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6908275325022668,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.647162720458418,
+          "permalink": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac",
+          "file_path": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6389100094240643,
+          "permalink": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0",
+          "file_path": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6034689323548434,
+          "permalink": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c",
+          "file_path": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c--分析近端梯度线搜索方向.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5936498005067801,
+          "permalink": "conversations/01a0d187-2137-7691-ba29-58a377292dad",
+          "file_path": "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5849145888258818,
+          "permalink": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1",
+          "file_path": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1--总结肌腱肌肉与神经对早期发力的贡献.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5756358335929619,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.5636307357997463,
+          "permalink": "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+          "file_path": "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "research-en",
+      "query": "Find conversations about research papers and literature analysis",
+      "expected_topic": "topics/research-and-papers",
+      "mode": "text",
+      "seconds": 0.04265856742858887,
+      "hits": [
+        {
+          "type": "entity",
+          "score": -28.885014165008485,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "type": "entity",
+          "score": -26.395093398861558,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": -18.88754431357765,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "type": "entity",
+          "score": -15.974028638845157,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": -10.82511965003393,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "type": "entity",
+          "score": -7.926063617316959,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        }
+      ],
+      "total": 6,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "research-en",
+      "query": "Find conversations about research papers and literature analysis",
+      "expected_topic": "topics/research-and-papers",
+      "mode": "semantic",
+      "seconds": 0.5765774250030518,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.7114353356441825,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6991060756529475,
+          "permalink": "topics/research-and-papers",
+          "file_path": "topics/research-and-papers.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6945441523916838,
+          "permalink": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e",
+          "file_path": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6932371894861387,
+          "permalink": "conversations/01a172df-6539-7473-a37b-80593ff24835",
+          "file_path": "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.684936713845218,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6843618175641932,
+          "permalink": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0",
+          "file_path": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6763825993076509,
+          "permalink": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+          "file_path": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6717570920672813,
+          "permalink": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac",
+          "file_path": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6705006838838141,
+          "permalink": "catalog/conversation-inventory",
+          "file_path": "catalog/ConversationInventory.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6672647831496477,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 2,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "research-en",
+      "query": "Find conversations about research papers and literature analysis",
+      "expected_topic": "topics/research-and-papers",
+      "mode": "hybrid",
+      "seconds": 0.7414982318878174,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 1.19225488775704,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.1192798874404881,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8634309772080686,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.8096355272038642,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7645659359276115,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7200424042620746,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7114353356441825,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6991060756529475,
+          "permalink": "topics/research-and-papers",
+          "file_path": "topics/research-and-papers.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6945441523916838,
+          "permalink": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e",
+          "file_path": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.6932371894861387,
+          "permalink": "conversations/01a172df-6539-7473-a37b-80593ff24835",
+          "file_path": "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 8,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "software-en",
+      "query": "Find work on software repositories, implementation and tests",
+      "expected_topic": "topics/software-repositories",
+      "mode": "text",
+      "seconds": 0.05090212821960449,
+      "hits": [
+        {
+          "type": "entity",
+          "score": -33.237665329772426,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": -32.79185077824708,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "type": "entity",
+          "score": -32.438376918051326,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "type": "entity",
+          "score": -32.34701654452616,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "type": "entity",
+          "score": -31.951754834002323,
+          "permalink": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+          "file_path": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md"
+        },
+        {
+          "type": "entity",
+          "score": -31.655249621202053,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "type": "entity",
+          "score": -29.65469505477519,
+          "permalink": "conversations/01a1a65c-d362-7280-88b9-84125626afa5",
+          "file_path": "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md"
+        },
+        {
+          "type": "entity",
+          "score": -28.7506113075296,
+          "permalink": "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7",
+          "file_path": "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md"
+        },
+        {
+          "type": "entity",
+          "score": -27.240558260382596,
+          "permalink": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739",
+          "file_path": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739--plan-rsi-repository-baseline-tests.md"
+        },
+        {
+          "type": "entity",
+          "score": -26.630970806386614,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        }
+      ],
+      "total": 12,
+      "expected_rank": null,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "software-en",
+      "query": "Find work on software repositories, implementation and tests",
+      "expected_topic": "topics/software-repositories",
+      "mode": "semantic",
+      "seconds": 0.6272597312927246,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 0.8231005620485501,
+          "permalink": "topics/software-repositories",
+          "file_path": "topics/software-repositories.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7855464666607688,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7295205048814921,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7239498349895097,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7216212258284411,
+          "permalink": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+          "file_path": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7188933904943724,
+          "permalink": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739",
+          "file_path": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739--plan-rsi-repository-baseline-tests.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7151494410132937,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7133878017201596,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7091372469041186,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "type": "entity",
+          "score": 0.7067770520359868,
+          "permalink": "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6",
+          "file_path": "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": 1,
+      "has_results": true
+    },
+    {
+      "project": "codex",
+      "id": "software-en",
+      "query": "Find work on software repositories, implementation and tests",
+      "expected_topic": "topics/software-repositories",
+      "mode": "hybrid",
+      "seconds": 0.6953277587890625,
+      "hits": [
+        {
+          "type": "entity",
+          "score": 1.2356639399982305,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.200603408316926,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.1859448038566143,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.1851867033677133,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.1777980157535366,
+          "permalink": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+          "file_path": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.1669357209879494,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.1006745718470903,
+          "permalink": "conversations/01a1a65c-d362-7280-88b9-84125626afa5",
+          "file_path": "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0725398385479976,
+          "permalink": "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7",
+          "file_path": "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0352369606980873,
+          "permalink": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739",
+          "file_path": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739--plan-rsi-repository-baseline-tests.md"
+        },
+        {
+          "type": "entity",
+          "score": 1.0184136331423843,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        }
+      ],
+      "total": 10,
+      "expected_rank": null,
+      "has_results": true
+    }
+  ],
+  "reads": [
+    {
+      "project": "notion",
+      "path": "Overview.md",
+      "seconds": 0.46239662170410156,
+      "returned_bytes": 6231,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "notion",
+      "path": "README.md",
+      "seconds": 0.0327610969543457,
+      "returned_bytes": 7007,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "notion",
+      "path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md",
+      "seconds": 0.032238006591796875,
+      "returned_bytes": 3967,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "notion",
+      "path": "driving/MotorcycleNotes/topics/riding-controls.md",
+      "seconds": 0.03276872634887695,
+      "returned_bytes": 5073,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "notion",
+      "path": "driving/MotorcycleNotes/topics/travel-preparation.md",
+      "seconds": 0.03262686729431152,
+      "returned_bytes": 2778,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "codex",
+      "path": "Overview.md",
+      "seconds": 0.05773329734802246,
+      "returned_bytes": 1359,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "codex",
+      "path": "README.md",
+      "seconds": 0.02828693389892578,
+      "returned_bytes": 2123,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "codex",
+      "path": "topics/memory-agent-infrastructure.md",
+      "seconds": 0.03210711479187012,
+      "returned_bytes": 3885,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "codex",
+      "path": "topics/research-and-papers.md",
+      "seconds": 0.029633522033691406,
+      "returned_bytes": 2231,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    },
+    {
+      "project": "codex",
+      "path": "topics/software-repositories.md",
+      "seconds": 0.02948904037475586,
+      "returned_bytes": 2663,
+      "has_error": false,
+      "returned_keys": [
+        "title",
+        "permalink",
+        "file_path",
+        "content",
+        "frontmatter",
+        "checksum"
+      ],
+      "body_returned": true
+    }
+  ],
+  "contexts": [
+    {
+      "project": "notion",
+      "source": "expected",
+      "anchor": "topics/riding-controls",
+      "seconds": 0.6247758865356445,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "captures/motorcycle-notes-build",
+        "catalog/SourceInventory.md",
+        "driving/MotorcycleNotes/Overview.md",
+        "driving/MotorcycleNotes/README.md",
+        "driving/MotorcycleNotes/SourceInventory.md",
+        "driving/MotorcycleNotes/history/build-motorcycle-notes.md",
+        "driving/MotorcycleNotes/history/motorcycle-notes-build.md",
+        "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md",
+        "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md",
+        "driving/MotorcycleNotes/sources/MotorcycleNotes--5e7a8010.md",
+        "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md",
+        "driving/MotorcycleNotes/sources/摩托道路骑行经验--d0f383f1.md",
+        "driving/MotorcycleNotes/sources/方块滚动（ChatGPT 回答）-TODO--f5944034.md",
+        "driving/MotorcycleNotes/sources/赛道技术 Track Techniques--8d7fbd63.md",
+        "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md",
+        "driving/MotorcycleNotes/topics/course-offroad-progression.md",
+        "driving/MotorcycleNotes/topics/course-training-map.md",
+        "driving/MotorcycleNotes/topics/maintenance-system-map.md",
+        "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md",
+        "driving/MotorcycleNotes/topics/reference-catalog.md",
+        "driving/MotorcycleNotes/topics/riding-controls.md",
+        "driving/MotorcycleNotes/topics/riding-evidence-gaps.md",
+        "driving/MotorcycleNotes/topics/riding-offroad-foundations.md",
+        "driving/MotorcycleNotes/topics/riding-terrain.md",
+        "driving/MotorcycleNotes/topics/riding-track.md",
+        "driving/MotorcycleNotes/topics/travel-preparation.md",
+        "global/guide",
+        "global/overview",
+        "global/source-inventory",
+        "overview",
+        "source-inventory",
+        "sources/1d3f8d77a87b8067960ac524ef02499c",
+        "sources/1e2f8d77a87b8070b139dd315e7a8010",
+        "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+        "sources/2caf8d77a87b8008ba43c9b916d94745",
+        "sources/33df8d77a87b80aa92dfde468d7fbd63",
+        "sources/3a4f8d77a87b80689fd2c92af8157078",
+        "tasks/build-motorcycle-notes",
+        "topics/riding-controls",
+        "topics/riding-evidence-gaps",
+        "topics/riding-offroad-foundations",
+        "topics/riding-track"
+      ],
+      "returned_bytes": 63019
+    },
+    {
+      "project": "notion",
+      "source": "semantic_top1",
+      "anchor": "sources/372f8d77a87b802bbe52dc8b4da28195",
+      "seconds": 0.04211568832397461,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "README.md",
+        "catalog/SourceInventory.md",
+        "driving/MotorcycleNotes/SourceInventory.md",
+        "driving/MotorcycleNotes/history/motorcycle-notes-build.md",
+        "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md",
+        "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md",
+        "driving/MotorcycleNotes/topics/maintenance-system-map.md",
+        "global/source-inventory",
+        "source-inventory",
+        "sources/1e2f8d77a87b809f858df18dedc5d54b",
+        "sources/372f8d77a87b802bbe52dc8b4da28195",
+        "topics/maintenance-system-map"
+      ],
+      "returned_bytes": 58754
+    },
+    {
+      "project": "codex",
+      "source": "expected",
+      "anchor": "topics/memory-agent-infrastructure",
+      "seconds": 0.04388165473937988,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "catalog/ConversationInventory.md",
+        "codex-memory-overview",
+        "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md",
+        "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8--go-through-the-stantard-of-asd-ste100-analyze-it-meticulou.md",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989--find-asd-ste100-writing-context.md",
+        "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md",
+        "conversations/01a143c6-ea77-7bc1-ad71-1aae58890066--install-skilllibmarmotatzju-skills.md",
+        "conversations/01a144d2-0a29-7d40-b616-7068f827b062--find-jev-engineering-pdf.md",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7--find-youtube-summarization-skills.md",
+        "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md",
+        "conversations/01a1582a-1772-7183-b78b-3f52a8c1a085--summarize-arxiv-paper-2609-36054.md",
+        "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99--find-deepseek-4-1-codex-harness.md",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md",
+        "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md",
+        "conversations/01a17844-03af-7bd2-b4bc-7fabe9b67c21--summarize-discrete-action-control.md",
+        "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md",
+        "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md",
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd",
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd--reinstall-research-context-skill.md",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60--find-ideal-pdf-reading-skills.md",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92--configure-codex-wsl-distribution.md",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md",
+        "topics/memory-agent-infrastructure",
+        "topics/memory-agent-infrastructure.md"
+      ],
+      "returned_bytes": 61971
+    },
+    {
+      "project": "codex",
+      "source": "semantic_top1",
+      "anchor": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+      "seconds": 0.03975224494934082,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "catalog/ConversationInventory.md",
+        "catalog/conversation-inventory",
+        "codex-memory-overview",
+        "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md",
+        "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md",
+        "conversations/01a0db78-42dc-7e72-bdeb-918212292ef6--find-muse-runtime-release-clues.md",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8--go-through-the-stantard-of-asd-ste100-analyze-it-meticulou.md",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989--find-asd-ste100-writing-context.md",
+        "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md",
+        "conversations/01a143c6-ea77-7bc1-ad71-1aae58890066--install-skilllibmarmotatzju-skills.md",
+        "conversations/01a144d2-0a29-7d40-b616-7068f827b062--find-jev-engineering-pdf.md",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7--find-youtube-summarization-skills.md",
+        "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md",
+        "conversations/01a1582a-1772-7183-b78b-3f52a8c1a085--summarize-arxiv-paper-2609-36054.md",
+        "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99--find-deepseek-4-1-codex-harness.md",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md",
+        "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md",
+        "conversations/01a1783a-2fd6-7262-b9e3-41c13c55fabe--verify-pronator-teres-syndrome-claim.md",
+        "conversations/01a17844-03af-7bd2-b4bc-7fabe9b67c21--summarize-discrete-action-control.md",
+        "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md",
+        "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md",
+        "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md",
+        "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md",
+        "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60--find-ideal-pdf-reading-skills.md",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92--configure-codex-wsl-distribution.md",
+        "conversations/01a1aba3-c064-7fb3-8679-26a3b07f5b61--check-effective-linux-distribution.md",
+        "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md",
+        "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1--总结肌腱肌肉与神经对早期发力的贡献.md",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md",
+        "topics/general-analysis.md",
+        "topics/memory-agent-infrastructure",
+        "topics/memory-agent-infrastructure.md",
+        "topics/motorcycle-and-control.md"
+      ],
+      "returned_bytes": 65784
+    }
+  ],
+  "benchmarks": [
+    {
+      "batch": 2,
+      "concurrency": 1,
+      "inputs": 512,
+      "seconds": 5.91242790222168,
+      "vectors_per_second": 86.5972504810771,
+      "all_768_finite": true
+    },
+    {
+      "batch": 32,
+      "concurrency": 4,
+      "inputs": 512,
+      "seconds": 3.1761527061462402,
+      "vectors_per_second": 161.20131724435603,
+      "all_768_finite": true
+    },
+    {
+      "batch": 128,
+      "concurrency": 4,
+      "inputs": 512,
+      "seconds": 1.9317309856414795,
+      "vectors_per_second": 265.04725751447097,
+      "all_768_finite": true
+    },
+    {
+      "batch": 512,
+      "concurrency": 4,
+      "inputs": 512,
+      "seconds": 2.7604641914367676,
+      "vectors_per_second": 185.47605203076878,
+      "all_768_finite": true
+    }
+  ],
+  "corpus_audit": {
+    "notion": {
+      "original_markdown_records": 429,
+      "runtime_entities": 450,
+      "missing_record_paths": [],
+      "changed_permalinks": [],
+      "legacy_edges": 1396,
+      "matched_legacy_edges": 1396,
+      "missing_legacy_edges": [],
+      "runtime_resolved_edges": 1411,
+      "runtime_unresolved_relations": 0,
+      "vector_chunks": 7484,
+      "embedding_status_counts": {
+        "ready": 7484
+      },
+      "original_unchanged": true,
+      "changed_copy_files": 4,
+      "copy_markdown_changes": {},
+      "non_markdown_entities": 21
+    },
+    "codex": {
+      "original_markdown_records": 51,
+      "runtime_entities": 128,
+      "missing_record_paths": [],
+      "changed_permalinks": [],
+      "legacy_edges": 132,
+      "matched_legacy_edges": 132,
+      "missing_legacy_edges": [],
+      "runtime_resolved_edges": 210,
+      "runtime_unresolved_relations": 0,
+      "vector_chunks": 36264,
+      "embedding_status_counts": {
+        "ready": 36264
+      },
+      "original_unchanged": true,
+      "changed_copy_files": 0,
+      "copy_markdown_changes": {},
+      "non_markdown_entities": 77
+    }
+  },
+  "warm_query_benchmarks": [
+    {
+      "concurrency": 1,
+      "seconds": 1.5488462448120117,
+      "queries": [
+        {
+          "seconds": 0.10797619819641113,
+          "hits": 10
+        },
+        {
+          "seconds": 0.08402466773986816,
+          "hits": 10
+        },
+        {
+          "seconds": 0.08968353271484375,
+          "hits": 10
+        },
+        {
+          "seconds": 0.10504937171936035,
+          "hits": 10
+        },
+        {
+          "seconds": 0.08690118789672852,
+          "hits": 10
+        },
+        {
+          "seconds": 0.07541275024414062,
+          "hits": 10
+        },
+        {
+          "seconds": 0.08994436264038086,
+          "hits": 10
+        },
+        {
+          "seconds": 0.17893147468566895,
+          "hits": 10
+        },
+        {
+          "seconds": 0.08587217330932617,
+          "hits": 10
+        },
+        {
+          "seconds": 0.08172035217285156,
+          "hits": 10
+        },
+        {
+          "seconds": 0.10141921043395996,
+          "hits": 10
+        },
+        {
+          "seconds": 0.0835413932800293,
+          "hits": 10
+        },
+        {
+          "seconds": 0.09099698066711426,
+          "hits": 10
+        },
+        {
+          "seconds": 0.09363532066345215,
+          "hits": 10
+        },
+        {
+          "seconds": 0.0907127857208252,
+          "hits": 10
+        },
+        {
+          "seconds": 0.10270833969116211,
+          "hits": 10
+        }
+      ]
+    },
+    {
+      "concurrency": 4,
+      "seconds": 1.018066644668579,
+      "queries": [
+        {
+          "seconds": 0.15873336791992188,
+          "hits": 10
+        },
+        {
+          "seconds": 0.24788475036621094,
+          "hits": 10
+        },
+        {
+          "seconds": 0.27690887451171875,
+          "hits": 10
+        },
+        {
+          "seconds": 0.25435900688171387,
+          "hits": 10
+        },
+        {
+          "seconds": 0.28144240379333496,
+          "hits": 10
+        },
+        {
+          "seconds": 0.25284314155578613,
+          "hits": 10
+        },
+        {
+          "seconds": 0.2368004322052002,
+          "hits": 10
+        },
+        {
+          "seconds": 0.22976970672607422,
+          "hits": 10
+        },
+        {
+          "seconds": 0.19603848457336426,
+          "hits": 10
+        },
+        {
+          "seconds": 0.28250956535339355,
+          "hits": 10
+        },
+        {
+          "seconds": 0.29726648330688477,
+          "hits": 10
+        },
+        {
+          "seconds": 0.2908782958984375,
+          "hits": 10
+        },
+        {
+          "seconds": 0.29352807998657227,
+          "hits": 10
+        },
+        {
+          "seconds": 0.22065520286560059,
+          "hits": 10
+        },
+        {
+          "seconds": 0.21817517280578613,
+          "hits": 10
+        },
+        {
+          "seconds": 0.19965767860412598,
+          "hits": 10
+        }
+      ]
+    }
+  ],
+  "gpu_model_placement": {
+    "models": [
+      {
+        "name": "nomic-embed-text:v1.5",
+        "model": "nomic-embed-text:v1.5",
+        "size": 335743549,
+        "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16"
+        },
+        "expires_at": "2026-11-10T15:12:21.91497635Z",
+        "size_vram": 335743549,
+        "context_length": 2048,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "previous_context_attempts": [
+    {
+      "project": "notion",
+      "anchor": "topics/riding-controls",
+      "error": "ToolError: [{'type': 'value_error', 'loc': ['query', 'timeframe'], 'msg': 'Value error, Timeframe should be <= 1 year', 'input': '3650d', 'ctx': {'error': {}}}]"
+    },
+    {
+      "project": "notion",
+      "anchor": "sources/372f8d77a87b802bbe52dc8b4da28195",
+      "error": "ToolError: [{'type': 'value_error', 'loc': ['query', 'timeframe'], 'msg': 'Value error, Timeframe should be <= 1 year', 'input': '3650d', 'ctx': {'error': {}}}]"
+    },
+    {
+      "project": "codex",
+      "anchor": "topics/memory-agent-infrastructure",
+      "error": "ToolError: [{'type': 'value_error', 'loc': ['query', 'timeframe'], 'msg': 'Value error, Timeframe should be <= 1 year', 'input': '3650d', 'ctx': {'error': {}}}]"
+    },
+    {
+      "project": "codex",
+      "anchor": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+      "error": "ToolError: [{'type': 'value_error', 'loc': ['query', 'timeframe'], 'msg': 'Value error, Timeframe should be <= 1 year', 'input': '3650d', 'ctx': {'error': {}}}]"
+    },
+    {
+      "project": "notion",
+      "source": "expected",
+      "anchor": "topics/riding-controls",
+      "seconds": 0.6288583278656006,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "captures/motorcycle-notes-build",
+        "catalog/SourceInventory.md",
+        "driving/MotorcycleNotes/Overview.md",
+        "driving/MotorcycleNotes/README.md",
+        "driving/MotorcycleNotes/SourceInventory.md",
+        "driving/MotorcycleNotes/history/build-motorcycle-notes.md",
+        "driving/MotorcycleNotes/history/motorcycle-notes-build.md",
+        "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md",
+        "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md",
+        "driving/MotorcycleNotes/sources/MotorcycleNotes--5e7a8010.md",
+        "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md",
+        "driving/MotorcycleNotes/sources/摩托道路骑行经验--d0f383f1.md",
+        "driving/MotorcycleNotes/sources/方块滚动（ChatGPT 回答）-TODO--f5944034.md",
+        "driving/MotorcycleNotes/sources/赛道技术 Track Techniques--8d7fbd63.md",
+        "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md",
+        "driving/MotorcycleNotes/topics/course-offroad-progression.md",
+        "driving/MotorcycleNotes/topics/course-training-map.md",
+        "driving/MotorcycleNotes/topics/maintenance-system-map.md",
+        "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md",
+        "driving/MotorcycleNotes/topics/reference-catalog.md",
+        "driving/MotorcycleNotes/topics/riding-controls.md",
+        "driving/MotorcycleNotes/topics/riding-evidence-gaps.md",
+        "driving/MotorcycleNotes/topics/riding-offroad-foundations.md",
+        "driving/MotorcycleNotes/topics/riding-terrain.md",
+        "driving/MotorcycleNotes/topics/riding-track.md",
+        "driving/MotorcycleNotes/topics/travel-preparation.md",
+        "global/guide",
+        "global/overview",
+        "global/source-inventory",
+        "overview",
+        "source-inventory",
+        "sources/1d3f8d77a87b8067960ac524ef02499c",
+        "sources/1e2f8d77a87b8070b139dd315e7a8010",
+        "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+        "sources/2caf8d77a87b8008ba43c9b916d94745",
+        "sources/33df8d77a87b80aa92dfde468d7fbd63",
+        "sources/3a4f8d77a87b80689fd2c92af8157078",
+        "tasks/build-motorcycle-notes",
+        "topics/riding-controls",
+        "topics/riding-evidence-gaps",
+        "topics/riding-offroad-foundations",
+        "topics/riding-track"
+      ],
+      "returned_bytes": 63019
+    },
+    {
+      "project": "notion",
+      "source": "semantic_top1",
+      "anchor": "sources/372f8d77a87b802bbe52dc8b4da28195",
+      "seconds": 0.04158496856689453,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "README.md",
+        "catalog/SourceInventory.md",
+        "driving/MotorcycleNotes/SourceInventory.md",
+        "driving/MotorcycleNotes/history/motorcycle-notes-build.md",
+        "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md",
+        "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md",
+        "driving/MotorcycleNotes/topics/maintenance-system-map.md",
+        "global/source-inventory",
+        "source-inventory",
+        "sources/1e2f8d77a87b809f858df18dedc5d54b",
+        "sources/372f8d77a87b802bbe52dc8b4da28195",
+        "topics/maintenance-system-map"
+      ],
+      "returned_bytes": 58754
+    },
+    {
+      "project": "codex",
+      "source": "expected",
+      "anchor": "topics/memory-agent-infrastructure",
+      "seconds": 0.04381561279296875,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "catalog/ConversationInventory.md",
+        "codex-memory-overview",
+        "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md",
+        "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8--go-through-the-stantard-of-asd-ste100-analyze-it-meticulou.md",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989--find-asd-ste100-writing-context.md",
+        "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md",
+        "conversations/01a143c6-ea77-7bc1-ad71-1aae58890066--install-skilllibmarmotatzju-skills.md",
+        "conversations/01a144d2-0a29-7d40-b616-7068f827b062--find-jev-engineering-pdf.md",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7--find-youtube-summarization-skills.md",
+        "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md",
+        "conversations/01a1582a-1772-7183-b78b-3f52a8c1a085--summarize-arxiv-paper-2609-36054.md",
+        "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99--find-deepseek-4-1-codex-harness.md",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md",
+        "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md",
+        "conversations/01a17844-03af-7bd2-b4bc-7fabe9b67c21--summarize-discrete-action-control.md",
+        "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md",
+        "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md",
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd",
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd--reinstall-research-context-skill.md",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md",
+        "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md",
+        "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60--find-ideal-pdf-reading-skills.md",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92--configure-codex-wsl-distribution.md",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md",
+        "topics/memory-agent-infrastructure",
+        "topics/memory-agent-infrastructure.md"
+      ],
+      "returned_bytes": 61944
+    },
+    {
+      "project": "codex",
+      "source": "semantic_top1",
+      "anchor": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+      "seconds": 0.04061746597290039,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "catalog/ConversationInventory.md",
+        "catalog/conversation-inventory",
+        "codex-memory-overview",
+        "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md",
+        "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md",
+        "conversations/01a0db78-42dc-7e72-bdeb-918212292ef6--find-muse-runtime-release-clues.md",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8--go-through-the-stantard-of-asd-ste100-analyze-it-meticulou.md",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989--find-asd-ste100-writing-context.md",
+        "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md",
+        "conversations/01a143c6-ea77-7bc1-ad71-1aae58890066--install-skilllibmarmotatzju-skills.md",
+        "conversations/01a144d2-0a29-7d40-b616-7068f827b062--find-jev-engineering-pdf.md",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7--find-youtube-summarization-skills.md",
+        "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md",
+        "conversations/01a1582a-1772-7183-b78b-3f52a8c1a085--summarize-arxiv-paper-2609-36054.md",
+        "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99--find-deepseek-4-1-codex-harness.md",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md",
+        "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md",
+        "conversations/01a1783a-2fd6-7262-b9e3-41c13c55fabe--verify-pronator-teres-syndrome-claim.md",
+        "conversations/01a17844-03af-7bd2-b4bc-7fabe9b67c21--summarize-discrete-action-control.md",
+        "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md",
+        "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md",
+        "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md",
+        "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md",
+        "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60--find-ideal-pdf-reading-skills.md",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92--configure-codex-wsl-distribution.md",
+        "conversations/01a1aba3-c064-7fb3-8679-26a3b07f5b61--check-effective-linux-distribution.md",
+        "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md",
+        "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1--总结肌腱肌肉与神经对早期发力的贡献.md",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md",
+        "topics/general-analysis.md",
+        "topics/memory-agent-infrastructure",
+        "topics/memory-agent-infrastructure.md",
+        "topics/motorcycle-and-control.md"
+      ],
+      "returned_bytes": 65784
+    },
+    {
+      "project": "notion",
+      "source": "expected",
+      "anchor": "topics/riding-controls",
+      "seconds": 0.6557319164276123,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "captures/motorcycle-notes-build",
+        "catalog/SourceInventory.md",
+        "driving/MotorcycleNotes/Overview.md",
+        "driving/MotorcycleNotes/README.md",
+        "driving/MotorcycleNotes/SourceInventory.md",
+        "driving/MotorcycleNotes/history/build-motorcycle-notes.md",
+        "driving/MotorcycleNotes/history/motorcycle-notes-build.md",
+        "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md",
+        "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md",
+        "driving/MotorcycleNotes/sources/MotorcycleNotes--5e7a8010.md",
+        "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md",
+        "driving/MotorcycleNotes/sources/摩托道路骑行经验--d0f383f1.md",
+        "driving/MotorcycleNotes/sources/方块滚动（ChatGPT 回答）-TODO--f5944034.md",
+        "driving/MotorcycleNotes/sources/赛道技术 Track Techniques--8d7fbd63.md",
+        "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md",
+        "driving/MotorcycleNotes/topics/course-offroad-progression.md",
+        "driving/MotorcycleNotes/topics/course-training-map.md",
+        "driving/MotorcycleNotes/topics/maintenance-system-map.md",
+        "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md",
+        "driving/MotorcycleNotes/topics/reference-catalog.md",
+        "driving/MotorcycleNotes/topics/riding-controls.md",
+        "driving/MotorcycleNotes/topics/riding-evidence-gaps.md",
+        "driving/MotorcycleNotes/topics/riding-offroad-foundations.md",
+        "driving/MotorcycleNotes/topics/riding-terrain.md",
+        "driving/MotorcycleNotes/topics/riding-track.md",
+        "driving/MotorcycleNotes/topics/travel-preparation.md",
+        "global/guide",
+        "global/overview",
+        "global/source-inventory",
+        "overview",
+        "source-inventory",
+        "sources/1d3f8d77a87b8067960ac524ef02499c",
+        "sources/1e2f8d77a87b8070b139dd315e7a8010",
+        "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+        "sources/2caf8d77a87b8008ba43c9b916d94745",
+        "sources/33df8d77a87b80aa92dfde468d7fbd63",
+        "sources/3a4f8d77a87b80689fd2c92af8157078",
+        "tasks/build-motorcycle-notes",
+        "topics/riding-controls",
+        "topics/riding-evidence-gaps",
+        "topics/riding-offroad-foundations",
+        "topics/riding-track"
+      ],
+      "returned_bytes": 63019
+    },
+    {
+      "project": "notion",
+      "source": "semantic_top1",
+      "anchor": "sources/372f8d77a87b802bbe52dc8b4da28195",
+      "seconds": 0.045755624771118164,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "README.md",
+        "catalog/SourceInventory.md",
+        "driving/MotorcycleNotes/SourceInventory.md",
+        "driving/MotorcycleNotes/history/motorcycle-notes-build.md",
+        "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md",
+        "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md",
+        "driving/MotorcycleNotes/topics/maintenance-system-map.md",
+        "global/source-inventory",
+        "source-inventory",
+        "sources/1e2f8d77a87b809f858df18dedc5d54b",
+        "sources/372f8d77a87b802bbe52dc8b4da28195",
+        "topics/maintenance-system-map"
+      ],
+      "returned_bytes": 58754
+    },
+    {
+      "project": "codex",
+      "source": "expected",
+      "anchor": "topics/memory-agent-infrastructure",
+      "seconds": 0.046379804611206055,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "catalog/ConversationInventory.md",
+        "codex-memory-overview",
+        "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md",
+        "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8--go-through-the-stantard-of-asd-ste100-analyze-it-meticulou.md",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989--find-asd-ste100-writing-context.md",
+        "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md",
+        "conversations/01a143c6-ea77-7bc1-ad71-1aae58890066--install-skilllibmarmotatzju-skills.md",
+        "conversations/01a144d2-0a29-7d40-b616-7068f827b062--find-jev-engineering-pdf.md",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7--find-youtube-summarization-skills.md",
+        "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md",
+        "conversations/01a1582a-1772-7183-b78b-3f52a8c1a085--summarize-arxiv-paper-2609-36054.md",
+        "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99--find-deepseek-4-1-codex-harness.md",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md",
+        "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md",
+        "conversations/01a17844-03af-7bd2-b4bc-7fabe9b67c21--summarize-discrete-action-control.md",
+        "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md",
+        "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md",
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd",
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd--reinstall-research-context-skill.md",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60--find-ideal-pdf-reading-skills.md",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92--configure-codex-wsl-distribution.md",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md",
+        "topics/memory-agent-infrastructure",
+        "topics/memory-agent-infrastructure.md"
+      ],
+      "returned_bytes": 61971
+    },
+    {
+      "project": "codex",
+      "source": "semantic_top1",
+      "anchor": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+      "seconds": 0.04241442680358887,
+      "result_keys": [
+        "results",
+        "metadata",
+        "page",
+        "page_size",
+        "has_more"
+      ],
+      "paths": [
+        "",
+        "Overview.md",
+        "README.md",
+        "catalog/ConversationInventory.md",
+        "catalog/conversation-inventory",
+        "codex-memory-overview",
+        "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md",
+        "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md",
+        "conversations/01a0db78-42dc-7e72-bdeb-918212292ef6--find-muse-runtime-release-clues.md",
+        "conversations/01a12e02-dea9-7a20-a2ef-4a7486a2abd8--go-through-the-stantard-of-asd-ste100-analyze-it-meticulou.md",
+        "conversations/01a1345f-5f02-7c03-8b7f-0a10e0d3f989--find-asd-ste100-writing-context.md",
+        "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md",
+        "conversations/01a143c6-ea77-7bc1-ad71-1aae58890066--install-skilllibmarmotatzju-skills.md",
+        "conversations/01a144d2-0a29-7d40-b616-7068f827b062--find-jev-engineering-pdf.md",
+        "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md",
+        "conversations/01a14c85-285c-7c43-bafe-ba8c351acab7--find-youtube-summarization-skills.md",
+        "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+        "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md",
+        "conversations/01a1582a-1772-7183-b78b-3f52a8c1a085--summarize-arxiv-paper-2609-36054.md",
+        "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md",
+        "conversations/01a15c70-7200-7592-a43e-b82d45afcf99--find-deepseek-4-1-codex-harness.md",
+        "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md",
+        "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md",
+        "conversations/01a1783a-2fd6-7262-b9e3-41c13c55fabe--verify-pronator-teres-syndrome-claim.md",
+        "conversations/01a17844-03af-7bd2-b4bc-7fabe9b67c21--summarize-discrete-action-control.md",
+        "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md",
+        "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md",
+        "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md",
+        "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md",
+        "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md",
+        "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md",
+        "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md",
+        "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md",
+        "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md",
+        "conversations/01a1aafc-a2fe-7e51-ae0f-701d1ebe9c60--find-ideal-pdf-reading-skills.md",
+        "conversations/01a1ab9c-fd7f-70e2-a463-e5d44ca8bd92--configure-codex-wsl-distribution.md",
+        "conversations/01a1aba3-c064-7fb3-8679-26a3b07f5b61--check-effective-linux-distribution.md",
+        "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md",
+        "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1--总结肌腱肌肉与神经对早期发力的贡献.md",
+        "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md",
+        "topics/general-analysis.md",
+        "topics/memory-agent-infrastructure",
+        "topics/memory-agent-infrastructure.md",
+        "topics/motorcycle-and-control.md"
+      ],
+      "returned_bytes": 65784
+    }
+  ],
+  "post_repair_queries": [
+    {
+      "id": "controls-en",
+      "project": "notion",
+      "mode": "semantic",
+      "query": "How do throttle, clutch and brakes coordinate motorcycle balance?",
+      "expected_topic": "topics/riding-controls",
+      "seconds": 0.791243314743042,
+      "hits": [
+        {
+          "score": 0.7295363744265089,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.7031071406851694,
+          "permalink": "sources/3a4f8d77a87b80689fd2c92af8157078",
+          "file_path": "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md"
+        },
+        {
+          "score": 0.6941421098995306,
+          "permalink": "notion/399f8d77a87b80778019d95550632a4a",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Variability and Fatigue (Answered by ChatGPT)--50632a4a.md"
+        },
+        {
+          "score": 0.6863831094180863,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "score": 0.6787132896740147,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        },
+        {
+          "score": 0.6752121258359107,
+          "permalink": "notion/205f8d77a87b800ebc74d5fa73c3a5d0",
+          "file_path": "driving/VehicleNotes--73c3a5d0.md"
+        },
+        {
+          "score": 0.6544671156763666,
+          "permalink": "notion/36ff8d77a87b809f87bed62efd21b29a",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Physiology of Supramaximal Cycling Sprints (Answered by Gemi--fd21b29a.md"
+        },
+        {
+          "score": 0.6490214383917827,
+          "permalink": "notion/1eef8d77a87b80ddb291fefd4013352b",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/_index.md"
+        },
+        {
+          "score": 0.6481547708867037,
+          "permalink": "notion/391f8d77a87b80ca898ad23aa3f53823",
+          "file_path": "knowledge/Robotics & Control/Impedance Control-Admittance Control--a3f53823.md"
+        },
+        {
+          "score": 0.6476990724543654,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "controls-en",
+      "project": "notion",
+      "mode": "hybrid",
+      "query": "How do throttle, clutch and brakes coordinate motorcycle balance?",
+      "expected_topic": "topics/riding-controls",
+      "seconds": 0.4202425479888916,
+      "hits": [
+        {
+          "score": 1.1462716420479233,
+          "permalink": "notion/23af8d77a87b8032a846f9ebffdeae1e",
+          "file_path": "notes/h-auto-doc-notes/[LocoManipulation][Quadruped] Learning coordinated badminton--ffdeae1e.md"
+        },
+        {
+          "score": 1.01080752549609,
+          "permalink": "notion/239f8d77a87b807ba1f9e2aed799658f",
+          "file_path": "notes/h-auto-doc-notes/[MultiTerrain][Humanoid] Humanoid Whole-Body Locomotion on N--d799658f.md"
+        },
+        {
+          "score": 1.0,
+          "permalink": "notion/23bf8d77a87b800a9333d0d4f2c5bf3f",
+          "file_path": "languages/ENG/Life--f2c5bf3f.md"
+        },
+        {
+          "score": 0.9526669597009614,
+          "permalink": "notion/23af8d77a87b802c927be8f5820113ea",
+          "file_path": "notes/h-auto-doc-notes/[MultiView] PETRv2- A Unified Framework for 3D Perception fr--820113ea.md"
+        },
+        {
+          "score": 0.9520575122484005,
+          "permalink": "notion/376f8d77a87b803d9b3cc0a960e48fbb",
+          "file_path": "knowledge/Mathematics/Notes on Differential Geometry--60e48fbb.md"
+        },
+        {
+          "score": 0.9435914266148502,
+          "permalink": "notion/239f8d77a87b802ca89be9f06693ba9a",
+          "file_path": "notes/h-auto-doc-notes/Humanoid Motion Control Reading--6693ba9a.md"
+        },
+        {
+          "score": 0.8299424871303467,
+          "permalink": "notion/23af8d77a87b8050b1dfcf3955baff82",
+          "file_path": "notes/h-auto-doc-notes/[Draft][Research] Foothold-as-Interface--55baff82.md"
+        },
+        {
+          "score": 0.8234547655363368,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.8229651236056768,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "score": 0.8217433524286963,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "controls-zh",
+      "project": "notion",
+      "mode": "semantic",
+      "query": "摩托车如何协调油门、离合、刹车与身体重心？",
+      "expected_topic": "topics/riding-controls",
+      "seconds": 0.11245012283325195,
+      "hits": [
+        {
+          "score": 0.7563090327843849,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "score": 0.7264285099842525,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7214268818969458,
+          "permalink": "notion/2b8f8d77a87b801493ecf241d9196b3f",
+          "file_path": "knowledge/户外运动 Outdoors/滑雪-滑雪携带物资 Ski-Snowboard--d9196b3f.md"
+        },
+        {
+          "score": 0.7210782363742894,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "score": 0.7155637263614221,
+          "permalink": "sources/1e4f8d77a87b80f58f42dae851d32ed3",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾高阶--51d32ed3.md"
+        },
+        {
+          "score": 0.7073702748147923,
+          "permalink": "notion/1eef8d77a87b80ddb291fefd4013352b",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/_index.md"
+        },
+        {
+          "score": 0.705354673452673,
+          "permalink": "sources/1e4f8d77a87b807ba2cdfdea7e71f4dc",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾初阶--7e71f4dc.md"
+        },
+        {
+          "score": 0.704177075255636,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "score": 0.703438110715517,
+          "permalink": "notion/405f8d77a87b80499d9fc372d4073603",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/蛋白粉食物热效应（ChatGPT 回答）--d4073603.md"
+        },
+        {
+          "score": 0.7028491426513526,
+          "permalink": "notion/2d8f8d77a87b8097a48ad960f09152b6",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/高容量徒步后恢复（Gemini 回答）--f09152b6.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "controls-zh",
+      "project": "notion",
+      "mode": "hybrid",
+      "query": "摩托车如何协调油门、离合、刹车与身体重心？",
+      "expected_topic": "topics/riding-controls",
+      "seconds": 0.18204379081726074,
+      "hits": [
+        {
+          "score": 0.7563090327843849,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "score": 0.7264285099842525,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7214268818969458,
+          "permalink": "notion/2b8f8d77a87b801493ecf241d9196b3f",
+          "file_path": "knowledge/户外运动 Outdoors/滑雪-滑雪携带物资 Ski-Snowboard--d9196b3f.md"
+        },
+        {
+          "score": 0.7210782363742894,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "score": 0.7155637263614221,
+          "permalink": "sources/1e4f8d77a87b80f58f42dae851d32ed3",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾高阶--51d32ed3.md"
+        },
+        {
+          "score": 0.7073702748147923,
+          "permalink": "notion/1eef8d77a87b80ddb291fefd4013352b",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/_index.md"
+        },
+        {
+          "score": 0.705354673452673,
+          "permalink": "sources/1e4f8d77a87b807ba2cdfdea7e71f4dc",
+          "file_path": "driving/MotorcycleNotes/sources/悦骑-安驾初阶--7e71f4dc.md"
+        },
+        {
+          "score": 0.704177075255636,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "score": 0.703438110715517,
+          "permalink": "notion/405f8d77a87b80499d9fc372d4073603",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/蛋白粉食物热效应（ChatGPT 回答）--d4073603.md"
+        },
+        {
+          "score": 0.7028491426513526,
+          "permalink": "notion/2d8f8d77a87b8097a48ad960f09152b6",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/高容量徒步后恢复（Gemini 回答）--f09152b6.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "vehicle-en",
+      "project": "notion",
+      "mode": "semantic",
+      "query": "KTM 250 DUKE fuel consumption and oil maintenance records",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "seconds": 0.09385442733764648,
+      "hits": [
+        {
+          "score": 0.807289200358495,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "score": 0.7675588098823578,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "score": 0.7621753664901618,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "score": 0.7586758287547966,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "score": 0.7414940989505521,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.7256673132310549,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7037372390640257,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "score": 0.6720462608521967,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        },
+        {
+          "score": 0.650441548011484,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "score": 0.6417540084062221,
+          "permalink": "sources/1e4f8d77a87b80c2988af052590fa530",
+          "file_path": "driving/MotorcycleNotes/sources/其他摩托杂项--590fa530.md"
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "vehicle-en",
+      "project": "notion",
+      "mode": "hybrid",
+      "query": "KTM 250 DUKE fuel consumption and oil maintenance records",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "seconds": 0.14665675163269043,
+      "hits": [
+        {
+          "score": 0.807289200358495,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "score": 0.7675588098823578,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "score": 0.7621753664901618,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "score": 0.7586758287547966,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "score": 0.7414940989505521,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.7256673132310549,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7037372390640257,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "score": 0.6720462608521967,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        },
+        {
+          "score": 0.650441548011484,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "score": 0.6417540084062221,
+          "permalink": "sources/1e4f8d77a87b80c2988af052590fa530",
+          "file_path": "driving/MotorcycleNotes/sources/其他摩托杂项--590fa530.md"
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "vehicle-zh",
+      "project": "notion",
+      "mode": "semantic",
+      "query": "KTM 250 DUKE 的油耗记录与机油保养在哪里？",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "seconds": 0.10181879997253418,
+      "hits": [
+        {
+          "score": 0.8498252774721706,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "score": 0.8326424080485548,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "score": 0.8240227771658777,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "score": 0.8126563207924971,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "score": 0.7993998269594158,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7703330897224543,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.7214739505777104,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "score": 0.7100219265020087,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "score": 0.7049499171902127,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "score": 0.6973973711245076,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "vehicle-zh",
+      "project": "notion",
+      "mode": "hybrid",
+      "query": "KTM 250 DUKE 的油耗记录与机油保养在哪里？",
+      "expected_topic": "topics/maintenance-vehicle-records",
+      "seconds": 0.14682841300964355,
+      "hits": [
+        {
+          "score": 0.8498252774721706,
+          "permalink": "topics/maintenance-vehicle-records",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-vehicle-records.md"
+        },
+        {
+          "score": 0.8326424080485548,
+          "permalink": "sources/32ff8d77a87b80c78c7add8d23338162",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 轮胎--23338162.md"
+        },
+        {
+          "score": 0.8240227771658777,
+          "permalink": "sources/32ff8d77a87b806a97c4dab64474f410",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 油耗记录--4474f410.md"
+        },
+        {
+          "score": 0.8126563207924971,
+          "permalink": "sources/32ff8d77a87b80a9be58d632bd9b4ba6",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 维护项目-实用信息-车辆数据--bd9b4ba6.md"
+        },
+        {
+          "score": 0.7993998269594158,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7703330897224543,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.7214739505777104,
+          "permalink": "sources/32ff8d77a87b804782dbf2c062fd31d4",
+          "file_path": "driving/MotorcycleNotes/sources/ktm250duke (2022) 齿比-轮速-转速计算--62fd31d4.md"
+        },
+        {
+          "score": 0.7100219265020087,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "score": 0.7049499171902127,
+          "permalink": "topics/maintenance-system-map",
+          "file_path": "driving/MotorcycleNotes/topics/maintenance-system-map.md"
+        },
+        {
+          "score": 0.6973973711245076,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "travel-en",
+      "project": "notion",
+      "mode": "semantic",
+      "query": "What equipment and preparation are needed for a motorcycle journey?",
+      "expected_topic": "topics/travel-preparation",
+      "seconds": 0.09303522109985352,
+      "hits": [
+        {
+          "score": 0.7188286726286606,
+          "permalink": "sources/3a4f8d77a87b80689fd2c92af8157078",
+          "file_path": "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md"
+        },
+        {
+          "score": 0.6996936621945888,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.6926536508949468,
+          "permalink": "notion/370f8d77a87b80aa93dcfa5699c3efde",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Fasted Training For Fat Oxidation (Answered by Gemini)--99c3efde.md"
+        },
+        {
+          "score": 0.6831735879206633,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "score": 0.6570813419115336,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        },
+        {
+          "score": 0.6562304102343415,
+          "permalink": "notion/37df8d77a87b804ca6e8fcc699b38c4f",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/FatMax Power Relative to CP (Answered by Gemini)--99b38c4f.md"
+        },
+        {
+          "score": 0.6478702627857444,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        },
+        {
+          "score": 0.6410643899042707,
+          "permalink": "notion/270f8d77a87b8082a453c9715cfa27b1",
+          "file_path": "languages/ENG/Programs-Articles-Talks-Radio--5cfa27b1.md"
+        },
+        {
+          "score": 0.6393972761163411,
+          "permalink": "notion/303f8d77a87b80759d42f64c27917a91",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/Switch between Different Energy Systems (Answered by Gemini)--27917a91.md"
+        },
+        {
+          "score": 0.6390187526394584,
+          "permalink": "notion/391f8d77a87b80df9456ff3bd17ed02f",
+          "file_path": "knowledge/户外运动 Outdoors/The Feeling of Skill Mastery (Answered by ChatGPT)--d17ed02f.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "travel-en",
+      "project": "notion",
+      "mode": "hybrid",
+      "query": "What equipment and preparation are needed for a motorcycle journey?",
+      "expected_topic": "topics/travel-preparation",
+      "seconds": 0.16234636306762695,
+      "hits": [
+        {
+          "score": 1.1750304210387292,
+          "permalink": "topics/travel-preparation",
+          "file_path": "driving/MotorcycleNotes/topics/travel-preparation.md"
+        },
+        {
+          "score": 0.9184141733233807,
+          "permalink": "notion/2d1f8d77a87b80ee9702e984f2122f5c",
+          "file_path": "languages/ENG/Sentences-Quotes-Idiom--f2122f5c.md"
+        },
+        {
+          "score": 0.8285819285715613,
+          "permalink": "notion/38ef8d77a87b804fb2bbdec8f3047f49",
+          "file_path": "languages/ENG/Technical Terms--f3047f49.md"
+        },
+        {
+          "score": 0.7798044986505159,
+          "permalink": "sources/372f8d77a87b802bbe52dc8b4da28195",
+          "file_path": "driving/MotorcycleNotes/sources/Understanding RBW on KTM Motorcycles (Answered by Gemini)--4da28195.md"
+        },
+        {
+          "score": 0.7790836231497421,
+          "permalink": "captures/motorcycle-notes-build",
+          "file_path": "driving/MotorcycleNotes/history/motorcycle-notes-build.md"
+        },
+        {
+          "score": 0.7717029141689329,
+          "permalink": "sources/3a4f8d77a87b80689fd2c92af8157078",
+          "file_path": "driving/MotorcycleNotes/sources/Motorcycle Psychology Fact Check (Answered by ChatGPT)--f8157078.md"
+        },
+        {
+          "score": 0.7471714658079199,
+          "permalink": "tasks/build-motorcycle-notes",
+          "file_path": "driving/MotorcycleNotes/history/build-motorcycle-notes.md"
+        },
+        {
+          "score": 0.7471446227630131,
+          "permalink": "sources/1e2f8d77a87b8070b139dd315e7a8010",
+          "file_path": "driving/MotorcycleNotes/sources/MotorcycleNotes--5e7a8010.md"
+        },
+        {
+          "score": 0.7464498546262307,
+          "permalink": "notion/2fff8d77a87b8080af8cfcbe4077f42e",
+          "file_path": "driving/_index.md"
+        },
+        {
+          "score": 0.7463777663065936,
+          "permalink": "sources/247f8d77a87b80b986c3c29b7c0aa15f",
+          "file_path": "driving/MotorcycleNotes/sources/经典车型-制造商--7c0aa15f.md"
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "travel-zh",
+      "project": "notion",
+      "mode": "semantic",
+      "query": "摩托车长途旅行之前需要准备什么装备？",
+      "expected_topic": "topics/travel-preparation",
+      "seconds": 0.11073803901672363,
+      "hits": [
+        {
+          "score": 0.7904026857796094,
+          "permalink": "sources/235f8d77a87b807db139e29fd0f383f1",
+          "file_path": "driving/MotorcycleNotes/sources/摩托道路骑行经验--d0f383f1.md"
+        },
+        {
+          "score": 0.7619410769580099,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "score": 0.7602877093478764,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "score": 0.7458251898171095,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "score": 0.7421535600775471,
+          "permalink": "topics/course-offroad-progression",
+          "file_path": "driving/MotorcycleNotes/topics/course-offroad-progression.md"
+        },
+        {
+          "score": 0.7380522906752116,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "score": 0.7363949579407745,
+          "permalink": "notion/3d1f8d77a87b8094968ffa318fed48cb",
+          "file_path": "driving/LegalNotes--8fed48cb.md"
+        },
+        {
+          "score": 0.730592623127194,
+          "permalink": "sources/394f8d77a87b80049940ec4b1b2bc4ae",
+          "file_path": "driving/MotorcycleNotes/sources/中长途摩托旅行--1b2bc4ae.md"
+        },
+        {
+          "score": 0.7270835889326417,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7185399885479722,
+          "permalink": "notion/3ebf8d77a87b805d9848f7a3b99f7ebb",
+          "file_path": "knowledge/户外运动 Outdoors/北体车队-计成课堂--b99f7ebb.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "travel-zh",
+      "project": "notion",
+      "mode": "hybrid",
+      "query": "摩托车长途旅行之前需要准备什么装备？",
+      "expected_topic": "topics/travel-preparation",
+      "seconds": 0.16608190536499023,
+      "hits": [
+        {
+          "score": 0.7904026857796094,
+          "permalink": "sources/235f8d77a87b807db139e29fd0f383f1",
+          "file_path": "driving/MotorcycleNotes/sources/摩托道路骑行经验--d0f383f1.md"
+        },
+        {
+          "score": 0.7619410769580099,
+          "permalink": "sources/2caf8d77a87b8008ba43c9b916d94745",
+          "file_path": "driving/MotorcycleNotes/sources/Ice Snow Tire Pressure Discussion (Answered by Gemini)--16d94745.md"
+        },
+        {
+          "score": 0.7602877093478764,
+          "permalink": "sources/1d3f8d77a87b8067960ac524ef02499c",
+          "file_path": "driving/MotorcycleNotes/sources/摩托操控经验--ef02499c.md"
+        },
+        {
+          "score": 0.7458251898171095,
+          "permalink": "sources/1fcf8d77a87b80d7938dd3abebc727ac",
+          "file_path": "driving/MotorcycleNotes/sources/非铺装技术 Off-Road Techniques--ebc727ac.md"
+        },
+        {
+          "score": 0.7421535600775471,
+          "permalink": "topics/course-offroad-progression",
+          "file_path": "driving/MotorcycleNotes/topics/course-offroad-progression.md"
+        },
+        {
+          "score": 0.7380522906752116,
+          "permalink": "notion/34bf8d77a87b8062812cf49e5e52bdca",
+          "file_path": "knowledge/生理&&心理&&运动医学physiology&&psychology&&kinesiology/徒步-越野跑过程大腿肌群抽筋（Gemini 回答）--5e52bdca.md"
+        },
+        {
+          "score": 0.7363949579407745,
+          "permalink": "notion/3d1f8d77a87b8094968ffa318fed48cb",
+          "file_path": "driving/LegalNotes--8fed48cb.md"
+        },
+        {
+          "score": 0.730592623127194,
+          "permalink": "sources/394f8d77a87b80049940ec4b1b2bc4ae",
+          "file_path": "driving/MotorcycleNotes/sources/中长途摩托旅行--1b2bc4ae.md"
+        },
+        {
+          "score": 0.7270835889326417,
+          "permalink": "sources/1e2f8d77a87b809f858df18dedc5d54b",
+          "file_path": "driving/MotorcycleNotes/sources/维修-保养-机械-电子手册--edc5d54b.md"
+        },
+        {
+          "score": 0.7185399885479722,
+          "permalink": "notion/3ebf8d77a87b805d9848f7a3b99f7ebb",
+          "file_path": "knowledge/户外运动 Outdoors/北体车队-计成课堂--b99f7ebb.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "memory-en",
+      "project": "codex",
+      "mode": "semantic",
+      "query": "Find previous work on persistent conversation memory and agent skills",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "seconds": 0.43904900550842285,
+      "hits": [
+        {
+          "score": 0.7653307423720133,
+          "permalink": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+          "file_path": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md"
+        },
+        {
+          "score": 0.7575605977833373,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "score": 0.7550369737502773,
+          "permalink": "topics/memory-agent-infrastructure",
+          "file_path": "topics/memory-agent-infrastructure.md"
+        },
+        {
+          "score": 0.7507134664089374,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "score": 0.7438987203467615,
+          "permalink": "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd",
+          "file_path": "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd--reinstall-research-context-skill.md"
+        },
+        {
+          "score": 0.7351919616720135,
+          "permalink": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+          "file_path": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md"
+        },
+        {
+          "score": 0.729812833085127,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "score": 0.7289957588462812,
+          "permalink": "catalog/conversation-inventory",
+          "file_path": "catalog/ConversationInventory.md"
+        },
+        {
+          "score": 0.7274096236679508,
+          "permalink": "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+          "file_path": "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md"
+        },
+        {
+          "score": 0.7233396038046678,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        }
+      ],
+      "expected_rank": 3
+    },
+    {
+      "id": "memory-en",
+      "project": "codex",
+      "mode": "hybrid",
+      "query": "Find previous work on persistent conversation memory and agent skills",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "seconds": 0.9882550239562988,
+      "hits": [
+        {
+          "score": 1.229599222711604,
+          "permalink": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+          "file_path": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md"
+        },
+        {
+          "score": 1.1260770026319957,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "score": 1.0391134507494681,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "score": 1.0378523454268882,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "score": 1.0193203795636452,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "score": 1.0122754786920238,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "score": 1.0056458081111406,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "score": 1.0028937299796794,
+          "permalink": "conversations/01a1a65c-d362-7280-88b9-84125626afa5",
+          "file_path": "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md"
+        },
+        {
+          "score": 0.9604249570122506,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "score": 0.8671880386532262,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "memory-zh",
+      "project": "codex",
+      "mode": "semantic",
+      "query": "查找之前关于对话记忆、智能体技能和上下文系统的工作",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "seconds": 1.0392229557037354,
+      "hits": [
+        {
+          "score": 0.7212522303567379,
+          "permalink": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539",
+          "file_path": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md"
+        },
+        {
+          "score": 0.7058569479395214,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "score": 0.6908275325022668,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        },
+        {
+          "score": 0.647162720458418,
+          "permalink": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac",
+          "file_path": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md"
+        },
+        {
+          "score": 0.6389100094240643,
+          "permalink": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0",
+          "file_path": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md"
+        },
+        {
+          "score": 0.6034689323548434,
+          "permalink": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c",
+          "file_path": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c--分析近端梯度线搜索方向.md"
+        },
+        {
+          "score": 0.5936498005067801,
+          "permalink": "conversations/01a0d187-2137-7691-ba29-58a377292dad",
+          "file_path": "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md"
+        },
+        {
+          "score": 0.5849145888258818,
+          "permalink": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1",
+          "file_path": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1--总结肌腱肌肉与神经对早期发力的贡献.md"
+        },
+        {
+          "score": 0.5756358335929619,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "score": 0.5636307357997463,
+          "permalink": "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+          "file_path": "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "memory-zh",
+      "project": "codex",
+      "mode": "hybrid",
+      "query": "查找之前关于对话记忆、智能体技能和上下文系统的工作",
+      "expected_topic": "topics/memory-agent-infrastructure",
+      "seconds": 0.9178922176361084,
+      "hits": [
+        {
+          "score": 0.7212522303567379,
+          "permalink": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539",
+          "file_path": "conversations/01a18f89-e113-7e01-9e25-f0445b50c539--对比两类肌群恢复速度.md"
+        },
+        {
+          "score": 0.7058569479395214,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "score": 0.6908275325022668,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        },
+        {
+          "score": 0.647162720458418,
+          "permalink": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac",
+          "file_path": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md"
+        },
+        {
+          "score": 0.6389100094240643,
+          "permalink": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0",
+          "file_path": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md"
+        },
+        {
+          "score": 0.6034689323548434,
+          "permalink": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c",
+          "file_path": "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c--分析近端梯度线搜索方向.md"
+        },
+        {
+          "score": 0.5936498005067801,
+          "permalink": "conversations/01a0d187-2137-7691-ba29-58a377292dad",
+          "file_path": "conversations/01a0d187-2137-7691-ba29-58a377292dad--diagnose-missing-wifi-driver.md"
+        },
+        {
+          "score": 0.5849145888258818,
+          "permalink": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1",
+          "file_path": "conversations/01a1af0a-a1dd-7d43-9f43-f6e336971cf1--总结肌腱肌肉与神经对早期发力的贡献.md"
+        },
+        {
+          "score": 0.5756358335929619,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "score": 0.5636307357997463,
+          "permalink": "conversations/01a19f5c-4062-7c43-9365-375d57111d41",
+          "file_path": "conversations/01a19f5c-4062-7c43-9365-375d57111d41--access-notion-notes-with-mcp.md"
+        }
+      ],
+      "expected_rank": null
+    },
+    {
+      "id": "research-en",
+      "project": "codex",
+      "mode": "semantic",
+      "query": "Find conversations about research papers and literature analysis",
+      "expected_topic": "topics/research-and-papers",
+      "seconds": 0.353710412979126,
+      "hits": [
+        {
+          "score": 0.7114353356441825,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "score": 0.6991060756529475,
+          "permalink": "topics/research-and-papers",
+          "file_path": "topics/research-and-papers.md"
+        },
+        {
+          "score": 0.6945441523916838,
+          "permalink": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e",
+          "file_path": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md"
+        },
+        {
+          "score": 0.6932371894861387,
+          "permalink": "conversations/01a172df-6539-7473-a37b-80593ff24835",
+          "file_path": "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md"
+        },
+        {
+          "score": 0.684936713845218,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "score": 0.6843618175641932,
+          "permalink": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0",
+          "file_path": "conversations/01a19c73-eb4f-7f40-9a45-eb6277a234c0--分析拮抗控制的频域与跟踪时滞.md"
+        },
+        {
+          "score": 0.6763825993076509,
+          "permalink": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e",
+          "file_path": "conversations/01a1533d-b2e5-7e51-aba3-ef2b2214f32e--find-conversation-summary-skills.md"
+        },
+        {
+          "score": 0.6717570920672813,
+          "permalink": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac",
+          "file_path": "conversations/01a19769-e442-73c2-87ea-2e5c93f659ac--查找腕关节桡侧疼痛原因.md"
+        },
+        {
+          "score": 0.6705006838838141,
+          "permalink": "catalog/conversation-inventory",
+          "file_path": "catalog/ConversationInventory.md"
+        },
+        {
+          "score": 0.6672647831496477,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        }
+      ],
+      "expected_rank": 2
+    },
+    {
+      "id": "research-en",
+      "project": "codex",
+      "mode": "hybrid",
+      "query": "Find conversations about research papers and literature analysis",
+      "expected_topic": "topics/research-and-papers",
+      "seconds": 0.9341111183166504,
+      "hits": [
+        {
+          "score": 1.19225488775704,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "score": 1.1190671796369573,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "score": 0.8634042742121633,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "score": 0.8095553498367698,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "score": 0.7645463656080544,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "score": 0.7200117840448406,
+          "permalink": "conversations/01a19f71-4870-7d60-8213-9960cf693380",
+          "file_path": "conversations/01a19f71-4870-7d60-8213-9960cf693380--build-motorcyclenotes-database.md"
+        },
+        {
+          "score": 0.7114353356441825,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "score": 0.6991060756529475,
+          "permalink": "topics/research-and-papers",
+          "file_path": "topics/research-and-papers.md"
+        },
+        {
+          "score": 0.6945441523916838,
+          "permalink": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e",
+          "file_path": "conversations/01a13475-927e-7cb1-8722-e5b029c06f0e--develop-research-directions.md"
+        },
+        {
+          "score": 0.6932371894861387,
+          "permalink": "conversations/01a172df-6539-7473-a37b-80593ff24835",
+          "file_path": "conversations/01a172df-6539-7473-a37b-80593ff24835--survey-dental-occlusion-and-athletic.md"
+        }
+      ],
+      "expected_rank": 8
+    },
+    {
+      "id": "software-en",
+      "project": "codex",
+      "mode": "semantic",
+      "query": "Find work on software repositories, implementation and tests",
+      "expected_topic": "topics/software-repositories",
+      "seconds": 0.6289000511169434,
+      "hits": [
+        {
+          "score": 0.8231005620485501,
+          "permalink": "topics/software-repositories",
+          "file_path": "topics/software-repositories.md"
+        },
+        {
+          "score": 0.7855464666607688,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "score": 0.7295205048814921,
+          "permalink": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813",
+          "file_path": "conversations/01a14ca5-991b-7833-aba7-0c471ad84813--find-structured-paper-summarization.md"
+        },
+        {
+          "score": 0.7239498349895097,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        },
+        {
+          "score": 0.7216212258284411,
+          "permalink": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+          "file_path": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md"
+        },
+        {
+          "score": 0.7188933904943724,
+          "permalink": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739",
+          "file_path": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739--plan-rsi-repository-baseline-tests.md"
+        },
+        {
+          "score": 0.7151494410132937,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "score": 0.7133878017201596,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "score": 0.7091372469041186,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "score": 0.7067770520359868,
+          "permalink": "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6",
+          "file_path": "conversations/01a0b3b4-0a3f-7ca3-b505-f59d8a49e8b6--count-workspace-git-repositories.md"
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "software-en",
+      "project": "codex",
+      "mode": "hybrid",
+      "query": "Find work on software repositories, implementation and tests",
+      "expected_topic": "topics/software-repositories",
+      "seconds": 0.703850507736206,
+      "hits": [
+        {
+          "score": 1.2356639399982305,
+          "permalink": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9",
+          "file_path": "conversations/01a1abf1-bf58-71c2-9c59-f8fbe2c110e9--create-asset-index-readme.md"
+        },
+        {
+          "score": 1.2003186183682988,
+          "permalink": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5",
+          "file_path": "conversations/01a1a441-9db3-75b2-95f9-33c157c0f7e5--compare-basic-memory-usage-approaches.md"
+        },
+        {
+          "score": 1.185937284673842,
+          "permalink": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3",
+          "file_path": "conversations/01a16b86-237e-73f0-babd-281076dbe9c3--survey-basic-memory-repo.md"
+        },
+        {
+          "score": 1.1850155082668465,
+          "permalink": "conversations/01a1b049-0264-78d3-bd47-400f572629db",
+          "file_path": "conversations/01a1b049-0264-78d3-bd47-400f572629db--sync-codex-conversation-memory.md"
+        },
+        {
+          "score": 1.1777095221247076,
+          "permalink": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455",
+          "file_path": "conversations/01a1479c-da47-7101-bb90-22fdccd3c455--evaluate-ai-coding-skill-patterns.md"
+        },
+        {
+          "score": 1.1671626847777055,
+          "permalink": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96",
+          "file_path": "conversations/01a1aaf3-40c0-7de0-b328-4da79854ee96--analyze-deepseek-harness-usage.md"
+        },
+        {
+          "score": 1.1009769487417262,
+          "permalink": "conversations/01a1a65c-d362-7280-88b9-84125626afa5",
+          "file_path": "conversations/01a1a65c-d362-7280-88b9-84125626afa5--check-basic-memory-dependencies.md"
+        },
+        {
+          "score": 1.0725649107045718,
+          "permalink": "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7",
+          "file_path": "conversations/01a15c37-59d6-7933-b90c-6818dabb75c7--analyze-laya-repo-and-report.md"
+        },
+        {
+          "score": 1.035013634954798,
+          "permalink": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739",
+          "file_path": "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739--plan-rsi-repository-baseline-tests.md"
+        },
+        {
+          "score": 1.0184150712779212,
+          "permalink": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90",
+          "file_path": "conversations/01a1a412-60a1-7a72-839d-5e5562560b90--check-workspace-conversation-access.md"
+        }
+      ],
+      "expected_rank": null
+    }
+  ]
+}

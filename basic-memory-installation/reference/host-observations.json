@@ -1,0 +1,21 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "windows_build": "10.0.26200.9711",
+  "wsl_package": "2.7.3.0",
+  "wsl_kernel_package": "6.6.114.1-1",
+  "running_kernel": "6.6.114.1-microsoft-standard-WSL2",
+  "architecture": "x86_64",
+  "distribution": "Ubuntu 24.04.5 LTS",
+  "pid_1": "systemd",
+  "gpu_name": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "gpu_driver": "572.84",
+  "gpu_memory_mib": 24463,
+  "docker_on_path": false,
+  "uv_on_path": false,
+  "host_installation_performed": false,
+  "image_build_performed": false,
+  "gpu_inference_performed": false,
+  "host_python": "3.12.3",
+  "host_git": "2.43.0"
+}

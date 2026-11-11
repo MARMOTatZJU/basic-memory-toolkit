@@ -1,0 +1,280 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 14,
+  "attempt": 1,
+  "authorization": "proceed to order 14",
+  "status": "passed",
+  "installation_started": true,
+  "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+  "before": {
+    "ollama_image": {
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+        "--format",
+        "{{.Id}}"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Error response from daemon: No such image: ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223"
+    },
+    "containers": {
+      "command": [
+        "docker",
+        "ps",
+        "-a",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "volumes": {
+      "command": [
+        "docker",
+        "volume",
+        "ls",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "driver": {
+      "command": [
+        "/usr/lib/wsl/lib/nvidia-smi",
+        "--query-gpu=name,driver_version",
+        "--format=csv,noheader"
+      ],
+      "exit_code": 0,
+      "stdout": "NVIDIA GeForce RTX 5090 Laptop GPU, 572.84",
+      "stderr": ""
+    }
+  },
+  "progress_reports": [
+    {
+      "observed_at": "2026-11-07T21:13:07+08:00",
+      "verified_MiB": 260.5,
+      "total_MiB": 3235.3,
+      "verified_percent": 8.05,
+      "partial_transfer_MiB": 11.4
+    },
+    {
+      "observed_at": "2026-11-07T21:19:12+08:00",
+      "verified_MiB": 615.5,
+      "total_MiB": 3235.3,
+      "verified_percent": 19.02,
+      "partial_transfer_MiB": 11.5
+    },
+    {
+      "observed_at": "2026-11-07T21:24:36+08:00",
+      "verified_percent": 41.25,
+      "verified_MiB": 1334.5
+    },
+    {
+      "observed_at": "2026-11-07T21:37:07+08:00",
+      "verified_percent": 99.81,
+      "verified_MiB": 3229.3
+    }
+  ],
+  "transfer_recovery": {
+    "original_route": "WSL curl, 4 MiB ranges, eight workers",
+    "selected_route": "Windows curl direct routing, 1 MiB checked ranges, resumable WSL-home files",
+    "original_manifest_matches_google_cache": true,
+    "global_network_settings_changed": false,
+    "tokens_saved": false,
+    "optional_additional_route_comparison": "Not executed: automatic permission review reached its deadline. The active transfer continued.",
+    "current_workers": 64,
+    "reason_for_concurrency_increase": "Small validated ranges allow more parallel requests while retaining all completed data.",
+    "windows_curl_version": "8.21.0",
+    "windows_tls_backend": "Schannel"
+  },
+  "run_id": "20261107-order14-attempt01",
+  "started_at_utc": "2026-11-07T13:41:13.166664+00:00",
+  "image": "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+  "commands": [
+    {
+      "arguments": [
+        "/mnt/c/Windows/System32/curl.exe",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "dpkg-query",
+        "-W",
+        "-f=${Package}\t${Version}\t${Status}\n"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "image",
+        "load",
+        "--input",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order14-preflight/ollama-a717bfc1c56a.oci.tar"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "image",
+        "inspect",
+        "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "run",
+        "--pull=never",
+        "--rm",
+        "--network",
+        "none",
+        "--gpus",
+        "all",
+        "--tmpfs",
+        "/tmp:rw,size=64m",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--env",
+        "CUDA_CACHE_DISABLE=1",
+        "--env",
+        "LD_LIBRARY_PATH=/usr/lib/ollama/cuda_v12:/usr/lib/ollama:/usr/local/nvidia/lib:/usr/local/nvidia/lib64",
+        "--mount",
+        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/order14-probe-f21aqed7/interpreter/python,target=/opt/order14-python,readonly",
+        "--mount",
+        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/check-ollama-runtime.py,target=/opt/check-ollama-runtime.py,readonly",
+        "--entrypoint",
+        "/opt/order14-python/bin/python3.13",
+        "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+        "/opt/check-ollama-runtime.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "curl",
+        "--fail",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--connect-timeout",
+        "8",
+        "--max-time",
+        "45",
+        "--retry",
+        "2",
+        "https://raw.githubusercontent.com/ollama/ollama/v0.40.15/Dockerfile",
+        "--output",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order14-probe-f21aqed7/publisher/Dockerfile"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "curl",
+        "--fail",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--connect-timeout",
+        "8",
+        "--max-time",
+        "45",
+        "--retry",
+        "2",
+        "https://raw.githubusercontent.com/ollama/ollama/v0.40.15/llama/server/CMakePresets.json",
+        "--output",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order14-probe-f21aqed7/publisher/CMakePresets.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "dpkg-query",
+        "-W",
+        "-f=${Package}\t${Version}\t${Status}\n"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "ps",
+        "-a",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "volume",
+        "ls",
+        "--quiet"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "python3",
+        "/home/ydxu_/basic-memory-installation-assets/verify-assets.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "runtime": {
+    "status": "passed",
+    "run_id": "20261107-order14-attempt01",
+    "image_tag": "ollama/ollama:0.40.15",
+    "image": "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+    "image_id": "sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+    "manifest_digest": "sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+    "config_digest": "sha256:8d0356014a54ff18edb6c99e8ae18422790ffff537848e0bc07f5a04a3fd33d7",
+    "image_archive": "images/ollama/0.40.15/linux-amd64/ollama-a717bfc1c56a.oci.tar",
+    "image_archive_sha256": "c04af3b2a83f8ae40ef62d6edd00e74bf3807478ae343c417878beff2d76fbb4",
+    "metadata_directory": "metadata/order-14/20261107-order14-attempt01",
+    "cuda_runtime_api_version": 12080,
+    "cuda_runtime_library": "/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90",
+    "cublas_api_version": 120805,
+    "gpu_name": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "compute_capability": "12.0",
+    "cuda_memory_round_trip": {
+      "bytes": 32,
+      "value": 90,
+      "passed": true
+    },
+    "cublas_kernel_check": {
+      "operation": "1x1 SGEMM",
+      "input": [
+        2.0,
+        3.0
+      ],
+      "expected": 6.0,
+      "actual": 6.0,
+      "passed": true
+    },
+    "service_started": false,
+    "model_downloaded": false,
+    "inference_run": false
+  },
+  "host_packages_unchanged": true,
+  "containers_after": "",
+  "volumes_after": "",
+  "home_asset_verification": {
+    "status": "passed",
+    "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+    "files_checked": 555,
+    "failures": []
+  },
+  "next_action": "Stop before Order 15. Await explicit instruction for model download and later service startup.",
+  "finished_at_utc": "2026-11-07T13:42:03.110504+00:00"
+}

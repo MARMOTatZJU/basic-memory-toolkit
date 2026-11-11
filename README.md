@@ -13,3 +13,8 @@ See [PROMPT.md](./PROMPTS.md) for detail.
 - [asd-ste100-writing-context](https://github.com/MARMOTatZJU/SkillLibMARMOTatZJU/tree/main/skills/asd-ste100-writing-context)
   - Slightly compact texts in terms of writing style
   - Lower cognitive load of reading
+
+
+## TODO
+
+Fix basic memory version

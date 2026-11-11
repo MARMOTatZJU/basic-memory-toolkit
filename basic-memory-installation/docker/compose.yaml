@@ -1,0 +1,54 @@
+# Draft. Run scripts/build.sh before starting this deployment.
+services:
+  ollama:
+    image: ${BM_OLLAMA_IMAGE:?Load config/versions.env}
+    platform: linux/amd64
+    restart: unless-stopped
+    volumes:
+      - ollama-models:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 20s
+
+  basic-memory:
+    image: ${BM_APP_IMAGE:?Load config/versions.env}
+    platform: linux/amd64
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      BM_PROJECT_NAME: ${BM_PROJECT_NAME:-main}
+      BASIC_MEMORY_CONFIG_DIR: /var/lib/basic-memory
+      BASIC_MEMORY_HOME: /notes
+      BASIC_MEMORY_AUTO_UPDATE: "false"
+      BASIC_MEMORY_FORCE_LOCAL: "true"
+      BASIC_MEMORY_SEMANTIC_EMBEDDING_PROVIDER: openai
+      BASIC_MEMORY_SEMANTIC_EMBEDDING_API_BASE: http://ollama:11434/v1
+      BASIC_MEMORY_SEMANTIC_EMBEDDING_API_KEY: ollama
+      BASIC_MEMORY_SEMANTIC_EMBEDDING_MODEL: ${BM_EMBEDDING_MODEL:?Load config/versions.env}
+      BASIC_MEMORY_SEMANTIC_EMBEDDING_DIMENSIONS: ${BM_EMBEDDING_DIMENSIONS:?Load config/versions.env}
+      BASIC_MEMORY_SEMANTIC_EMBEDDING_DOCUMENT_PREFIX: "search_document: "
+      BASIC_MEMORY_SEMANTIC_EMBEDDING_QUERY_PREFIX: "search_query: "
+    ports:
+      - "127.0.0.1:${BM_MCP_PORT:-8000}:8000"
+    volumes:
+      - basic-memory-state:/var/lib/basic-memory
+      - type: bind
+        source: ${BM_NOTES_DIR:-./data/notes}
+        target: /notes
+        bind:
+          create_host_path: false
+volumes:
+  basic-memory-state:
+  ollama-models:

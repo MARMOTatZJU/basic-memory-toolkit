@@ -1,0 +1,237 @@
+{
+  "notion": {
+    "original_markdown_records": 429,
+    "runtime_entities": 450,
+    "missing_record_paths": [],
+    "changed_permalinks": [
+      "notes/h-auto-doc-notes/New database--8491b5ac.md",
+      "notes/h-auto-doc-notes/New database--b216bc29.md",
+      "workspace/agent-documents/_index.md",
+      "workspace/linked-sources/_index.md"
+    ],
+    "legacy_edges": 1396,
+    "matched_legacy_edges": 1374,
+    "missing_legacy_edges": [
+      [
+        "Overview.md",
+        "contains",
+        "workspace/agent-documents/_index.md"
+      ],
+      [
+        "Overview.md",
+        "contains",
+        "workspace/linked-sources/_index.md"
+      ],
+      [
+        "catalog/SourceInventory.md",
+        "indexes",
+        "notes/h-auto-doc-notes/New database--8491b5ac.md"
+      ],
+      [
+        "catalog/SourceInventory.md",
+        "indexes",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "catalog/SourceInventory.md",
+        "indexes",
+        "workspace/agent-documents/_index.md"
+      ],
+      [
+        "catalog/SourceInventory.md",
+        "indexes",
+        "workspace/linked-sources/_index.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/New page--74906c16.md",
+        "part_of",
+        "notes/h-auto-doc-notes/New database--8491b5ac.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/New page--74906c16.md",
+        "references",
+        "notes/h-auto-doc-notes/New database--8491b5ac.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/Obstacle--05455441.md",
+        "part_of",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/Obstacle--05455441.md",
+        "references",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/PyramidInverted pyramid--6a81a68e.md",
+        "part_of",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/PyramidInverted pyramid--6a81a68e.md",
+        "references",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/Rough--bda217f9.md",
+        "part_of",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/Rough--bda217f9.md",
+        "references",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/Stair up-down--be7cadd9.md",
+        "part_of",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/Stair up-down--be7cadd9.md",
+        "references",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/[Survey-Experiments] Multi-Terrain Locomotion 课程等级-测评指标-测评实现--69d2a246.md",
+        "contains",
+        "notes/h-auto-doc-notes/New database--8491b5ac.md"
+      ],
+      [
+        "notes/h-auto-doc-notes/[Survey-Experiments] Multi-Terrain Locomotion 课程等级-测评指标-测评实现--69d2a246.md",
+        "contains",
+        "notes/h-auto-doc-notes/New database--b216bc29.md"
+      ],
+      [
+        "workspace/agent-documents/Agent Operating Guide--0f59f002.md",
+        "part_of",
+        "workspace/agent-documents/_index.md"
+      ],
+      [
+        "workspace/agent-documents/Agent Operating Guide--0f59f002.md",
+        "references",
+        "workspace/agent-documents/_index.md"
+      ],
+      [
+        "workspace/agent-documents/Agent Operating Guide--0f59f002.md",
+        "references",
+        "workspace/linked-sources/_index.md"
+      ],
+      [
+        "workspace/linked-sources/Notion agent setup choice--9eaf58e4.md",
+        "part_of",
+        "workspace/linked-sources/_index.md"
+      ]
+    ],
+    "runtime_resolved_edges": 1389,
+    "runtime_unresolved_relations": 22,
+    "vector_chunks": 7500,
+    "embedding_status_counts": {
+      "ready": 7500
+    },
+    "original_unchanged": true,
+    "changed_copy_files": 0,
+    "copy_markdown_changes": {},
+    "non_markdown_entities": 21
+  },
+  "codex": {
+    "original_markdown_records": 51,
+    "runtime_entities": 128,
+    "missing_record_paths": [],
+    "changed_permalinks": [],
+    "legacy_edges": 132,
+    "matched_legacy_edges": 116,
+    "missing_legacy_edges": [
+      [
+        "Overview.md",
+        "summarizes",
+        "topics/general-analysis.md"
+      ],
+      [
+        "Overview.md",
+        "summarizes",
+        "topics/health-and-performance.md"
+      ],
+      [
+        "Overview.md",
+        "summarizes",
+        "topics/memory-agent-infrastructure.md"
+      ],
+      [
+        "Overview.md",
+        "summarizes",
+        "topics/motorcycle-and-control.md"
+      ],
+      [
+        "Overview.md",
+        "summarizes",
+        "topics/research-and-papers.md"
+      ],
+      [
+        "Overview.md",
+        "summarizes",
+        "topics/software-repositories.md"
+      ],
+      [
+        "conversations/01a0bc19-76f2-74b0-995d-da2daea16a92--summarize-plyometrics-training.md",
+        "categorized_as",
+        "topics/health-and-performance.md"
+      ],
+      [
+        "conversations/01a0bc19-76f2-74b0-995d-da2daea16a92--summarize-plyometrics-training.md",
+        "part_of",
+        "Overview.md"
+      ],
+      [
+        "conversations/01a0ed35-8816-7a10-9dd6-b5ff38f08d85--i-participated-in-a-cycling-6-second-sprint-experiment-max.md",
+        "categorized_as",
+        "topics/health-and-performance.md"
+      ],
+      [
+        "conversations/01a0ed35-8816-7a10-9dd6-b5ff38f08d85--i-participated-in-a-cycling-6-second-sprint-experiment-max.md",
+        "part_of",
+        "Overview.md"
+      ],
+      [
+        "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c--分析近端梯度线搜索方向.md",
+        "categorized_as",
+        "topics/research-and-papers.md"
+      ],
+      [
+        "conversations/01a10443-a0df-76e0-ae6a-6c0e3847313c--分析近端梯度线搜索方向.md",
+        "part_of",
+        "Overview.md"
+      ],
+      [
+        "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739--plan-rsi-repository-baseline-tests.md",
+        "categorized_as",
+        "topics/software-repositories.md"
+      ],
+      [
+        "conversations/01a13d7e-7358-78c0-a15c-02c81e7fe739--plan-rsi-repository-baseline-tests.md",
+        "part_of",
+        "Overview.md"
+      ],
+      [
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd--reinstall-research-context-skill.md",
+        "categorized_as",
+        "topics/memory-agent-infrastructure.md"
+      ],
+      [
+        "conversations/01a19f08-0ab1-7e11-8830-278b6a3b31bd--reinstall-research-context-skill.md",
+        "part_of",
+        "Overview.md"
+      ]
+    ],
+    "runtime_resolved_edges": 194,
+    "runtime_unresolved_relations": 0,
+    "vector_chunks": 36248,
+    "embedding_status_counts": {
+      "ready": 36248
+    },
+    "original_unchanged": true,
+    "changed_copy_files": 0,
+    "copy_markdown_changes": {},
+    "non_markdown_entities": 77
+  }
+}

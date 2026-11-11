@@ -8,7 +8,9 @@ The survey uses commit `14ed21b9eaf892b7774c346898981b355fc92dbe` from 2026-10-2
 The survey date is 2026-10-24, Asia/Shanghai.
 Source links remain fixed to that commit.
 
-Start with the [step-by-step user tutorial](17-user-tutorial.md) for installation, SQLite setup, updates, and retrieval.
+Start with the [runtime installation series](21-runtime-installation-guide.md) for dependencies, isolated environments, and headless WSL2 Docker.
+Use its [topic and operation index](21-runtime-installation-guide.md#find-a-topic-or-operation) to retrieve a specific requirement or setup step.
+Use the [step-by-step user tutorial](17-user-tutorial.md) for disposable SQLite exercises, updates, and retrieval.
 The tutorial update from 2026-11-03 uses the published Basic Memory 1.0.0 package.
 Its commands were tested on disposable local data.
 See [version changes and verification](18-tutorial-validation-and-version-update.md) for the results and scope.
@@ -16,8 +18,8 @@ See [version changes and verification](18-tutorial-validation-and-version-update
 For memory without a Basic Memory service, use the [adapted skill and Markdown tutorial](19-user-tutorial-skill-version.md).
 It reuses the repository's record format, Task schema, and shipped workflow guides through a file adapter.
 
-Use the [installation strategy analysis](20-installation-strategy-token-use-gpu-and-dependencies.md) to compare both approaches.
-It also covers token use, local embeddings, WSL2 GPU acceleration, and installation dependencies.
+Use [usage strategy and token use](20-installation-strategy-token-use-gpu-and-dependencies.md) to compare both approaches.
+Chapters 21–25 own the installation requirements and procedures. Custom workspace scripts are outside that installation scope.
 
 The original survey and inventories remain fixed to the earlier commit above.
 In 1.0, the `bm_*` tools replace the earlier MCP registrations.
@@ -45,7 +47,8 @@ Evidence: [docs/DOMAIN_MODEL.md](https://github.com/basicmachines-co/basic-memor
 | --- | --- |
 | User tutorial | Verified local installation, SQLite setup, content updates, retrieval, schemas, imports, MCP, backups, and exports for version 1.0.0. |
 | Skill and Markdown tutorial | A pinned repository clone, reused note and Task definitions, upstream workflow references, and a file adapter. |
-| Installation strategy | Usage choices, token effects, local embeddings, WSL2 GPU acceleration, and a high-level dependency map. |
+| Usage strategy | Application and service-free choices, plus expected token effects. |
+| Runtime installation | Exact dependencies, separate Python environments, GPU embeddings, and headless WSL2 Docker procedures. |
 | Repository survey | 487 production Python modules, 140,166 lines, and 1,906 tracked paths inventoried. |
 | Interfaces | 40 exported MCP tool names, 48 core HTTP route declarations, and configuration/data schema inventories. |
 | General usage | 72 cases with example prompts and prerequisites. |
@@ -64,8 +67,23 @@ Counts describe the pinned source surface, not a tested live installation.
 
 - [Step-by-step user tutorial](17-user-tutorial.md).
 - [Adapted skill and Markdown tutorial](19-user-tutorial-skill-version.md).
-- [Installation strategy, token use, GPU acceleration, and dependencies](20-installation-strategy-token-use-gpu-and-dependencies.md).
+- [Usage strategy and token use](20-installation-strategy-token-use-gpu-and-dependencies.md).
 - [Tutorial verification and 1.0 interface changes](18-tutorial-validation-and-version-update.md).
+
+### Install the runtime
+
+**Quick retrieval:** [dependencies, Python environments, GPU setup, Docker operations, and validation](21-runtime-installation-guide.md#find-a-topic-or-operation).
+
+Read 21 → 22 → 24 → 25 for the selected headless GPU container deployment.
+Read 23 for a direct installation into a separate Python environment.
+
+| Document | Scope |
+| --- | --- |
+| [21 — Runtime installation guide](21-runtime-installation-guide.md) | Scope, headless deployment choice, reading order, and evidence boundaries. |
+| [22 — Runtime dependencies](22-runtime-dependencies.md) | Exact runtime requirements, optional extras, native libraries, services, and build/development requirements. |
+| [23 — Separate Python environments](23-python-environments.md) | Environment comparison, source-lock installation, state isolation, and validation. |
+| [24 — GPU embeddings](24-gpu-embeddings.md) | RTX 5090 runtime choices, local Ollama configuration, and inference acceptance checks. |
+| [25 — Headless WSL2 and Docker](25-headless-wsl2-docker.md) | Terminal-only Docker host setup, NVIDIA container support, and application deployment requirements. |
 
 ### Understand the implementation
 
@@ -122,7 +140,9 @@ The original survey traces central code paths and scans module declarations.
 It does not claim a line-by-line audit or a successful repository test-suite run.
 The later tutorial update adds the runtime checks described in document 18.
 Document 20 adds source-checked strategy analysis and expected token behavior.
-Its token and GPU conclusions have the stated verification limits.
+Chapters 21–25 consolidate source-checked installation guidance on 2026-11-07.
+The new Docker and GPU procedures have not been executed.
+Token comparisons remain unbenchmarked.
 The usage cases and development ideas are authored proposals.
 
 The narrative is an **STE-aligned draft** under the requested writing skill.
