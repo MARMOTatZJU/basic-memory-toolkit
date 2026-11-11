@@ -27,6 +27,7 @@ INDEX_DIR = SEMANTIC / "global-index-v6"
 MODEL_ID = "intfloat/multilingual-e5-small"
 MODEL_REVISION = "614241f622f53c4eeff9890bdc4f31cfecc418b3"
 MODEL_CARD = f"https://huggingface.co/{MODEL_ID}/blob/{MODEL_REVISION}/README.md"
+DEFAULT_INDEX_TYPES = ("source_note", "source_database", "topic")
 CONTENT_VIEW_SPEC = {
     "version": "context-and-full-content-v4",
     "source_context": "Deduplicated authored lead, summaries, authorship, conflicts, uncertainty and limitations, plus explicit evidence status; no graph relations or import bookkeeping",
@@ -283,7 +284,7 @@ def verify_projection_metadata(metadata):
         raise ValueError("The semantic content projection differs from this index. Rebuild the index before querying; vectors and lexical text must use the same projection.")
 
 
-def build(root, index_dir, chunk_tokens, overlap, view="authored"):
+def build(root, index_dir, chunk_tokens, overlap, view="authored", include_types=()):
     canonical_root, requested_view = store_layout.locate(root)
     if requested_view and Path(index_dir).resolve() == INDEX_DIR.resolve():
         raise ValueError('The shared global index must be built from the canonical root; select MotorcycleNotes at query time')
@@ -292,9 +293,10 @@ def build(root, index_dir, chunk_tokens, overlap, view="authored"):
     records, issues = memory_db.load_records(root)
     if issues:
         raise ValueError("Cannot index invalid authored records: " + json.dumps(issues, ensure_ascii=False))
-    selected = [r for r in records if r["type"] in {"source_note", "source_database", "topic"}]
+    selected_types = set(DEFAULT_INDEX_TYPES) | set(include_types)
+    selected = [r for r in records if r["type"] in selected_types]
     if not selected:
-        raise ValueError("No source_note, source_database, or topic records found")
+        raise ValueError("No records found for selected semantic-index types: " + ", ".join(sorted(selected_types)))
     tokenizer, model = load_model()
     chunks, inputs, coverage = [], [], []
     for record in selected:
@@ -366,7 +368,7 @@ def build(root, index_dir, chunk_tokens, overlap, view="authored"):
                 "model_revision": MODEL_REVISION, "official_usage": MODEL_CARD,
                 "model_files_sha256": model_files, "dimensions": int(vectors.shape[1]),
                 "record_count": len(selected), "chunk_count": len(chunks), "chunk_tokens": chunk_tokens,
-                "overlap_tokens": overlap, "selected_note_types": ["source_note", "source_database", "topic"],
+                "overlap_tokens": overlap, "selected_note_types": sorted(selected_types),
                 "maximum_actual_input_tokens": maximum_input_tokens, "input_truncation_required": False,
                 "coverage": {"all_records_complete": all(r["all_tokenized_text_covered"] for r in coverage),
                              "records": coverage, "sampling": False,
@@ -829,6 +831,8 @@ def main():
                               help="Source-token budget, reduced as needed to keep title/prefix/special tokens within model512")
     build_parser.add_argument("--overlap", type=int, default=64)
     build_parser.add_argument("--view", choices=["authored", "content"], default="content")
+    build_parser.add_argument("--include-type", action="append", default=[],
+                              help="Additional authored record type to index; repeat as needed")
     query_parser = sub.add_parser("query")
     query_parser.add_argument("text")
     query_parser.add_argument("--root", type=Path)
@@ -860,7 +864,7 @@ def main():
     if args.command == "build":
         if not 64 <= args.chunk_tokens <= 512 or not 0 <= args.overlap < args.chunk_tokens:
             parser.error("chunk tokens must be64–512; overlap must be smaller and nonnegative")
-        build(args.root.resolve(), args.index, args.chunk_tokens, args.overlap, args.view)
+        build(args.root.resolve(), args.index, args.chunk_tokens, args.overlap, args.view, args.include_type)
     elif args.command == "query":
         if args.hybrid or args.variant:
             resources = workflow_resources(args.index, args.root, args.path_prefix)

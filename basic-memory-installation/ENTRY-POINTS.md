@@ -195,6 +195,20 @@ The temporary smoke tests instead set `OLLAMA_MODELS=/models` and mount a dispos
 The saved startup helper runs `ollama pull`; it does not import the home cache automatically.
 See [model installation and reuse](docs/order-15-model.md).
 
+### Future multilingual companion index
+
+The current Basic Memory embedding provider remains
+`nomic-embed-text:v1.5` with 768 dimensions. The installation does not select
+Nomic v2 and does not include E5 inference packages or model weights in the
+application image.
+
+For multilingual stores, the
+[companion embedding TODO](docs/companion-multilingual-embeddings-todo.md)
+records a possible external `multilingual-e5-small` channel. It must use a
+separate 384-dimensional index. Never mix E5 and Nomic vectors. A future
+implementation may fuse only independently ranked candidates after it passes
+the documented multilingual and lifecycle evaluations.
+
 | Asset family beneath the home root | Content and owner |
 | --- | --- |
 | `packages/order-07`, `order-08`, `order-09`, `order-10` | Authenticated Debian packages for the corresponding operations. |
