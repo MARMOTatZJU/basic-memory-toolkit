@@ -1,0 +1,567 @@
+{
+  "status": "running",
+  "started_epoch": 1794320762.1745887,
+  "commands": [
+    {
+      "label": "version",
+      "args": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1188745498657227,
+      "stdout_bytes": 28,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "notion-register",
+      "args": [
+        "project",
+        "add",
+        "notion",
+        "/work/MARMOTatZJU-s-Notion",
+        "--local",
+        "--no-wait"
+      ],
+      "exit_code": 0,
+      "seconds": 7.504889011383057,
+      "stdout_bytes": 185,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "notion-index",
+      "args": [
+        "reindex",
+        "--search",
+        "--project",
+        "notion"
+      ],
+      "exit_code": 0,
+      "seconds": 58.3476140499115,
+      "stdout_bytes": 233,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "version",
+      "args": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2043724060058594,
+      "stdout_bytes": 28,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "notion-embeddings",
+      "args": [
+        "reindex",
+        "--embeddings",
+        "--project",
+        "notion"
+      ],
+      "exit_code": 0,
+      "seconds": 126.19951128959656,
+      "stdout_bytes": 550,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-register",
+      "args": [
+        "project",
+        "add",
+        "codex",
+        "/work/YindaXU-s-Codex-Memory",
+        "--local",
+        "--no-wait"
+      ],
+      "exit_code": 0,
+      "seconds": 6.694192171096802,
+      "stdout_bytes": 182,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-index",
+      "args": [
+        "reindex",
+        "--search",
+        "--project",
+        "codex"
+      ],
+      "exit_code": 1,
+      "seconds": 97.41092157363892,
+      "stdout_bytes": 3535,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-embeddings",
+      "args": [
+        "reindex",
+        "--embeddings",
+        "--project",
+        "codex"
+      ],
+      "exit_code": 130,
+      "seconds": 47.67461895942688,
+      "stdout_bytes": 139,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "version",
+      "args": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8522121906280518,
+      "stdout_bytes": 28,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-index",
+      "args": [
+        "reindex",
+        "--search",
+        "--project",
+        "codex"
+      ],
+      "exit_code": 0,
+      "seconds": 2.82281231880188,
+      "stdout_bytes": 230,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-embeddings",
+      "args": [
+        "reindex",
+        "--embeddings",
+        "--project",
+        "codex"
+      ],
+      "exit_code": 0,
+      "seconds": 383.56241273880005,
+      "stdout_bytes": 549,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-full-index-repair",
+      "args": [
+        "reindex",
+        "--full",
+        "--search",
+        "--project",
+        "codex"
+      ],
+      "exit_code": 1,
+      "seconds": 72.18161344528198,
+      "stdout_bytes": 3116,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-embedding-repair",
+      "args": [
+        "reindex",
+        "--embeddings",
+        "--project",
+        "codex"
+      ],
+      "exit_code": 0,
+      "seconds": 6.771430730819702,
+      "stdout_bytes": 549,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "notion-index-repair",
+      "args": [
+        "reindex",
+        "--search",
+        "--project",
+        "notion"
+      ],
+      "exit_code": 0,
+      "seconds": 3.948246479034424,
+      "stdout_bytes": 231,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "notion-embedding-repair",
+      "args": [
+        "reindex",
+        "--embeddings",
+        "--project",
+        "notion"
+      ],
+      "exit_code": 0,
+      "seconds": 5.506087779998779,
+      "stdout_bytes": 552,
+      "stderr_bytes": 0
+    },
+    {
+      "label": "codex-serial-embedding-refresh",
+      "args": [
+        "reindex",
+        "--embeddings",
+        "--project",
+        "codex"
+      ],
+      "exit_code": 0,
+      "seconds": 7.408421277999878,
+      "stdout_bytes": 549,
+      "stderr_bytes": 0
+    }
+  ],
+  "queries": [],
+  "reads": [],
+  "graphs": [],
+  "original_inventory": {
+    "MARMOTatZJU-s-Notion": {
+      "files": 450,
+      "markdown": 429,
+      "tree_sha256": "8a7480e7c217bf791d95b8962881cb9edb02e1af341f0703b0f4d33c4c0e6767"
+    },
+    "YindaXU-s-Codex-Memory": {
+      "files": 128,
+      "markdown": 51,
+      "tree_sha256": "014fe00f54f325e3d92b1a153e919a7f47443baf71986f38329f9da0b3431dc6"
+    }
+  },
+  "config": {
+    "BASIC_MEMORY_AUTO_UPDATE": "false",
+    "BASIC_MEMORY_FORCE_LOCAL": "true",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_PROVIDER": "openai",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_API_BASE": "http://127.0.0.1:18080/v1",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_MODEL": "nomic-embed-text:v1.5",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_DIMENSIONS": "768",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_DOCUMENT_PREFIX": "search_document: ",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_QUERY_PREFIX": "search_query: ",
+    "BASIC_MEMORY_CONFIG_DIR": "/work/state",
+    "BASIC_MEMORY_HOME": "/work/home",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_BATCH_SIZE": "128",
+    "BASIC_MEMORY_SEMANTIC_EMBEDDING_REQUEST_CONCURRENCY": "4"
+  },
+  "version": "Basic Memory version: 1.0.0",
+  "recovered_test_errors": [
+    "OperationalError: no such module: vec0"
+  ],
+  "sqlite_inventory": {
+    "state/memory.db": {
+      "alembic_version": {
+        "count": 1,
+        "columns": [
+          "version_num"
+        ]
+      },
+      "entity": {
+        "count": 578,
+        "columns": [
+          "id",
+          "title",
+          "note_type",
+          "entity_metadata",
+          "content_type",
+          "permalink",
+          "file_path",
+          "checksum",
+          "created_at",
+          "updated_at",
+          "project_id",
+          "mtime",
+          "size",
+          "external_id",
+          "created_by",
+          "last_updated_by",
+          "vector_sync_deferred_at",
+          "sync_checksum"
+        ]
+      },
+      "note_content": {
+        "count": 480,
+        "columns": [
+          "entity_id",
+          "project_id",
+          "external_id",
+          "file_path",
+          "markdown_content",
+          "db_version",
+          "db_checksum",
+          "file_version",
+          "file_checksum",
+          "file_write_status",
+          "last_source",
+          "updated_at",
+          "file_updated_at",
+          "last_materialization_error",
+          "last_materialization_attempt_at"
+        ]
+      },
+      "note_file_vacate": {
+        "count": 0,
+        "columns": [
+          "id",
+          "project_id",
+          "entity_id",
+          "file_path",
+          "file_checksum",
+          "created_at"
+        ]
+      },
+      "relation_search_refresh": {
+        "count": 0,
+        "columns": [
+          "id",
+          "project_id",
+          "entity_id",
+          "created_at",
+          "publication_generation"
+        ]
+      },
+      "relation": {
+        "count": 1621,
+        "columns": [
+          "id",
+          "from_id",
+          "to_id",
+          "to_name",
+          "relation_type",
+          "context",
+          "project_id",
+          "generation"
+        ]
+      },
+      "project": {
+        "count": 3,
+        "columns": [
+          "id",
+          "name",
+          "description",
+          "permalink",
+          "path",
+          "is_active",
+          "is_default",
+          "created_at",
+          "updated_at",
+          "last_scan_timestamp",
+          "last_file_count",
+          "external_id",
+          "partition_position",
+          "last_indexed_at"
+        ]
+      },
+      "accepted_project_note_change": {
+        "count": 0,
+        "columns": [
+          "id",
+          "project_id",
+          "project_external_id",
+          "partition_position",
+          "entity_id",
+          "note_external_id",
+          "permalink",
+          "title",
+          "operation",
+          "file_path",
+          "previous_file_path",
+          "accepted_at",
+          "source",
+          "db_version",
+          "db_checksum",
+          "actor_user_profile_id",
+          "actor_kind",
+          "actor_name",
+          "materialized_at"
+        ]
+      },
+      "note_section": {
+        "count": 2268,
+        "columns": [
+          "id",
+          "project_id",
+          "entity_id",
+          "heading",
+          "level",
+          "heading_path",
+          "heading_path_digest",
+          "duplicate_index",
+          "start_line",
+          "end_line",
+          "start_offset",
+          "end_offset"
+        ]
+      },
+      "memory_time_index": {
+        "count": 6,
+        "columns": [
+          "id",
+          "project_id",
+          "entity_id",
+          "source_type",
+          "source_id",
+          "time_kind",
+          "range_axis",
+          "lower_value",
+          "upper_value",
+          "lower_inclusive",
+          "upper_inclusive",
+          "is_empty",
+          "extractor",
+          "source_text",
+          "assertion_metadata"
+        ]
+      },
+      "observation": {
+        "count": 2490,
+        "columns": [
+          "id",
+          "entity_id",
+          "content",
+          "category",
+          "context",
+          "tags",
+          "project_id",
+          "duplicate_index"
+        ]
+      },
+      "search_index": {
+        "count": 4689,
+        "columns": [
+          "id",
+          "title",
+          "content_stems",
+          "content_snippet",
+          "script_ngrams",
+          "permalink",
+          "file_path",
+          "type",
+          "project_id",
+          "from_id",
+          "to_id",
+          "relation_type",
+          "entity_id",
+          "category",
+          "metadata",
+          "created_at",
+          "updated_at"
+        ]
+      },
+      "search_index_data": {
+        "count": 33601,
+        "columns": [
+          "id",
+          "block"
+        ]
+      },
+      "search_index_idx": {
+        "count": 22764,
+        "columns": [
+          "segid",
+          "term",
+          "pgno"
+        ]
+      },
+      "search_index_content": {
+        "count": 4689,
+        "columns": [
+          "id",
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6",
+          "c7",
+          "c8",
+          "c9",
+          "c10",
+          "c11",
+          "c12",
+          "c13",
+          "c14",
+          "c15",
+          "c16"
+        ]
+      },
+      "search_index_docsize": {
+        "count": 4689,
+        "columns": [
+          "id",
+          "sz"
+        ]
+      },
+      "search_index_config": {
+        "count": 1,
+        "columns": [
+          "k",
+          "v"
+        ]
+      },
+      "search_vector_chunks": {
+        "count": 43748,
+        "columns": [
+          "id",
+          "entity_id",
+          "project_id",
+          "chunk_key",
+          "chunk_text",
+          "source_hash",
+          "source_type",
+          "source_row_id",
+          "chunk_index",
+          "entity_fingerprint",
+          "embedding_model",
+          "vector_index",
+          "embedding_status",
+          "updated_at"
+        ]
+      },
+      "search_vector_embeddings": {
+        "count": 43748,
+        "columns": [
+          "rowid",
+          "project_id",
+          "embedding",
+          "source_hash"
+        ]
+      },
+      "search_vector_embeddings_info": {
+        "count": 4,
+        "columns": [
+          "key",
+          "value"
+        ]
+      },
+      "search_vector_embeddings_chunks": {
+        "count": 44,
+        "columns": [
+          "chunk_id",
+          "size",
+          "sequence_id",
+          "partition00",
+          "validity",
+          "rowids"
+        ]
+      },
+      "search_vector_embeddings_rowids": {
+        "count": 43748,
+        "columns": [
+          "rowid",
+          "id",
+          "chunk_id",
+          "chunk_offset"
+        ]
+      },
+      "search_vector_embeddings_vector_chunks00": {
+        "count": 44,
+        "columns": [
+          "rowid",
+          "vectors"
+        ]
+      },
+      "search_vector_embeddings_auxiliary": {
+        "count": 43748,
+        "columns": [
+          "rowid",
+          "value00"
+        ]
+      }
+    }
+  },
+  "import_error": "codex"
+}

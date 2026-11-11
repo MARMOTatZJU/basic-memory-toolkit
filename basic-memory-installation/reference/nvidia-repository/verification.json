@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "key_fingerprint": "C95B321B61E88C1809C4F759DDCAE044F796ECB0",
+  "signature": "valid",
+  "packages_sha512_verified": true,
+  "selected_packages": {
+    "libnvidia-container-tools": {
+      "Version": "1.20.1-1",
+      "Architecture": "amd64",
+      "Filename": "./libnvidia-container-tools_1.20.1-1_amd64.deb",
+      "Size": "20804",
+      "SHA256": "8bd131b8977a3db667982024850ae7b50cfa02d6b2be06a718064ec814778f05",
+      "SHA512": "c57f890fc5aab48bb3c20ea14ff25d1689ad918f3fc67b8933e6d2f8be94cafa655638fb03391d578f57748c331a5f2fc09f5c2a7e8cdcf429de6126c03d9bf0"
+    },
+    "libnvidia-container1": {
+      "Version": "1.20.1-1",
+      "Architecture": "amd64",
+      "Filename": "./libnvidia-container1_1.20.1-1_amd64.deb",
+      "Size": "1236052",
+      "SHA256": "9d803cd9c898cb2fa927529d5ac4fc09f3d65c8cfbde8985de1b9398e53a4656",
+      "SHA512": "0c6aa4b95022afac2abda01d13f775f3d5d3d438baa4a6ea045fe7abaea195e7d9c42a41e0a9e51a6265aebd34e15b8bc41dea27fee9da2108ac13c95d0c8ae8"
+    },
+    "nvidia-container-toolkit-base": {
+      "Version": "1.20.1-1",
+      "Architecture": "amd64",
+      "Filename": "./nvidia-container-toolkit-base_1.20.1-1_amd64.deb",
+      "Size": "5993348",
+      "SHA256": "e01964a064fbdb62425ab22ec5832349f92c5b0b50c8f23fdf14dad004db4fb2",
+      "SHA512": "2c2eeed5636c8cd4e78b9f93123c9971664ca8ba18ba9bec01b3ac22518da8a66126fcf877a5317d156a734b3ebc4c7b40fb3234409233dcd65c772bac8215df"
+    },
+    "nvidia-container-toolkit": {
+      "Version": "1.20.1-1",
+      "Architecture": "amd64",
+      "Filename": "./nvidia-container-toolkit_1.20.1-1_amd64.deb",
+      "Size": "1501496",
+      "SHA256": "a95c9d206a7ecd6a90adff9290635271fa167a86b5767b17eaa0478a552eb02c",
+      "SHA512": "90d2966c6e346d3b42201efc21d2ff8dabd14748196bed4cf622e7effaddda6335805f5a3fc28b6cb3a65e411964da29967cbb3e04633e52c37b99149d3abb80"
+    }
+  },
+  "snapshot_sha256": {
+    "gpgkey.asc": "c880576d6cf75a48e5027a871bac70fd0421ab07d2b55f30877b21f1c87959c9",
+    "InRelease": "7fa8e870c5bf936c0f13178424b264ad940ddfbef5dfa113e4904713a0fe627a",
+    "Packages": "6453e9147bc1e294481771e63d9bc8c0de075add69cb34ee9762ea5025aad0b3"
+  }
+}

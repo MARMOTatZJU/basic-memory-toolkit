@@ -1,0 +1,7 @@
+{
+  "epoch": 1794321022.9495268,
+  "provider_batch": 128,
+  "sync_batch": 128,
+  "request_concurrency": 4,
+  "scope": "temporary test only"
+}

@@ -1,0 +1,64 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 6,
+  "scope": "installed download prerequisites and selected HTTPS endpoints",
+  "package_status": "passed",
+  "network_status": "partial",
+  "host_modified": false,
+  "package_versions": {
+    "ca-certificates": "20260816ubuntu0.24.04.2",
+    "curl": "8.5.0-2ubuntu10.16",
+    "gnupg": "2.4.4-2ubuntu17.6"
+  },
+  "upstream_tools": {
+    "curl": "8.5.0",
+    "GnuPG": "2.4.4"
+  },
+  "certificate_bundle": {
+    "path": "/etc/ssl/certs/ca-certificates.crt",
+    "present_and_nonempty": true,
+    "check_exit_code": 0
+  },
+  "tool_check_exit_codes": {
+    "package_query": 0,
+    "curl_version": 0,
+    "gpg_version": 0
+  },
+  "https_checks": [
+    {
+      "endpoint": "https://download.docker.com/linux/ubuntu/gpg",
+      "method": "HEAD",
+      "exit_code": 0,
+      "http_status": "200"
+    },
+    {
+      "endpoint": "https://nvidia.github.io/libnvidia-container/gpgkey",
+      "method": "HEAD",
+      "exit_code": 35,
+      "http_status": "000",
+      "error": "OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443"
+    },
+    {
+      "endpoint": "https://nvidia.github.io/libnvidia-container/gpgkey",
+      "method": "HEAD",
+      "ipv4_only": true,
+      "exit_code": 35,
+      "http_status": "000",
+      "error": "OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443"
+    },
+    {
+      "endpoint": "https://raw.githubusercontent.com/NVIDIA/libnvidia-container/gh-pages/gpgkey",
+      "method": "HEAD",
+      "exit_code": 0,
+      "http_status": "200",
+      "scope": "diagnostic request only; no repository substitution"
+    }
+  ],
+  "certificate_verification_disabled": false,
+  "keys_imported": false,
+  "repositories_added": false,
+  "packages_installed_or_changed": false,
+  "interpretation": "Prerequisite packages are ready. NVIDIA GitHub Pages TLS connectivity remains unresolved. The successful official raw-file endpoint suggests a domain or network-path issue, not proof of its cause.",
+  "next_action_requires_user_instruction": true
+}

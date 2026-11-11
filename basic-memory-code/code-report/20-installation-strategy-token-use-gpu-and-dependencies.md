@@ -1,9 +1,9 @@
-# Installation strategy, token use, GPU acceleration, and dependencies
+# Usage strategy and token use
 
 [Collection index](README.md) · [Essential version](00-essential-version.md) · [Application tutorial](17-user-tutorial.md) · [File-adapter tutorial](19-user-tutorial-skill-version.md)
 
-This chapter compares two ways to use the Basic Memory design.
-It also covers token use, local embeddings, GPU acceleration, WSL2, and installation dependencies.
+This chapter compares two ways to use the Basic Memory design and their expected token effects.
+Use the [runtime installation series](21-runtime-installation-guide.md) for dependencies, environments, GPU setup, and headless Docker.
 
 The chapter consolidates the analysis and questions from the related conversation.
 It does not reproduce the conversation as a transcript.
@@ -23,7 +23,8 @@ This chapter uses four evidence labels.
 | Expected | The conclusion follows from the inspected design, but no comparison benchmark ran. |
 | Illustrative | A number explains a method and does not predict an actual workload. |
 
-The installation and SQLite results are verified for version 1.0.0.
+Chapter 18 records historical installation and SQLite verification for version 1.0.0.
+The 2026-11-07 consolidation does not repeat that execution.
 The WSL2 GPU path is source-checked but was not executed for this report.
 The token comparison is an expected result, not a measured benchmark.
 
@@ -64,6 +65,14 @@ The application adds these functions:
 
 The database also stores entities, observations, relations, search rows, revisions, and materialization state.
 An agent does not have to recreate these functions in prompts.
+
+### Hosted and skill-only alternatives
+
+Official skills describe how to use application tools. They do not implement those tools or their database.
+A hosted Basic Memory connection can supply the service without a local application installation.
+An adapted file skill instead uses the agent's file tools, with the limitations described above.
+Copying official skills alone does not supply `bm_search` or `bm_context`.
+Sources: [release skills](https://github.com/basicmachines-co/basic-memory/tree/c9bd187b83baba549d5cd16bacc180f8023d51c8/skills) and [release overview](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/README.md).
 
 ### Comparison
 
@@ -184,169 +193,23 @@ Correctness is part of the token result.
 
 ## Local embeddings
 
-Usage 2 creates local embeddings when semantic indexing uses the local FastEmbed provider.
-The normal installation includes FastEmbed, ONNX Runtime, and sqlite-vec dependencies.
-The first semantic operation can download the selected model.
-
-Usage 1 does not create embeddings by itself.
-The user must add an embedding model, chunker, vector store, and update process.
-
-Usage 2 can also use a remote embedding provider.
-In that configuration, the provider computes the embeddings outside the local system.
-Basic Memory can still store the resulting vectors in its configured vector store.
-
-Embedding creation is not the same as note creation.
-A note write can finish before its vector work reaches the ready state.
-See [indexing, search, and context](06-indexing-search-and-context.md) for the consistency model.
+The installed application can generate embeddings locally or request them through a configured provider.
+Embedding work can finish after a note mutation is accepted.
+See [indexing and consistency](06-indexing-search-and-context.md) for the application model.
+See [GPU embeddings](24-gpu-embeddings.md) for runtime selection and configuration.
 
 ## GPU acceleration in WSL2
 
-An RTX 5090 Laptop GPU can accelerate compatible CUDA workloads in WSL2.
-The GPU uses NVIDIA's Blackwell architecture and compute capability 12.0.
-Use current Windows drivers and a compatible CUDA runtime.
-
-GPU acceleration reduces embedding time.
-It does not reduce the agent's generative token count.
-
-### Direct FastEmbed path
-
-FastEmbed can use ONNX Runtime's CUDA execution provider.
-This path needs compatible GPU packages, CUDA libraries, and cuDNN libraries.
-The usual GPU packages are `fastembed-gpu` and `onnxruntime-gpu`.
-
-The inspected Basic Memory provider did not expose a CUDA provider setting.
-It created the FastEmbed model with the model name, memory option, cache path, and thread count.
-The default dependency set also selected the CPU FastEmbed package.
-
-Newer FastEmbed versions can select an available CUDA execution provider automatically.
-This behavior still depends on the installed package and runtime.
-
-Do not install CPU and GPU FastEmbed variants in one environment.
-The Basic Memory resolver can also restore the declared CPU package during an update.
-Treat this path as an environment customization that needs testing.
-
-### Recommended local endpoint path
-
-Run a GPU-enabled embedding server as a separate process.
-Then configure Basic Memory to use its OpenAI-compatible endpoint.
-
-This design isolates CUDA dependencies from the Basic Memory environment.
-It also permits independent model and server updates.
-
-Possible servers include Ollama, llama.cpp, vLLM, Text Embeddings Inference, and LM Studio.
-Confirm that the selected server implements the required embeddings endpoint.
-Also confirm its model name and vector dimensions.
-
-The conversation identified Ollama as a practical WSL2 option.
-The report did not execute this endpoint path.
-
-Example Basic Memory configuration:
-
-```bash
-export BASIC_MEMORY_SEMANTIC_EMBEDDING_PROVIDER=openai
-export BASIC_MEMORY_SEMANTIC_EMBEDDING_MODEL='<local-model-name>'
-export BASIC_MEMORY_SEMANTIC_EMBEDDING_API_BASE='http://localhost:11434/v1'
-export BASIC_MEMORY_SEMANTIC_EMBEDDING_API_KEY='local'
-export BASIC_MEMORY_SEMANTIC_EMBEDDING_DIMENSIONS='<model-dimensions>'
-
-bm reindex --embeddings
-```
-
-Use the exact dimensions that the embedding model returns.
-After a provider or dimension change, rebuild the embedding index.
-
-### WSL2 setup procedure
-
-CAUTION: Do not install a Linux NVIDIA display driver in WSL2.
-It can conflict with the driver that Windows maps into WSL2.
-
-1. Install a current NVIDIA Windows driver that supports WSL2 CUDA.
-2. Run `wsl --update` from Windows.
-3. Confirm that the selected distribution uses WSL2.
-4. Start the distribution.
-5. Run `nvidia-smi` in WSL2.
-6. Install the selected embedding server or GPU runtime.
-7. Confirm that the server detects the RTX 5090 Laptop GPU.
-8. Configure Basic Memory with the server endpoint.
-9. Rebuild the embedding index.
-10. Run one semantic query and inspect GPU use.
-
-Prebuilt GPU software often does not need the complete CUDA toolkit.
-If a build needs the toolkit, install a toolkit-only WSL package.
-
-CAUTION: Do not install a CUDA meta-package that installs a Linux display driver.
-That package can replace or conflict with the mapped WSL2 driver.
-
-For Blackwell hardware, verify support across the Windows driver, CUDA runtime, and inference package.
-New hardware usually needs recent versions from all three layers.
-
-First-party references:
-
-- [NVIDIA CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html).
-- [NVIDIA CUDA GPU compute capability table](https://developer.nvidia.com/cuda-gpus).
-- [ONNX Runtime CUDA execution provider](https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html).
-- [FastEmbed repository](https://github.com/qdrant/fastembed).
-- [Basic Memory semantic search documentation](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/docs/semantic-search.md).
+The canonical GPU guidance now resides in [chapter 24](24-gpu-embeddings.md).
+It covers the RTX 5090 Laptop GPU, Ollama, direct FastEmbed alternatives, and verification limits.
+Use [chapter 25](25-headless-wsl2-docker.md) for the selected headless container host.
 
 ## High-level dependency list
 
-The phrase complete installation has two useful meanings.
-The first meaning is the normal local application path.
-The second meaning includes every optional integration.
-
-### Normal local application path
-
-| Layer | Dependencies and artifacts | Purpose |
-| --- | --- | --- |
-| Host | Linux, macOS, Windows, or WSL2 | Runs the application. |
-| Language | Python 3.12 or later | Runs Basic Memory and its Python packages. |
-| Installer | `uv` is recommended. `pip` is also possible. | Creates and updates the environment. |
-| Application | `basic-memory` | Supplies CLI, MCP, HTTP, indexing, and storage functions. |
-| Database | SQLAlchemy, aiosqlite, Alembic, SQLite, and greenlet | Stores relational and operational state. |
-| Protocol and API | MCP, FastMCP, FastAPI, AnyIO, HTTPX, and uvicorn-related packages | Supplies agent and HTTP interfaces. |
-| Validation and settings | Pydantic, pydantic-settings, python-dotenv, and PyYAML | Validates data and loads configuration. |
-| Markdown | markdown-it-py, python-frontmatter, mdformat, and related plugins | Parses and formats note content. |
-| Files | watchfiles, aiofiles, filelock, and pathspec | Watches, reads, locks, and filters files. |
-| Semantic search | FastEmbed, ONNX Runtime, sqlite-vec, and a local model | Creates and searches local vectors. |
-| Provider client | OpenAI client library | Connects to configured compatible providers. |
-| CLI and diagnostics | Typer, Rich, Loguru, Logfire, and psutil | Supplies commands, output, logs, and diagnostics. |
-| Utilities | Pillow, dateparser, Unidecode, PyJWT, and Pybars3 | Supports content and runtime features. |
-| Local artifacts | Markdown project, configuration, SQLite database, logs, and model cache | Retains knowledge and derived state. |
-| AI host | An MCP client or another agent host | Operates Basic Memory through agent tools. |
-
-The AI host is optional for direct CLI or HTTP use.
-The local model download occurs when semantic indexing first needs that model.
-
-The verified 1.0.0 installation resolved 160 packages in its WSL environment.
-The result included Python 3.12.15, uv 0.13.1, and SQLite migrations through revision `0042`.
-It also included FastMCP 4.1.3, MCP 2.3.0, and FastAPI 0.162.0.
-
-The semantic stack included FastEmbed 0.9.1 and ONNX Runtime 1.31.1.
-It also included sqlite-vec 0.1.10a4 and `bge-small-en-v1.5` with 384 dimensions.
-
-These values describe one tested resolution.
-They are not permanent pins for all future installations.
-
-### Optional feature dependencies
-
-| Feature | Added package, service, or system |
-| --- | --- |
-| Postgres storage | Postgres server, asyncpg, Psycopg, and optional pgvector. |
-| Milvus vectors | The `milvus` extra, PyMilvus, and a Milvus service. |
-| Redis cache | The `redis` extra and a Redis service. |
-| LiteLLM providers | The `litellm` extra and provider credentials or endpoints. |
-| PDF extraction | The `pdf` extra and its extraction packages. |
-| Office extraction | The `documents` extra and MarkItDown-related packages. |
-| Remote embeddings | Provider endpoint, credentials, model name, and vector dimensions. |
-| Local GPU embeddings | Windows NVIDIA driver, WSL2 support, and a compatible GPU runtime. |
-| Reranking | A configured FastEmbed or LiteLLM reranker. |
-| Host integration | Client configuration and the host's MCP transport. |
-
-Postgres, Milvus, Redis, Docker, and a CUDA toolkit are not required for the normal SQLite path.
-Git and development test tools are also not required for ordinary application use.
-
-See [tutorial verification](18-tutorial-validation-and-version-update.md) for executed installation results.
-See the [application tutorial](17-user-tutorial.md) for the normal SQLite procedure.
+The canonical dependency inventory now resides in [chapter 22](22-runtime-dependencies.md).
+It includes all 43 runtime requirements, five extras, build/development requirements, services, and native libraries.
+Use [chapter 23](23-python-environments.md) for isolated Python installation.
+The [series overview](21-runtime-installation-guide.md) defines complete installation and its evidence boundaries.
 
 ## Decision guide
 
@@ -370,27 +233,14 @@ Choose Usage 2 when one or more of these conditions apply:
 A mixed design is also valid.
 Keep Markdown portable and use Basic Memory as a rebuildable index and service layer.
 
-## Ten-sentence conclusion
-
-1. Usage 1 keeps Basic Memory's Markdown design but does not install its full service stack.
-2. Usage 2 installs the application and supplies parsing, indexing, retrieval, graph, and update controls.
-3. Usage 1 is usually simpler for a small corpus with known paths and precise file tools.
-4. Usage 2 is usually stronger for repeated discovery, graph traversal, semantic search, and concurrent updates.
-5. Usage 2 adds fixed tool overhead but can reduce note text, edit output, and correction turns.
-6. Usage 1 can use fewer tokens when one exact file operation completes the task.
-7. The local FastEmbed path in Usage 2 creates embeddings when semantic indexing runs.
-8. Usage 1 creates no embeddings unless the user adds an embedding and vector-index process.
-9. An RTX 5090 Laptop GPU can accelerate compatible WSL2 embedding software, but it does not reduce agent tokens.
-10. A separate GPU embedding server is the clearest integration when direct FastEmbed package changes are difficult to maintain.
-
 ## Review limits and writing status
 
 The report did not run a controlled token benchmark.
 It also did not execute GPU embedding on the RTX 5090 Laptop GPU.
 Measure both paths before a production decision.
 
-The dependency list is high level.
-The package resolver can change transitive versions and package counts.
+Chapter 22 distinguishes declared requirements, locked versions, and historical installed versions.
+Do not reuse a historical package count as a new installation result.
 
 This chapter is an **STE-aligned draft**.
 Official ASD-STE100 dictionary verification and independent human review remain pending.

@@ -1,0 +1,38 @@
+{
+  "status": "loaded_and_digest_reference_verified",
+  "image": "ubuntu:24.04@sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+  "manifest_digest": "sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+  "config_digest": "sha256:d9b8c34d61a9b9a3c44cab883d7d2f2619d674966ab520186f799cf32e3e0377",
+  "blobs": [
+    {
+      "mediaType": "application/vnd.oci.image.config.v1+json",
+      "size": 2052,
+      "digest": "sha256:d9b8c34d61a9b9a3c44cab883d7d2f2619d674966ab520186f799cf32e3e0377"
+    },
+    {
+      "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+      "size": 29767612,
+      "digest": "sha256:7a48b8f0e5c73d0cc2a85b008978396aa19d253dc1b96fdb0b769ee6dcbeca4a"
+    }
+  ],
+  "platform": "linux/amd64",
+  "archive": "/home/ydxu_/basic-memory-installation-assets/images/ubuntu/24.04/linux-amd64/ubuntu-78d4744ead1f.oci.tar",
+  "archive_sha256": "3426af7d964e5ad77a085bcc0d1d86d1102aee248c02c567c0dee1ccd7f7cf7f",
+  "archive_bytes": 29788160,
+  "authentication": "ephemeral anonymous public-pull token; not saved",
+  "tls_verification_enabled": true,
+  "image_content_built_or_changed": false,
+  "blob_transfer": "1 MiB verified ranges, six workers, final complete-blob SHA-256 and size check",
+  "load": {
+    "exit_code": 0,
+    "stdout": "Loaded image: ubuntu:24.04\nLoaded image: ubuntu@sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+    "stderr": ""
+  },
+  "inspection": {
+    "exit_code": 0,
+    "stdout": "[\"ubuntu@sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d\"] sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+    "stderr": ""
+  },
+  "previous_archive_path": "/tmp/basic-memory-order09-ubuntu.oci.tar",
+  "archive_storage": "Persistent WSL user home asset folder."
+}

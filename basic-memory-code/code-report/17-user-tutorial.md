@@ -4,45 +4,14 @@
 
 ## Viable installation choices
 
-You can use Basic Memory without `uv`.
-However, the official Basic Memory skills still need a Basic Memory server.
-A skill supplies instructions for tools such as `bm_write`, `bm_search`, and `bm_context`.
-The skill does not implement those tools or their database.
-See the [official skills documentation](https://github.com/basicmachines-co/basic-memory/blob/main/skills/README.md).
+For a complete application installation, start with the [runtime installation series](21-runtime-installation-guide.md).
+It owns the dependency inventory, environment comparison, GPU configuration, and headless Docker procedure.
+Use [chapter 20](20-installation-strategy-token-use-gpu-and-dependencies.md) to compare installed, hosted, and service-free approaches.
+The [file-adapter tutorial](19-user-tutorial-skill-version.md) is a separate alternative, not an application prerequisite.
 
-| Approach | Local Basic Memory installation? | Available functions |
-| --- | --- | --- |
-| **Official skills and Basic Memory Cloud** | No. | The skills use hosted storage, search, and graph tools through a connector or MCP connection. |
-| **Official skills and local Basic Memory** | Yes. `uv` is one installation option. | The local application supplies indexing, database retrieval, and graph tools. |
-| **Adapted skill and Markdown files** | No. | The agent uses its existing file tools to maintain notes, search text, and follow links. |
-
-The cloud approach moves the application and database to the hosted service.
-The official skills still require that service connection.
-See the [Basic Memory Cloud overview](https://github.com/basicmachines-co/basic-memory#basic-memory-cloud).
-
-**An adapted skill can provide a simpler memory system without a Basic Memory service.**
-The agent must have access to persistent files.
-The adapted skill can instruct the agent to:
-
-1. Read an index and search existing Markdown notes.
-2. Save decisions, observations, and task checkpoints.
-3. Add named links between notes.
-4. Follow those links to reconstruct context.
-
-These links can represent a knowledge graph.
-The agent must interpret and traverse the links itself, unless another tool supplies that function.
-Automatic graph indexing, database queries, semantic search, and revision protection require additional implementation.
-Copying the official skills alone does not make `bm_search` or `bm_context` available.
-
-Choose Cloud and the official skills if you want to avoid a local Basic Memory installation.
-Choose an adapted filesystem skill if you want to avoid a Basic Memory service entirely.
-Choose the local application if you need its database and indexing functions on your computer.
-
-For the adapted skill choice, follow [user-tutorial-skill-version](19-user-tutorial-skill-version.md).
-That tutorial reuses the repository's note format, Task schema, and workflow guides through a file adapter.
-
-The remaining tutorial follows the verified local installation through `uv`.
-The Cloud and adapted-skill approaches are alternatives, not prerequisites for these steps.
+This tutorial retains a small standalone installation sequence to support its disposable SQLite exercises.
+That sequence pins the application release but does not reproduce every dependency version.
+Use [chapter 23](23-python-environments.md) for source-lock installation with all extras.
 
 This tutorial uses **Basic Memory 1.0.0** and Python 3.12.
 The verification date is 2026-11-03, Asia/Shanghai.

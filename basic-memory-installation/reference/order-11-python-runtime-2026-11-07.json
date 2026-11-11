@@ -1,0 +1,293 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 11,
+  "attempt": 1,
+  "authorization": "Proceed to order 11",
+  "status": "passed",
+  "installation_started": true,
+  "uv_index_digest": "sha256:96f40d3904aad8d0bd010539001d36c8e2188b981e1334471a90c4a1d93bb490",
+  "uv_amd64_digest": "sha256:c7db1d63057f268a8b6da8af9077850a60461f98d23db23c676a82089a050c91",
+  "python_archive": {
+    "name": "cpython-3.13.18+20261026-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+    "sha256": "df15fe60d3ff55bf9dcf25824b5572756bb8816ff93865a273d3301d7066a8b7",
+    "publisher_checksums_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/SHA256SUMS"
+  },
+  "preflight_notes": [
+    "GitHub API returned HTTP 403. Public release checksum file was reachable over verified HTTPS.",
+    "The earlier uv source catalog path returned HTTP 404. Use the actual uv binary catalog during interpreter installation."
+  ],
+  "download_recovery": {
+    "uv_first_transfer": "One GHCR range request failed with curl error 35 during TLS setup. No image was imported.",
+    "retry": "The failed image transfer was retried. The saved helper now also retries connection errors and limits concurrent ranges to three.",
+    "verification": "TLS verification and complete-image digest verification remain enabled.",
+    "python_archive_download": "Passed; publisher checksum matched."
+  },
+  "uv_embedded_python_catalog": {
+    "command": [
+      "docker",
+      "run",
+      "--pull=never",
+      "--rm",
+      "--network",
+      "none",
+      "--entrypoint",
+      "/uv",
+      "ghcr.io/astral-sh/uv:0.13.7@sha256:c7db1d63057f268a8b6da8af9077850a60461f98d23db23c676a82089a050c91",
+      "python",
+      "list",
+      "3.13.18",
+      "--all-versions",
+      "--output-format",
+      "json"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "error: Failed to determine the libc used on the current platform\n  cause: Failed to find any common binaries to determine libc from: /bin/sh, /usr/bin/env, /bin/dash, /bin/ls\n"
+  },
+  "run_id": "20261107-order11-attempt01",
+  "target": "python-runtime",
+  "image_tag": "local/basic-memory-python:3.13.18-uv0.13.7",
+  "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+  "started_at_utc": "2026-11-07T11:37:34.185335+00:00",
+  "commands": [
+    {
+      "arguments": [
+        "docker",
+        "image",
+        "inspect",
+        "ghcr.io/astral-sh/uv:0.13.7@sha256:c7db1d63057f268a8b6da8af9077850a60461f98d23db23c676a82089a050c91"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "dpkg-query",
+        "-W",
+        "-f=${Package}\t${Version}\t${Status}\n"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "buildx",
+        "build",
+        "--platform",
+        "linux/amd64",
+        "--pull=false",
+        "--progress=plain",
+        "--provenance=false",
+        "--target",
+        "python-runtime",
+        "--tag",
+        "local/basic-memory-python:3.13.18-uv0.13.7",
+        "--load",
+        "--metadata-file",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order11-u8f9zt7p/build-metadata.json",
+        "--file",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order11-u8f9zt7p/Dockerfile",
+        "--build-arg",
+        "BM_BASE_IMAGE=ubuntu:24.04@sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+        "--build-arg",
+        "BM_UV_IMAGE=ghcr.io/astral-sh/uv:0.13.7@sha256:c7db1d63057f268a8b6da8af9077850a60461f98d23db23c676a82089a050c91",
+        "--build-arg",
+        "BM_CA_CERTIFICATES_VERSION=20260816ubuntu0.24.04.2",
+        "--build-arg",
+        "BM_NATIVE_GCC_VERSION=14.2.0-4ubuntu2~24.04.1",
+        "--build-arg",
+        "BM_LIBPQ_VERSION=16.15-0ubuntu0.24.04.1",
+        "--build-arg",
+        "BM_UV_VERSION=0.13.7",
+        "--build-arg",
+        "BM_PYTHON_VERSION=3.13.18",
+        "--build-arg",
+        "BM_PYTHON_BUILD=20261026",
+        "--build-arg",
+        "BM_PYTHON_ARCHIVE_NAME=cpython-3.13.18+20261026-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+        "--build-arg",
+        "BM_PYTHON_ARCHIVE_SHA256=df15fe60d3ff55bf9dcf25824b5572756bb8816ff93865a273d3301d7066a8b7",
+        "--build-arg",
+        "BM_EXPECTED_SQLITE_VERSION=3.53.1",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order11-u8f9zt7p"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "run",
+        "--pull=never",
+        "--rm",
+        "--network",
+        "none",
+        "--name",
+        "basic-memory-order11-python-check",
+        "local/basic-memory-python:3.13.18-uv0.13.7",
+        "python",
+        "/opt/installation/check-python-runtime.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "image",
+        "inspect",
+        "local/basic-memory-python:3.13.18-uv0.13.7"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "image",
+        "save",
+        "--output",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order11-u8f9zt7p/python-runtime.oci.tar",
+        "local/basic-memory-python:3.13.18-uv0.13.7"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "dpkg-query",
+        "-W",
+        "-f=${Package}\t${Version}\t${Status}\n"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "ps",
+        "-a",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "volume",
+        "ls",
+        "--quiet"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "python3",
+        "/home/ydxu_/basic-memory-installation-assets/verify-assets.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "runtime": {
+    "status": "passed",
+    "run_id": "20261107-order11-attempt01",
+    "image_tag": "local/basic-memory-python:3.13.18-uv0.13.7",
+    "image_id": "sha256:62f596a48a36c097400eb35cf855aa001ca4d511e019d30349745b477da54d2b",
+    "uv_image": "ghcr.io/astral-sh/uv:0.13.7@sha256:c7db1d63057f268a8b6da8af9077850a60461f98d23db23c676a82089a050c91",
+    "uv_image_archive": "images/uv/0.13.7/linux-amd64/uv-c7db1d63057f.oci.tar",
+    "uv_transfer_receipt": "metadata/order-11/20261107-order11-attempt01/uv-transfer.json",
+    "python_archive": "interpreters/cpython/3.13.18/20261026/cpython-3.13.18+20261026-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+    "python_archive_receipt": "interpreters/cpython/3.13.18/20261026/python-archive.json",
+    "image_archive": "images/basic-memory-python/3.13.18/linux-amd64/python-62f596a48a36.oci.tar",
+    "image_archive_sha256": "8d68c121fccb94c7820a8782179c555d1ee35eeb08dc316cb718f2b19bf35928",
+    "metadata_directory": "metadata/order-11/20261107-order11-attempt01",
+    "verification": {
+      "status": "passed",
+      "uv_version": "uv 0.13.7 (x86_64-unknown-linux-musl)",
+      "python_version": "3.13.18",
+      "python_full_version": "3.13.18 (main, Oct 26 2026, 14:08:20) [Clang 23.1.3 ]",
+      "standalone_build": "20261026",
+      "archive_sha256": "df15fe60d3ff55bf9dcf25824b5572756bb8816ff93865a273d3301d7066a8b7",
+      "archive_name": "cpython-3.13.18+20261026-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "sqlite_version": "3.53.1",
+      "sqlite_fts5": true,
+      "sqlite_extension_loading_enabled": true,
+      "sqlite_compile_options": [
+        "ATOMIC_INTRINSICS=1",
+        "COMPILER=clang-23.1.3",
+        "DEFAULT_AUTOVACUUM",
+        "DEFAULT_CACHE_SIZE=-2000",
+        "DEFAULT_FILE_FORMAT=4",
+        "DEFAULT_JOURNAL_SIZE_LIMIT=-1",
+        "DEFAULT_MMAP_SIZE=0",
+        "DEFAULT_PAGE_SIZE=4096",
+        "DEFAULT_PCACHE_INITSZ=20",
+        "DEFAULT_RECURSIVE_TRIGGERS",
+        "DEFAULT_SECTOR_SIZE=4096",
+        "DEFAULT_SYNCHRONOUS=2",
+        "DEFAULT_WAL_AUTOCHECKPOINT=1000",
+        "DEFAULT_WAL_SYNCHRONOUS=2",
+        "DEFAULT_WORKER_THREADS=0",
+        "DIRECT_OVERFLOW_READ",
+        "ENABLE_DBSTAT_VTAB",
+        "ENABLE_FTS3",
+        "ENABLE_FTS3_PARENTHESIS",
+        "ENABLE_FTS4",
+        "ENABLE_FTS5",
+        "ENABLE_GEOPOLY",
+        "ENABLE_MATH_FUNCTIONS",
+        "ENABLE_PERCENTILE",
+        "ENABLE_RTREE",
+        "MALLOC_SOFT_LIMIT=1024",
+        "MAX_ATTACHED=10",
+        "MAX_COLUMN=2000",
+        "MAX_COMPOUND_SELECT=500",
+        "MAX_DEFAULT_PAGE_SIZE=8192",
+        "MAX_EXPR_DEPTH=1000",
+        "MAX_FUNCTION_ARG=1000",
+        "MAX_LENGTH=1000000000",
+        "MAX_LIKE_PATTERN_LENGTH=50000",
+        "MAX_MMAP_SIZE=0x7fff0000",
+        "MAX_PAGE_COUNT=0xfffffffe",
+        "MAX_PAGE_SIZE=65536",
+        "MAX_SQL_LENGTH=1000000000",
+        "MAX_TRIGGER_DEPTH=1000",
+        "MAX_VARIABLE_NUMBER=32766",
+        "MAX_VDBE_OP=250000000",
+        "MAX_WORKER_THREADS=8",
+        "MUTEX_PTHREADS",
+        "SYSTEM_MALLOC",
+        "TEMP_STORE=1",
+        "THREADSAFE=1"
+      ],
+      "openssl_version": "OpenSSL 3.5.9 29 Sep 2026",
+      "sys_executable": "/opt/bm-python/bin/python",
+      "sys_prefix": "/opt/uv/python/cpython-3.13.18-linux-x86_64-gnu",
+      "sys_base_prefix": "/opt/uv/python/cpython-3.13.18-linux-x86_64-gnu",
+      "resolved_prefix": "/opt/uv/python/cpython-3.13.18-linux-x86_64-gnu",
+      "site_packages": "/opt/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/site-packages",
+      "managed_interpreter": true,
+      "virtual_environment": false,
+      "native_libraries_load": true,
+      "stdlib_compression_and_ffi_imports": true,
+      "initial_python_distributions": {
+        "pip": "26.2.2"
+      },
+      "later_build_backends_and_application_installed": false
+    },
+    "later_backends_and_application_installed": false
+  },
+  "host_packages_unchanged": true,
+  "container_inventory_after": "",
+  "volume_inventory_after": "",
+  "home_asset_verification": {
+    "status": "passed",
+    "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+    "files_checked": 93,
+    "failures": []
+  },
+  "next_action": "Stop before Order 12. Await explicit user instruction for application build backends.",
+  "finished_at_utc": "2026-11-07T11:37:42.621129+00:00",
+  "home_asset_verification_at_build": {
+    "status": "passed",
+    "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+    "files_checked": 92,
+    "failures": []
+  },
+  "portable_interpreter_receipt": true
+}

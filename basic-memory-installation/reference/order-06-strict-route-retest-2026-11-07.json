@@ -1,0 +1,73 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 6,
+  "attempt": 3,
+  "user_instruction": "I activate the strict route. Check it again.",
+  "user_reported_change": "strict route activated",
+  "proxy_configuration_independently_verified": false,
+  "scope": "read-only connectivity retest after a user-reported routing change",
+  "connection_status": "failed",
+  "dns_addresses": [
+    "198.18.4.24",
+    "2606:50c0:8000::153",
+    "2606:50c0:8001::153",
+    "2606:50c0:8002::153",
+    "2606:50c0:8003::153"
+  ],
+  "https_checks": [
+    {
+      "check": "wsl_nvidia_key",
+      "endpoint": "https://nvidia.github.io/libnvidia-container/gpgkey",
+      "method": "HEAD",
+      "exit_code": 35,
+      "http_status": "000",
+      "error": "OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443"
+    },
+    {
+      "check": "wsl_nvidia_repo",
+      "endpoint": "https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list",
+      "method": "HEAD",
+      "exit_code": 35,
+      "http_status": "000",
+      "error": "OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443"
+    },
+    {
+      "check": "wsl_nvidia_package_index",
+      "endpoint": "https://nvidia.github.io/libnvidia-container/stable/deb/amd64/Packages",
+      "method": "HEAD",
+      "exit_code": 35,
+      "http_status": "000",
+      "error": "OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to nvidia.github.io:443"
+    },
+    {
+      "check": "windows_nvidia_key",
+      "endpoint": "https://nvidia.github.io/libnvidia-container/gpgkey",
+      "method": "HEAD",
+      "exit_code": 35,
+      "http_status": "000",
+      "error": "schannel: failed to receive handshake, SSL/TLS connection failed"
+    },
+    {
+      "check": "wsl_docker_key",
+      "endpoint": "https://download.docker.com/linux/ubuntu/gpg",
+      "method": "HEAD",
+      "exit_code": 0,
+      "http_status": "200"
+    }
+  ],
+  "openssl_handshake": {
+    "exit_code": 1,
+    "tcp_connected": true,
+    "peer_certificate_received": false,
+    "tls_bytes_read": 0,
+    "tls_bytes_written": 325,
+    "cipher_negotiated": false,
+    "error": "unexpected eof while reading"
+  },
+  "certificate_verification_enabled": true,
+  "agent_changed_host_settings": false,
+  "certificate_installation_performed": false,
+  "packages_installed": false,
+  "next_action": "Inspect the nvidia.github.io request rule, outbound group, and upstream node in Clash. No further installation order is authorized."
+}

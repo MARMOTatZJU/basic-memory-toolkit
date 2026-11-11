@@ -1,0 +1,8 @@
+# Private configuration and generated operation state are not build inputs.
+.git
+config/runtime.env
+data
+**/__pycache__
+**/*.pyc
+validation
+records

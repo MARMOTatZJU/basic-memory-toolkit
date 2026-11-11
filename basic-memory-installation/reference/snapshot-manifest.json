@@ -1,0 +1,39 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "application_version": "1.0.0",
+  "commit": "c9bd187b83baba549d5cd16bacc180f8023d51c8",
+  "files": [
+    {
+      "path": "reference/basic-memory-1.0.0/pyproject.toml",
+      "source": "basic-memory-database-workspace/vendor/basic-memory/pyproject.toml",
+      "sha256": "f9f7e9d72509de76bc44902c38d44c97f63111a9fbb4c34c3e38b5d556906fc4"
+    },
+    {
+      "path": "reference/basic-memory-1.0.0/uv.lock",
+      "source": "basic-memory-database-workspace/vendor/basic-memory/uv.lock",
+      "sha256": "2d526dea7783189a2dcd017222082a3a5034687d6704185cc8257ab46600ddf3"
+    },
+    {
+      "path": "reference/basic-memory-1.0.0/LICENSE",
+      "source": "basic-memory-database-workspace/vendor/basic-memory/LICENSE",
+      "sha256": "6f1e622c82a380075843bb084a7ec3b1f1d12a4a02526d75e78b0924a860aa75"
+    },
+    {
+      "path": "reference/dependencies/declared-dependencies.csv",
+      "source": "basic-memory-database-workspace/reports/dependency-audit-2026-11-04/declared-dependencies.csv",
+      "sha256": "16ca1d290eafc64b48877b329c4fcca155f1bd8485836ee5e386209cccbc7e7a"
+    },
+    {
+      "path": "reference/dependencies/historical-locked-packages-2026-11-04.csv",
+      "source": "basic-memory-database-workspace/reports/dependency-audit-2026-11-04/locked-packages.csv",
+      "sha256": "2ff6fb506b64967ee13e5514f2b77cad52d83a2f12379f0b75b659b287271c50"
+    },
+    {
+      "path": "reference/dependencies/locked-packages.csv",
+      "source": "reference/basic-memory-1.0.0/uv.lock",
+      "derivation": "CSV generated from all lock records on 2026-11-07",
+      "sha256": "3737ec50f99cbc0b443043037838e56fcbdc31b3fc4e89a398815fb15d9487f0"
+    }
+  ]
+}

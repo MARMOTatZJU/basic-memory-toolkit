@@ -1,0 +1,6 @@
+# Keep shared packages compatible with the saved application release lock.
+jinja2==3.1.6
+markupsafe==3.0.3
+packaging==26.2
+pathspec==1.1.1
+pluggy==1.6.0

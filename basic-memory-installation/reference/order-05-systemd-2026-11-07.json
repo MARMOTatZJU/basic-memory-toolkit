@@ -1,0 +1,42 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 5,
+  "scope": "systemd readiness check in Ubuntu WSL2",
+  "status": "passed",
+  "host_modified": false,
+  "distribution": "Ubuntu 24.04.5 LTS",
+  "kernel": "6.6.114.1-microsoft-standard-WSL2",
+  "package_versions": {
+    "systemd": "255.4-1ubuntu8.18",
+    "systemd-sysv": "255.4-1ubuntu8.18"
+  },
+  "packages_installed": true,
+  "pid_1": {
+    "pid": 1,
+    "command": "systemd",
+    "args": "/usr/lib/systemd/systemd --system --deserialize=62"
+  },
+  "service_manager_status": "running",
+  "failed_units": 0,
+  "dbus_service": "active",
+  "wsl_boot_systemd": true,
+  "commands": [
+    "cat /etc/os-release",
+    "uname -r",
+    "ps -p 1 -o pid=,comm=,args=",
+    "dpkg-query -W -f='${Package} ${Version} ${Status}\\n' systemd systemd-sysv",
+    "systemctl --version",
+    "systemctl is-system-running",
+    "systemctl --failed --no-pager",
+    "systemctl is-active dbus.service",
+    "cat /etc/wsl.conf"
+  ],
+  "combined_probe_exit_code": 0,
+  "package_install_performed": false,
+  "service_restart_performed": false,
+  "scope_limits": [
+    "Docker package conflicts not checked",
+    "Docker not installed or started by this check"
+  ]
+}

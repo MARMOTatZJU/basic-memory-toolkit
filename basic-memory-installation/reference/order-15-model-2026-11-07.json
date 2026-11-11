@@ -1,0 +1,255 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 15,
+  "attempt": 1,
+  "authorization": "proceed to order 15",
+  "status": "passed",
+  "installation_started": true,
+  "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+  "model": "nomic-embed-text:v1.5",
+  "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+  "commands": [
+    {
+      "arguments": [
+        "dpkg-query",
+        "-W",
+        "-f=${Package}\t${Version}\t${Status}\n"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "/usr/bin/python3",
+        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
+        "--store",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order15-model/store"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "run",
+        "--pull=never",
+        "--detach",
+        "--network",
+        "none",
+        "--gpus",
+        "all",
+        "--name",
+        "basic-memory-order15-model-check",
+        "--env",
+        "OLLAMA_MODELS=/models",
+        "--env",
+        "OLLAMA_DEBUG=1",
+        "--env",
+        "OLLAMA_KEEP_ALIVE=5m",
+        "--env",
+        "OLLAMA_NUM_PARALLEL=1",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--tmpfs",
+        "/root/.ollama:rw,size=8m",
+        "--mount",
+        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/order15-check-345_235j/test-store,target=/models",
+        "--mount",
+        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/order15-check-345_235j/interpreter/python,target=/opt/order15-python,readonly",
+        "--mount",
+        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/check-embedding-runtime.py,target=/opt/check-embedding-runtime.py,readonly",
+        "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
+        "serve"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "exec",
+        "c5ac2d52379a1a2e2e414912b837ace6b2c515f410efdf86d33d6840233c0235",
+        "/opt/order15-python/bin/python3.13",
+        "/opt/check-embedding-runtime.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "logs",
+        "c5ac2d52379a1a2e2e414912b837ace6b2c515f410efdf86d33d6840233c0235"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "rm",
+        "--force",
+        "c5ac2d52379a1a2e2e414912b837ace6b2c515f410efdf86d33d6840233c0235"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "/usr/bin/python3",
+        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
+        "--store",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order15-model/store"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "dpkg-query",
+        "-W",
+        "-f=${Package}\t${Version}\t${Status}\n"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "ps",
+        "-a",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "volume",
+        "ls",
+        "--quiet"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "python3",
+        "/home/ydxu_/basic-memory-installation-assets/verify-assets.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "containers_before": "",
+  "volumes_before": "",
+  "run_id": "20261107-order15-attempt01",
+  "started_at_utc": "2026-11-07T13:58:57.211356+00:00",
+  "runtime": {
+    "status": "passed",
+    "run_id": "20261107-order15-attempt01",
+    "model": "nomic-embed-text:v1.5",
+    "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "model_blob_digest": "sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6",
+    "model_store": "models/ollama/nomic-embed-text/v1.5/0a109f422b47/store",
+    "model_manifest": "models/ollama/nomic-embed-text/v1.5/0a109f422b47/store/manifests/registry.ollama.ai/library/nomic-embed-text/v1.5",
+    "model_bytes": 274290656,
+    "dimensions": 768,
+    "file_type": "F16",
+    "gguf_context_length": 2048,
+    "packaged_num_ctx": 8192,
+    "metadata_directory": "metadata/order-15/20261107-order15-attempt01",
+    "embedding_runtime": {
+      "status": "passed",
+      "ollama_version": "0.40.15",
+      "model": "nomic-embed-text:v1.5",
+      "endpoint": "/v1/embeddings",
+      "dimensions": 768,
+      "finite_values": true,
+      "l2_norm": 1.000000161214146,
+      "gpu_placement": [
+        {
+          "name": "nomic-embed-text:v1.5",
+          "model": "nomic-embed-text:v1.5",
+          "size": 335743549,
+          "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16"
+          },
+          "expires_at": "2026-11-07T14:04:04.538505338Z",
+          "size_vram": 335743549,
+          "context_length": 2048,
+          "runner": "llamacpp"
+        }
+      ],
+      "runner_library_maps": [
+        {
+          "pid": 164,
+          "cuda_libraries": [
+            "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
+            "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
+            "/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90",
+            "/usr/lib/ollama/cuda_v12/libggml-cuda.so"
+          ]
+        }
+      ],
+      "selected_cuda_backend": "cuda_v12",
+      "show": {
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "nomic-bert",
+          "families": [
+            "nomic-bert"
+          ],
+          "parameter_size": "137M",
+          "quantization_level": "F16"
+        },
+        "model_info": {
+          "general.architecture": "nomic-bert",
+          "general.file_type": 1,
+          "general.parameter_count": 136727040,
+          "nomic-bert.attention.causal": false,
+          "nomic-bert.attention.head_count": 12,
+          "nomic-bert.attention.layer_norm_epsilon": 1e-12,
+          "nomic-bert.block_count": 12,
+          "nomic-bert.context_length": 2048,
+          "nomic-bert.embedding_length": 768,
+          "nomic-bert.feed_forward_length": 3072,
+          "nomic-bert.pooling_type": 1,
+          "nomic-bert.rope.freq_base": 1000,
+          "tokenizer.ggml.bos_token_id": 101,
+          "tokenizer.ggml.cls_token_id": 101,
+          "tokenizer.ggml.eos_token_id": 102,
+          "tokenizer.ggml.mask_token_id": 103,
+          "tokenizer.ggml.model": "bert",
+          "tokenizer.ggml.padding_token_id": 0,
+          "tokenizer.ggml.scores": [],
+          "tokenizer.ggml.seperator_token_id": 102,
+          "tokenizer.ggml.token_type": [],
+          "tokenizer.ggml.token_type_count": 2,
+          "tokenizer.ggml.tokens": [],
+          "tokenizer.ggml.unknown_token_id": 100
+        },
+        "parameters": "num_ctx                        8192",
+        "capabilities": [
+          "embedding"
+        ]
+      },
+      "fixture": "Public installation verification query; no user notes.",
+      "persistent_service_started": false,
+      "scope": "Model-level OpenAI-compatible embedding and actual GPU/CUDA 12 runner; not Basic Memory or MCP acceptance."
+    },
+    "persistent_service_started": false,
+    "basic_memory_acceptance": "not_run"
+  },
+  "host_packages_unchanged": true,
+  "containers_after": "",
+  "volumes_after": "",
+  "home_asset_verification": {
+    "status": "passed",
+    "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+    "files_checked": 572,
+    "failures": []
+  },
+  "next_action": "All dependency orders are complete. Stop before runtime configuration, persistent deployment, and Basic Memory acceptance; await explicit user instruction.",
+  "finished_at_utc": "2026-11-07T13:59:11.204818+00:00"
+}

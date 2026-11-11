@@ -1,0 +1,123 @@
+{
+  "recorded_date": "2026-11-07",
+  "timezone": "Asia/Shanghai",
+  "dependency_order": 12,
+  "attempt": 1,
+  "authorization": "proceed to order 12",
+  "status": "failed",
+  "installation_started": true,
+  "before": {
+    "python_image": {
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "local/basic-memory-python:3.13.18-uv0.13.7",
+        "--format",
+        "{{.Id}}"
+      ],
+      "exit_code": 0,
+      "stdout": "sha256:62f596a48a36c097400eb35cf855aa001ca4d511e019d30349745b477da54d2b",
+      "stderr": ""
+    },
+    "backend_image_before": {
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "local/basic-memory-build-backends:hatch1.33.0-uvdv0.14.1",
+        "--format",
+        "{{.Id}}"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Error response from daemon: No such image: local/basic-memory-build-backends:hatch1.33.0-uvdv0.14.1"
+    },
+    "containers_before": {
+      "command": [
+        "docker",
+        "ps",
+        "-a",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "volumes_before": {
+      "command": [
+        "docker",
+        "volume",
+        "ls",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "target": "build-backends",
+  "run_id": "20261107-order12-attempt01",
+  "image_tag": "local/basic-memory-build-backends:hatch1.33.0-uvdv0.14.1",
+  "asset_root": "/home/ydxu_/basic-memory-installation-assets",
+  "commands": [
+    {
+      "arguments": [
+        "dpkg-query",
+        "-W",
+        "-f=${Package}\t${Version}\t${Status}\n"
+      ],
+      "exit_code": 0
+    },
+    {
+      "arguments": [
+        "docker",
+        "buildx",
+        "build",
+        "--platform",
+        "linux/amd64",
+        "--pull=false",
+        "--progress=plain",
+        "--provenance=false",
+        "--target",
+        "build-backends",
+        "--tag",
+        "local/basic-memory-build-backends:hatch1.33.0-uvdv0.14.1",
+        "--load",
+        "--metadata-file",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order12-7zx9u2yz/build-metadata.json",
+        "--file",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order12-7zx9u2yz/Dockerfile",
+        "--build-arg",
+        "BM_BASE_IMAGE=ubuntu:24.04@sha256:78d4744ead1f5b19b04d0df558ab182a5300903900755e515b2ca4d10eb2044d",
+        "--build-arg",
+        "BM_UV_IMAGE=ghcr.io/astral-sh/uv:0.13.7@sha256:c7db1d63057f268a8b6da8af9077850a60461f98d23db23c676a82089a050c91",
+        "--build-arg",
+        "BM_CA_CERTIFICATES_VERSION=20260816ubuntu0.24.04.2",
+        "--build-arg",
+        "BM_NATIVE_GCC_VERSION=14.2.0-4ubuntu2~24.04.1",
+        "--build-arg",
+        "BM_LIBPQ_VERSION=16.15-0ubuntu0.24.04.1",
+        "--build-arg",
+        "BM_UV_VERSION=0.13.7",
+        "--build-arg",
+        "BM_PYTHON_VERSION=3.13.18",
+        "--build-arg",
+        "BM_PYTHON_BUILD=20261026",
+        "--build-arg",
+        "BM_PYTHON_ARCHIVE_NAME=cpython-3.13.18+20261026-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+        "--build-arg",
+        "BM_PYTHON_ARCHIVE_SHA256=df15fe60d3ff55bf9dcf25824b5572756bb8816ff93865a273d3301d7066a8b7",
+        "--build-arg",
+        "BM_EXPECTED_SQLITE_VERSION=3.53.1",
+        "/home/ydxu_/basic-memory-installation-assets/.staging/order12-7zx9u2yz"
+      ],
+      "exit_code": 1
+    }
+  ],
+  "started_at_utc": "2026-11-07T11:59:34.754714+00:00",
+  "error": "Command failed with exit code 1. Read the saved log.",
+  "staging_retained": "/home/ydxu_/basic-memory-installation-assets/.staging/order12-7zx9u2yz",
+  "next_action": "Inspect the saved log and partial state. Resume Order 12 only; stop before Order 13.",
+  "finished_at_utc": "2026-11-07T11:59:36.492748+00:00"
+}

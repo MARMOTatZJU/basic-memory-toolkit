@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "samples": 66,
+  "first_timestamp": "2026/11/07 22:07:25.269",
+  "last_timestamp": "2026/11/07 22:08:30.914",
+  "sampling_timezone": "Asia/Shanghai",
+  "scope": "Device-wide NVIDIA samples across warmup, timed workload, and final checks; not exclusive process accounting.",
+  "gpu_percent": {
+    "minimum": 0.0,
+    "mean": 37.984848484848484,
+    "maximum": 51.0
+  },
+  "memory_MiB": {
+    "minimum": 74.0,
+    "mean": 665.939393939394,
+    "maximum": 725.0
+  },
+  "power_W": {
+    "minimum": 7.41,
+    "mean": 73.37348484848485,
+    "maximum": 89.68
+  }
+}

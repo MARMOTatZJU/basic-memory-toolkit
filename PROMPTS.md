@@ -17,7 +17,7 @@ Based on the usage tutorial of Basic-Memory `user-tutorial-skill-version`,
       - Typical scenarios: conversation memory record, etc.
 - if not, then summarize the SOURCE and create a TARGET DATABASE upon the SOURCE.
 
-- `user-tutorial-skill-version`: [user-tutorial-skill-version](./basic-memory-code/code-report/19-user-tutorial-skill-version.md)
+- `user-tutorial-skill-version`: [user-tutorial-skill-version](./basic-memory-toolkit/basic-memory-code/code-report/19-user-tutorial-skill-version.md)
 - the SOURCE location:
   - SPECIFY_HERE
 - the TARGET DATABASE location:

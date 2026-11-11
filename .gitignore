@@ -1,5 +1,6 @@
 # git-commit message draft
 /m.txt
+/commit-message.txt
 /merge-commit-message.txt
 
 # codex files
@@ -7,6 +8,7 @@
 
 # worksapce
 /basic-memory-database-workspace/
+/basic-memory-installation/validation/
 
 
 ### [Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)

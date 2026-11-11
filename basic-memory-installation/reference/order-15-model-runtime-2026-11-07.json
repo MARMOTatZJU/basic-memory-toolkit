@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "ollama_version": "0.40.15",
+  "model": "nomic-embed-text:v1.5",
+  "endpoint": "/v1/embeddings",
+  "dimensions": 768,
+  "finite_values": true,
+  "l2_norm": 1.000000161214146,
+  "gpu_placement": [
+    {
+      "name": "nomic-embed-text:v1.5",
+      "model": "nomic-embed-text:v1.5",
+      "size": 335743549,
+      "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "nomic-bert",
+        "families": [
+          "nomic-bert"
+        ],
+        "parameter_size": "137M",
+        "quantization_level": "F16"
+      },
+      "expires_at": "2026-11-07T14:04:04.538505338Z",
+      "size_vram": 335743549,
+      "context_length": 2048,
+      "runner": "llamacpp"
+    }
+  ],
+  "runner_library_maps": [
+    {
+      "pid": 164,
+      "cuda_libraries": [
+        "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
+        "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
+        "/usr/lib/ollama/cuda_v12/libcudart.so.12.8.90",
+        "/usr/lib/ollama/cuda_v12/libggml-cuda.so"
+      ]
+    }
+  ],
+  "selected_cuda_backend": "cuda_v12",
+  "show": {
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "nomic-bert",
+      "families": [
+        "nomic-bert"
+      ],
+      "parameter_size": "137M",
+      "quantization_level": "F16"
+    },
+    "model_info": {
+      "general.architecture": "nomic-bert",
+      "general.file_type": 1,
+      "general.parameter_count": 136727040,
+      "nomic-bert.attention.causal": false,
+      "nomic-bert.attention.head_count": 12,
+      "nomic-bert.attention.layer_norm_epsilon": 1e-12,
+      "nomic-bert.block_count": 12,
+      "nomic-bert.context_length": 2048,
+      "nomic-bert.embedding_length": 768,
+      "nomic-bert.feed_forward_length": 3072,
+      "nomic-bert.pooling_type": 1,
+      "nomic-bert.rope.freq_base": 1000,
+      "tokenizer.ggml.bos_token_id": 101,
+      "tokenizer.ggml.cls_token_id": 101,
+      "tokenizer.ggml.eos_token_id": 102,
+      "tokenizer.ggml.mask_token_id": 103,
+      "tokenizer.ggml.model": "bert",
+      "tokenizer.ggml.padding_token_id": 0,
+      "tokenizer.ggml.scores": [],
+      "tokenizer.ggml.seperator_token_id": 102,
+      "tokenizer.ggml.token_type": [],
+      "tokenizer.ggml.token_type_count": 2,
+      "tokenizer.ggml.tokens": [],
+      "tokenizer.ggml.unknown_token_id": 100
+    },
+    "parameters": "num_ctx                        8192",
+    "capabilities": [
+      "embedding"
+    ]
+  },
+  "fixture": "Public installation verification query; no user notes.",
+  "persistent_service_started": false,
+  "scope": "Model-level OpenAI-compatible embedding and actual GPU/CUDA 12 runner; not Basic Memory or MCP acceptance."
+}

@@ -7,8 +7,9 @@ knowledge-store work. The original workspace remains unchanged.
 The original selection contained 32 copied source files, plus this index and a model placeholder:
 local-store utilities, semantic-retrieval code and configuration, reusable schemas,
 upstream Basic Memory workflow references, core upstream documentation, and a versioned
-dependency audit. It intentionally excludes personal or corpus-specific data and generated
-artifacts.
+dependency audit. The original selection excluded personal or corpus-specific
+data and generated artifacts. Later dated additions include only compact,
+body-free validation baselines that are useful for comparison and tuning.
 
 ## What was selected
 
@@ -27,12 +28,13 @@ limitations below before reuse.
 
 | Area | Contents | Start here |
 | --- | --- | --- |
-| [scripts/](scripts/) | Nine local-store, layout, validation, graph, semantic-search, and vector-remap utilities. | [global_memory_db.py](scripts/global_memory_db.py), [canonical_db.py](scripts/canonical_db.py), and [store_layout.py](scripts/store_layout.py) |
+| [scripts/](scripts/) | Local-store, layout, validation, runtime-compatibility, graph, semantic-search, and vector-remap utilities. | [global_memory_db.py](scripts/global_memory_db.py), [canonical_db.py](scripts/canonical_db.py), and [store_layout.py](scripts/store_layout.py) |
 | [templates/schemas/](templates/schemas/) | Source-note, source-database, topic, and task Picoschema examples. | [SourceNote.md](templates/schemas/SourceNote.md) |
-| [templates/config/](templates/config/) | Frozen bilingual hybrid-retrieval settings and a writing/provenance policy. | [hybrid-config.json](templates/config/hybrid-config.json) |
+| [templates/config/](templates/config/) | Hybrid-retrieval settings, a writing/provenance policy, and a Basic Memory runtime ignore profile. | [hybrid-config.json](templates/config/hybrid-config.json) and [basic-memory-databases.bmignore](templates/config/basic-memory-databases.bmignore) |
 | [references/basic-memory-workflows/](references/basic-memory-workflows/) | Upstream note, task, schema, capture, and continuation workflow guides. | [memory-notes.md](references/basic-memory-workflows/memory-notes.md) |
 | [references/upstream-basic-memory/](references/upstream-basic-memory/) | Basic Memory 1.0.0 note format, domain model, architecture, and license. | [NOTE-FORMAT.md](references/upstream-basic-memory/NOTE-FORMAT.md) |
 | [reference-audits/basic-memory-1.0.0-wsl2/](reference-audits/basic-memory-1.0.0-wsl2/) | A dated WSL2 dependency audit and declared, installed, and locked package inventories. | [Audit README](reference-audits/basic-memory-1.0.0-wsl2/README.md) |
+| [reference-baselines/runtime-validation/](reference-baselines/runtime-validation/) | Compact GPU smoke, database compatibility, retrieval, repair, and tuning baselines moved out of generated installation validation output. | [Runtime validation baseline index](reference-baselines/runtime-validation/README.md) |
 | [semantic/models/multilingual-e5-small/](semantic/models/multilingual-e5-small/) | Pinned model metadata and instructions for supplying omitted local model files. | [Model placeholder](semantic/models/multilingual-e5-small/README.md) |
 
 ## Local-store utility bundle
@@ -226,3 +228,48 @@ Typical workflow: capture selected API histories, recover visible local-log even
 The canonical reader now resolves historical evidence through an optional `registry/evidence-roots.json` file with `version: 1` and a `roots` list of `from`/`to` path prefixes. Every resolved snapshot still undergoes its recorded SHA-256 check. Escapes outside the declared destination root are rejected. This permits relocating evidence without rewriting unchanged source records.
 
 The default store resolver discovers the current `basic-memory-databases/MARMOTatZJU-s-Notion` layout beneath an ancestor directory, while preserving an explicit `CANONICAL_ROOT` override and the historical fallback. The same changes are applied to the active toolkit workspace helpers.
+
+## Basic Memory runtime compatibility utilities (2026-11-11)
+
+The reusable utilities below preserve the authored-file workflow while supporting the
+Basic Memory 1.0.0 container runtime:
+
+- [normalize_frontmatter_aliases.py](scripts/normalize_frontmatter_aliases.py)
+  detects YAML anchors and aliases that Basic Memory rejects. Apply mode requires
+  an external backup directory and verifies equal parsed metadata and body text.
+- [reindex_basic_memory_serial.py](scripts/reindex_basic_memory_serial.py) runs
+  one local project's file-index phase with one SQLite writer. This avoids the
+  lock failures reproduced with the release's default concurrent CLI path.
+- [refresh_semantic_projection_equivalent.py](scripts/refresh_semantic_projection_equivalent.py)
+  refreshes an existing semantic index only after a trusted baseline and the
+  current store produce equal chunk-driving fields and projected text. It keeps
+  `vectors.npy` and `chunks.json` byte-identical and records their hashes.
+- [verify_basic_memory_import.py](scripts/verify_basic_memory_import.py) compares
+  an imported runtime SQLite database with each authored `index.json` and
+  `graph.json`. It reports missing paths, changed permalinks, missing directed
+  edges, unresolved relations, and ready-vector counts without exporting bodies.
+- [smoke_basic_memory_tools.py](scripts/smoke_basic_memory_tools.py) exercises
+  runtime read, compact search, and graph-context tools. Its report retains only
+  identifiers, scores, timings, and content byte counts.
+- [install_basic_memory_ignore_profile.py](scripts/install_basic_memory_ignore_profile.py)
+  checks or installs the curated runtime ignore profile. It requires an explicit
+  backup directory before it replaces an existing `.bmignore`.
+
+[basic-memory-databases.bmignore](templates/config/basic-memory-databases.bmignore)
+keeps derived catalogs, unlinked registry/view JSON, and raw Codex evidence out
+of runtime search. It retains linked JSON resources and the motorcycle fuel CSV
+so authored links resolve. It does not modify a database `.gitignore`.
+
+Keep embedding generation separate from serial file indexing. The compatibility
+trial found that embedding batches of 128 with four provider requests gave the
+best tested throughput. That value is a measured starting point, not a universal
+default. Read the database workspace skill before a migration or in-place edit.
+
+## Runtime validation baselines (2026-11-11 curation)
+
+The [runtime validation baseline index](reference-baselines/runtime-validation/README.md)
+contains the reusable result summaries and telemetry moved from the installation
+bundle's generated `validation/` tree. Use it for future comparisons and tuning.
+The collection excludes raw logs, empty captures, duplicated executed-input
+snapshots, and the path-specific cleanup script. The active installation scripts
+remain under `../basic-memory-installation/`.
