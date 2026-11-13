@@ -14,6 +14,28 @@ A virtual environment inside the container is unnecessary for this selected desi
 Completed orders below have scoped verification results. Later pins remain proposed, pending their required checks.
 Existing host versions are observations from this conversation.
 
+## Ordered dependencies (original concise plan)
+
+This table preserves the original proposal from 2026-11-07. The [detailed dependency order](#ordered-dependencies) records the selected NVIDIA driver 572.84 and CUDA 12.8, along with the completed installation checks.
+
+| Order | Location | Dependency and selected version |
+|---:|---|---|
+| 1 | Windows | Windows **11**, build **26200.9711**, already installed. |
+| 2 | Windows | WSL package **2.7.3.0**, using WSL2. Kernel **6.6.114.1**, already installed. |
+| 3 | Windows | NVIDIA GeForce driver **595.79 WHQL**. Replace the installed **572.84** before testing the CUDA 13 runner. |
+| 4 | WSL2 | Ubuntu **24.04.5 LTS**, amd64. Retain the existing installation. |
+| 5 | WSL2 | `systemd` **255.4-1ubuntu8.18**. Already active. |
+| 6 | WSL2 | `ca-certificates` **20260816ubuntu0.24.04.2**, `curl` **8.5.0-2ubuntu10.16**, `gnupg` **2.4.4-2ubuntu17.6**. |
+| 7 | WSL2 | Docker Engine and CLI **29.9.3**, `containerd.io` **2.4.2**. |
+| 8 | WSL2 | Docker Buildx **0.38.1**, Docker Compose **5.7.0**, from the Docker APT repository. |
+| 9 | WSL2 | NVIDIA Container Toolkit **1.20.1-1**. Use the same version for its base package, `libnvidia-container-tools`, and `libnvidia-container1`. |
+| 10 | Application image | Ubuntu **24.04**, `libpq5` **16.15-0ubuntu0.24.04.1**. Use **14.2.0-4ubuntu2~24.04.1** for `libgomp1`, `libstdc++6`, and `libgcc-s1`. |
+| 11 | Application image | uv **0.13.7**. uv-managed CPython **3.13.18**, standalone build **20261026**, including SQLite **3.53.1**. |
+| 12 | Image build | Hatchling **1.33.0**, `uv-dynamic-versioning` **0.14.1**. Preserve the application release version during the build. |
+| 13 | Application image | Basic Memory **1.0.0**, its locked runtime dependencies, and all five extras listed below. |
+| 14 | Inference container | Ollama **0.40.15**. Its release supplies CUDA **12.8** and **13.0** runners. Validate the active runner during testing. |
+| 15 | Inference container | `nomic-embed-text:v1.5`, model identity **0a109f422b47**, FP16, **768** output dimensions. |
+
 ## Ordered dependencies
 
 | Order | Location | Dependency | Version | Action or purpose |

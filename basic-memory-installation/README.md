@@ -67,7 +67,7 @@ Each row below is a separate entry point. Do not execute the table as one sequen
 | Test existing database compatibility | [Container test procedure](docs/database-compatibility.md#repeat-and-resume) | Read/search/graph checks on copies, GPU benchmarks, and explicit cleanup. Original folders are mounted read-only. |
 | Find detailed technical entry points | [ENTRY-POINTS.md](ENTRY-POINTS.md) | Image identities and archives, every active script/configuration, effects, privileges, outputs, and recovery routes. |
 | Start using the selected installation | [Quick start](QUICK-START.md) | First deployment, verification, notes, search, MCP, and daily commands. Persistent deployment remains pending in the saved records. |
-| Read the dependency order | [installation-plan.md](installation-plan.md) | Names and versions for each dependency. |
+| Read the dependency order | [installation-plan.md](installation-plan.md) | Original 15-order proposal followed by the detailed dependencies and verified versions. |
 | Review unfinished installation work | [Remaining steps](docs/remaining-installation-steps.md) | Current file and Docker-state audit. Runtime configuration is the next selected operation. |
 | Recover the current position | [Current checkpoint](docs/installation-status.md) | Read before repeating a command or after a reboot. |
 | Review the connection recovery | [Connection impact](docs/connection-troubleshooting.md#impact-on-the-installation) | NVIDIA installation passed through a verified official raw GitHub route. The original Pages domain still fails. |
@@ -164,7 +164,7 @@ clone; use the essential-assets baseline index for durable comparison data.
 | [README.md](README.md) | Bundle entry points, current state, and complete file index. | Start here after each interruption or restart. |
 | [AGENTS.md](AGENTS.md) | User-controlled installation and documentation maintenance rules. | Read before any installation operation. |
 | [PROMPT.md](PROMPT.md) | Original installation planning request. | Use as historical context for the selected requirements. |
-| [installation-plan.md](installation-plan.md) | Dependency order, locations, and proposed versions. | Use the dependency order to select the next authorized operation. |
+| [installation-plan.md](installation-plan.md) | Original 15-order proposal, detailed dependency versions, and completed checks. | Use the detailed plan to select the next authorized operation. |
 | [.gitignore](.gitignore) | Exclusions for private runtime configuration, data, and generated caches. | Used by Git if the bundle is tracked. |
 | [docs/installation-status.md](docs/installation-status.md) | Current focus, operation status, and exact resume instructions. | Read before selecting or repeating an operation. |
 | [docs/nvidia-driver.md](docs/nvidia-driver.md) | Order 3 explanation, version checks, package selection, and later update procedure. | Includes Windows and WSL commands for the selected CUDA 12.8 baseline. |
