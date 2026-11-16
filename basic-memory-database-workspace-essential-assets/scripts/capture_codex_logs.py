@@ -2,7 +2,7 @@
 """Recover visible completed events from selected local Codex logs, including .zst.
 No reasoning, system/developer prompts, auth/config files, or raw rollout copies are saved.
 """
-import argparse,ctypes as C,ctypes.util,json,hashlib,io
+import argparse,ctypes as C,ctypes.util,json,hashlib,io,re
 from pathlib import Path
 import sync_codex_memory as sync
 
@@ -38,34 +38,40 @@ def convert(item):
 
 def capture(logroot,api,sources,inventory):
     entries=json.loads(inventory.read_text())['selected'];files={}
+    name_pattern=re.compile(r'^rollout-\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}-([0-9a-f-]{36})(?:_[0-9a-f-]{36})?\.jsonl(?:\.zst)?$')
     for p in logroot.rglob('rollout-*'):
-        name=p.name.removesuffix('.zst').removesuffix('.jsonl');tid=name[-36:]
-        if p.is_file() and p.name.endswith(('.jsonl','.jsonl.zst')):files[tid]=p
+        match=name_pattern.match(p.name)
+        if p.is_file() and match:files.setdefault(match.group(1),[]).append(p)
     report={};sources.mkdir(parents=True,exist_ok=True)
     allowed={'UserMessage','AgentMessage','CommandExecution','McpToolCall','FileChange','Extension','ContextCompaction','ImageView','SubAgentActivity','CollabAgentToolCall','Plan','WebSearch'}
     for e in entries:
-        tid=e['id'];s=json.loads((api/(tid+'.json')).read_text());p=files.get(tid)
-        if not p:
+        tid=e['id'];s=json.loads((api/(tid+'.json')).read_text());paths=sorted(files.get(tid,[]))
+        if not paths:
             report[tid]={'local_log':None,'api_turns':len(sync.turns(s))};sync.dump(sources/(tid+'.json'),s);continue
-        raw=p.read_bytes();data=decompress(raw) if p.suffix=='.zst' else raw
         # Current chat is bounded by its already recorded API capture timestamp.
         cutoff=s['capturedAt'] if e.get('status')=='active' else None
-        by={};ordered=[];skipped=0;malformed=0
-        for line in data.splitlines():
-            try:d=json.loads(line)
-            except json.JSONDecodeError:malformed+=1;continue
-            if cutoff and d.get('timestamp','')>cutoff:continue
-            v=d.get('payload',{})
-            if d.get('type')!='event_msg' or v.get('type')!='item_completed':continue
-            item=v['item'];typ=item.get('type')
-            if typ not in allowed:skipped+=1;continue
-            turnid=v.get('turn_id') or 'local-log-unattributed'
-            if turnid not in by:
-                by[turnid]={'id':turnid,'items':[],'startedAt':v.get('started_at_ms')};ordered.append(by[turnid])
-            by[turnid]['items'].append(convert(item))
+        by={};ordered=[];skipped=0;malformed=0;log_hashes=[]
+        for p in paths:
+            raw=p.read_bytes();data=decompress(raw) if p.suffix=='.zst' else raw
+            log_hashes.append({'path':str(p),'sha256':hashlib.sha256(raw).hexdigest()})
+            for line in data.splitlines():
+                try:d=json.loads(line)
+                except json.JSONDecodeError:malformed+=1;continue
+                if cutoff and d.get('timestamp','')>cutoff:continue
+                v=d.get('payload',{})
+                if d.get('type')!='event_msg' or v.get('type')!='item_completed':continue
+                item=v['item'];typ=item.get('type')
+                if typ not in allowed:skipped+=1;continue
+                turnid=v.get('turn_id') or 'local-log-unattributed'
+                if turnid not in by:
+                    by[turnid]={'id':turnid,'items':[],'startedAt':v.get('started_at_ms'),'_item_index':{}};ordered.append(by[turnid])
+                converted=convert(item);key=sync.itemkey(converted);turn=by[turnid]
+                if key in turn['_item_index']:turn['items'][turn['_item_index'][key]]=converted
+                else:turn['_item_index'][key]=len(turn['items']);turn['items'].append(converted)
+        for turn in ordered:turn.pop('_item_index',None)
         local={'threadListEntry':e,'capturedAt':s['capturedAt'],'pages':[{'turns':list(reversed(ordered)),'page':{'hasMore':False,'order':'newest_first'}}]}
         merged=sync.merge(s,local)
-        report[tid]={'local_log':str(p),'log_bytes_sha256':hashlib.sha256(raw).hexdigest(),'local_turns':len(ordered),'local_visible_items':sum(len(t['items']) for t in ordered),'api_turns':len(sync.turns(s)),'excluded_nonvisible_events':skipped,'malformed_lines':malformed,'cutoff':cutoff}
+        report[tid]={'local_log':str(paths[0]) if len(paths)==1 else [str(p) for p in paths],'log_files':log_hashes,'local_turns':len(ordered),'local_visible_items':sum(len(t['items']) for t in ordered),'api_turns':len(sync.turns(s)),'excluded_nonvisible_events':skipped,'malformed_lines':malformed,'cutoff':cutoff}
         merged['capture_sources']=report[tid];sync.dump(sources/(tid+'.json'),merged)
     sync.dump(sources.parent/'local-log-coverage.json',report)
     print(json.dumps({'logs_found':sum(bool(v['local_log']) for v in report.values()),'selected':len(entries),'visible_items':sum(v.get('local_visible_items',0) for v in report.values()),'empty_sources':[k for k,v in report.items() if not v.get('local_turns') and not v.get('api_turns')]},indent=2))
