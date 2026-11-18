@@ -67,7 +67,8 @@ Four Notion records contain YAML aliases. The installed parser reports:
 `Invalid YAML in frontmatter: YAML aliases are not supported in note frontmatter`
 
 The runtime treated these records as plain Markdown. It generated replacement identifiers and lost 22 legacy graph edges.
-The affected paths appear in the [frontmatter diagnostics baseline](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/frontmatter-diagnostics.json).
+The baseline records the parser error and number of affected files.
+[Frontmatter diagnostics baseline](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/frontmatter-diagnostics.json)
 
 The test expanded aliases into ordinary YAML values in the four copies.
 The test checked that parsed metadata and body text remained equal.
@@ -226,8 +227,8 @@ If the current shell lacks Docker group access, use `newgrp docker` or wrap a co
 
 ## Evidence and remaining scope
 
-- [Main runtime result](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/result.json): commands, durations, import errors, and SQLite inventory.
-- [Read/search/graph result](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/retrieval.json): questions, ranks, identifiers, reads, graph coverage, and integrity checks.
+- Import results, command timings, and SQLite table counts. [Main runtime result](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/result.json)
+- Numbered retrieval cases, ranks, scores, read and graph timings, and aggregate integrity checks. [Read, search, and graph result](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/retrieval.json)
 - [Metrics summary](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/metrics-summary.json): GPU samples and measured request overlap.
 - [Serial repair](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/serial-index-repair.json): complete serial import without failed files.
 - [Alias repair](../../basic-memory-database-workspace-essential-assets/reference-baselines/runtime-validation/database-compatibility/2026-11-10/copy-frontmatter-repair.json): four changed copies with preserved metadata and bodies.

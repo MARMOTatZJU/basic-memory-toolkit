@@ -1,4 +1,4 @@
-RUNNER /proc/168
+CUDA libraries mapped by the inference runner
 /usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5
 /usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5
 /usr/lib/ollama/cuda_v12/libcudart.so.12.8.90

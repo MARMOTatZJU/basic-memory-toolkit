@@ -18,13 +18,14 @@ if STAGED_TOOLS.is_dir():
 sys.path.insert(0, str(HERE))
 import authored_format as authored
 
-# The parser copy is byte-identical. Resolve its environment for staging too.
+# Resolve the parser environment for staging too.
 authored.WORKSPACE = WORKSPACE
 import canonical_db as canonical
 import store_layout
-authored.DEFAULT_ROOT = store_layout.canonical_default() / 'driving/MotorcycleNotes'
+authored.DEFAULT_ROOT = store_layout.default_view_root()
 
-DEFAULT_MANIFEST = store_layout.canonical_default() / "registry/source-inventory.json"
+CANONICAL_ROOT = store_layout.canonical_default()
+DEFAULT_MANIFEST = CANONICAL_ROOT / "registry/source-inventory.json" if CANONICAL_ROOT else None
 SOURCE_TYPES = {"source_note", "source_database"}
 
 
@@ -155,29 +156,32 @@ def legacy_context(identifier, records, depth=2, incoming=False, aliases=None):
 
 def main(mode="memory", argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    default_root = store_layout.canonical_default()
-    if mode == 'memory':
-        default_root = default_root / 'driving/MotorcycleNotes'
+    default_root = store_layout.default_view_root() if mode == 'memory' else store_layout.canonical_default()
     parser.add_argument("--root", type=Path, default=default_root)
     parser.add_argument("--sources", type=Path, help="Optional compatibility cache inventory; current evidence comes from each record")
     parser.add_argument("--manifest", type=Path, help="Optional historical manifest; the selected canonical inventory is the default")
     sub = parser.add_subparsers(dest="command", required=True)
     check = sub.add_parser("check")
-    check.add_argument("--report", type=Path, default=WORKSPACE / "reports" / ("current-global-validation.json" if mode == "global" else "current-validation.json"))
+    check.add_argument("--report", type=Path, help="Write the full report to a file. By default it goes to stdout.")
     sub.add_parser("build-index")
     reader = sub.add_parser("read"); reader.add_argument("identifier"); reader.add_argument("--original", action="store_true")
     search = sub.add_parser("search"); search.add_argument("query"); search.add_argument("--type", dest="note_type"); search.add_argument("--path-prefix"); search.add_argument("--limit", type=int, default=20)
     context = sub.add_parser("context"); context.add_argument("identifier"); context.add_argument("--depth", type=int, default=2); context.add_argument("--incoming", action="store_true")
     args = parser.parse_args(argv)
+    if args.root is None:
+        parser.error("specify --root or set CANONICAL_ROOT")
     root = args.root.resolve()
     if args.manifest is None:
         args.manifest = store_layout.locate(root)[0] / "registry/source-inventory.json"
     if args.command in {"check", "build-index"}:
         report = check_store(root, args.manifest, args.sources)
         if args.command == "check":
-            args.report.parent.mkdir(parents=True, exist_ok=True)
-            args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2, default=str) + "\n")
-            emit({k: report[k] for k in ["ok", "record_count", "named_relation_count", "notion_source_count", "errors", "warnings"]} | {"report": str(args.report)})
+            if args.report:
+                args.report.parent.mkdir(parents=True, exist_ok=True)
+                args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2, default=str) + "\n")
+                emit({k: report[k] for k in ["ok", "record_count", "named_relation_count", "notion_source_count", "errors", "warnings"]} | {"report": str(args.report)})
+            else:
+                emit(report)
         elif report["ok"]:
             canonical_root, view = store_layout.locate(root)
             built = canonical.build_index(canonical_root)

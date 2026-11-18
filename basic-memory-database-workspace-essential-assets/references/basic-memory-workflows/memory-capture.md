@@ -189,7 +189,7 @@ bm_write(
 ---
 title: Visual identity — initial decisions
 type: note
-thread_id: 7c1d4a2e-3b5f-4d8a-9e1c-2f6b8a4d7c39
+thread_id: 00000000-0000-4000-8000-000000000000
 tags:
 - branding
 - design
@@ -235,7 +235,7 @@ Working through the visual identity for the new product. This thread covers the 
 ---
 title: Visual identity — initial decisions
 type: note
-thread_id: 7c1d4a2e-3b5f-4d8a-9e1c-2f6b8a4d7c39
+thread_id: 00000000-0000-4000-8000-000000000000
 tags:
 - branding
 - design

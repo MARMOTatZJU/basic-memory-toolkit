@@ -1,4 +1,4 @@
-# Basic Memory runtime ignore profile for the two authored databases.
+# Basic Memory runtime ignore profile for authored databases.
 # Install this file as <BASIC_MEMORY_CONFIG_DIR>/.bmignore.
 # The default exclusions are repeated because Basic Memory replaces its defaults
 # when a nonempty .bmignore file exists.
@@ -59,10 +59,10 @@ registry/provenance.json
 registry/root-routes.json
 registry/sync-coverage.json
 registry/writing-policy.json
-# Keep views/MotorcycleNotes.json because authored Markdown links to it.
+# Keep linked view descriptors.
 views/domain-*.json
 */view.json
-# Keep the motorcycle source manifest because authored Markdown links to it.
+# Keep linked source manifests.
 
 # Raw Codex evidence duplicates the authored conversation Markdown records.
 evidence/

@@ -7,113 +7,6 @@
   "image": "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
   "model": "nomic-embed-text:v1.5",
   "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
-  "commands": [
-    {
-      "arguments": [
-        "/usr/bin/python3",
-        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
-        "--store",
-        "/home/ydxu_/basic-memory-installation-assets/models/ollama/nomic-embed-text/v1.5/0a109f422b47/store"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "run",
-        "--pull=never",
-        "--detach",
-        "--network",
-        "none",
-        "--gpus",
-        "all",
-        "--name",
-        "basic-memory-gpu-smoke-20261107-smoke01",
-        "--env",
-        "OLLAMA_MODELS=/models",
-        "--env",
-        "OLLAMA_DEBUG=1",
-        "--env",
-        "OLLAMA_NUM_PARALLEL=1",
-        "--env",
-        "OLLAMA_KEEP_ALIVE=5m",
-        "--env",
-        "PYTHONDONTWRITEBYTECODE=1",
-        "--tmpfs",
-        "/root/.ollama:rw,size=8m",
-        "--mount",
-        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-lkkzbez3/models,target=/models",
-        "--mount",
-        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-lkkzbez3/interpreter/python,target=/opt/order15-python,readonly",
-        "--mount",
-        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/check-embedding-runtime.py,target=/opt/check-embedding-runtime.py,readonly",
-        "--mount",
-        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/run-gpu-smoke.py,target=/opt/run-gpu-smoke.py,readonly",
-        "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
-        "serve"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "exec",
-        "3ab255d58999f580160c709c42ef771bdaa06f99d3fcdd4112f9366a1a05ed92",
-        "/opt/order15-python/bin/python3.13",
-        "/opt/run-gpu-smoke.py",
-        "--duration",
-        "60",
-        "--batch-size",
-        "32"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "/usr/bin/python3",
-        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
-        "--store",
-        "/home/ydxu_/basic-memory-installation-assets/models/ollama/nomic-embed-text/v1.5/0a109f422b47/store"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "logs",
-        "3ab255d58999f580160c709c42ef771bdaa06f99d3fcdd4112f9366a1a05ed92"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "rm",
-        "--force",
-        "3ab255d58999f580160c709c42ef771bdaa06f99d3fcdd4112f9366a1a05ed92"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "ps",
-        "-a",
-        "--format",
-        "{{.Names}}"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "volume",
-        "ls",
-        "--quiet"
-      ],
-      "exit_code": 0
-    }
-  ],
   "persistent_service_started": false,
   "basic_memory_acceptance": "not_run",
   "artifact_before": {
@@ -195,7 +88,6 @@
     },
     "scope": "Artifact, native store layout, and declared metadata; embedding execution is a separate check."
   },
-  "container_id": "3ab255d58999f580160c709c42ef771bdaa06f99d3fcdd4112f9366a1a05ed92",
   "events": [
     {
       "event": "workload_started",
@@ -255,7 +147,6 @@
         "status": "passed",
         "ollama_version": "0.40.15",
         "model": "nomic-embed-text:v1.5",
-        "endpoint": "/v1/embeddings",
         "dimensions": 768,
         "finite_values": true,
         "l2_norm": 1.000000161214146,
@@ -275,15 +166,12 @@
               "parameter_size": "137M",
               "quantization_level": "F16"
             },
-            "expires_at": "2026-11-07T14:12:30.884978853Z",
             "size_vram": 335743549,
-            "context_length": 2048,
-            "runner": "llamacpp"
+            "context_length": 2048
           }
         ],
         "runner_library_maps": [
           {
-            "pid": 170,
             "cuda_libraries": [
               "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
               "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -343,7 +231,6 @@
         "status": "passed",
         "ollama_version": "0.40.15",
         "model": "nomic-embed-text:v1.5",
-        "endpoint": "/v1/embeddings",
         "dimensions": 768,
         "finite_values": true,
         "l2_norm": 1.000000161214146,
@@ -363,15 +250,12 @@
               "parameter_size": "137M",
               "quantization_level": "F16"
             },
-            "expires_at": "2026-11-07T14:13:31.114143013Z",
             "size_vram": 335743549,
-            "context_length": 2048,
-            "runner": "llamacpp"
+            "context_length": 2048
           }
         ],
         "runner_library_maps": [
           {
-            "pid": 170,
             "cuda_libraries": [
               "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
               "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -446,7 +330,6 @@
       "status": "passed",
       "ollama_version": "0.40.15",
       "model": "nomic-embed-text:v1.5",
-      "endpoint": "/v1/embeddings",
       "dimensions": 768,
       "finite_values": true,
       "l2_norm": 1.000000161214146,
@@ -466,15 +349,12 @@
             "parameter_size": "137M",
             "quantization_level": "F16"
           },
-          "expires_at": "2026-11-07T14:12:30.884978853Z",
           "size_vram": 335743549,
-          "context_length": 2048,
-          "runner": "llamacpp"
+          "context_length": 2048
         }
       ],
       "runner_library_maps": [
         {
-          "pid": 170,
           "cuda_libraries": [
             "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
             "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -534,7 +414,6 @@
       "status": "passed",
       "ollama_version": "0.40.15",
       "model": "nomic-embed-text:v1.5",
-      "endpoint": "/v1/embeddings",
       "dimensions": 768,
       "finite_values": true,
       "l2_norm": 1.000000161214146,
@@ -554,15 +433,12 @@
             "parameter_size": "137M",
             "quantization_level": "F16"
           },
-          "expires_at": "2026-11-07T14:13:31.114143013Z",
           "size_vram": 335743549,
-          "context_length": 2048,
-          "runner": "llamacpp"
+          "context_length": 2048
         }
       ],
       "runner_library_maps": [
         {
-          "pid": 170,
           "cuda_libraries": [
             "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
             "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -700,7 +576,5 @@
     "scope": "Artifact, native store layout, and declared metadata; embedding execution is a separate check."
   },
   "container_removed": true,
-  "containers_after": "",
-  "volumes_after": "",
   "finished_at_utc": "2026-11-07T14:08:32.540029+00:00"
 }

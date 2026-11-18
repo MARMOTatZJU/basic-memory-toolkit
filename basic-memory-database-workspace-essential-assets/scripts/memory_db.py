@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compatible MotorcycleNotes commands over the canonical store or a view."""
+"""Compatible commands over the canonical store or a view."""
 from legacy_cli import authored as _authored, canonical as _canonical
 from legacy_cli import WORKSPACE, check_store, legacy_context, main as _main, run
 
@@ -10,7 +10,7 @@ for _name in dir(_authored):
 load_records = _canonical.load_records
 resolve = _canonical.resolve
 graph_edges = _canonical.graph_edges
-DEFAULT_ROOT = _canonical.store_layout.canonical_default() / 'driving/MotorcycleNotes'
+DEFAULT_ROOT = _canonical.store_layout.default_view_root()
 
 
 def check(root, records=None, load_issues=None, source_dir=None):

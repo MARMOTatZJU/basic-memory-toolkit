@@ -21,13 +21,10 @@ import sys
 import time
 
 WORKSPACE = next(p for p in Path(__file__).resolve().parents if (p / "semantic/models/multilingual-e5-small").exists())
-# Keep the installed local model and evaluation data usable after moving the CLI.
-MODEL_SUBDIR = Path("semantic/models/multilingual-e5-small")
-older_workspace = WORKSPACE.with_name("basic-memory-database-workspace")
-DATA_WORKSPACE = WORKSPACE
-if not (WORKSPACE / MODEL_SUBDIR / "model.safetensors").is_file():
-    if (older_workspace / MODEL_SUBDIR / "model.safetensors").is_file():
-        DATA_WORKSPACE = older_workspace
+# Keep model files, caches, and generated results in a writable workspace.
+DATA_WORKSPACE = Path(os.environ.get(
+    "BASIC_MEMORY_SEMANTIC_WORKSPACE", WORKSPACE.with_name("basic-memory-database-workspace")
+)).expanduser().resolve()
 SEMANTIC = DATA_WORKSPACE / "semantic"
 MODEL_DIR = SEMANTIC / "models" / "multilingual-e5-small"
 INDEX_DIR = SEMANTIC / "global-index-v6"
@@ -294,7 +291,7 @@ def verify_projection_metadata(metadata):
 def build(root, index_dir, chunk_tokens, overlap, view="authored", include_types=()):
     canonical_root, requested_view = store_layout.locate(root)
     if requested_view and Path(index_dir).resolve() == INDEX_DIR.resolve():
-        raise ValueError('The shared global index must be built from the canonical root; select MotorcycleNotes at query time')
+        raise ValueError('Build the shared index from the canonical root and select a view at query time')
     import numpy as np
     started = time.monotonic()
     records, issues = memory_db.load_records(root)
@@ -846,14 +843,14 @@ def main():
     query_parser.add_argument("--index", type=Path, default=INDEX_DIR)
     query_parser.add_argument("--top-k", type=int, default=10,
                               help="Read candidates and their provenance before answering; default10 follows the fixed trial results")
-    query_parser.add_argument("--path-prefix", help="Filter record paths after scoring, e.g. modules/MotorcycleNotes/")
+    query_parser.add_argument("--path-prefix", help="Filter record paths after scoring, e.g. modules/example/")
     query_parser.add_argument("--variant", action="append", default=[], help="Additional preprovided query form; repeat for bilingual variants")
     query_parser.add_argument("--hybrid", action="store_true", help="Fuse dense and BM25 channels, returning source-only candidates and separate graph context")
     trial_parser = sub.add_parser("trials")
     trial_parser.add_argument("--cases", type=Path, default=DATA_WORKSPACE / "reports/semantic-trial-cases.json")
     trial_parser.add_argument("--root", type=Path)
     trial_parser.add_argument("--index", type=Path, default=INDEX_DIR)
-    trial_parser.add_argument("--report", type=Path, default=WORKSPACE / "reports/semantic-trials-embeddings.json")
+    trial_parser.add_argument("--report", type=Path, default=DATA_WORKSPACE / "reports/semantic-trials-embeddings.json")
     trial_parser.add_argument("--path-prefix", help="Restrict ranked records to a module/path while keeping the full index")
     refresh_parser = sub.add_parser("refresh-metadata", help="Allow excluded guide-only changes after proving all indexed source bytes/set unchanged")
     refresh_parser.add_argument("--index", type=Path, default=INDEX_DIR)
@@ -864,11 +861,13 @@ def main():
     workflow_parser.add_argument("--index", type=Path, default=INDEX_DIR)
     workflow_parser.add_argument("--root", type=Path)
     workflow_parser.add_argument("--path-prefix")
-    workflow_parser.add_argument("--report", type=Path, default=WORKSPACE / "reports/semantic-workflow-global.json")
+    workflow_parser.add_argument("--report", type=Path, default=DATA_WORKSPACE / "reports/semantic-workflow-global.json")
     args = parser.parse_args()
     if getattr(args, "root", None) and getattr(args, "command", None) in {"query", "trials", "workflow-trials"}:
         args.path_prefix = store_layout.normalize_scope(args.root, args.path_prefix)
     if args.command == "build":
+        if args.root is None:
+            parser.error("specify --root or set CANONICAL_ROOT")
         if not 64 <= args.chunk_tokens <= 512 or not 0 <= args.overlap < args.chunk_tokens:
             parser.error("chunk tokens must be64–512; overlap must be smaller and nonnegative")
         build(args.root.resolve(), args.index, args.chunk_tokens, args.overlap, args.view, args.include_type)

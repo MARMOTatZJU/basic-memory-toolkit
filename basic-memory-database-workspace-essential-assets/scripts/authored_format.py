@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local file operations for the MotorcycleNotes authored Basic Memory corpus.
+"""Local file operations for an authored Basic Memory corpus.
 
 This is a convenience CLI, not the Basic Memory application, parser, or server.
 Its schema checks implement a documented subset of the authored conventions.
@@ -11,6 +11,7 @@ from collections import Counter, defaultdict, deque
 from datetime import datetime, timezone
 import html
 import json
+import os
 from pathlib import Path
 import re
 import sys
@@ -21,8 +22,8 @@ WORKSPACE = next(p for p in Path(__file__).resolve().parents if (p / "scripts/me
 if str(WORKSPACE / "scripts") not in sys.path:
     sys.path.append(str(WORKSPACE / "scripts"))
 import store_layout
-DEFAULT_ROOT = store_layout.canonical_default() / "driving/MotorcycleNotes"
-NOTION_ROOT_ID = "1e2f8d77a87b8070b139dd315e7a8010"
+DEFAULT_ROOT = store_layout.default_view_root()
+NOTION_ROOT_ID = os.environ.get("NOTION_ROOT_ID")
 FM = re.compile(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)", re.S)
 OBSERVATION = re.compile(r"^\s*-\s+\[([\w-]+)\]\s+(.+)$")
 RELATION = re.compile(r"^\s*-\s+([A-Za-z_][\w-]*)\s+\[\[([^\]]+)\]\](.*)$")
@@ -194,7 +195,10 @@ def unwrap_snapshot(data):
     return data
 
 
-def source_coverage(records, source_dir):
+def source_coverage(records, source_dir, *, root_id=None):
+    root_id = notion_id(root_id or NOTION_ROOT_ID)
+    if root_id is None:
+        raise ValueError("Set NOTION_ROOT_ID or pass root_id to check source coverage")
     snapshots, failures, body_matches = {}, [], 0
     media = Counter()
     for path in sorted(source_dir.glob("*.json")):
@@ -234,7 +238,7 @@ def source_coverage(records, source_dir):
                 failures.append({"kind": "source_identity", "path": record["path"]})
             else:
                 source_records[identifier].append(record["path"])
-    descendants, queue, visited, child_edges, databases = set(), deque([NOTION_ROOT_ID]), set(), [], set()
+    descendants, queue, visited, child_edges, databases = set(), deque([root_id]), set(), [], set()
     while queue:
         identifier = queue.popleft()
         if identifier in visited:
@@ -279,14 +283,14 @@ def source_coverage(records, source_dir):
         if len(paths) > 1:
             failures.append({"kind": "duplicate_source_note", "notion_page_id": identifier, "paths": paths})
     extra = sorted(set(source_records) - expected)
-    return {"root_notion_page_id": NOTION_ROOT_ID, "raw_snapshot_count": len(snapshots),
+    return {"root_notion_page_id": root_id, "raw_snapshot_count": len(snapshots),
             "reachable_page_count": len(expected), "database_count": len(databases),
             "snapshot_markdown_body_matches": body_matches, "embedded_media_tags": dict(media),
             "source_note_count": len(source_records), "hierarchy_edges": child_edges,
             "mapped_source_notes": dict(source_records), "out_of_scope_source_ids": extra}, failures
 
 
-def check(root, records, load_issues, source_dir):
+def check(root, records, load_issues, source_dir, *, root_id=None):
     issues, warnings = list(load_issues), []
     for field in ["title", "permalink"]:
         groups = defaultdict(list)
@@ -320,7 +324,7 @@ def check(root, records, load_issues, source_dir):
                              "targets": record["bare_links"]})
     edges, edge_issues = graph_edges(records)
     schema_issues, reviews = schema_checks(records)
-    coverage, source_issues = source_coverage(records, source_dir)
+    coverage, source_issues = source_coverage(records, source_dir, root_id=root_id)
     issues.extend(edge_issues + schema_issues + source_issues)
     by_permalink = {r["permalink"]: r for r in records}
     for edge in edges:

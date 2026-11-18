@@ -3,12 +3,11 @@
 This directory contains the compact, reusable results moved from the generated
 installation `validation/` tree. Use these files as comparison baselines for
 future database imports, GPU embedding tests, retrieval checks, and performance
-tuning. They are historical measurements, not current host status.
+tuning. The retained measurements describe the original test runs.
 
-Raw command logs, server logs, transient runtime captures, duplicated executed
-inputs, and the one-time cleanup script remain outside this collection. Use the
-active scripts and configuration under `basic-memory-installation/` for a new
-run. Do not execute files copied from an old validation input directory.
+The summaries omit host paths, private queries, corpus identifiers, command
+arguments, and raw logs. Use the active scripts and configuration under
+`basic-memory-installation/` for a new run.
 
 ## GPU smoke baselines
 
@@ -36,12 +35,12 @@ All files below are under
 | [copy-frontmatter-repair.json](database-compatibility/2026-11-10/copy-frontmatter-repair.json) | Copy-only YAML-alias repair invariant and affected-file count. |
 | [cuda-libraries.txt](database-compatibility/2026-11-10/cuda-libraries.txt) | CUDA library inventory from the tested Ollama image. |
 | [cuda-runner.txt](database-compatibility/2026-11-10/cuda-runner.txt) | Selected CUDA runner evidence. |
-| [frontmatter-diagnostics.json](database-compatibility/2026-11-10/frontmatter-diagnostics.json) | Original parser-compatibility diagnostic summary. |
+| [frontmatter-diagnostics.json](database-compatibility/2026-11-10/frontmatter-diagnostics.json) | Parser error and affected-file count. |
 | [gpu.csv](database-compatibility/2026-11-10/gpu.csv) | Device samples from the database compatibility workload. |
 | [metrics-summary.json](database-compatibility/2026-11-10/metrics-summary.json) | GPU-phase statistics and request-overlap summary. |
 | [pre-repair-audit.json](database-compatibility/2026-11-10/pre-repair-audit.json) | Baseline database record, edge, and runtime observations before copy repairs. |
-| [result.json](database-compatibility/2026-11-10/result.json) | Main runtime import, identity, timing, and integrity result. |
-| [retrieval.json](database-compatibility/2026-11-10/retrieval.json) | Read, search, ranking, graph, and unchanged-original checks. |
+| [result.json](database-compatibility/2026-11-10/result.json) | Import results, command timings, and SQLite table counts. |
+| [retrieval.json](database-compatibility/2026-11-10/retrieval.json) | Numbered retrieval cases, ranks, scores, read and graph timings, and aggregate integrity checks. |
 | [serial-index-repair.json](database-compatibility/2026-11-10/serial-index-repair.json) | Serial SQLite file-index result used to avoid writer contention. |
 
 These files describe the disposable-copy test from 2026-11-10. The later

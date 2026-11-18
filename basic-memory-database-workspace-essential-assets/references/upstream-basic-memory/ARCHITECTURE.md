@@ -254,8 +254,8 @@ constructs a `SearchQuery`; the internal model still calls these fields
 `metadata_filters`, `after_date`, and `search_type`. Those internal names are not
 MCP arguments.
 
-See [`ranked_search.py`](../src/basic_memory/mcp/tools/ranked_search.py) for the
-current search adapter and [`note_targets.py`](../src/basic_memory/mcp/note_targets.py)
+See [`ranked_search.py`](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/src/basic_memory/mcp/tools/ranked_search.py) for the
+current search adapter and [`note_targets.py`](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/src/basic_memory/mcp/note_targets.py)
 for project-qualified path resolution. Note-addressing tools use `open_project_target`
 to combine routing, typed clients, and output paths; project-only operations use
 `get_project_client` directly. The installed `bm_man` pages define the public tool

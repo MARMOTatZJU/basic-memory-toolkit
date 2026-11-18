@@ -7,94 +7,6 @@
   "image": "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
   "model": "nomic-embed-text:v1.5",
   "manifest_digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
-  "commands": [
-    {
-      "arguments": [
-        "/usr/bin/python3",
-        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
-        "--store",
-        "/home/ydxu_/basic-memory-installation-assets/models/ollama/nomic-embed-text/v1.5/0a109f422b47/store"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "run",
-        "--pull=never",
-        "--detach",
-        "--network",
-        "none",
-        "--gpus",
-        "all",
-        "--name",
-        "basic-memory-gpu-smoke-20261107-smoke02",
-        "--env",
-        "OLLAMA_MODELS=/models",
-        "--env",
-        "OLLAMA_DEBUG=1",
-        "--env",
-        "OLLAMA_NUM_PARALLEL=1",
-        "--env",
-        "OLLAMA_KEEP_ALIVE=5m",
-        "--env",
-        "PYTHONDONTWRITEBYTECODE=1",
-        "--tmpfs",
-        "/root/.ollama:rw,size=8m",
-        "--mount",
-        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd/models,target=/models",
-        "--mount",
-        "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd/interpreter/python,target=/opt/order15-python,readonly",
-        "--mount",
-        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/check-embedding-runtime.py,target=/opt/check-embedding-runtime.py,readonly",
-        "--mount",
-        "type=bind,source=/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/docker/run-gpu-smoke.py,target=/opt/run-gpu-smoke.py,readonly",
-        "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
-        "serve"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "exec",
-        "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe",
-        "/opt/order15-python/bin/python3.13",
-        "/opt/run-gpu-smoke.py",
-        "--duration",
-        "300",
-        "--batch-size",
-        "32"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "/usr/bin/python3",
-        "/mnt/d/Documents/Projects/AICodingWorkspace/basic-memory-toolkit/basic-memory-installation/scripts/check-embedding-assets.py",
-        "--store",
-        "/home/ydxu_/basic-memory-installation-assets/models/ollama/nomic-embed-text/v1.5/0a109f422b47/store"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "logs",
-        "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe"
-      ],
-      "exit_code": 0
-    },
-    {
-      "arguments": [
-        "docker",
-        "rm",
-        "--force",
-        "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe"
-      ],
-      "exit_code": 0
-    }
-  ],
   "persistent_service_started": false,
   "basic_memory_acceptance": "not_run",
   "artifact_before": {
@@ -176,7 +88,6 @@
     },
     "scope": "Artifact, native store layout, and declared metadata; embedding execution is a separate check."
   },
-  "container_id": "26f4e10148cf769075d27b31415742e3e48ed464c8d6b23acb0698d602afb5fe",
   "events": [
     {
       "event": "workload_started",
@@ -380,7 +291,6 @@
         "status": "passed",
         "ollama_version": "0.40.15",
         "model": "nomic-embed-text:v1.5",
-        "endpoint": "/v1/embeddings",
         "dimensions": 768,
         "finite_values": true,
         "l2_norm": 1.000000161214146,
@@ -400,15 +310,12 @@
               "parameter_size": "137M",
               "quantization_level": "F16"
             },
-            "expires_at": "2026-11-07T14:17:37.57373188Z",
             "size_vram": 335743549,
-            "context_length": 2048,
-            "runner": "llamacpp"
+            "context_length": 2048
           }
         ],
         "runner_library_maps": [
           {
-            "pid": 167,
             "cuda_libraries": [
               "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
               "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -468,7 +375,6 @@
         "status": "passed",
         "ollama_version": "0.40.15",
         "model": "nomic-embed-text:v1.5",
-        "endpoint": "/v1/embeddings",
         "dimensions": 768,
         "finite_values": true,
         "l2_norm": 1.000000161214146,
@@ -488,15 +394,12 @@
               "parameter_size": "137M",
               "quantization_level": "F16"
             },
-            "expires_at": "2026-11-07T14:22:37.850044708Z",
             "size_vram": 335743549,
-            "context_length": 2048,
-            "runner": "llamacpp"
+            "context_length": 2048
           }
         ],
         "runner_library_maps": [
           {
-            "pid": 167,
             "cuda_libraries": [
               "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
               "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -571,7 +474,6 @@
       "status": "passed",
       "ollama_version": "0.40.15",
       "model": "nomic-embed-text:v1.5",
-      "endpoint": "/v1/embeddings",
       "dimensions": 768,
       "finite_values": true,
       "l2_norm": 1.000000161214146,
@@ -591,15 +493,12 @@
             "parameter_size": "137M",
             "quantization_level": "F16"
           },
-          "expires_at": "2026-11-07T14:17:37.57373188Z",
           "size_vram": 335743549,
-          "context_length": 2048,
-          "runner": "llamacpp"
+          "context_length": 2048
         }
       ],
       "runner_library_maps": [
         {
-          "pid": 167,
           "cuda_libraries": [
             "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
             "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -659,7 +558,6 @@
       "status": "passed",
       "ollama_version": "0.40.15",
       "model": "nomic-embed-text:v1.5",
-      "endpoint": "/v1/embeddings",
       "dimensions": 768,
       "finite_values": true,
       "l2_norm": 1.000000161214146,
@@ -679,15 +577,12 @@
             "parameter_size": "137M",
             "quantization_level": "F16"
           },
-          "expires_at": "2026-11-07T14:22:37.850044708Z",
           "size_vram": 335743549,
-          "context_length": 2048,
-          "runner": "llamacpp"
+          "context_length": 2048
         }
       ],
       "runner_library_maps": [
         {
-          "pid": 167,
           "cuda_libraries": [
             "/usr/lib/ollama/cuda_v12/libcublas.so.12.8.5.5",
             "/usr/lib/ollama/cuda_v12/libcublasLt.so.12.8.5.5",
@@ -824,75 +719,19 @@
     },
     "scope": "Artifact, native store layout, and declared metadata; embedding execution is a separate check."
   },
-  "containers_after": "",
-  "volumes_after": "",
   "container_removed": true,
   "staging_removed": true,
   "cleanup_recovery": {
     "initial_helper_exit_code": 1,
-    "initial_error": "PermissionError during rmtree of container-created root-owned model metadata.",
-    "scope": "/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd",
-    "commands": [
-      {
-        "arguments": [
-          "docker",
-          "run",
-          "--pull=never",
-          "--rm",
-          "--network",
-          "none",
-          "--user",
-          "0:0",
-          "--entrypoint",
-          "/bin/chown",
-          "--mount",
-          "type=bind,source=/home/ydxu_/basic-memory-installation-assets/.staging/gpu-smoke-n8ndzhwd,target=/cleanup",
-          "ollama/ollama:0.40.15@sha256:a717bfc1c56acfc2e85d3109bd40a7646258ec9062c40cea83b9ed0927eb4223",
-          "-R",
-          "1000:1000",
-          "/cleanup"
-        ],
-        "exit_code": 0,
-        "stdout": "",
-        "stderr": ""
-      },
-      {
-        "arguments": [
-          "docker",
-          "ps",
-          "-a",
-          "--format",
-          "{{.Names}}"
-        ],
-        "exit_code": 0,
-        "stdout": "",
-        "stderr": ""
-      },
-      {
-        "arguments": [
-          "docker",
-          "volume",
-          "ls",
-          "--quiet"
-        ],
-        "exit_code": 0,
-        "stdout": "",
-        "stderr": ""
-      },
-      {
-        "arguments": [
-          "/usr/lib/wsl/lib/nvidia-smi",
-          "--query-gpu=name,driver_version,utilization.gpu,memory.used,power.draw",
-          "--format=csv"
-        ],
-        "exit_code": 0,
-        "stdout": "name, driver_version, utilization.gpu [%], memory.used [MiB], power.draw [W]\nNVIDIA GeForce RTX 5090 Laptop GPU, 572.84, 0 %, 74 MiB, 7.67 W\n",
-        "stderr": ""
-      }
-    ],
     "status": "passed",
     "staging_removed": true,
-    "finished_at_utc": "2026-11-07T14:19:06.048438+00:00"
+    "finished_at_utc": "2026-11-07T14:19:06.048438+00:00",
+    "step_exit_codes": [
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "finished_at_utc": "2026-11-07T14:19:06.048438+00:00"
 }

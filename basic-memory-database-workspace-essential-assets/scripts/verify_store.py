@@ -94,11 +94,11 @@ def verify(root, motorcycle=None, alias_plan=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
-    parser.add_argument("--motorcycle", type=Path)
+    parser.add_argument("--view", "--motorcycle", dest="view", type=Path)
     parser.add_argument("--alias-plan", type=Path, help="Verify all original planned aliases, including entries removed as redundant")
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
-    report = verify(args.root, args.motorcycle, args.alias_plan)
+    report = verify(args.root, args.view, args.alias_plan)
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps({key: report[key] for key in ["ok", "records", "checked_aliases", "checked_local_markdown_links", "motorcycle_view"]} | {"errors": len(report["errors"]), "report": str(args.report)}, ensure_ascii=False, indent=2))

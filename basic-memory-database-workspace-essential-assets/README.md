@@ -7,9 +7,9 @@ knowledge-store work. The original workspace remains unchanged.
 The original selection contained 32 copied source files, plus this index and a model placeholder:
 local-store utilities, semantic-retrieval code and configuration, reusable schemas,
 upstream Basic Memory workflow references, core upstream documentation, and a versioned
-dependency audit. The original selection excluded personal or corpus-specific
-data and generated artifacts. Later dated additions include only compact,
-body-free validation baselines that are useful for comparison and tuning.
+dependency audit. The dated validation baselines retain aggregate counts, scores,
+timings, and hardware measurements for comparison and tuning. Keep current-run
+reports, private source material, and generated artifacts in the writable database workspace.
 
 ## What was selected
 
@@ -20,9 +20,10 @@ An asset was included when it met at least one of these conditions:
 - It is a small template that can be adapted to another source-backed knowledge base.
 - It records installation dependencies that are useful when reproducing the same release.
 
-Exact copies were preferred over rewritten variants so their provenance remains clear.
-Some tools still contain compatibility behavior for Notion and MotorcycleNotes; read the
-limitations below before reuse.
+The upstream references use pinned links for files outside the bundle. The
+workflow guides use placeholder identifiers in examples.
+Local utilities read corpus-specific settings from arguments, environment variables,
+or the selected database's registries.
 
 ## Index
 
@@ -39,33 +40,30 @@ limitations below before reuse.
 
 ## Local-store utility bundle
 
-The files under `scripts/` are copied from the final deployed helper set in the source
+The files under `scripts/` derive from the deployed helper set in the source
 workspace. Keep them together because several modules import one another by filename.
 
 | Script | Reusable role | Important coupling |
 | --- | --- | --- |
-| [authored_format.py](scripts/authored_format.py) | Parse Markdown/frontmatter, observations, relations, and local schemas; run convention and source-coverage checks. | Contains a MotorcycleNotes default root and Notion root ID. Its parser functions are broader than its default check command. |
+| [authored_format.py](scripts/authored_format.py) | Parse Markdown/frontmatter, observations, relations, and local schemas; run convention and source-coverage checks. | Supply the Notion hierarchy root through `NOTION_ROOT_ID` or the `root_id` argument to the source-coverage function. |
 | [canonical_db.py](scripts/canonical_db.py) | Load a canonical store or view, resolve identities, validate graph targets, traverse context, search text, and build derived catalogs. | Expects the registry/view conventions implemented by `store_layout.py`. |
 | [global_memory_db.py](scripts/global_memory_db.py) | Global-store CLI wrapper for `read`, `search`, `context`, `check`, and `build-index`. | Uses the compatibility CLI and canonical-store conventions. |
-| [legacy_cli.py](scripts/legacy_cli.py) | Preserve legacy routes, aliases, evidence reads, and scoped-view behavior. | Includes Notion evidence fallback paths and Motorcycle compatibility behavior. |
-| [memory_db.py](scripts/memory_db.py) | View-oriented compatibility wrapper, originally for MotorcycleNotes. | Keep when legacy view commands or parser imports are required; otherwise prefer `global_memory_db.py`. |
+| [legacy_cli.py](scripts/legacy_cli.py) | Preserve legacy routes, aliases, evidence reads, and scoped-view behavior. | Includes a fallback for the older Notion evidence directory layout. |
+| [memory_db.py](scripts/memory_db.py) | View-oriented compatibility wrapper. | Select a view with `--root` or `BASIC_MEMORY_VIEW_ROOT`. |
 | [semantic_search.py](scripts/semantic_search.py) | Build/query local multilingual dense and BM25 indexes, fuse query variants, return source candidates and separate graph context, and run frozen trials. | Requires the pinned local model and a compatible canonical store. It does not download a model. |
 | [remap_semantic.py](scripts/remap_semantic.py) | Reuse vector bytes only after proving that selected records, titles, projected text, and dataset hashes are unchanged. | Expects the index metadata contract produced by `semantic_search.py`. |
 | [store_layout.py](scripts/store_layout.py) | Resolve canonical roots, lightweight views, retired root routes, scope aliases, and dataset freshness hashes. | Expects `registry/aliases.json`, optional `registry/root-routes.json`, and `views/*.json`. |
-| [verify_store.py](scripts/verify_store.py) | Independently verify records, aliases, relation targets, evidence, and optional view membership. | Its optional motorcycle checks are compatibility-specific. |
+| [verify_store.py](scripts/verify_store.py) | Independently verify records, aliases, relation targets, evidence, and optional view membership. | Use `--view` to verify a declared view. |
 
 ### Basic use
 
-Python 3 and PyYAML are sufficient for the non-semantic file helpers. The semantic path
-also imports NumPy, PyTorch, and Transformers when model inference runs.
+Python 3 and PyYAML are sufficient for the canonical store and Codex file helpers.
+The semantic path also imports NumPy, PyTorch, and Transformers when model inference
+runs. The repository's `.gitignore` covers Python's `__pycache__/` directories.
+Set `PYTHONPYCACHEPREFIX` to a writable directory outside this bundle to keep
+bytecode caches on disk in that location.
 
-The default root is resolved as:
-
-```text
-../basic-memory-database/MARMOTatZJU-s-Notion/
-```
-
-That database is not included here. Supply a compatible store explicitly:
+Supply a compatible store explicitly.
 
 ```bash
 python3 scripts/global_memory_db.py --root /path/to/store check
@@ -74,11 +72,20 @@ python3 scripts/global_memory_db.py --root /path/to/store read "permalink-or-id"
 python3 scripts/global_memory_db.py --root /path/to/store context "permalink-or-id" --depth 1 --incoming
 ```
 
-Alternatively, set `CANONICAL_ROOT` for tools that use the default resolver:
+The check prints its full report to stdout. Use `check --report /path/to/report.json`
+to save it in the writable database workspace.
+
+Set `CANONICAL_ROOT` to configure the default store and isolate root resolution to
+that store and its declared views.
 
 ```bash
 CANONICAL_ROOT=/path/to/store python3 scripts/global_memory_db.py check
 ```
+
+With no explicit root, the CLI looks for a registry above the current directory
+or in a nearby conventional database directory. If several stores qualify, it
+will select the sole store with a root-route registry. Pass `--root` when the
+intended store is ambiguous.
 
 These helpers implement the local adapter's authored conventions. They are not the Basic
 Memory server, complete upstream parser/validator, temporal engine, or atomic write API.
@@ -87,8 +94,9 @@ Memory server, complete upstream parser/validator, temporal engine, or atomic wr
 
 `semantic_search.py` is offline by design. Before running a build or query, supply the
 pinned `intfloat/multilingual-e5-small` model files described in the
-[model placeholder](semantic/models/multilingual-e5-small/README.md). Generated indexes
-must be written to a separate location; none are bundled here.
+[model placeholder](semantic/models/multilingual-e5-small/README.md). Set
+`BASIC_MEMORY_SEMANTIC_WORKSPACE` to select the location for model files, caches,
+default indexes, and trial reports.
 
 The copied [hybrid configuration](templates/config/hybrid-config.json) documents the fixed
 retrieval design:
@@ -188,7 +196,7 @@ migration implementation is needed.
 
 ## Provenance
 
-All copied assets came from:
+The original selection came from:
 
 ```text
 ../basic-memory-database-workspace/
@@ -205,16 +213,13 @@ Specifically:
 - `reference-audits/basic-memory-1.0.0-wsl2/` holds the November 4 dependency audit.
 - lightweight model metadata → `semantic/models/multilingual-e5-small/`
 
-The README and model placeholder are the only new explanatory files.
-
-
 ## Codex append-only synchronization utilities (2026-11-06)
 
 Four reusable scripts were added after the original selection:
 
 - [capture_codex_logs.py](scripts/capture_codex_logs.py): combine selected API snapshots with visible completed events from local JSONL or Zstandard logs. Excludes reasoning and system/developer messages. Requires the OS `libzstd` library for compressed logs.
 - [codex_memory_format.py](scripts/codex_memory_format.py): create authored conversation records, exact transcripts, and extractive continuation briefs. Adapted from the historical 2026-11-04 builder; destructive rebuild entry points were removed.
-- [sync_codex_memory.py](scripts/sync_codex_memory.py): build an append-only staging copy, preserve absent records and prior evidence, and update same-ID items. Requires an existing compatible corpus and PyYAML. It does not publish automatically.
+- [sync_codex_memory.py](scripts/sync_codex_memory.py) builds an append-only staging copy, preserves absent records and prior evidence, and updates same-ID items. It reads the workspace label from the target inventory, keeps existing topic assignments, and places new conversations under General Analysis and Workspace Tasks. It uses the target's previous sync timezone or UTC, with a `--timezone` override. It requires an existing compatible corpus and PyYAML.
 - [verify_codex_sync.py](scripts/verify_codex_sync.py): check source-item equality, message hashes, retained files/IDs, evidence history, declared structure, and synthetic merge behavior.
 
 `canonical_db.py` now supports database-relative evidence paths and reading Codex JSON snapshots. It is therefore no longer byte-identical to the original curated copy. The capture, sync, and verification CLIs accept `--help`; the formatter is an imported module. Obtain an explicit unarchived thread inventory from the app before selecting logs. Keep private snapshots in the database workspace, not in this reusable toolkit.
@@ -223,11 +228,15 @@ Typical workflow: capture selected API histories, recover visible local-log even
 
 ## Notion incremental verification (2026-11-06)
 
-[scripts/verify_notion_sync.py](scripts/verify_notion_sync.py) verifies a completed Notion sync against a backup and fresh MCP cache. It checks exact changed-source properties and text, unchanged source file bytes, evidence hashes, source membership, and graph preservation. It refuses errors and block responses used as source pages. It does not fetch Notion, discover roots, or authorize deletions. Run with explicit `--root`, `--baseline`, `--run`, and `--report`; the run directory must contain the documented analysis and cache artifacts from synchronization-2026-11-06.
+The verifier compares a completed Notion sync with a backup and a fresh MCP cache.
+It checks exact changed-source properties and text, unchanged source file bytes,
+evidence hashes, source membership, and graph preservation. It rejects errors and
+block responses that appear where it expects source pages. Run with `--root`,
+`--baseline`, `--run`, and `--report`. The run directory must contain
+`reports/analysis.json` and source snapshots under `cache/`.
+[verify_notion_sync.py](scripts/verify_notion_sync.py)
 
 The canonical reader now resolves historical evidence through an optional `registry/evidence-roots.json` file with `version: 1` and a `roots` list of `from`/`to` path prefixes. Every resolved snapshot still undergoes its recorded SHA-256 check. Escapes outside the declared destination root are rejected. This permits relocating evidence without rewriting unchanged source records.
-
-The default store resolver discovers the current `basic-memory-databases/MARMOTatZJU-s-Notion` layout beneath an ancestor directory, while preserving an explicit `CANONICAL_ROOT` override and the historical fallback. Both workspaces use the shared helpers in this bundle.
 
 ## Basic Memory runtime compatibility utilities (2026-11-11)
 
@@ -257,8 +266,7 @@ Basic Memory 1.0.0 container runtime:
 
 [basic-memory-databases.bmignore](templates/config/basic-memory-databases.bmignore)
 keeps derived catalogs, unlinked registry/view JSON, and raw Codex evidence out
-of runtime search. It retains linked JSON resources and the motorcycle fuel CSV
-so authored links resolve. It does not modify a database `.gitignore`.
+of runtime search. It retains linked JSON and CSV resources so authored links resolve.
 
 Keep embedding generation separate from serial file indexing. The compatibility
 trial found that embedding batches of 128 with four provider requests gave the
@@ -267,7 +275,9 @@ default. Read the database workspace skill before a migration or in-place edit.
 
 ## Runtime validation baselines (2026-11-11 curation)
 
-The [November 11 Notion validation result](reports/notion-validation-2026-11-11.json) records the saved structural check. Run the current validator for a fresh report.
+The November 11 Notion validation result records aggregate counts from the structural
+check. Run the current validator for a fresh report.
+[November 11 validation summary](reports/notion-validation-2026-11-11.json)
 
 The [runtime validation baseline index](reference-baselines/runtime-validation/README.md)
 contains the reusable result summaries and telemetry moved from the installation

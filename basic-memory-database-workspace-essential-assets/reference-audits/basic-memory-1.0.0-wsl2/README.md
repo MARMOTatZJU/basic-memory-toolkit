@@ -12,7 +12,7 @@ This report checks installation requirements. It does not install packages or ch
 - Application source: Basic Memory 1.0.0, commit `c9bd187b83baba549d5cd16bacc180f8023d51c8`.
 - The vendor checkout has no reported Git changes.
 - Report inputs: chapters 17, 18, and 20 in the adjacent code-report directory.
-- Runtime inspected: `/tmp/bm-tutorial-runtime/.venv`.
+- Runtime inspected: the tutorial's Python virtual environment.
 - The original architectural survey uses an older commit. Its dependency counts do not define this release.
 - Optional services and integrations received source inspection. This audit did not execute those features.
 
@@ -266,7 +266,7 @@ For source reproducibility, use the checked release's `uv.lock` and `uv sync --l
 Add `--all-extras` only when the optional packages are required. Add the development group for development tasks.
 
 Keep the environment and frequently accessed state in the Linux filesystem when practical.
-Your existing workspace is on `/mnt/d`. It can remain there, but cross-filesystem access can reduce performance.
+Access to a Windows-mounted workspace from WSL can reduce performance.
 Source: [Microsoft WSL filesystem guidance](https://learn.microsoft.com/en-us/windows/wsl/filesystems).
 
 **Ubuntu 22.04 versus 24.04**
@@ -278,21 +278,21 @@ Source: [Ubuntu release schedule](https://ubuntu.com/about/release-cycle).
 
 **Local source references**
 
-- [pyproject.toml](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/pyproject.toml)
-- [uv.lock](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/uv.lock)
-- [.python-version](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/.python-version)
-- [Dockerfile](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/Dockerfile)
-- [docker-compose-postgres.yml](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/docker-compose-postgres.yml)
-- [src/basic_memory/config_models.py](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/src/basic_memory/config_models.py)
-- [src/basic_memory/repository/fastembed_provider.py](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/src/basic_memory/repository/fastembed_provider.py)
-- [src/basic_memory/repository/pgvector_index.py](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/src/basic_memory/repository/pgvector_index.py)
-- [integrations/openclaw/package.json](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/integrations/openclaw/package.json)
-- [integrations/pi/package.json](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/integrations/pi/package.json)
-- [integrations/tau/pyproject.toml](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/integrations/tau/pyproject.toml)
-- [integrations/hermes/requirements-dev.txt](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/integrations/hermes/requirements-dev.txt)
-- [justfile](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-database-workspace/vendor/basic-memory/justfile)
-- [17-user-tutorial.md](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-code/code-report/17-user-tutorial.md)
-- [18-tutorial-validation-and-version-update.md](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-code/code-report/18-tutorial-validation-and-version-update.md)
-- [20-installation-strategy-token-use-gpu-and-dependencies.md](/mnt/d/Documents/Projects/AICodingWorkspace/AgenticPlayground/agentic_playground/basic-memory-code/code-report/20-installation-strategy-token-use-gpu-and-dependencies.md)
+- [pyproject.toml](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/pyproject.toml)
+- [uv.lock](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/uv.lock)
+- [.python-version](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/.python-version)
+- [Dockerfile](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/Dockerfile)
+- [docker-compose-postgres.yml](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/docker-compose-postgres.yml)
+- [src/basic_memory/config_models.py](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/src/basic_memory/config_models.py)
+- [src/basic_memory/repository/fastembed_provider.py](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/src/basic_memory/repository/fastembed_provider.py)
+- [src/basic_memory/repository/pgvector_index.py](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/src/basic_memory/repository/pgvector_index.py)
+- [integrations/openclaw/package.json](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/integrations/openclaw/package.json)
+- [integrations/pi/package.json](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/integrations/pi/package.json)
+- [integrations/tau/pyproject.toml](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/integrations/tau/pyproject.toml)
+- [integrations/hermes/requirements-dev.txt](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/integrations/hermes/requirements-dev.txt)
+- [justfile](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/justfile)
+- [17-user-tutorial.md](../../../basic-memory-code/code-report/17-user-tutorial.md)
+- [18-tutorial-validation-and-version-update.md](../../../basic-memory-code/code-report/18-tutorial-validation-and-version-update.md)
+- [20-installation-strategy-token-use-gpu-and-dependencies.md](../../../basic-memory-code/code-report/20-installation-strategy-token-use-gpu-and-dependencies.md)
 
 Writing status: STE-aligned draft. Official dictionary verification and independent human review remain pending.

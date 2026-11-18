@@ -4,9 +4,6 @@
   "commands": [
     {
       "label": "version",
-      "args": [
-        "--version"
-      ],
       "exit_code": 0,
       "seconds": 1.1188745498657227,
       "stdout_bytes": 28,
@@ -14,14 +11,6 @@
     },
     {
       "label": "notion-register",
-      "args": [
-        "project",
-        "add",
-        "notion",
-        "/work/MARMOTatZJU-s-Notion",
-        "--local",
-        "--no-wait"
-      ],
       "exit_code": 0,
       "seconds": 7.504889011383057,
       "stdout_bytes": 185,
@@ -29,12 +18,6 @@
     },
     {
       "label": "notion-index",
-      "args": [
-        "reindex",
-        "--search",
-        "--project",
-        "notion"
-      ],
       "exit_code": 0,
       "seconds": 58.3476140499115,
       "stdout_bytes": 233,
@@ -42,9 +25,6 @@
     },
     {
       "label": "version",
-      "args": [
-        "--version"
-      ],
       "exit_code": 0,
       "seconds": 1.2043724060058594,
       "stdout_bytes": 28,
@@ -52,12 +32,6 @@
     },
     {
       "label": "notion-embeddings",
-      "args": [
-        "reindex",
-        "--embeddings",
-        "--project",
-        "notion"
-      ],
       "exit_code": 0,
       "seconds": 126.19951128959656,
       "stdout_bytes": 550,
@@ -65,14 +39,6 @@
     },
     {
       "label": "codex-register",
-      "args": [
-        "project",
-        "add",
-        "codex",
-        "/work/YindaXU-s-Codex-Memory",
-        "--local",
-        "--no-wait"
-      ],
       "exit_code": 0,
       "seconds": 6.694192171096802,
       "stdout_bytes": 182,
@@ -80,12 +46,6 @@
     },
     {
       "label": "codex-index",
-      "args": [
-        "reindex",
-        "--search",
-        "--project",
-        "codex"
-      ],
       "exit_code": 1,
       "seconds": 97.41092157363892,
       "stdout_bytes": 3535,
@@ -93,12 +53,6 @@
     },
     {
       "label": "codex-embeddings",
-      "args": [
-        "reindex",
-        "--embeddings",
-        "--project",
-        "codex"
-      ],
       "exit_code": 130,
       "seconds": 47.67461895942688,
       "stdout_bytes": 139,
@@ -106,9 +60,6 @@
     },
     {
       "label": "version",
-      "args": [
-        "--version"
-      ],
       "exit_code": 0,
       "seconds": 0.8522121906280518,
       "stdout_bytes": 28,
@@ -116,12 +67,6 @@
     },
     {
       "label": "codex-index",
-      "args": [
-        "reindex",
-        "--search",
-        "--project",
-        "codex"
-      ],
       "exit_code": 0,
       "seconds": 2.82281231880188,
       "stdout_bytes": 230,
@@ -129,12 +74,6 @@
     },
     {
       "label": "codex-embeddings",
-      "args": [
-        "reindex",
-        "--embeddings",
-        "--project",
-        "codex"
-      ],
       "exit_code": 0,
       "seconds": 383.56241273880005,
       "stdout_bytes": 549,
@@ -142,13 +81,6 @@
     },
     {
       "label": "codex-full-index-repair",
-      "args": [
-        "reindex",
-        "--full",
-        "--search",
-        "--project",
-        "codex"
-      ],
       "exit_code": 1,
       "seconds": 72.18161344528198,
       "stdout_bytes": 3116,
@@ -156,12 +88,6 @@
     },
     {
       "label": "codex-embedding-repair",
-      "args": [
-        "reindex",
-        "--embeddings",
-        "--project",
-        "codex"
-      ],
       "exit_code": 0,
       "seconds": 6.771430730819702,
       "stdout_bytes": 549,
@@ -169,12 +95,6 @@
     },
     {
       "label": "notion-index-repair",
-      "args": [
-        "reindex",
-        "--search",
-        "--project",
-        "notion"
-      ],
       "exit_code": 0,
       "seconds": 3.948246479034424,
       "stdout_bytes": 231,
@@ -182,12 +102,6 @@
     },
     {
       "label": "notion-embedding-repair",
-      "args": [
-        "reindex",
-        "--embeddings",
-        "--project",
-        "notion"
-      ],
       "exit_code": 0,
       "seconds": 5.506087779998779,
       "stdout_bytes": 552,
@@ -195,12 +109,6 @@
     },
     {
       "label": "codex-serial-embedding-refresh",
-      "args": [
-        "reindex",
-        "--embeddings",
-        "--project",
-        "codex"
-      ],
       "exit_code": 0,
       "seconds": 7.408421277999878,
       "stdout_bytes": 549,
@@ -211,37 +119,29 @@
   "reads": [],
   "graphs": [],
   "original_inventory": {
-    "MARMOTatZJU-s-Notion": {
+    "notion": {
       "files": 450,
-      "markdown": 429,
-      "tree_sha256": "8a7480e7c217bf791d95b8962881cb9edb02e1af341f0703b0f4d33c4c0e6767"
+      "markdown": 429
     },
-    "YindaXU-s-Codex-Memory": {
+    "codex": {
       "files": 128,
-      "markdown": 51,
-      "tree_sha256": "014fe00f54f325e3d92b1a153e919a7f47443baf71986f38329f9da0b3431dc6"
+      "markdown": 51
     }
   },
   "config": {
     "BASIC_MEMORY_AUTO_UPDATE": "false",
     "BASIC_MEMORY_FORCE_LOCAL": "true",
     "BASIC_MEMORY_SEMANTIC_EMBEDDING_PROVIDER": "openai",
-    "BASIC_MEMORY_SEMANTIC_EMBEDDING_API_BASE": "http://127.0.0.1:18080/v1",
     "BASIC_MEMORY_SEMANTIC_EMBEDDING_MODEL": "nomic-embed-text:v1.5",
     "BASIC_MEMORY_SEMANTIC_EMBEDDING_DIMENSIONS": "768",
     "BASIC_MEMORY_SEMANTIC_EMBEDDING_DOCUMENT_PREFIX": "search_document: ",
     "BASIC_MEMORY_SEMANTIC_EMBEDDING_QUERY_PREFIX": "search_query: ",
-    "BASIC_MEMORY_CONFIG_DIR": "/work/state",
-    "BASIC_MEMORY_HOME": "/work/home",
     "BASIC_MEMORY_SEMANTIC_EMBEDDING_BATCH_SIZE": "128",
     "BASIC_MEMORY_SEMANTIC_EMBEDDING_REQUEST_CONCURRENCY": "4"
   },
   "version": "Basic Memory version: 1.0.0",
-  "recovered_test_errors": [
-    "OperationalError: no such module: vec0"
-  ],
-  "sqlite_inventory": {
-    "state/memory.db": {
+  "sqlite_inventory": [
+    {
       "alembic_version": {
         "count": 1,
         "columns": [
@@ -562,6 +462,7 @@
         ]
       }
     }
-  },
-  "import_error": "codex"
+  ],
+  "import_error": true,
+  "recovered_test_error_count": 1
 }

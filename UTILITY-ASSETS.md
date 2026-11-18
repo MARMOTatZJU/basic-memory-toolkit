@@ -40,3 +40,10 @@ the workspace essential assets location: `./basic-memory-toolkit/basic-memory-da
 
 - consider saving newly created utility elements to facilitate furture works.
   - e.g. assets/elements/tools/scripts/etc.
+  - transform them into a more generic version before adding them.
+- elements to be excluded:
+  - temporary configurations/assets/etc. that have low probability to be reused
+  - sensitive information
+    - e.g. absolute path on the host machine.
+    - e.g. usernames, user-related names, etc.
+    - e.g. user data/notes, etc.

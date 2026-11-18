@@ -2,57 +2,18 @@
 """Build a Basic Memory corpus from captured Codex conversation exports."""
 from __future__ import annotations
 
-from collections import Counter, defaultdict
-from datetime import datetime, timezone, timedelta
+from collections import Counter
+from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
 import re
-import shutil
 from typing import Any
 
 import yaml
 
-PINNED_COMMIT = "c9bd187b83baba549d5cd16bacc180f8023d51c8"
-LOCAL_TZ = timezone(timedelta(hours=8))
-
-TOPICS = {
-    "memory-agent-infrastructure": {
-        "title": "Memory, Skills, and Agent Infrastructure",
-        "summary": "Conversation memory, Notion access, Codex skills, context systems, and agent harnesses.",
-        "keywords": ["basic memory", "notion", "skill", "context", "memory", "agentic", "codex", "deepseek", "harness", "asd-ste100", "conversation summary"],
-    },
-    "software-repositories": {
-        "title": "Software Engineering and Repository Work",
-        "summary": "Repository analysis, installation, code reports, system setup, Git, drivers, and runtime work.",
-        "keywords": ["repo", "repository", "code", "install", "git", "wifi", "driver", "runtime", "laya", "muse", "reinstall", "baseline tests"],
-    },
-    "research-and-papers": {
-        "title": "Research Papers and Technical Surveys",
-        "summary": "Academic papers, engineering surveys, research directions, and evidence reviews.",
-        "keywords": ["paper", "arxiv", "survey", "research", "literature", "jev engineering", "proximal gradient", "近端梯度"],
-    },
-    "health-and-performance": {
-        "title": "Health, Biomechanics, and Human Performance",
-        "summary": "Health questions, biomechanics, pain, muscle recovery, training, and athletic performance.",
-        "keywords": ["muscle", "pain", "wrist", "pronator", "dental", "plyometric", "cycling", "肌群", "疼痛", "腕关节", "恢复", "旋前圆肌", "腓骨", "训练"],
-    },
-    "motorcycle-and-control": {
-        "title": "Motorcycles, Control, and Driving",
-        "summary": "Motorcycle technique, control systems, tracking delay, braking, and related mechanics.",
-        "keywords": ["motorcycle", "braking", "dirt bike", "control", "tracking", "frequency", "摩托", "拮抗", "频域", "时滞", "油门", "后刹"],
-    },
-    "general-analysis": {
-        "title": "General Analysis and Workspace Tasks",
-        "summary": "Workspace tasks and analyses that do not fit one specialized topic.",
-        "keywords": [],
-    },
-}
-
-SUMMARY_OVERRIDES = {
-    "01a15c37-59d6-7933-b90c-6818dabb75c7":
-        "Review the laya code and documentation. Write Markdown reports in laya-code/code-report.",
-}
+DEFAULT_TOPIC = "general-analysis"
+DEFAULT_TOPIC_TITLE = "General Analysis and Workspace Tasks"
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -65,10 +26,10 @@ def yaml_frontmatter(metadata: dict[str, Any]) -> str:
     ).rstrip() + "\n---\n\n"
 
 
-def iso_from_epoch(value: Any) -> str | None:
+def iso_from_epoch(value: Any, local_timezone=timezone.utc) -> str | None:
     if not isinstance(value, (int, float)):
         return None
-    return datetime.fromtimestamp(value, timezone.utc).astimezone(LOCAL_TZ).isoformat()
+    return datetime.fromtimestamp(value, timezone.utc).astimezone(local_timezone).isoformat()
 
 
 def chronological_turns(snapshot: dict[str, Any]) -> list[dict[str, Any]]:
@@ -109,16 +70,6 @@ def clean_excerpt(text: str, limit: int = 700) -> str:
     return cut + "…"
 
 
-def select_topic(title: str, summary: str) -> str:
-    haystack = (title + "\n" + summary).casefold()
-    scores = {
-        key: sum(1 for word in topic["keywords"] if word.casefold() in haystack)
-        for key, topic in TOPICS.items()
-    }
-    best = max((key for key in TOPICS if key != "general-analysis"), key=lambda key: scores[key])
-    return best if scores[best] else "general-analysis"
-
-
 def extract_artifacts(texts: list[str], commands: list[str]) -> list[str]:
     candidates: list[str] = []
     patterns = [r"/mnt/[A-Za-z0-9_./+\- ]+", r"[A-Za-z]:/[A-Za-z0-9_./+\- ]+"]
@@ -155,7 +106,16 @@ def slug(value: str) -> str:
     return value[:70].rstrip("-") or "conversation"
 
 
-def conversation_record(snapshot: dict[str, Any], source_path: Path) -> tuple[str, dict[str, Any], list[dict[str, Any]]]:
+def conversation_record(
+    snapshot: dict[str, Any],
+    source_path: Path,
+    *,
+    topic_key: str = DEFAULT_TOPIC,
+    topic_title: str = DEFAULT_TOPIC_TITLE,
+    workspace: str | None = None,
+    local_timezone=timezone.utc,
+    summary_override: str | None = None,
+) -> tuple[str, dict[str, Any], list[dict[str, Any]]]:
     entry = snapshot["threadListEntry"]
     turns = chronological_turns(snapshot)
     messages: list[tuple[dict[str, Any], dict[str, Any]]] = []
@@ -176,9 +136,7 @@ def conversation_record(snapshot: dict[str, Any], source_path: Path) -> tuple[st
     latest_result = message_text(final_items[-1]) if final_items else (message_text(agent_items[-1]) if agent_items else "")
     status = "active" if entry.get("status") == "active" else ("complete" if messages and messages[-1][0].get("phase") == "final_answer" else ("interrupted" if messages else "unknown"))
     title = str(entry.get("title") or entry.get("summary") or entry["id"])
-    summary = SUMMARY_OVERRIDES.get(entry["id"], str(entry.get("summary") or title))
-    topic_key = select_topic(title, summary)
-    topic = TOPICS[topic_key]
+    summary = summary_override if summary_override is not None else str(entry.get("summary") or title)
 
     commands = [str(item.get("command", "")) for item, _ in trace_events if item.get("type") == "commandExecution"]
     agent_texts = [message_text(item) for item in agent_items]
@@ -214,15 +172,15 @@ def conversation_record(snapshot: dict[str, Any], source_path: Path) -> tuple[st
         "title": title,
         "type": "conversation",
         "permalink": f"conversations/{entry['id']}",
-        "tags": ["codex-conversation", "aicodingworkspace", topic_key],
+        "tags": ["codex-conversation", *([slug(workspace)] if workspace else []), topic_key],
         "thread_id": entry["id"],
         "source_kind": "codex",
-        "workspace": "AICodingWorkspace",
+        "workspace": workspace,
         "source_status": "unarchived",
         "conversation_status": entry.get("status"),
         "continuation_status": status,
-        "created_at": iso_from_epoch(entry.get("createdAt")),
-        "updated_at": iso_from_epoch(entry.get("updatedAt")),
+        "created_at": iso_from_epoch(entry.get("createdAt"), local_timezone),
+        "updated_at": iso_from_epoch(entry.get("updatedAt"), local_timezone),
         "captured_at": snapshot.get("capturedAt"),
         "summary_method": "exact-message-transcript-plus-extractive-continuation-brief",
         "original_evidence": {"path": str(source_path), "sha256": evidence_hash},
@@ -313,7 +271,7 @@ This trace preserves source events that support task continuation. Output limits
 ## Relations
 
 - part_of [[Codex Memory Overview]]
-- categorized_as [[{topic['title']}]]
+- categorized_as [[{topic_title}]]
 """
     record = yaml_frontmatter(metadata) + body
     for item, _ in messages:

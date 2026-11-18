@@ -2,7 +2,7 @@
 
 This document defines Basic Memory's product language, ownership, identity, and source-of-truth
 rules. [ARCHITECTURE.md](ARCHITECTURE.md) describes code layers and dependency direction;
-[ENGINEERING_STYLE.md](ENGINEERING_STYLE.md) describes how to implement changes. This document
+[ENGINEERING_STYLE.md](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/docs/ENGINEERING_STYLE.md) describes how to implement changes. This document
 describes what the system's concepts mean and which invariants the code must preserve.
 
 ## Design Center
@@ -290,6 +290,6 @@ Before adding a model, abstraction, or workflow, answer:
 ## Related Documentation
 
 - [Architecture](ARCHITECTURE.md)
-- [Engineering Style](ENGINEERING_STYLE.md)
+- [Engineering Style](https://github.com/basicmachines-co/basic-memory/blob/c9bd187b83baba549d5cd16bacc180f8023d51c8/docs/ENGINEERING_STYLE.md)
 - [DeepWiki generated overview](https://deepwiki.com/basicmachines-co/basic-memory) — use as a
   navigation aid; checked-in documentation and source code are authoritative.

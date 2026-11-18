@@ -14,15 +14,42 @@ WORKSPACE = next(p for p in Path(__file__).resolve().parents if (p / 'scripts/me
 
 
 def canonical_default():
-    """Allow an isolated staged store without falling back to active aliases."""
+    """Prefer the configured store, a store containing the cwd, or a nearby store."""
     value = os.environ.get('CANONICAL_ROOT')
     if value:
         return Path(value).resolve()
+    cwd = Path.cwd()
+    for parent in (cwd, *cwd.parents):
+        if (parent / 'registry/aliases.json').is_file():
+            return parent
     for parent in WORKSPACE.parents:
-        current = parent / 'basic-memory-databases/MARMOTatZJU-s-Notion'
-        if (current / 'registry/aliases.json').is_file():
-            return current
-    return WORKSPACE.parent / 'basic-memory-database/MARMOTatZJU-s-Notion'
+        for directory in ('basic-memory-databases', 'basic-memory-database'):
+            stores = [path.parent.parent for path in (parent / directory).glob('*/registry/aliases.json')]
+            routed = [store for store in stores if (store / 'registry/root-routes.json').is_file()]
+            if len(routed) == 1:
+                return routed[0]
+            if len(stores) == 1:
+                return stores[0]
+            if stores:
+                return None
+    return None
+
+
+def default_view_root():
+    """Select an explicitly configured view or the sole registered internal view."""
+    value = os.environ.get('BASIC_MEMORY_VIEW_ROOT')
+    if value:
+        return Path(value).resolve()
+    canonical = canonical_default()
+    if canonical is None:
+        return None
+    registry = canonical / 'registry/root-routes.json'
+    if registry.is_file():
+        routes = json.loads(registry.read_text()).get('routes', [])
+        internal = [route for route in routes if route.get('kind') == 'internal-view']
+        if len(internal) == 1:
+            return (canonical / internal[0]['path']).resolve()
+    return canonical
 
 
 def _view(canonical, name):
@@ -88,10 +115,11 @@ def _descriptor_view(root, required_canonical=None):
 
 def locate(root, canonical_root=None):
     root = Path(root).resolve()
-    canonical = Path(canonical_root).resolve() if canonical_root is not None else canonical_default().resolve()
-    registered = _registered_route(root, canonical)
-    if registered is not None:
-        return registered
+    canonical = Path(canonical_root).resolve() if canonical_root is not None else canonical_default()
+    if canonical is not None:
+        registered = _registered_route(root, canonical)
+        if registered is not None:
+            return registered
     if (canonical_root is not None or os.environ.get('CANONICAL_ROOT')) and root != canonical:
         # The override is a deliberate isolation boundary, not a fallback hint.
         if (root / 'view.json').is_file():

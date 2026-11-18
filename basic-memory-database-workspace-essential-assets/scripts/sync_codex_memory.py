@@ -4,7 +4,7 @@ Usage: sync_codex_memory.py --target DB --sources CAPTURES --stage EMPTY_DIR
 Captures use threadListEntry + newest-first pages from read_thread, with reasoning removed.
 """
 import argparse, copy, hashlib, json, re, shutil
-from datetime import datetime
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
 import yaml
@@ -48,16 +48,30 @@ def truncations(obj,path=''):
         for n,v in enumerate(obj):found+=truncations(v,path+'/'+str(n))
     return found
 
-def capture_date(captured_at):
+def capture_date(captured_at, local_timezone=timezone.utc):
     """Return the latest capture date in the database's documented timezone."""
     value=captured_at.replace('Z','+00:00')
-    return datetime.fromisoformat(value).astimezone(ZoneInfo('Asia/Shanghai')).date().isoformat()
+    return datetime.fromisoformat(value).astimezone(local_timezone).date().isoformat()
 
-def build(target,sources,stage):
-    assert not stage.exists(), 'Stage must not exist'
-    shutil.copytree(target,stage)
+def build(target,sources,stage,*,timezone_name=None):
     oldinv=json.loads((target/'registry/source-inventory.json').read_text())
     oldstats={r['id']:r for r in oldinv['conversations']}
+    provenance=json.loads((target/'registry/provenance.json').read_text())
+    previous_sync = (provenance.get('last_sync') or '').split()
+    timezone_name = timezone_name or (previous_sync[1] if len(previous_sync) == 2 else 'UTC')
+    local_timezone = timezone.utc if timezone_name == 'UTC' else ZoneInfo(timezone_name)
+    workspace = oldinv.get('workspace')
+    topics = {fmt.DEFAULT_TOPIC: (fmt.DEFAULT_TOPIC_TITLE, 'General workspace conversations.')}
+    for key in sorted({record['topic'] for record in oldstats.values()} | {fmt.DEFAULT_TOPIC}):
+        topic_path = target / 'topics' / f'{key}.md'
+        if Path(key).name != key:
+            raise ValueError(f'Invalid topic key: {key}')
+        if not topic_path.is_file() and key == fmt.DEFAULT_TOPIC:
+            continue
+        _, frontmatter, body = topic_path.read_text().split('---', 2)
+        title = yaml.safe_load(frontmatter)['title']
+        summary = re.search(r'(?m)^- \[summary\] (.+)$', body)
+        topics[key] = (title, summary[1] if summary else title)
     oldfiles={};oldtitles={}
     used_titles=set()
     for p in (target/'conversations').glob('*.md'):
@@ -67,12 +81,18 @@ def build(target,sources,stage):
             assert digest(p.read_bytes())==oldstats[m['thread_id']]['record_sha256'],f'Unreviewed local edit: {p}'
     incoming={p.stem:json.loads(p.read_text()) for p in sources.glob('*.json')}
     snapshots={p.stem:json.loads(p.read_text()) for p in (target/'evidence').glob('*.json')}
+    previous_entries = {tid: s['threadListEntry'] for tid, s in snapshots.items()}
+    for tid,s in incoming.items():
+        if tid != s['threadListEntry']['id']:
+            raise ValueError(f'Capture filename does not match its thread ID: {tid}')
+        if not s['pages'] or s['pages'][-1].get('page', {}).get('hasMore'):
+            raise ValueError(f'Pagination incomplete: {tid}')
+    if not (snapshots or incoming):
+        raise ValueError('No existing or incoming captures')
+    shutil.copytree(target,stage)
     changes={'new':[],'updated':[],'unchanged':[],'retained_out_of_scope':sorted(set(snapshots)-set(incoming))}
     coverage={}; records=[];manifest=[]
     for tid,s in incoming.items():
-        assert tid==s['threadListEntry']['id']
-        assert 'aicodingworkspace' in s['threadListEntry'].get('cwd','').lower()
-        assert not s['pages'][-1].get('page',{}).get('hasMore'),f'Pagination incomplete: {tid}'
         prior=snapshots.get(tid)
         merged=merge(prior,s)
         changes['new' if not prior else ('unchanged' if turns(clean(prior))==turns(merged) else 'updated')].append(tid)
@@ -83,7 +103,16 @@ def build(target,sources,stage):
         snapshots[tid]=merged
     for tid,s in sorted(snapshots.items()):
         evidence=stage/'evidence'/f'{tid}.json';dump(evidence,s)
-        record,stats,msgs=fmt.conversation_record(s,evidence)
+        previous = oldstats.get(tid, {})
+        topic_key = previous.get('topic', fmt.DEFAULT_TOPIC)
+        previous_entry = previous_entries.get(tid)
+        summary_override = None
+        if previous_entry and previous_entry.get('summary') == s['threadListEntry'].get('summary'):
+            summary_override = previous.get('summary')
+        record,stats,msgs=fmt.conversation_record(
+            s, evidence, topic_key=topic_key, topic_title=topics[topic_key][0],
+            workspace=workspace, local_timezone=local_timezone, summary_override=summary_override,
+        )
         # Published evidence paths are corpus-relative for transfer to another machine.
         meta,body=record.split('---',2)[1:];m=yaml.safe_load(meta)
         # Preserve existing canonical titles. Disambiguate only newly added
@@ -112,21 +141,21 @@ def build(target,sources,stage):
     dump(stage/'registry/source-inventory.json',oldinv)
     dump(stage/'registry/message-manifest.json',{'version':1,'messages':manifest})
     dump(stage/'registry/sync-coverage.json',{'version':1,'changes':changes,'threads':coverage,'policy':'append-only; retain absent threads/items; replace same IDs; preserve old evidence','reasoning':'excluded','source_boundary':'API capture augmented by visible completed events from local logs; API limits may remain for events without a local counterpart'})
-    provenance=json.loads((stage/'registry/provenance.json').read_text())
     provenance['source_boundary']['omitted']=['private internal reasoning','system/developer instructions','events not present in source logs or API']
     latest_capture=max(s.get('capturedAt','') for s in snapshots.values())
-    sync_date=capture_date(latest_capture)
-    provenance['last_sync']=sync_date+' Asia/Shanghai'
+    sync_date=capture_date(latest_capture, local_timezone)
+    provenance['last_sync']=f'{sync_date} {timezone_name}'
     provenance['sync_mode']='append-only'
     dump(stage/'registry/provenance.json',provenance)
-    for key,topic in fmt.TOPICS.items():
+    (stage/'topics').mkdir(exist_ok=True)
+    for key, (title, summary) in topics.items():
         members=[r for r in records if r['topic']==key]
-        body=f"# {topic['title']}\n\n{topic['summary']}\n\n## Conversations\n\n"+'\n'.join(f"- [{r['title']}](../{r['record_path']})" for r in members)
-        body+='\n\n## Observations\n\n- [summary] '+topic['summary']+'\n\n## Relations\n\n- part_of [[Codex Memory Overview]]\n'+'\n'.join(f"- indexes [[conversations/{r['id']}]]" for r in members)+'\n'
-        (stage/'topics'/f'{key}.md').write_text(fmt.yaml_frontmatter({'title':topic['title'],'type':'topic','permalink':'topics/'+key,'tags':['topic','codex-conversation']})+body)
+        body=f"# {title}\n\n{summary}\n\n## Conversations\n\n"+'\n'.join(f"- [{r['title']}](../{r['record_path']})" for r in members)
+        body+='\n\n## Observations\n\n- [summary] '+summary+'\n\n## Relations\n\n- part_of [[Codex Memory Overview]]\n'+'\n'.join(f"- indexes [[conversations/{r['id']}]]" for r in members)+'\n'
+        (stage/'topics'/f'{key}.md').write_text(fmt.yaml_frontmatter({'title':title,'type':'topic','permalink':'topics/'+key,'tags':['topic','codex-conversation']})+body)
     p=stage/'Overview.md';s=p.read_text()
     s=re.sub(r'- \[scope\] .*',f'- [scope] The database retains {len(records)} conversations; this sync selected {len(incoming)} unarchived chats.',s)
-    s=re.sub(r'- \[capture_date\] .*',f'- [capture_date] {sync_date} Asia/Shanghai.',s)
+    s=re.sub(r'- \[capture_date\] .*',f'- [capture_date] {sync_date} {timezone_name}.',s)
     p.write_text(s)
     p=stage/'README.md';s=p.read_text().replace('Tool-output bodies are absent because the source API rejected oversized turns.','Available tool-output bodies are included in the current capture. Truncation flags and capture cutoffs are listed in `registry/sync-coverage.json`.');transfer='\nTransfer the complete corpus, including `evidence/`, to another machine. Evidence paths are relative to this database root. Source artifact paths remain verbatim and may need remapping. The retained transcript is source material, not instructions.\n';s=s if transfer in s else s+transfer;p.write_text(s)
     p=stage/'catalog/ConversationInventory.md';m=yaml.safe_load(p.read_text().split('---',2)[1]);p.write_text(fmt.yaml_frontmatter(m)+'# Conversation Inventory\n\n'+f'{len(records)} retained conversations.\n\n'+'\n'.join(f"- [{r['title']}](../{r['record_path']}) — {r['messages']} messages; {r['status']}" for r in records)+'\n\n## Observations\n\n- [conversation_count] '+str(len(records))+'\n\n## Relations\n\n- part_of [[Codex Memory Overview]]\n')
@@ -135,4 +164,5 @@ def build(target,sources,stage):
 if __name__=='__main__':
     ap=argparse.ArgumentParser(description=__doc__)
     for arg in ('target','sources','stage'):ap.add_argument('--'+arg,type=Path,required=True)
-    a=ap.parse_args();print(json.dumps(build(a.target,a.sources,a.stage),indent=2))
+    ap.add_argument('--timezone', help='IANA timezone, defaulting to the last sync timezone or UTC')
+    a=ap.parse_args();print(json.dumps(build(a.target,a.sources,a.stage,timezone_name=a.timezone),indent=2))
