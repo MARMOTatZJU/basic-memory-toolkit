@@ -14,12 +14,15 @@ A code report of [Basic Memory](https://github.com/basicmachines-co/basic-memory
 - RUNTIME MODE:
   - INSTALLTAION MODE:
     - run the complete installation within docker containers by following the [user-tutorial](./basic-memory-code/code-report/17-user-tutorial.md)
-      - launch docker containers if they are not started.
+      - try to launch docker containers if they are not started.
+        - you are authorized to use Docker
+        - if the sandbox blocks Docker access, request the permissions needed for these actions.
       - stop and remove the created docker containers after stoping the work.
     - try to maximally leverage the functionalities supported by Basic Memory in mind to boost the efficiency and quality of the work.
       - e.g. consider using Basic-Memory supported GPU-accelerated semantic search to boost the scan/retrieval
-    - keep maximizing the performance by fully utilizing the PC's computing resources
-      - increase parallelism UNTIL REACHING THE PERFORMANCE PEAK OR RESOURCE LIMIT
+    - during the running process, keep maximizing the inference performance to fully utilize the PC's computing resources
+      - continuously measure the inference performance
+      - increase parallelism UNTIL REACHING THE INFERENCE PERFORMANCE PEAK OR RESOURCE LIMIT
         - priotize GPU resources over CPU resources if the former is available.
           - maximize the usage of GPU by increasing the batch size
         - in case of using docker container as runtime environment of Basic Memory, instantiate more docker containers
@@ -28,6 +31,13 @@ A code report of [Basic Memory](https://github.com/basicmachines-co/basic-memory
     - run the skill version by following `user-tutorial-skill-version`: [user-tutorial-skill-version](./basic-memory-code/code-report/19-user-tutorial-skill-version.md)
     - spawn subagents to accelerate if considered necessary in terms of efficiency
 - RUNTIME MODE Switching Strategy:
+  - try RUNTIME MODEs in the priority list
+    - always start with the first item in the priority list.
+    - if the trial of the current RUNTIME MODE fails, then fall back to the next one that has lower priority
+  - priority list (from high to low):
+    - INSTALLATION MODE
+    - SKILL MODE
+
   - if complete installation of basic memory is available, then switch to INSTALLATION MODE
   - if not, then fall back to SKILL MODE
 
