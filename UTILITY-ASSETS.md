@@ -12,19 +12,24 @@ A code report of [Basic Memory](https://github.com/basicmachines-co/basic-memory
 - it contains comprehensive scan and analysis of Basic Memory's implementation.
   - including an inventory of the BM's functionalities and their entry points.
 - RUNTIME MODE:
-  - INSTALLTAION MODE: if complete installation of basic memory is available, then run the complete installation within docker containers by following [user-tutorial](./basic-memory-code/code-report/17-user-tutorial.md)
+  - INSTALLTAION MODE:
+    - run the complete installation within docker containers by following the [user-tutorial](./basic-memory-code/code-report/17-user-tutorial.md)
+      - launch docker containers if they are not started.
+      - stop and remove the created docker containers after stoping the work.
     - try to maximally leverage the functionalities supported by Basic Memory in mind to boost the efficiency and quality of the work.
       - e.g. consider using Basic-Memory supported GPU-accelerated semantic search to boost the scan/retrieval
-    - Keep maximizing the performance by fully utilizing the PC's computing resources
+    - keep maximizing the performance by fully utilizing the PC's computing resources
       - increase parallelism UNTIL REACHING THE PERFORMANCE PEAK OR RESOURCE LIMIT
         - priotize GPU resources over CPU resources if the former is available.
           - maximize the usage of GPU by increasing the batch size
         - in case of using docker container as runtime environment of Basic Memory, instantiate more docker containers
         - otherwise, use multi-processing library and spawn more processes
-  - SKILL MODE: otherwise, fall back to the skill version by following `user-tutorial-skill-version`: [user-tutorial-skill-version](./basic-memory-code/code-report/19-user-tutorial-skill-version.md)
-    - Spawn subagents to accelerate. Try to maximize the efficiency by varying the number of subagents.
-
-
+  - SKILL MODE:
+    - run the skill version by following `user-tutorial-skill-version`: [user-tutorial-skill-version](./basic-memory-code/code-report/19-user-tutorial-skill-version.md)
+    - spawn subagents to accelerate if considered necessary in terms of efficiency
+- RUNTIME MODE Switching Strategy:
+  - if complete installation of basic memory is available, then switch to INSTALLATION MODE
+  - if not, then fall back to SKILL MODE
 
 
 the workspace location: `./basic-memory-databases/basic-memory-database-workspace/`
