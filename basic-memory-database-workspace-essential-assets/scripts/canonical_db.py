@@ -240,7 +240,11 @@ def build_index(root):
     catalog = [{k: r[k] for k in ["path", "permalink", "title", "type", "legacy_paths", "scope_paths", "view_memberships"]} |
                {"source_id": r["metadata"].get("notion_page_id")} for r in records]
     for name, data in [("index.json", {"records": catalog, "dataset": store_layout.dataset_manifest(root)}), ("graph.json", {"directed": True, "edges": edges})]:
-        (canonical / name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+        (canonical / name).write_text(
+            json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
     return result | {"written": [str(canonical / "index.json"), str(canonical / "graph.json")]}
 
 

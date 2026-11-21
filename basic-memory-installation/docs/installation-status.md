@@ -1,5 +1,9 @@
 # Installation status and resume checkpoint
 
+## 20 November 2026 RSI deployment
+
+The user selected installation mode, then requested container removal. Both containers were stopped and removed. The project `main` mapped to the RSI research folder. The cached Nomic model passed a 768-dimensional application embedding test with reported GPU residency. Shutdown interrupted the serial index. The named volumes remain. Semantic retrieval, MCP client use, persistence tests, and backup restoration remain unverified. See the [deployment record](../records/2026-11-20-rsi-runtime.md). The status below is historical.
+
 Updated: 2026-11-10, Asia/Shanghai.
 
 ## Latest authorized test

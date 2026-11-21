@@ -1,5 +1,7 @@
 # Installation operation records
 
+The [20 November RSI deployment](2026-11-20-rsi-runtime.md) started the services, then removed both containers at the user's request. The retained index is incomplete.
+
 The user authorized dependency Orders 5 through 15.
 Order 8 installed Buildx 0.38.1 and Compose 5.7.0. Builder inspection and Compose configuration checks passed.
 Order 7 installed Docker Engine, CLI, containerd, and required dependencies. Its service and container checks passed.

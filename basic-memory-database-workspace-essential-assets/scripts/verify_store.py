@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 import re
 import sys
@@ -70,6 +71,9 @@ def verify(root, motorcycle=None, alias_plan=None):
                 target = unquote(target.split("#", 1)[0])
                 if not target: continue
                 absolute = Path(target) if target.startswith("/") else Path(record["absolute_path"]).parent / target
+                if os.name == "nt":
+                    # Collapse parent segments before Win32 checks the path length.
+                    absolute = Path(os.path.normpath(absolute))
                 links += 1
                 if not absolute.exists():
                     errors.append({"kind": "local_markdown_link", "path": record["path"], "line": line_no, "target": target})

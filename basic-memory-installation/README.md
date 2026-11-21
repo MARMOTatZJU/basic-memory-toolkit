@@ -9,6 +9,8 @@ Use [ENTRY-POINTS.md](ENTRY-POINTS.md) for detailed image identities, script con
 
 ## Current state and resume point
 
+**20 November 2026 deployment:** Basic Memory and Ollama were started for RSI research, then both containers were removed at the user's request. The notes and Docker volumes remain. An embedding test returned 768 dimensions and reported GPU residency. Shutdown interrupted the serial index. Semantic retrieval and full acceptance remain pending. See the [deployment record](records/2026-11-20-rsi-runtime.md). Historical status below describes earlier checkpoints.
+
 Updated: 2026-11-07, Asia/Shanghai.
 Latest completed dependency: **Order 15, embedding model, passed**.
 All planned dependencies are available. Persistent deployment and Basic Memory acceptance remain pending.
@@ -344,6 +346,7 @@ clone; use the essential-assets baseline index for durable comparison data.
 | [records/2026-11-10-database-compatibility.md](records/2026-11-10-database-compatibility.md) | Compatibility procedure, findings, or operation record. | See the compatibility report for use and limitations. |
 | [docs/database-in-place-fix.md](docs/database-in-place-fix.md) | Current in-place database repair result and durable entry points. | Use before operating either repaired database. |
 | [records/2026-11-11-database-in-place-fix.md](records/2026-11-11-database-in-place-fix.md) | Authorized in-place repair actions, result, cleanup, and next boundary. | Current database repair operation record. |
+| [records/2026-11-20-rsi-runtime.md](records/2026-11-20-rsi-runtime.md) | RSI deployment state, startup correction, indexing, and acceptance limits. | Current RSI runtime operation record. |
 | [scripts/run-database-compatibility.py](scripts/run-database-compatibility.py) | Reusable compatibility test or reporting entry point. | See the compatibility report for use and limitations. |
 | [scripts/summarize-database-compatibility.py](scripts/summarize-database-compatibility.py) | Reusable compatibility test or reporting entry point. | See the compatibility report for use and limitations. |
 | [docker/test-database-compatibility.py](docker/test-database-compatibility.py) | Reusable compatibility test or reporting entry point. | See the compatibility report for use and limitations. |
