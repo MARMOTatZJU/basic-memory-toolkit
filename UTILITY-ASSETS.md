@@ -18,11 +18,11 @@ A code report of [Basic Memory](https://github.com/basicmachines-co/basic-memory
         - you are authorized to use Docker
         - if the sandbox blocks Docker access, request the permissions needed for these actions.
       - stop and remove the created docker containers after stoping the work.
-    - try to maximally leverage the functionalities supported by Basic Memory in mind to boost the efficiency and quality of the work.
-      - e.g. consider using Basic-Memory supported GPU-accelerated semantic search to boost the scan/retrieval
-    - during the running process, keep maximizing the inference performance to fully utilize the PC's computing resources
+    - maximally leverage the functionalities supported by Basic Memory in mind to boost the efficiency and quality of the work.
+      - utilize the Basic Memory-supported GPU-accelerated semantic search to boost the scan/retrieval
+    - always keep maximizing the inference performance and maximally utilize the local computing resources
       - continuously measure the inference performance
-      - increase parallelism UNTIL REACHING THE INFERENCE PERFORMANCE PEAK OR RESOURCE LIMIT
+      - keep increasing parallelism UNTIL REACHING THE INFERENCE PERFORMANCE PEAK OR RESOURCE LIMIT
         - priotize GPU resources over CPU resources if the former is available.
           - maximize the usage of GPU by increasing the batch size
         - in case of using docker container as runtime environment of Basic Memory, instantiate more docker containers
